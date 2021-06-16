@@ -1,0 +1,1830 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: 0
+ScriptType: v4.00+
+Collisions: Normal
+PlayDepth: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Pyidaungsu,20,&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,1,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.45,Default,,0,0,0,,[MUSIC PLAYING]
+Dialogue: 0,0:00:02.45,0:00:16.41,Default,,0,0,0,,
+Dialogue: 0,0:00:16.41,0:00:18.62,Default,,0,0,0,,JORDAN HAYASHI: Hello Lecture 9 ကနေ ပြန်လည် ကြိုဆိုပါတယ်
+Dialogue: 0,0:00:18.62,0:00:20.60,Default,,0,0,0,,ကျွန်တော်တို့တွေ ဒီတစ်ပတ်မှာတော့ redux အကြောင်းကိုပြောကြပါမယ်
+Dialogue: 0,0:00:20.60,0:00:23.27,Default,,0,0,0,,ပြီးခဲ့တဲ့ lecture တွေတုန်းက, တချို့ကိစ္စတွေပြောခဲ့ကြတယ်.
+Dialogue: 0,0:00:23.27,0:00:26.18,Default,,0,0,0,,ပြင်ပကနေခေါ်သုံးရတဲ့
+Dialogue: 0,0:00:26.18,0:00:28.16,Default,,0,0,0,,API အကြောင်းတွေပြောခဲ့ကြတယ်.
+Dialogue: 0,0:00:28.16,0:00:30.17,Default,,0,0,0,,network request တွေဘယ်လိုလုပ်သလဲဆိုတာကို ပြောခဲ့ကြတယ်,
+Dialogue: 0,0:00:30.17,0:00:33.53,Default,,0,0,0,,ကိုယ့်ကွန်ပျူတာထဲမှာမဟုတ်တဲ့ API တွေဆိုရင် ဘယ်လိုသုံးကြရမလဲပေါ့
+Dialogue: 0,0:00:33.53,0:00:35.61,Default,,0,0,0,,cloudထဲကတစ်နေရာရာကလည်းဖြစ်နိုင်တာပေါ့
+Dialogue: 0,0:00:35.61,0:00:37.49,Default,,0,0,0,,asynchronous actions တွေကိုဖြေရှင်းဖို့သုံးရတဲ့
+Dialogue: 0,0:00:37.49,0:00:41.57,Default,,0,0,0,,တိတိကျကျပြောရရင် network request တွေလုပ်တဲ့အခါသုံးတဲ့
+Dialogue: 0,0:00:41.57,0:00:43.09,Default,,0,0,0,,promises နဲ့ async/await အကြောင်းလည်းပြောခဲ့ကြတယ်
+Dialogue: 0,0:00:43.09,0:00:46.43,Default,,0,0,0,,API ကနေရတဲ့ data တွေကို ဘယ်လို transform လုပ်မလဲဆိုတာကိုလည်း ပြောခဲ့ကြတယ်
+Dialogue: 0,0:00:46.43,0:00:48.71,Default,,0,0,0,,ကိုယ်လိုချင်တဲ့ပုံစံတိတိကျကျမဟုတ်တာမျိုးလည်း ဖြစ်နိုင်တယ်
+Dialogue: 0,0:00:48.71,0:00:50.75,Default,,0,0,0,,ဒါနဲ့ပဲ မတူညီတဲ့ နည်းဗျူဟာတွေအကြောင်းကို ကျွန်တော်တို့ပြောခဲ့ကြတယ်
+Dialogue: 0,0:00:50.75,0:00:52.88,Default,,0,0,0,,ဒီနည်းအားဖြင့် API ကနေရတဲ့ ပုံစံကနေ
+Dialogue: 0,0:00:52.88,0:00:56.39,Default,,0,0,0,,ကျွန်တော်တို့ application အတွက်လိုတဲ့ ပုံစံကို ရအောင်လုပ်ရတယ်
+Dialogue: 0,0:00:56.39,0:00:58.47,Default,,0,0,0,,အဲ့ဒီနောက်မှာ ရိုးရှင်းတဲ့ authentication အကြောင်းကိုပြောခဲ့ကြတယ်
+Dialogue: 0,0:00:58.47,0:01:01.77,Default,,0,0,0,,users တွေ ဘယ်သူဘယ်ဝါပါဆိုတာသေချာအောင် လုပ်ထားတာမျိုးပေါ့
+Dialogue: 0,0:01:01.77,0:01:04.76,Default,,0,0,0,,ပြီးတော့မှ ကိုယ့် appထဲကို ဝင်သုံးခွင့်ပေးတာပေါ့
+Dialogue: 0,0:01:04.76,0:01:07.43,Default,,0,0,0,,ကျွန်တော်တို့တွေ Http method နဲ့ status code တွေအကြောင်းလည်း ပြောခဲ့ကြတယ်
+Dialogue: 0,0:01:07.43,0:01:14.72,Default,,0,0,0,,ပြောရရင် network request ကနေ response ပြန်ရဖို့အတွက် specificationတစ်ခုလိုပါပဲ
+Dialogue: 0,0:01:14.72,0:01:18.53,Default,,0,0,0,,နောက်ပြီး nework request က success or failure  ဖြစ်သွားသလားလည်း တိတိကျကျသိနိုင်တာပေါ့
+Dialogue: 0,0:01:18.53,0:01:20.72,Default,,0,0,0,,fail ရင်လည်း ဘာကြောင့် fail တာလည်းပေါ့
+Dialogue: 0,0:01:20.72,0:01:23.93,Default,,0,0,0,,နောက်ဆုံးတစ်ပတ်တုန်းက Charlie Cheever ကို ဧည့်သည်အနေနဲ့ခေါ်ခဲ့တယ်
+Dialogue: 0,0:01:23.93,0:01:25.74,Default,,0,0,0,,expo componentတွေအကြောင်းပြောဖို့ပေါ့
+Dialogue: 0,0:01:25.74,0:01:29.01,Default,,0,0,0,,
+Dialogue: 0,0:01:29.01,0:01:31.31,Default,,0,0,0,,စာသင်ရင်းနဲ့ရေးလာခဲ့တဲ့ ကျွန်တော်တို့ app ဟာ
+Dialogue: 0,0:01:31.31,0:01:32.96,Default,,0,0,0,,ပိုပိုပြီးတော့ ရှုပ်ထွေးလာတယ်
+Dialogue: 0,0:01:32.96,0:01:35.46,Default,,0,0,0,,ပြဿနာတွေစကြုံရတော့မှာပေါ့
+Dialogue: 0,0:01:35.46,0:01:37.91,Default,,0,0,0,,အစကတော့ တော်တော်ရိုးရှင်းတဲ့ app ပါပဲ
+Dialogue: 0,0:01:37.91,0:01:42.17,Default,,0,0,0,,ဒါပေမယ့် ရှုပ်ထွေးမှုနဲ့သက်ဆိုင်တဲ့ bug တချို့ကို ကျွန်တော်တို့ ကြုံခဲ့ဖူးပြီးပါပြီ တိတိကျကျဆိုရင်
+Dialogue: 0,0:01:42.17,0:01:47.57,Default,,0,0,0,,propတစ်ခု passလုပ်ဖို့ကျန်ခဲ့တာဖြစ်ဖြစ် ဒါမှမဟုတ် deeply nested ဖြစ်တဲ့
+Dialogue: 0,0:01:47.57,0:01:51.52,Default,,0,0,0,,state တွေကိုစီမံခန့်ခွဲတဲ့အခါပဲဖြစ်ဖြစ် အဲ့လိုဒုက္ခမျိုးတွေပေါ့
+Dialogue: 0,0:01:51.52,0:01:53.57,Default,,0,0,0,,ပိုရှုပ်ထွေးလာတဲ့ stateနဲ့အတူတူ
+Dialogue: 0,0:01:53.57,0:01:57.23,Default,,0,0,0,,state object ထဲမှာရှိတဲ့ တချို့ information တွေကို duplicate ဖြစ်စေပါတယ်
+Dialogue: 0,0:01:57.23,0:02:00.05,Default,,0,0,0,,အဲ့လို duplicate ဖြစ်နေတဲ့ informationကို
+Dialogue: 0,0:02:00.05,0:02:01.91,Default,,0,0,0,,update လုပ်တဲ့အခါမှာ ကျွန်တော်တို့ဟာ
+Dialogue: 0,0:02:01.91,0:02:06.41,Default,,0,0,0,,တခြားပွားနေတဲ့ တစ်ခုကိုကျတော့ updateမလုပ်မိတာမျိုးလည်း ဖြစ်နိုင်တယ်
+Dialogue: 0,0:02:06.41,0:02:08.66,Default,,0,0,0,,ဒါမှမဟုတ် propsတွေအများကြီးမလိုဘဲနဲ့ထည့်ထားနဲ့
+Dialogue: 0,0:02:08.66,0:02:13.43,Default,,0,0,0,,components တွေလည်း ရှိနိုင်တယ်
+Dialogue: 0,0:02:13.43,0:02:15.62,Default,,0,0,0,,ကျွန်တော်တို့ ထင်သလို အလုပ်မလုပ်တဲ့ propsတွေလည်း ရှိနိုင်တယ်
+Dialogue: 0,0:02:15.62,0:02:18.20,Default,,0,0,0,,ဘယ်နေရာမှာမှားလို့မှားမှန်းမသိဖြစ်နေနိုင်တယ်၊
+Dialogue: 0,0:02:18.20,0:02:21.92,Default,,0,0,0,,ဘယ်နေရာကနေလှမ်းပြင်လို့ပြင်မှန်းမသိဖြစ်နေနိုင်တယ်
+Dialogue: 0,0:02:21.92,0:02:25.61,Default,,0,0,0,,ဒီသင်ခန်းစာမှာတော့ ကျွန်တော်တို့က နောက်တစ်လှမ်းပြန်ဆုတ်ပြီး စဉ်းစားကြရမယ်
+Dialogue: 0,0:02:25.61,0:02:29.67,Default,,0,0,0,,ကျွန်တော်တို့ data ကို စီမံနေတဲ့ architectureကိုပေါ့
+Dialogue: 0,0:02:29.67,0:02:33.80,Default,,0,0,0,,အဲ့လို scaling လုပ်ရတဲ့ ပြဿနာနဲ့ကြုံနေတဲ့ ကုမ္ပဏီတစ်ခုကတော့ facebook ပေါ့
+Dialogue: 0,0:02:33.80,0:02:37.22,Default,,0,0,0,,သူတို့ architecture အတွက် MVC က
+Dialogue: 0,0:02:37.22,0:02:39.05,Default,,0,0,0,,တော်တော်ကိုရှုပ်တဲ့ patternဖြစ်နေတာကို သွားတွေ့ရတယ်
+Dialogue: 0,0:02:39.05,0:02:43.55,Default,,0,0,0,,CS50မှာတက်ဖူးပြီးသားလူတွေသိလိမ့်မယ်
+Dialogue: 0,0:02:43.55,0:02:44.84,Default,,0,0,0,,Model view controllerအကြောင်းကို
+Dialogue: 0,0:02:44.84,0:02:47.27,Default,,0,0,0,,MVC ဆိုတာဘာကြီးလဲပေါ့
+Dialogue: 0,0:02:47.27,0:02:51.71,Default,,0,0,0,,MVC architectureမှာ modelတွေပါတယ်
+Dialogue: 0,0:02:51.71,0:02:54.65,Default,,0,0,0,,
+Dialogue: 0,0:02:54.65,0:02:55.53,Default,,0,0,0,,viewတွေပါတယ်
+Dialogue: 0,0:02:55.53,0:02:59.67,Default,,0,0,0,,
+Dialogue: 0,0:02:59.67,0:03:01.24,Default,,0,0,0,,နောက် controllerတွေပါတယ်
+Dialogue: 0,0:03:01.24,0:03:06.58,Default,,0,0,0,,
+Dialogue: 0,0:03:06.58,0:03:09.79,Default,,0,0,0,,viewကတော့ userမြင်ရတဲ့အပိုင်းပေါ့
+Dialogue: 0,0:03:09.79,0:03:11.71,Default,,0,0,0,,modelတွေကရတဲ့ dataတွေသည်
+Dialogue: 0,0:03:11.71,0:03:15.79,Default,,0,0,0,,viewထဲကိုသွားတယ်
+Dialogue: 0,0:03:15.79,0:03:17.77,Default,,0,0,0,,userကအဲ့ဒီviewတွေနဲ့ဘယ်လိုအလုပ်လုပ်ရမလဲပေါ့
+Dialogue: 0,0:03:17.77,0:03:20.10,Default,,0,0,0,,အဲ့လိုသွားအောင်လုပ်ပေးတာသည် controllerကပေါ့
+Dialogue: 0,0:03:20.10,0:03:22.84,Default,,0,0,0,,
+Dialogue: 0,0:03:22.84,0:03:26.86,Default,,0,0,0,,controllerကနေactionတစ်ခုခုလုပ်ပေးလိမ့်မယ်
+Dialogue: 0,0:03:26.86,0:03:28.57,Default,,0,0,0,,userက တခုခုနှိပ်လိုက်ရင်ပေါ့
+Dialogue: 0,0:03:28.57,0:03:32.88,Default,,0,0,0,,အဲ့ကနေတော့မှ modelကိုသွားပြီး update လုပ်တာပေါ့
+Dialogue: 0,0:03:32.88,0:03:37.48,Default,,0,0,0,,တချို့viewတွေကတော့ modelတွေကို တိုက်ရိုက်ပြင်တာတွေလည်းရှိတယ်
+Dialogue: 0,0:03:37.48,0:03:40.99,Default,,0,0,0,,ဒီလိုနဲ့ modelနဲ့viewကြားမှာ အပြန်အလှန် connectionနှစ်ခုရတာပေါ့
+Dialogue: 0,0:03:40.99,0:03:43.54,Default,,0,0,0,,facebookလိုကောင်မျိုးရေးရတဲ့အခါ
+Dialogue: 0,0:03:43.54,0:03:45.85,Default,,0,0,0,,modelတစ်ခုကိုသုံးတာသည် viewတစ်ခုမကရှိနေနိုင်တယ်
+Dialogue: 0,0:03:45.85,0:03:48.31,Default,,0,0,0,,Facebookမှာသုံးတဲ့componentပေါင်းက
+Dialogue: 0,0:03:48.31,0:03:49.69,Default,,0,0,0,,30,000 လောက်ရှိတယ်
+Dialogue: 0,0:03:49.69,0:03:51.61,Default,,0,0,0,,အဲ့လို viewတွေအများကြီးပေါ့
+Dialogue: 0,0:03:51.61,0:03:56.97,Default,,0,0,0,,
+Dialogue: 0,0:03:56.97,0:03:58.85,Default,,0,0,0,,အဲ့လို viewတွေအများကြီးရှိသလို
+Dialogue: 0,0:03:58.85,0:04:00.81,Default,,0,0,0,,modelတွေလည်း အများကြီးရှိတယ်
+Dialogue: 0,0:04:00.81,0:04:05.72,Default,,0,0,0,,
+Dialogue: 0,0:04:05.72,0:04:10.82,Default,,0,0,0,,ဒီviewကဒီmodelကိုပြောတာလည်းဖြစ်နိုင်တယ်
+Dialogue: 0,0:04:10.82,0:04:12.32,Default,,0,0,0,,အပြန်အလှန်ပြောတာလည်းရှိမယ်
+Dialogue: 0,0:04:12.32,0:04:15.05,Default,,0,0,0,,ဒီ viewက ဒီmodelကိုပြောတာလည်းဖြစ်နိုင်တယ်
+Dialogue: 0,0:04:15.05,0:04:16.94,Default,,0,0,0,,အခုလို အများကြီးချိတ်ဆက်ထားတဲ့အခါ
+Dialogue: 0,0:04:16.94,0:04:19.10,Default,,0,0,0,,အရမ်းကိုရှုပ်ထွေးလာတာကိုတွေ့ရမယ်
+Dialogue: 0,0:04:19.10,0:04:21.26,Default,,0,0,0,,facebookလိုscaleချဲ့ချင်တဲ့အခါ
+Dialogue: 0,0:04:21.26,0:04:23.51,Default,,0,0,0,,bugတွေကြုံရတော့မယ်
+Dialogue: 0,0:04:23.51,0:04:27.20,Default,,0,0,0,,facebookမှာဖြစ်သွားတာကတော့
+Dialogue: 0,0:04:27.20,0:04:30.83,Default,,0,0,0,,complexityကြောင့်ပဲ bugတွေတက်လာတယ် တိတိကျကျပြောရရင်
+Dialogue: 0,0:04:30.83,0:04:35.03,Default,,0,0,0,,unread chat notificationsလိုလုပ်ရတဲ့ဟာမျိုးပေါ့
+Dialogue: 0,0:04:35.03,0:04:37.85,Default,,0,0,0,,အခြေခံအားဖြင့် ဘယ်လိုဖြစ်လဲဆိုတော့ facebookက
+Dialogue: 0,0:04:37.85,0:04:42.16,Default,,0,0,0,,chat ကိုaccess လုပ်တဲ့ပေါ်မူတည်ပြီး viewတွေထပ်ထပ်ထည့်သွားတယ်
+Dialogue: 0,0:04:42.16,0:04:46.14,Default,,0,0,0,,အစတုန်းကတော့ အောက်မှာပေါ်လာတဲ့ popup boxလေးပဲ
+Dialogue: 0,0:04:46.14,0:04:48.89,Default,,0,0,0,,ဒါပေမယ့် chatting အတွက် pageသပ်သပ်ထပ်ထည့်လိုက်တယ်
+Dialogue: 0,0:04:48.89,0:04:52.13,Default,,0,0,0,,နောက်တော့ dropdownပုံစံနဲ့chatကို navbarထဲမှာထည့်လိုက်တယ်
+Dialogue: 0,0:04:52.13,0:04:54.83,Default,,0,0,0,,အဲ့နောက် chattingအတွက်တခြားapp နဲ့လုပ်လိုက်တယ်
+Dialogue: 0,0:04:54.83,0:04:57.08,Default,,0,0,0,,အဲ့ကျတော့ chatတွေကို updateလုပ်စရာ
+Dialogue: 0,0:04:57.08,0:05:01.20,Default,,0,0,0,,နေရာပိုများလာတယ်
+Dialogue: 0,0:05:01.20,0:05:05.21,Default,,0,0,0,,အဲ့မှာ user log in လုပ်တဲ့နေရာမှာပဲ bugအကြီးကြီးတက်ပါလေရော
+Dialogue: 0,0:05:05.21,0:05:08.60,Default,,0,0,0,,ဘာလဲဆိုတော့ login လုပ်လိုက်တာနဲ့ You have ‌an unread messageလို့ပြောဖို့ပေါ့
+Dialogue: 0,0:05:08.60,0:05:10.44,Default,,0,0,0,,အဲ့ဒါတစ်ခုတည်းတော့မဟုတ်ဘူးပေါ့
+Dialogue: 0,0:05:10.44,0:05:12.53,Default,,0,0,0,,usersတွေအများကြီးဟာ အဲ့bugကိုကြုံရတယ်
+Dialogue: 0,0:05:12.53,0:05:15.92,Default,,0,0,0,,facebookအနေနဲ့ ပိုကောင်းတဲ့ နည်းလမ်းကိုရှာရတယ်
+Dialogue: 0,0:05:15.92,0:05:18.17,Default,,0,0,0,,သူတို့ကြုံနေရတဲ့ ဒီ complexityကိုဖြေရှင်းဖို့ပေါ့
+Dialogue: 0,0:05:18.17,0:05:20.54,Default,,0,0,0,,
+Dialogue: 0,0:05:20.54,0:05:22.79,Default,,0,0,0,,ဘာလုပ်လဲဆိုတော့ အကုန်လုံးကို architectureပြောင်းပစ်လိုက်တယ်
+Dialogue: 0,0:05:22.79,0:05:25.04,Default,,0,0,0,,single direction data fl‌ow ပေါ့
+Dialogue: 0,0:05:25.04,0:05:28.25,Default,,0,0,0,,အဲ့တော့ data သည် တစ်ဘက်တည်းကနေပဲ လာတယ်
+Dialogue: 0,0:05:28.25,0:05:31.19,Default,,0,0,0,,data ကိုပြင်စရာတစ်နည်းပဲရှိတယ်
+Dialogue: 0,0:05:31.19,0:05:32.82,Default,,0,0,0,,ဆိုတော့ ဘယ်လိုလုပ်လိုက်လဲပေါ့
+Dialogue: 0,0:05:32.82,0:05:34.94,Default,,0,0,0,,အသစ်ဖန်တီးလိုက်တယ်၊
+Dialogue: 0,0:05:34.94,0:05:37.31,Default,,0,0,0,,ဒီပြဿအသေစိတ်ကိုသိချင်ရင်
+Dialogue: 0,0:05:37.31,0:05:39.57,Default,,0,0,0,,Jing Chen ရဲ့ youtube videoတစ်ခုကိုရှာကြည့်လို့ရပါတယ်
+Dialogue: 0,0:05:39.57,0:05:42.11,Default,,0,0,0,,ဘယ်လို bug လဲဆိုတာကို သေသေချာချာရှင်းပြတယ်
+Dialogue: 0,0:05:42.11,0:05:44.90,Default,,0,0,0,,ဘာကြောင့်ဒီarchitectureအသစ်ကိုဖန်းတီးရသလဲဆိုတာရောပေါ့
+Dialogue: 0,0:05:44.90,0:05:47.72,Default,,0,0,0,,အဲ့ဒီarchitectureကိုFLUXလို့ခေါ်တယ်
+Dialogue: 0,0:05:47.72,0:05:49.13,Default,,0,0,0,,Flux ဆိုတာဘာလဲပေါ့
+Dialogue: 0,0:05:49.13,0:05:51.74,Default,,0,0,0,,React အတွက် architectureအသစ်တစ်ခုပါ
+Dialogue: 0,0:05:51.74,0:05:54.92,Default,,0,0,0,,unidirectional data flowကို အသုံးချတာပေါ့
+Dialogue: 0,0:05:54.92,0:05:56.52,Default,,0,0,0,,ဘာကိုဆိုလိုချင်တာလဲဆိုတော့
+Dialogue: 0,0:05:56.52,0:06:02.15,Default,,0,0,0,,storeထဲကဂဏန်းတချို့ပေါ်မူတည်ပြီးviewကတုံ့ပြန်လိမ့်မယ်
+Dialogue: 0,0:06:02.15,0:06:04.46,Default,,0,0,0,,storeသည် dataကိုသိမ်းတယ်ပေါ့
+Dialogue: 0,0:06:04.46,0:06:08.27,Default,,0,0,0,,အဲ့ဒီdataကိုပြင်လို့ရတဲ့ကောင်သည် dispatcherတစ်ခုပဲရှိတယ်
+Dialogue: 0,0:06:08.27,0:06:12.13,Default,,0,0,0,,ခဏနေရင် အဲ့ဒီအကြောင်းဆက်ပြောမယ်
+Dialogue: 0,0:06:12.13,0:06:14.06,Default,,0,0,0,,ဒီdispatcherကို ဘယ်လို trigger လုပ်သလဲပေါ့
+Dialogue: 0,0:06:14.06,0:06:16.31,Default,,0,0,0,,ရှင်းပါတယ် actionတစ်ခုကို invokeလုပ်ရုံပါပဲ
+Dialogue: 0,0:06:16.31,0:06:18.02,Default,,0,0,0,,ဒီactionကိုရောဘယ်လိုinvokeလုပ်မလဲပေါ့
+Dialogue: 0,0:06:18.02,0:06:21.01,Default,,0,0,0,,actionကိုviewကနေtriggerလုပ်တယ်
+Dialogue: 0,0:06:21.01,0:06:22.54,Default,,0,0,0,,ပုံလေးဆွဲကြည့်ရအောင်
+Dialogue: 0,0:06:22.54,0:06:32.32,Default,,0,0,0,,
+Dialogue: 0,0:06:32.32,0:06:36.69,Default,,0,0,0,,မင်းရဲ့ informationတွေအကုန်လုံးကိုသိမ်းထားတဲ့ central storeတစ်ခုရှိတယ်
+Dialogue: 0,0:06:36.69,0:06:37.99,Default,,0,0,0,,ဒါမှမဟုတ်အများကြီးလည်း ရှိချင်ရှိမယ်ပေါ့
+Dialogue: 0,0:06:37.99,0:06:46.98,Default,,0,0,0,,
+Dialogue: 0,0:06:46.98,0:06:50.63,Default,,0,0,0,,အဲ့ဒီ store တွေကနေ dataတွေကိုသိမ်းတယ်
+Dialogue: 0,0:06:50.63,0:06:52.70,Default,,0,0,0,,applicationအတွက်လိုတဲ့dataပေါ့
+Dialogue: 0,0:06:52.70,0:06:54.08,Default,,0,0,0,,store ကိုဘယ်လို update လုပ်မလဲပေါ့
+Dialogue: 0,0:06:54.08,0:06:56.16,Default,,0,0,0,,dispatcherဆိုတဲ့ကောင်ကိုဖြတ်ပြီးတော့ လုပ်မှာပေါ့
+Dialogue: 0,0:06:56.16,0:07:02.83,Default,,0,0,0,,
+Dialogue: 0,0:07:02.83,0:07:08.63,Default,,0,0,0,,dispatcherကနေstoreကို information ပို့လိုက်မယ်
+Dialogue: 0,0:07:08.63,0:07:09.85,Default,,0,0,0,,အဲ့ဒီမှာ storeက updateလုပ်မယ်
+Dialogue: 0,0:07:09.85,0:07:13.33,Default,,0,0,0,,storeကို updateလုပ်ဖို့ဆိုရင် ဒီနည်းလမ်းတစ်ခုပဲရှိတာပေါ့
+Dialogue: 0,0:07:13.33,0:07:15.96,Default,,0,0,0,,ဒါဆို dispatcher ကိုဘယ်လို trigger လုပ်မလဲပေါ့
+Dialogue: 0,0:07:15.96,0:07:17.92,Default,,0,0,0,,actionကနေလုပ်မှာပေါ့
+Dialogue: 0,0:07:17.92,0:07:23.86,Default,,0,0,0,,
+Dialogue: 0,0:07:23.86,0:07:26.61,Default,,0,0,0,,storeထဲမှာinformationအားလုံးရှိပြီဆို ဘာလုပ်မလဲပေါ့
+Dialogue: 0,0:07:26.61,0:07:29.58,Default,,0,0,0,,အဲ့ဒီ information တွေကိုသုံးပြီးတော့ view တွေကို render လုပ်လို့ရတယ်
+Dialogue: 0,0:07:29.58,0:07:36.42,Default,,0,0,0,,ဒီviewသည် ဒီstoreကိုလည်း နားထောင်မယ် ဒီstoreရောပဲ
+Dialogue: 0,0:07:36.42,0:07:43.20,Default,,0,0,0,,ဒီviewကကျတော့storeအကုန်လုံးကိုနားထောင်တာလည်းရှိမယ်
+Dialogue: 0,0:07:43.20,0:07:48.27,Default,,0,0,0,,ဒီနားကview ကတော့ ဒီstoreကိုပဲနားထောင်မယ်
+Dialogue: 0,0:07:48.27,0:07:52.26,Default,,0,0,0,,ပြောရရင် arrow တွေတော်တော်များသွားပြီ
+Dialogue: 0,0:07:52.26,0:07:54.87,Default,,0,0,0,,တစ်ခုသတိထားရမှာက မြှားတွေအကုန်လုံးက
+Dialogue: 0,0:07:54.87,0:08:01.05,Default,,0,0,0,,ဒီဘက်ကိုပဲသွားတယ်၊ ဦးတည်ဘက် နှစ်ဖက် မရှိဘူး။
+Dialogue: 0,0:08:01.05,0:08:04.44,Default,,0,0,0,,view တွေအကုန်လုံးကနေ မလိုအပ်ဘဲလိုက် updateလုပ်ဖို့မလိုဘူး
+Dialogue: 0,0:08:04.44,0:08:07.33,Default,,0,0,0,,ဒါမှမဟုတ် storeတွေအကုန်လုံးကို သွား updateလုပ်လို့မရဘူး
+Dialogue: 0,0:08:07.33,0:08:09.88,Default,,0,0,0,,ဒါသည်ကောင်းတယ်လို့ပြောလို့ရတယ် ဘာကြောင့်လဲဆိုတော့ viewသည်
+Dialogue: 0,0:08:09.88,0:08:12.29,Default,,0,0,0,,ဟေး ငါ့ကိုတော့ ဒီ information ဒီ informationလေးတွေတော့ပေးကွာ လို့ပဲ ပြောလို့ရတယ်
+Dialogue: 0,0:08:12.29,0:08:16.14,Default,,0,0,0,,ဒီကောင်တွေကို သူupdateလုပ်မလုပ်ကိုပူစရာမလိုဘူး
+Dialogue: 0,0:08:16.14,0:08:18.48,Default,,0,0,0,,ဘာလုပ်လဲဆိုတော့ actionတစ်ခုကို dispatchလုပ်လိုက်တယ်
+Dialogue: 0,0:08:18.48,0:08:26.03,Default,,0,0,0,,ဒီviewတွေကတော့ actionကိုဒီလိုပဲtriggerလုပ်လိမ့်မယ်
+Dialogue: 0,0:08:26.03,0:08:28.64,Default,,0,0,0,,actionပို့ဖို့ တစ်ခုတည်းသောလမ်းပေါ့
+Dialogue: 0,0:08:28.64,0:08:32.96,Default,,0,0,0,,မြှားတွေအများကြီးတွေ့ရပေမယ့်လို့
+Dialogue: 0,0:08:32.96,0:08:35.46,Default,,0,0,0,,သူတို့သည် တစ်ဘက်တည်းကိုပဲသွားတယ်
+Dialogue: 0,0:08:35.46,0:08:38.39,Default,,0,0,0,,unidirectional data fl‌ow ပေါ့
+Dialogue: 0,0:08:38.39,0:08:42.11,Default,,0,0,0,,ထပ်ပြောမယ် applicationထဲမှာသိမ်းထားတဲ့
+Dialogue: 0,0:08:42.11,0:08:44.74,Default,,0,0,0,,informationကိုပြင်ဖို့တစ်ခုတည်းသောလမ်းသည်
+Dialogue: 0,0:08:44.74,0:08:46.49,Default,,0,0,0,,dispatcherဖြစ်တယ်
+Dialogue: 0,0:08:46.49,0:08:48.77,Default,,0,0,0,,ကျွန်တော်တို့သည် dispatcherကို ထိန်းစရာမလိုဘူး
+Dialogue: 0,0:08:48.77,0:08:54.11,Default,,0,0,0,,dispatcherထဲကိုactionပို့ပြီးတော့ပဲ ထိန်းတယ်
+Dialogue: 0,0:08:54.11,0:08:55.82,Default,,0,0,0,,ဟုတ်ပီ ဒါဆို actionကိုဘယ်လိုပို့ရမလဲပေါ့
+Dialogue: 0,0:08:55.82,0:08:58.82,Default,,0,0,0,,ပို့တာပေါ့ viewကနေလှမ်းလုပ်မှာ
+Dialogue: 0,0:08:58.82,0:09:01.82,Default,,0,0,0,,ဆိုလိုတာက userကနေပေါ့
+Dialogue: 0,0:09:01.82,0:09:04.22,Default,,0,0,0,,viewတွေသည် ဘယ်လို renderလုပ်လဲဆိုတော့
+Dialogue: 0,0:09:04.22,0:09:06.47,Default,,0,0,0,,storeကနေရတဲ့informationကိုလုပ်တယ်ပေါ့
+Dialogue: 0,0:09:06.47,0:09:09.44,Default,,0,0,0,,storeကupdateဖြစ်တိုင်းမှာ viewကိုလှမ်းအသိပေးတဲ့အတွက်
+Dialogue: 0,0:09:09.44,0:09:11.73,Default,,0,0,0,,viewက ပြန် rendereလုပ်တယ်
+Dialogue: 0,0:09:11.73,0:09:14.36,Default,,0,0,0,,ဒါကြောင့်arrowတွေသည် နောက်ပြန်သွားဖို့မလိုဘူးပေါ့
+Dialogue: 0,0:09:14.36,0:09:16.67,Default,,0,0,0,,ပြောရရင် complexity သိသိသာသာလျော့သွားတယ်
+Dialogue: 0,0:09:16.67,0:09:19.41,Default,,0,0,0,,ဘာကြောင့်လဲဆိုတော့ view သည် information ကိုပဲဂရုစိုက်တယ်
+Dialogue: 0,0:09:19.41,0:09:20.96,Default,,0,0,0,,storeထဲမှာဘာရှိလဲဆိုတာကိုပေါ့
+Dialogue: 0,0:09:20.96,0:09:23.66,Default,,0,0,0,,အဲ့ဒီ informationတွေပြောင်းသွားရင်လည်း အလိုလိုသိတယ်
+Dialogue: 0,0:09:23.66,0:09:30.64,Default,,0,0,0,,
+Dialogue: 0,0:09:30.64,0:09:32.99,Default,,0,0,0,,Flux architectureသည် generalဆန်တယ်လို့ပြောလို့ရတယ်
+Dialogue: 0,0:09:32.99,0:09:37.00,Default,,0,0,0,,Flux architectureကိုimplementလုပ်ထားတာတွေအများကြီးရှိတယ်
+Dialogue: 0,0:09:37.00,0:09:40.06,Default,,0,0,0,,Facebookကရေးထားတာတစ်ခုရှိတယ်
+Dialogue: 0,0:09:40.06,0:09:42.58,Default,,0,0,0,,Redux ဆိုတာ
+Dialogue: 0,0:09:42.58,0:09:46.36,Default,,0,0,0,,Reduxသည် Flux ကိုimplementလုပ်ထားသည်ဖြစ်စေမလုပ်ထားသည်ဖြစ်စေ
+Dialogue: 0,0:09:46.36,0:09:48.92,Default,,0,0,0,,ဒါကတော့ ကိုယ်ထင်တာမြင်တာပြောလို့ရပါတယ်
+Dialogue: 0,0:09:48.92,0:09:53.34,Default,,0,0,0,,ငြင်းလို့မရတာကတော့ Reduxသည် Fluxကိုinspireယူပြီးတော့မှ ရေးထားတယ်ဆိုတာပါပဲ
+Dialogue: 0,0:09:53.34,0:09:57.79,Default,,0,0,0,,Reduxသည် Data management libraryတစ်ခုဖြစ်တယ်
+Dialogue: 0,0:09:57.79,0:10:02.05,Default,,0,0,0,,Flux နဲ့ဖန်တီးထားတဲ့ paradigmတွေတော်တော်များများကိုလည်း လက်ခံနိုင်တယ်
+Dialogue: 0,0:10:02.05,0:10:05.23,Default,,0,0,0,,Reduxရဲ့ pillarသုံးခုရှိတယ်
+Dialogue: 0,0:10:05.23,0:10:08.30,Default,,0,0,0,,ပထမက dataတွေအကုန်လုံးတွက်source တစ်ခုပဲရှိတယ်
+Dialogue: 0,0:10:08.30,0:10:11.13,Default,,0,0,0,,Fluxမှာဆိုရင် storeကအများကြီးရှိလို့ရတယ်
+Dialogue: 0,0:10:11.13,0:10:13.81,Default,,0,0,0,,Redux မှာတော့တစ်ခုပဲရှိတယ်၊ big object ခုပေါ့
+Dialogue: 0,0:10:13.81,0:10:18.04,Default,,0,0,0,,app stateအားလုံးအတွက် ပေါ့
+Dialogue: 0,0:10:18.04,0:10:20.26,Default,,0,0,0,,stateကိုupdateလုပ်လို့ရတဲ့တစ်ခုတည်းသောနည်းလမ်းကတော့
+Dialogue: 0,0:10:20.26,0:10:23.40,Default,,0,0,0,,stateကိုrecomputeပြန်လုပ်မယ့် actionတစ်ခုကို ပို့ပေးလိုက်ရုံပဲ
+Dialogue: 0,0:10:23.40,0:10:27.61,Default,,0,0,0,,Fluxမှာလုပ်တဲ့နည်းလိုပဲ
+Dialogue: 0,0:10:27.61,0:10:30.58,Default,,0,0,0,,actionကိုdispatchလုပ်ပြီးတော့မှပဲ storeကိုupdateလုပ်တယ်
+Dialogue: 0,0:10:30.58,0:10:33.25,Default,,0,0,0,,Reduxမှာလည်းအဲ့လိုပဲပေါ့
+Dialogue: 0,0:10:33.25,0:10:37.09,Default,,0,0,0,,centralize storeကိုအဲ့နည်းနဲ့ပဲ update လုပ်တယ်
+Dialogue: 0,0:10:37.09,0:10:45.82,Default,,0,0,0,,Redux မှာ storeသည် အကြီးဆုံးအပိုင်းလို့မှတ်ယူလို့ရတယ်
+Dialogue: 0,0:10:45.82,0:10:48.99,Default,,0,0,0,,actionကိုdispatchလုပ်ပြီးတော့storeကိုupdateလုပ်လို့ရတယ်
+Dialogue: 0,0:10:48.99,0:10:54.64,Default,,0,0,0,,
+Dialogue: 0,0:10:54.64,0:10:58.36,Default,,0,0,0,,And lastly, updates are made using a pure function.
+Dialogue: 0,0:10:58.36,0:11:02.32,Default,,0,0,0,,And so by pure function, I mean a function that takes in arguments
+Dialogue: 0,0:11:02.32,0:11:05.09,Default,,0,0,0,,and will always return the same thing for those arguments.
+Dialogue: 0,0:11:05.09,0:11:08.74,Default,,0,0,0,,So it's fully deterministic, meaning given the same arguments,
+Dialogue: 0,0:11:08.74,0:11:10.76,Default,,0,0,0,,it will always return the same answer.
+Dialogue: 0,0:11:10.76,0:11:12.64,Default,,0,0,0,,And also, it doesn't look anywhere else other
+Dialogue: 0,0:11:12.64,0:11:15.88,Default,,0,0,0,,than those arguments for the computation that it gives.
+Dialogue: 0,0:11:15.88,0:11:19.36,Default,,0,0,0,,So you're not using things like the current time
+Dialogue: 0,0:11:19.36,0:11:21.97,Default,,0,0,0,,or anything in the environment to calculate things,
+Dialogue: 0,0:11:21.97,0:11:24.95,Default,,0,0,0,,only a function of the input.
+Dialogue: 0,0:11:24.95,0:11:26.54,Default,,0,0,0,,And lastly, there are no side effects.
+Dialogue: 0,0:11:26.54,0:11:30.36,Default,,0,0,0,,So I take input, and I give output.
+Dialogue: 0,0:11:30.36,0:11:31.57,Default,,0,0,0,,And I don't do anything else.
+Dialogue: 0,0:11:31.57,0:11:32.51,Default,,0,0,0,,I don't print.
+Dialogue: 0,0:11:32.51,0:11:35.05,Default,,0,0,0,,I don't change variables outside my scope, nothing like that.
+Dialogue: 0,0:11:35.05,0:11:37.25,Default,,0,0,0,,
+Dialogue: 0,0:11:37.25,0:11:38.47,Default,,0,0,0,,And so we have this thing.
+Dialogue: 0,0:11:38.47,0:11:43.01,Default,,0,0,0,,We have an action, goes to a reducer, which then updates the store.
+Dialogue: 0,0:11:43.01,0:11:45.52,Default,,0,0,0,,And so to draw that--
+Dialogue: 0,0:11:45.52,0:11:48.85,Default,,0,0,0,,if you remember this from Flux, we have actions
+Dialogue: 0,0:11:48.85,0:11:53.05,Default,,0,0,0,,go through a dispatcher, which updates some number of stores,
+Dialogue: 0,0:11:53.05,0:11:55.78,Default,,0,0,0,,which then update some number of views.
+Dialogue: 0,0:11:55.78,0:12:09.38,Default,,0,0,0,,And in Reduxland, we have an action, gets dispatched,
+Dialogue: 0,0:12:09.38,0:12:11.21,Default,,0,0,0,,and updates some central store.
+Dialogue: 0,0:12:11.21,0:12:15.52,Default,,0,0,0,,
+Dialogue: 0,0:12:15.52,0:12:19.18,Default,,0,0,0,,And that will update any of its views.
+Dialogue: 0,0:12:19.18,0:12:32.14,Default,,0,0,0,,
+Dialogue: 0,0:12:32.14,0:12:37.09,Default,,0,0,0,,And those views, with user interaction, can trigger more actions.
+Dialogue: 0,0:12:37.09,0:12:39.19,Default,,0,0,0,,And so it's a very similar diagram to Flux.
+Dialogue: 0,0:12:39.19,0:12:43.78,Default,,0,0,0,,And it's the exact same in that it's a unidirectional flow of data.
+Dialogue: 0,0:12:43.78,0:12:46.15,Default,,0,0,0,,But the main difference is here where you
+Dialogue: 0,0:12:46.15,0:12:50.71,Default,,0,0,0,,have a singular store, rather than a potentially large number of stores
+Dialogue: 0,0:12:50.71,0:12:51.35,Default,,0,0,0,,like in Flux.
+Dialogue: 0,0:12:51.35,0:12:58.13,Default,,0,0,0,,
+Dialogue: 0,0:12:58.13,0:13:01.10,Default,,0,0,0,,And if you want to read about Redux and its background,
+Dialogue: 0,0:13:01.10,0:13:02.96,Default,,0,0,0,,you can go to this URL, which is ITS Docs.
+Dialogue: 0,0:13:02.96,0:13:06.78,Default,,0,0,0,,
+Dialogue: 0,0:13:06.78,0:13:09.89,Default,,0,0,0,,So let's do something fun this lecture and actually implement
+Dialogue: 0,0:13:09.89,0:13:12.49,Default,,0,0,0,,something like Redux ourselves.
+Dialogue: 0,0:13:12.49,0:13:13.62,Default,,0,0,0,,And so where do we start?
+Dialogue: 0,0:13:13.62,0:13:21.45,Default,,0,0,0,,Let's go ahead and just create a directory
+Dialogue: 0,0:13:21.45,0:13:23.29,Default,,0,0,0,,into which we'll start creating these files.
+Dialogue: 0,0:13:23.29,0:13:27.89,Default,,0,0,0,,
+Dialogue: 0,0:13:27.89,0:13:29.54,Default,,0,0,0,,So what's first?
+Dialogue: 0,0:13:29.54,0:13:32.84,Default,,0,0,0,,So there's this thing called a reducer, which
+Dialogue: 0,0:13:32.84,0:13:35.43,Default,,0,0,0,,is what calculates the next state.
+Dialogue: 0,0:13:35.43,0:13:38.87,Default,,0,0,0,,And so it takes a previous state, and it takes some information
+Dialogue: 0,0:13:38.87,0:13:40.33,Default,,0,0,0,,on how it should update.
+Dialogue: 0,0:13:40.33,0:13:43.68,Default,,0,0,0,,And it goes ahead and applies the update and returns some new state.
+Dialogue: 0,0:13:43.68,0:13:47.64,Default,,0,0,0,,So some constraints, it should be a pure function.
+Dialogue: 0,0:13:47.64,0:13:49.63,Default,,0,0,0,,So in other words, the result is deterministic.
+Dialogue: 0,0:13:49.63,0:13:52.51,Default,,0,0,0,,So given the same input, it'll always give the same output.
+Dialogue: 0,0:13:52.51,0:13:56.12,Default,,0,0,0,,And it's determined exclusively by those arguments.
+Dialogue: 0,0:13:56.12,0:13:59.00,Default,,0,0,0,,And there are no side effects, so no logging, no changing variables,
+Dialogue: 0,0:13:59.00,0:14:00.68,Default,,0,0,0,,no doing anything like that--
+Dialogue: 0,0:14:00.68,0:14:03.74,Default,,0,0,0,,no changing variables outside of its own scope that should.
+Dialogue: 0,0:14:03.74,0:14:05.01,Default,,0,0,0,,Should be immutable.
+Dialogue: 0,0:14:05.01,0:14:08.16,Default,,0,0,0,,And so we've talked about immutability in previous lectures.
+Dialogue: 0,0:14:08.16,0:14:11.79,Default,,0,0,0,,So it should always return a new object.
+Dialogue: 0,0:14:11.79,0:14:14.01,Default,,0,0,0,,So the keys in the object might not change,
+Dialogue: 0,0:14:14.01,0:14:15.93,Default,,0,0,0,,but the object reference itself should change.
+Dialogue: 0,0:14:15.93,0:14:18.97,Default,,0,0,0,,
+Dialogue: 0,0:14:18.97,0:14:21.52,Default,,0,0,0,,And let's actually go ahead and start implementing a reducer.
+Dialogue: 0,0:14:21.52,0:14:25.82,Default,,0,0,0,,
+Dialogue: 0,0:14:25.82,0:14:31.34,Default,,0,0,0,,And so we said a reducer takes the previous state and some sort of update
+Dialogue: 0,0:14:31.34,0:14:32.93,Default,,0,0,0,,and returns some new state.
+Dialogue: 0,0:14:32.93,0:14:34.70,Default,,0,0,0,,And let's go ahead and implement that.
+Dialogue: 0,0:14:34.70,0:14:40.01,Default,,0,0,0,,
+Dialogue: 0,0:14:40.01,0:14:47.20,Default,,0,0,0,,So some function that takes a previous state and an update
+Dialogue: 0,0:14:47.20,0:14:48.94,Default,,0,0,0,,and it returns some sort of new state.
+Dialogue: 0,0:14:48.94,0:14:52.63,Default,,0,0,0,,And so how it calculates that state is completely up to us.
+Dialogue: 0,0:14:52.63,0:14:55.69,Default,,0,0,0,,And so let's make the simplest reducer possible.
+Dialogue: 0,0:14:55.69,0:14:59.41,Default,,0,0,0,,Well, the simplest reducer possible would actually be this,
+Dialogue: 0,0:14:59.41,0:15:03.33,Default,,0,0,0,,where we take the previous date, we take an update,
+Dialogue: 0,0:15:03.33,0:15:06.80,Default,,0,0,0,,and we just completely ignore the update and return the previous state.
+Dialogue: 0,0:15:06.80,0:15:08.81,Default,,0,0,0,,But let's actually do something.
+Dialogue: 0,0:15:08.81,0:15:12.16,Default,,0,0,0,,So rather than just returning the state blindly, let's apply some update.
+Dialogue: 0,0:15:12.16,0:15:15.96,Default,,0,0,0,,And so let's assume the state isn't an object,
+Dialogue: 0,0:15:15.96,0:15:18.71,Default,,0,0,0,,and let's assume the update is also an object.
+Dialogue: 0,0:15:18.71,0:15:21.88,Default,,0,0,0,,And let's just merge those objects.
+Dialogue: 0,0:15:21.88,0:15:23.51,Default,,0,0,0,,And so we could do something like this.
+Dialogue: 0,0:15:23.51,0:15:30.28,Default,,0,0,0,,
+Dialogue: 0,0:15:30.28,0:15:32.58,Default,,0,0,0,,So this would be a very, very simple reducer.
+Dialogue: 0,0:15:32.58,0:15:36.60,Default,,0,0,0,,So given a state and an update, where they're both objects,
+Dialogue: 0,0:15:36.60,0:15:38.19,Default,,0,0,0,,just merge those objects.
+Dialogue: 0,0:15:38.19,0:15:40.19,Default,,0,0,0,,And so take all of the keys and states of-- you
+Dialogue: 0,0:15:40.19,0:15:41.61,Default,,0,0,0,,don't remember what the syntax is.
+Dialogue: 0,0:15:41.61,0:15:45.36,Default,,0,0,0,,It's object spread by which you take all of the key and value
+Dialogue: 0,0:15:45.36,0:15:50.12,Default,,0,0,0,,pairs of an object, and you add them to this new object that we're creating.
+Dialogue: 0,0:15:50.12,0:15:51.75,Default,,0,0,0,,And then do the same thing with update.
+Dialogue: 0,0:15:51.75,0:15:55.78,Default,,0,0,0,,Take all of its keys and value pairs, and then apply them to the same object.
+Dialogue: 0,0:15:55.78,0:15:57.75,Default,,0,0,0,,And so if there are any duplicate keys, they'll
+Dialogue: 0,0:15:57.75,0:16:01.45,Default,,0,0,0,,get overwritten by this second update.
+Dialogue: 0,0:16:01.45,0:16:06.02,Default,,0,0,0,,And so this is an example of an extremely simple reducer.
+Dialogue: 0,0:16:06.02,0:16:08.40,Default,,0,0,0,,And so let's actually play with our reducer a little bit.
+Dialogue: 0,0:16:08.40,0:16:13.61,Default,,0,0,0,,We can do something like let state start as an empty object.
+Dialogue: 0,0:16:13.61,0:16:19.05,Default,,0,0,0,,We can do state is now--
+Dialogue: 0,0:16:19.05,0:16:25.29,Default,,0,0,0,,invoke the reducer on the old state, and that it's passing something like foo
+Dialogue: 0,0:16:25.29,0:16:28.17,Default,,0,0,0,,gets foo.
+Dialogue: 0,0:16:28.17,0:16:31.92,Default,,0,0,0,,And then now let's update the state again.
+Dialogue: 0,0:16:31.92,0:16:34.67,Default,,0,0,0,,And so that's passed into our reducer--
+Dialogue: 0,0:16:34.67,0:16:37.05,Default,,0,0,0,,the old states, and maybe bar gets bar.
+Dialogue: 0,0:16:37.05,0:16:39.81,Default,,0,0,0,,
+Dialogue: 0,0:16:39.81,0:16:46.38,Default,,0,0,0,,And lastly, let's update the state again, passes into the reducer,
+Dialogue: 0,0:16:46.38,0:16:48.75,Default,,0,0,0,,and give it now foo gets baz.
+Dialogue: 0,0:16:48.75,0:16:51.31,Default,,0,0,0,,
+Dialogue: 0,0:16:51.31,0:16:53.90,Default,,0,0,0,,And so what do we expect to see back here?
+Dialogue: 0,0:16:53.90,0:16:59.74,Default,,0,0,0,,So we have state initialises an empty object.
+Dialogue: 0,0:16:59.74,0:17:04.24,Default,,0,0,0,,And then first we invoke it and passing this object that
+Dialogue: 0,0:17:04.24,0:17:06.81,Default,,0,0,0,,has a key value pair of foo and foo.
+Dialogue: 0,0:17:06.81,0:17:11.32,Default,,0,0,0,,And so when we invoke that, we have an empty object here and foo here.
+Dialogue: 0,0:17:11.32,0:17:16.01,Default,,0,0,0,,And so after line 7, our state is just foo, foo.
+Dialogue: 0,0:17:16.01,0:17:17.31,Default,,0,0,0,,How about line 8?
+Dialogue: 0,0:17:17.31,0:17:23.26,Default,,0,0,0,,Now we pass foo foo into the reducer, and also pass an update called bar bar.
+Dialogue: 0,0:17:23.26,0:17:25.78,Default,,0,0,0,,And so state is foo foo.
+Dialogue: 0,0:17:25.78,0:17:26.65,Default,,0,0,0,,Update is bar bar.
+Dialogue: 0,0:17:26.65,0:17:31.21,Default,,0,0,0,,And so we now are ended up with an object with a key of foo
+Dialogue: 0,0:17:31.21,0:17:34.84,Default,,0,0,0,,and a value of foo, a key of bar and a value of bar.
+Dialogue: 0,0:17:34.84,0:17:37.46,Default,,0,0,0,,And then lastly, we pass that object into the reducer again,
+Dialogue: 0,0:17:37.46,0:17:40.57,Default,,0,0,0,,this time with a key value pair of foo and baz.
+Dialogue: 0,0:17:40.57,0:17:44.92,Default,,0,0,0,,And so what we expect to see out of that is an object with a key of foo,
+Dialogue: 0,0:17:44.92,0:17:49.23,Default,,0,0,0,,value of baz, and a key bar with a value of bar.
+Dialogue: 0,0:17:49.23,0:17:50.53,Default,,0,0,0,,So let's go ahead and run this.
+Dialogue: 0,0:17:50.53,0:17:55.84,Default,,0,0,0,,But first, since object spread is not yet supported by node,
+Dialogue: 0,0:17:55.84,0:17:59.89,Default,,0,0,0,,let's just replace it with something like a helper function called
+Dialogue: 0,0:17:59.89,0:18:05.39,Default,,0,0,0,,merge, where it'll take a bunch of arguments-- some number of arguments.
+Dialogue: 0,0:18:05.39,0:18:08.74,Default,,0,0,0,,Let's actually just to prev and next.
+Dialogue: 0,0:18:08.74,0:18:13.63,Default,,0,0,0,,And it will do this thing called object, dot, assign,
+Dialogue: 0,0:18:13.63,0:18:15.91,Default,,0,0,0,,which is the way that we used to merge objects before.
+Dialogue: 0,0:18:15.91,0:18:19.42,Default,,0,0,0,,This object spread became a syntax.
+Dialogue: 0,0:18:19.42,0:18:24.67,Default,,0,0,0,,And so let's just assign a new object, the key value pairs of previous,
+Dialogue: 0,0:18:24.67,0:18:27.16,Default,,0,0,0,,and then the key value pairs of next.
+Dialogue: 0,0:18:27.16,0:18:29.83,Default,,0,0,0,,And then rather than doing this manually here,
+Dialogue: 0,0:18:29.83,0:18:34.60,Default,,0,0,0,,let's just merge state and update.
+Dialogue: 0,0:18:34.60,0:18:37.13,Default,,0,0,0,,So let's run this and see what we get.
+Dialogue: 0,0:18:37.13,0:18:39.43,Default,,0,0,0,,I guess nothing will happen when you run that, so let's
+Dialogue: 0,0:18:39.43,0:18:41.23,Default,,0,0,0,,just console log the state at the end.
+Dialogue: 0,0:18:41.23,0:18:46.40,Default,,0,0,0,,
+Dialogue: 0,0:18:46.40,0:18:48.69,Default,,0,0,0,,And so we get what we expected.
+Dialogue: 0,0:18:48.69,0:18:51.23,Default,,0,0,0,,So we expect it to get this thing with foo baz and bar bar.
+Dialogue: 0,0:18:51.23,0:18:53.21,Default,,0,0,0,,And that's exactly what we got.
+Dialogue: 0,0:18:53.21,0:18:58.49,Default,,0,0,0,,And so to recap, all a reducer is is something
+Dialogue: 0,0:18:58.49,0:19:02.96,Default,,0,0,0,,that takes some previous state and something that we want to update it
+Dialogue: 0,0:19:02.96,0:19:06.87,Default,,0,0,0,,with and then returns a new state.
+Dialogue: 0,0:19:06.87,0:19:11.46,Default,,0,0,0,,So in our particular reducer, we chose to just merge the update into states.
+Dialogue: 0,0:19:11.46,0:19:15.41,Default,,0,0,0,,But what happens here doesn't matter, as long
+Dialogue: 0,0:19:15.41,0:19:17.39,Default,,0,0,0,,as it's returning a new state object.
+Dialogue: 0,0:19:17.39,0:19:22.91,Default,,0,0,0,,And so like I alluded to earlier, we can make our reducer even simpler
+Dialogue: 0,0:19:22.91,0:19:23.84,Default,,0,0,0,,by just doing this.
+Dialogue: 0,0:19:23.84,0:19:27.66,Default,,0,0,0,,
+Dialogue: 0,0:19:27.66,0:19:36.60,Default,,0,0,0,,So if we did this, and ran it, we just get
+Dialogue: 0,0:19:36.60,0:19:38.43,Default,,0,0,0,,an empty object, which is as expected.
+Dialogue: 0,0:19:38.43,0:19:41.27,Default,,0,0,0,,Because all we're doing is we're just passing the old state backward
+Dialogue: 0,0:19:41.27,0:19:43.94,Default,,0,0,0,,and completely ignoring the update and passing an old state.
+Dialogue: 0,0:19:43.94,0:19:47.57,Default,,0,0,0,,So this is a completely valid reducer.
+Dialogue: 0,0:19:47.57,0:19:51.08,Default,,0,0,0,,It just happened to be that it doesn't do anything.
+Dialogue: 0,0:19:51.08,0:19:55.79,Default,,0,0,0,,And so instead, we made it do something by merging these objects.
+Dialogue: 0,0:19:55.79,0:20:01.43,Default,,0,0,0,,
+Dialogue: 0,0:20:01.43,0:20:01.93,Default,,0,0,0,,Cool.
+Dialogue: 0,0:20:01.93,0:20:06.16,Default,,0,0,0,,So let's make our Redux model a little bit more advanced.
+Dialogue: 0,0:20:06.16,0:20:09.61,Default,,0,0,0,,So how was it responsible for invoking the reducer?
+Dialogue: 0,0:20:09.61,0:20:12.04,Default,,0,0,0,,And how do we actually manage the state?
+Dialogue: 0,0:20:12.04,0:20:15.40,Default,,0,0,0,,Because currently, it's not very good that the way
+Dialogue: 0,0:20:15.40,0:20:21.16,Default,,0,0,0,,that we're managing the state is just this state object that we're mutating.
+Dialogue: 0,0:20:21.16,0:20:25.00,Default,,0,0,0,,Why not try to wrap this up in something self-contained, like a class?
+Dialogue: 0,0:20:25.00,0:20:30.91,Default,,0,0,0,,And that's exactly what Redux does with this concept of a store.
+Dialogue: 0,0:20:30.91,0:20:31.71,Default,,0,0,0,,So what is a store?
+Dialogue: 0,0:20:31.71,0:20:33.52,Default,,0,0,0,,So as we talked about earlier, a store is
+Dialogue: 0,0:20:33.52,0:20:35.79,Default,,0,0,0,,responsible for maintaining some sort of state.
+Dialogue: 0,0:20:35.79,0:20:39.39,Default,,0,0,0,,
+Dialogue: 0,0:20:39.39,0:20:40.87,Default,,0,0,0,,It does a bunch of other stuff.
+Dialogue: 0,0:20:40.87,0:20:46.11,Default,,0,0,0,,But at its core, it's just responsible for remembering what the state is.
+Dialogue: 0,0:20:46.11,0:20:49.50,Default,,0,0,0,,The way that you access that state is through this [INAUDIBLE] method
+Dialogue: 0,0:20:49.50,0:20:50.48,Default,,0,0,0,,called getState.
+Dialogue: 0,0:20:50.48,0:20:52.62,Default,,0,0,0,,And so you can invoke this method called getState,
+Dialogue: 0,0:20:52.62,0:20:55.35,Default,,0,0,0,,and it'll return the current state.
+Dialogue: 0,0:20:55.35,0:20:56.73,Default,,0,0,0,,And how do you update that state?
+Dialogue: 0,0:20:56.73,0:20:58.77,Default,,0,0,0,,Well, as we talked about earlier, the only way
+Dialogue: 0,0:20:58.77,0:21:02.49,Default,,0,0,0,,to do it is by using this thing called dispatch-- by dispatching an action
+Dialogue: 0,0:21:02.49,0:21:05.25,Default,,0,0,0,,to update the state.
+Dialogue: 0,0:21:05.25,0:21:08.52,Default,,0,0,0,,And lastly, you can add listeners that get invoked when the state changes.
+Dialogue: 0,0:21:08.52,0:21:12.42,Default,,0,0,0,,And so it wouldn't be super great of a reactive model
+Dialogue: 0,0:21:12.42,0:21:16.44,Default,,0,0,0,,if the store just updated itself and didn't tell anybody,
+Dialogue: 0,0:21:16.44,0:21:19.77,Default,,0,0,0,,because the whole point of React is that the UI will react
+Dialogue: 0,0:21:19.77,0:21:23.41,Default,,0,0,0,,to updates in the application state.
+Dialogue: 0,0:21:23.41,0:21:29.49,Default,,0,0,0,,And so what Redux does is when the application state gets updated,
+Dialogue: 0,0:21:29.49,0:21:32.10,Default,,0,0,0,,it'll run some callbacks.
+Dialogue: 0,0:21:32.10,0:21:34.72,Default,,0,0,0,,But let's not include that in our implementation for now.
+Dialogue: 0,0:21:34.72,0:21:44.92,Default,,0,0,0,,
+Dialogue: 0,0:21:44.92,0:21:47.44,Default,,0,0,0,,So currently, we have this very simple reducer.
+Dialogue: 0,0:21:47.44,0:21:49.57,Default,,0,0,0,,And now let's turn it into a store.
+Dialogue: 0,0:21:49.57,0:21:51.79,Default,,0,0,0,,And so what does a store need?
+Dialogue: 0,0:21:51.79,0:21:54.64,Default,,0,0,0,,Well, it should maintain the state within itself.
+Dialogue: 0,0:21:54.64,0:21:58.57,Default,,0,0,0,,It should expose some sort of getter method called getState.
+Dialogue: 0,0:21:58.57,0:22:01.27,Default,,0,0,0,,And it should expose this method called dispatch,
+Dialogue: 0,0:22:01.27,0:22:03.91,Default,,0,0,0,,which is the way that you update these actions.
+Dialogue: 0,0:22:03.91,0:22:08.26,Default,,0,0,0,,And so let's start to do that.
+Dialogue: 0,0:22:08.26,0:22:12.64,Default,,0,0,0,,And so let's create this class called Store.
+Dialogue: 0,0:22:12.64,0:22:14.29,Default,,0,0,0,,And how do you create a store?
+Dialogue: 0,0:22:14.29,0:22:21.55,Default,,0,0,0,,Well, let's just say you pass it, maybe a reducer.
+Dialogue: 0,0:22:21.55,0:22:25.27,Default,,0,0,0,,So how does a store know how to update itself?
+Dialogue: 0,0:22:25.27,0:22:27.78,Default,,0,0,0,,And you also pass it, maybe some initial state.
+Dialogue: 0,0:22:27.78,0:22:32.33,Default,,0,0,0,,
+Dialogue: 0,0:22:32.33,0:22:34.04,Default,,0,0,0,,And what should it do in the constructor?
+Dialogue: 0,0:22:34.04,0:22:35.79,Default,,0,0,0,,Well, it should remember these things.
+Dialogue: 0,0:22:35.79,0:22:38.39,Default,,0,0,0,,And so maybe it'll say this.reducer--
+Dialogue: 0,0:22:38.39,0:22:41.30,Default,,0,0,0,,is that reducer that you passed it.
+Dialogue: 0,0:22:41.30,0:22:45.83,Default,,0,0,0,,And maybe the initial state, or the state, is that initial state.
+Dialogue: 0,0:22:45.83,0:22:51.81,Default,,0,0,0,,
+Dialogue: 0,0:22:51.81,0:22:52.31,Default,,0,0,0,,Cool.
+Dialogue: 0,0:22:52.31,0:22:54.57,Default,,0,0,0,,So now we have a store.
+Dialogue: 0,0:22:54.57,0:22:58.28,Default,,0,0,0,,It's kind of useless because all it does is create this class instance,
+Dialogue: 0,0:22:58.28,0:23:00.39,Default,,0,0,0,,and you can't actually interface with it at all.
+Dialogue: 0,0:23:00.39,0:23:05.30,Default,,0,0,0,,And so let's start to add these methods by which you can interface with it.
+Dialogue: 0,0:23:05.30,0:23:08.99,Default,,0,0,0,,So first, we said you should be able to get the state by invoking
+Dialogue: 0,0:23:08.99,0:23:10.77,Default,,0,0,0,,this thing called getState.
+Dialogue: 0,0:23:10.77,0:23:16.41,Default,,0,0,0,,And so let's create this method called getState, which is pretty simple.
+Dialogue: 0,0:23:16.41,0:23:19.07,Default,,0,0,0,,
+Dialogue: 0,0:23:19.07,0:23:24.10,Default,,0,0,0,,All it does is return this.state.
+Dialogue: 0,0:23:24.10,0:23:26.23,Default,,0,0,0,,And so now we're starting to make our simple store.
+Dialogue: 0,0:23:26.23,0:23:27.39,Default,,0,0,0,,We can test it a little bit.
+Dialogue: 0,0:23:27.39,0:23:36.37,Default,,0,0,0,,
+Dialogue: 0,0:23:36.37,0:23:40.51,Default,,0,0,0,,Let's just pass our simple reducer, and then you'll
+Dialogue: 0,0:23:40.51,0:23:44.56,Default,,0,0,0,,see the initial state of empty.
+Dialogue: 0,0:23:44.56,0:23:50.01,Default,,0,0,0,,And then let's see what the initial state is.
+Dialogue: 0,0:23:50.01,0:23:56.65,Default,,0,0,0,,And so we can do store, dot, get the State.
+Dialogue: 0,0:23:56.65,0:24:03.53,Default,,0,0,0,,
+Dialogue: 0,0:24:03.53,0:24:08.66,Default,,0,0,0,,So if we run that, we just get an empty object back, which is as expected.
+Dialogue: 0,0:24:08.66,0:24:12.05,Default,,0,0,0,,All store is currently a constructor that
+Dialogue: 0,0:24:12.05,0:24:15.02,Default,,0,0,0,,takes the reducer in an initial state, initializes
+Dialogue: 0,0:24:15.02,0:24:16.70,Default,,0,0,0,,the state to the initial state.
+Dialogue: 0,0:24:16.70,0:24:18.62,Default,,0,0,0,,And then we have no way of updating the state.
+Dialogue: 0,0:24:18.62,0:24:22.56,Default,,0,0,0,,And so when you call this.state, it just returns an empty object.
+Dialogue: 0,0:24:22.56,0:24:30.90,Default,,0,0,0,,And if we add instead past its arbitrary object like foo foo, and then ran it,
+Dialogue: 0,0:24:30.90,0:24:33.84,Default,,0,0,0,,we'll get that same object back.
+Dialogue: 0,0:24:33.84,0:24:34.34,Default,,0,0,0,,Cool.
+Dialogue: 0,0:24:34.34,0:24:41.03,Default,,0,0,0,,So not very useful yet, and so let's start to add some features to it.
+Dialogue: 0,0:24:41.03,0:24:44.03,Default,,0,0,0,,So first, and most importantly, we should have some sort of way
+Dialogue: 0,0:24:44.03,0:24:45.56,Default,,0,0,0,,to update that state.
+Dialogue: 0,0:24:45.56,0:24:49.37,Default,,0,0,0,,And the way that we do this in Redux is by dispatching an action
+Dialogue: 0,0:24:49.37,0:24:54.98,Default,,0,0,0,,or by just invoking this method called dispatch with some way of updating.
+Dialogue: 0,0:24:54.98,0:24:59.00,Default,,0,0,0,,And so the way that we've been doing this thus far
+Dialogue: 0,0:24:59.00,0:25:02.64,Default,,0,0,0,,is by just passing an object that we want merged into a state.
+Dialogue: 0,0:25:02.64,0:25:04.31,Default,,0,0,0,,And so let's do that.
+Dialogue: 0,0:25:04.31,0:25:07.40,Default,,0,0,0,,So let's have this thing called dispatch.
+Dialogue: 0,0:25:07.40,0:25:08.08,Default,,0,0,0,,We pass it.
+Dialogue: 0,0:25:08.08,0:25:11.79,Default,,0,0,0,,Well, we pass it some sort of update.
+Dialogue: 0,0:25:11.79,0:25:13.23,Default,,0,0,0,,And what does it do?
+Dialogue: 0,0:25:13.23,0:25:19.85,Default,,0,0,0,,Well, it should update the current state to be what?
+Dialogue: 0,0:25:19.85,0:25:21.77,Default,,0,0,0,,We want to run this reducer function.
+Dialogue: 0,0:25:21.77,0:25:24.85,Default,,0,0,0,,
+Dialogue: 0,0:25:24.85,0:25:26.00,Default,,0,0,0,,And which reducer function?
+Dialogue: 0,0:25:26.00,0:25:29.45,Default,,0,0,0,,Well, whichever one that we passed in the original constructor
+Dialogue: 0,0:25:29.45,0:25:31.19,Default,,0,0,0,,and stored as this.reducer.
+Dialogue: 0,0:25:31.19,0:25:36.89,Default,,0,0,0,,So let's invoke that with the current state, and then any update
+Dialogue: 0,0:25:36.89,0:25:40.07,Default,,0,0,0,,that we want to pass it.
+Dialogue: 0,0:25:40.07,0:25:43.44,Default,,0,0,0,,And that's pretty much it.
+Dialogue: 0,0:25:43.44,0:25:49.19,Default,,0,0,0,,And so now down here, rather than having to handle this ourselves--
+Dialogue: 0,0:25:49.19,0:25:55.40,Default,,0,0,0,,and by this I mean replacing the old state with the reducer,
+Dialogue: 0,0:25:55.40,0:25:58.16,Default,,0,0,0,,with value after passing it through the reducer--
+Dialogue: 0,0:25:58.16,0:26:01.31,Default,,0,0,0,,that's now abstracted away from us using this thing called a store.
+Dialogue: 0,0:26:01.31,0:26:07.35,Default,,0,0,0,,And so now we can just do store, dot, dispatch this object.
+Dialogue: 0,0:26:07.35,0:26:08.44,Default,,0,0,0,,And the same goes to here.
+Dialogue: 0,0:26:08.44,0:26:23.71,Default,,0,0,0,,
+Dialogue: 0,0:26:23.71,0:26:26.10,Default,,0,0,0,,And so now, we're doing things a little bit differently.
+Dialogue: 0,0:26:26.10,0:26:29.43,Default,,0,0,0,,So rather than creating the state ourselves
+Dialogue: 0,0:26:29.43,0:26:36.90,Default,,0,0,0,,and manually going through and replacing state with the output of the reducer
+Dialogue: 0,0:26:36.90,0:26:39.78,Default,,0,0,0,,and passing in the old state, now that's handled for us by this thing
+Dialogue: 0,0:26:39.78,0:26:40.43,Default,,0,0,0,,called a store.
+Dialogue: 0,0:26:40.43,0:26:41.64,Default,,0,0,0,,And how is it handled for us?
+Dialogue: 0,0:26:41.64,0:26:48.18,Default,,0,0,0,,Well, the store is actually storing the state as part of its class.
+Dialogue: 0,0:26:48.18,0:26:50.91,Default,,0,0,0,,And so the state gets initialized to some initial state.
+Dialogue: 0,0:26:50.91,0:26:55.41,Default,,0,0,0,,And every time we dispatch an action or dispatch an update,
+Dialogue: 0,0:26:55.41,0:26:56.43,Default,,0,0,0,,it handles that for us.
+Dialogue: 0,0:26:56.43,0:26:58.29,Default,,0,0,0,,It remembers what the reducer is.
+Dialogue: 0,0:26:58.29,0:27:01.18,Default,,0,0,0,,It knows how it should update its own state by just doing this,
+Dialogue: 0,0:27:01.18,0:27:05.30,Default,,0,0,0,,dot, state, equals the old state, applying an update through the reducer.
+Dialogue: 0,0:27:05.30,0:27:06.51,Default,,0,0,0,,But we don't care about that.
+Dialogue: 0,0:27:06.51,0:27:08.64,Default,,0,0,0,,We don't need to know the implementation details.
+Dialogue: 0,0:27:08.64,0:27:09.75,Default,,0,0,0,,We don't really care.
+Dialogue: 0,0:27:09.75,0:27:15.24,Default,,0,0,0,,All we care is that we just pass this store.dispatch function,
+Dialogue: 0,0:27:15.24,0:27:17.19,Default,,0,0,0,,some update that we want to apply.
+Dialogue: 0,0:27:17.19,0:27:19.53,Default,,0,0,0,,And it goes ahead and does the rest of it.
+Dialogue: 0,0:27:19.53,0:27:22.47,Default,,0,0,0,,We don't even care that state is stored as an object.
+Dialogue: 0,0:27:22.47,0:27:24.24,Default,,0,0,0,,That's all just abstracted away.
+Dialogue: 0,0:27:24.24,0:27:27.21,Default,,0,0,0,,All that we care about is we update the state
+Dialogue: 0,0:27:27.21,0:27:30.36,Default,,0,0,0,,by passing something into dispatch.
+Dialogue: 0,0:27:30.36,0:27:35.37,Default,,0,0,0,,And we get the state back by invoking this thing called getState.
+Dialogue: 0,0:27:35.37,0:27:38.78,Default,,0,0,0,,We don't care that the state is just stored on the constructor.
+Dialogue: 0,0:27:38.78,0:27:40.83,Default,,0,0,0,,For all we know, maybe it's a tree, or maybe it's
+Dialogue: 0,0:27:40.83,0:27:43.65,Default,,0,0,0,,some weird data structure for performance.
+Dialogue: 0,0:27:43.65,0:27:45.47,Default,,0,0,0,,It doesn't matter.
+Dialogue: 0,0:27:45.47,0:27:48.09,Default,,0,0,0,,All that we care about is the API for this store.
+Dialogue: 0,0:27:48.09,0:27:52.17,Default,,0,0,0,,And this API is just getting the state and dispatching state updates.
+Dialogue: 0,0:27:52.17,0:27:53.76,Default,,0,0,0,,And so let's make sure it works.
+Dialogue: 0,0:27:53.76,0:27:56.94,Default,,0,0,0,,
+Dialogue: 0,0:27:56.94,0:28:00.67,Default,,0,0,0,,So we create a new store down here by saying, give me a new store.
+Dialogue: 0,0:28:00.67,0:28:03.47,Default,,0,0,0,,I'm going to pass it, the reducer function that we defined up here.
+Dialogue: 0,0:28:03.47,0:28:07.09,Default,,0,0,0,,So let's actually just move this down.
+Dialogue: 0,0:28:07.09,0:28:08.05,Default,,0,0,0,,And maybe this as well.
+Dialogue: 0,0:28:08.05,0:28:12.10,Default,,0,0,0,,
+Dialogue: 0,0:28:12.10,0:28:15.33,Default,,0,0,0,,So now, let's just not care about the implementation details of store.
+Dialogue: 0,0:28:15.33,0:28:17.83,Default,,0,0,0,,All that we care about is we define this thing called merge,
+Dialogue: 0,0:28:17.83,0:28:19.23,Default,,0,0,0,,which merges objects.
+Dialogue: 0,0:28:19.23,0:28:23.71,Default,,0,0,0,,We define a reducer which takes some states and some update,
+Dialogue: 0,0:28:23.71,0:28:26.05,Default,,0,0,0,,and applies the update by merging it in.
+Dialogue: 0,0:28:26.05,0:28:30.55,Default,,0,0,0,,And then we create that new store with that reducer and some initial value
+Dialogue: 0,0:28:30.55,0:28:31.18,Default,,0,0,0,,called foo foo.
+Dialogue: 0,0:28:31.18,0:28:36.61,Default,,0,0,0,,And let's, for now, actually just not pass an initial value at all.
+Dialogue: 0,0:28:36.61,0:28:39.35,Default,,0,0,0,,And let's see what happens.
+Dialogue: 0,0:28:39.35,0:28:43.90,Default,,0,0,0,,And so we dispatch a few updates, and then now let's
+Dialogue: 0,0:28:43.90,0:28:51.08,Default,,0,0,0,,log some initials, or the state after those dispatches.
+Dialogue: 0,0:28:51.08,0:28:52.83,Default,,0,0,0,,And so we get back what we wanted.
+Dialogue: 0,0:28:52.83,0:28:58.10,Default,,0,0,0,,We get back foo baz, bar bar, which is the same thing as up here.
+Dialogue: 0,0:28:58.10,0:28:59.40,Default,,0,0,0,,And what's the main difference?
+Dialogue: 0,0:28:59.40,0:29:02.94,Default,,0,0,0,,Well, the main difference is that in reducer, we
+Dialogue: 0,0:29:02.94,0:29:04.90,Default,,0,0,0,,had to handle the updates ourselves.
+Dialogue: 0,0:29:04.90,0:29:11.31,Default,,0,0,0,,We had to handle passing in to reducer the old state and the new updates.
+Dialogue: 0,0:29:11.31,0:29:21.04,Default,,0,0,0,,And in this new file called Store, we no longer care about those things.
+Dialogue: 0,0:29:21.04,0:29:25.03,Default,,0,0,0,,We just care that we have a new store, and we're passing a new reducer.
+Dialogue: 0,0:29:25.03,0:29:29.38,Default,,0,0,0,,And we're just dispatching some additional changes.
+Dialogue: 0,0:29:29.38,0:29:32.16,Default,,0,0,0,,
+Dialogue: 0,0:29:32.16,0:29:32.99,Default,,0,0,0,,Cool.
+Dialogue: 0,0:29:32.99,0:29:36.14,Default,,0,0,0,,And so this is not really super helpful for us right now.
+Dialogue: 0,0:29:36.14,0:29:37.78,Default,,0,0,0,,All it does is merge some objects.
+Dialogue: 0,0:29:37.78,0:29:41.61,Default,,0,0,0,,But let's actually modify this such that it will help us.
+Dialogue: 0,0:29:41.61,0:29:45.65,Default,,0,0,0,,And so in previous weeks, what we've been working on is this contacts app.
+Dialogue: 0,0:29:45.65,0:29:50.33,Default,,0,0,0,,And so I changed a few things from last week, or couple weeks ago to this week,
+Dialogue: 0,0:29:50.33,0:29:53.99,Default,,0,0,0,,namely that the login screen is gone and the asynchronous request
+Dialogue: 0,0:29:53.99,0:29:55.82,Default,,0,0,0,,for fetching the contacts is gone.
+Dialogue: 0,0:29:55.82,0:29:58.52,Default,,0,0,0,,And so I just reverted the app to where it
+Dialogue: 0,0:29:58.52,0:30:02.92,Default,,0,0,0,,was before we add asynchronous actions.
+Dialogue: 0,0:30:02.92,0:30:06.19,Default,,0,0,0,,And so what do we care about in this simple application?
+Dialogue: 0,0:30:06.19,0:30:09.20,Default,,0,0,0,,Well, we care about the context, obviously.
+Dialogue: 0,0:30:09.20,0:30:15.17,Default,,0,0,0,,We care about maybe adding new contacts by using this Add button in the top.
+Dialogue: 0,0:30:15.17,0:30:16.73,Default,,0,0,0,,And we kind of care about the user.
+Dialogue: 0,0:30:16.73,0:30:22.34,Default,,0,0,0,,And so before we had this login page where a user would log in--
+Dialogue: 0,0:30:22.34,0:30:25.10,Default,,0,0,0,,and presumably we should be storing some sort of token
+Dialogue: 0,0:30:25.10,0:30:27.05,Default,,0,0,0,,or store the fact that the users logged in--
+Dialogue: 0,0:30:27.05,0:30:30.28,Default,,0,0,0,,and so we need to care about the contacts,
+Dialogue: 0,0:30:30.28,0:30:33.39,Default,,0,0,0,,and we need to care about some concept of having a user-user app,
+Dialogue: 0,0:30:33.39,0:30:35.49,Default,,0,0,0,,so we can tell if they're logged in or not.
+Dialogue: 0,0:30:35.49,0:30:38.80,Default,,0,0,0,,And so let's use what we've implemented in Redux thus far
+Dialogue: 0,0:30:38.80,0:30:40.55,Default,,0,0,0,,to actually keep track of that information
+Dialogue: 0,0:30:40.55,0:30:43.67,Default,,0,0,0,,in Redux, rather than having to do it ourself scattered throughout our app.
+Dialogue: 0,0:30:43.67,0:30:59.55,Default,,0,0,0,,
+Dialogue: 0,0:30:59.55,0:31:04.65,Default,,0,0,0,,So currently our store takes a reducer in an initial state.
+Dialogue: 0,0:31:04.65,0:31:05.78,Default,,0,0,0,,It stores those things.
+Dialogue: 0,0:31:05.78,0:31:08.94,Default,,0,0,0,,It gives us this thing called getState, which returns our state,
+Dialogue: 0,0:31:08.94,0:31:14.16,Default,,0,0,0,,and gives us a method called dispatch which applies any updates that we
+Dialogue: 0,0:31:14.16,0:31:16.27,Default,,0,0,0,,pass it to our state.
+Dialogue: 0,0:31:16.27,0:31:18.15,Default,,0,0,0,,And so we don't have to change anything there
+Dialogue: 0,0:31:18.15,0:31:20.67,Default,,0,0,0,,for the context of our contacts app.
+Dialogue: 0,0:31:20.67,0:31:23.64,Default,,0,0,0,,Though we do have to change this reducer.
+Dialogue: 0,0:31:23.64,0:31:27.32,Default,,0,0,0,,So presumably, if we want to update--
+Dialogue: 0,0:31:27.32,0:31:28.98,Default,,0,0,0,,maybe we want to add a contact.
+Dialogue: 0,0:31:28.98,0:31:32.26,Default,,0,0,0,,The way that we would do that would be appending that to an array.
+Dialogue: 0,0:31:32.26,0:31:34.14,Default,,0,0,0,,And so there's not really a convenient way
+Dialogue: 0,0:31:34.14,0:31:38.94,Default,,0,0,0,,to do this with our current reducers, since it's just merging objects.
+Dialogue: 0,0:31:38.94,0:31:42.96,Default,,0,0,0,,So let's actually implement a reducer that will.
+Dialogue: 0,0:31:42.96,0:31:53.85,Default,,0,0,0,,So say we-- let's call it the contacts reducer.
+Dialogue: 0,0:31:53.85,0:31:58.44,Default,,0,0,0,,And the contacts reducer, or contact reducer, takes the state
+Dialogue: 0,0:31:58.44,0:32:01.29,Default,,0,0,0,,and presumably the state is all the old contacts,
+Dialogue: 0,0:32:01.29,0:32:05.16,Default,,0,0,0,,and rather than passing an update, let's just pass it a new contact.
+Dialogue: 0,0:32:05.16,0:32:07.70,Default,,0,0,0,,
+Dialogue: 0,0:32:07.70,0:32:09.27,Default,,0,0,0,,And what should this do?
+Dialogue: 0,0:32:09.27,0:32:13.82,Default,,0,0,0,,So state, presumably, is just a list of old contacts.
+Dialogue: 0,0:32:13.82,0:32:21.80,Default,,0,0,0,,And so let's just spread those old contacts,
+Dialogue: 0,0:32:21.80,0:32:25.64,Default,,0,0,0,,and then add a new content at the end.
+Dialogue: 0,0:32:25.64,0:32:29.33,Default,,0,0,0,,And there's our reducer for our contacts.
+Dialogue: 0,0:32:29.33,0:32:34.38,Default,,0,0,0,,How about four-hour user?
+Dialogue: 0,0:32:34.38,0:32:36.65,Default,,0,0,0,,So maybe we should have--
+Dialogue: 0,0:32:36.65,0:32:40.25,Default,,0,0,0,,how should we keep track of our user?
+Dialogue: 0,0:32:40.25,0:32:43.37,Default,,0,0,0,,Or more importantly, what is important to know about our user?
+Dialogue: 0,0:32:43.37,0:32:47.42,Default,,0,0,0,,Maybe something about their username, maybe whether they are logged in
+Dialogue: 0,0:32:47.42,0:32:52.38,Default,,0,0,0,,or not, maybe some other keys which have values.
+Dialogue: 0,0:32:52.38,0:32:55.78,Default,,0,0,0,,And so what's the way that we generally store key value pairs in JavaScript?
+Dialogue: 0,0:32:55.78,0:32:57.59,Default,,0,0,0,,It's usually just a simple array.
+Dialogue: 0,0:32:57.59,0:32:59.97,Default,,0,0,0,,I mean a simple object.
+Dialogue: 0,0:32:59.97,0:33:03.92,Default,,0,0,0,,So let's have this thing called a userReducer, which takes
+Dialogue: 0,0:33:03.92,0:33:09.53,Default,,0,0,0,,an old state and maybe an update again.
+Dialogue: 0,0:33:09.53,0:33:12.00,Default,,0,0,0,,And how are we going to handle this?
+Dialogue: 0,0:33:12.00,0:33:14.12,Default,,0,0,0,,Well, we'll just apply the update to this state.
+Dialogue: 0,0:33:14.12,0:33:16.37,Default,,0,0,0,,So it's basically the same as our reducer from before.
+Dialogue: 0,0:33:16.37,0:33:21.85,Default,,0,0,0,,We'll just merge into the old state that update.
+Dialogue: 0,0:33:21.85,0:33:22.35,Default,,0,0,0,,Cool.
+Dialogue: 0,0:33:22.35,0:33:24.98,Default,,0,0,0,,So now we have two separate reducers.
+Dialogue: 0,0:33:24.98,0:33:29.21,Default,,0,0,0,,One handles any updates for contacts.
+Dialogue: 0,0:33:29.21,0:33:33.44,Default,,0,0,0,,One handles any updates for a user.
+Dialogue: 0,0:33:33.44,0:33:40.46,Default,,0,0,0,,And so how are we going to apply that for our store as implemented?
+Dialogue: 0,0:33:40.46,0:33:43.43,Default,,0,0,0,,Because the store right now only takes a single reducer.
+Dialogue: 0,0:33:43.43,0:33:48.22,Default,,0,0,0,,It doesn't expect a reducer for contacts, a reducer for users,
+Dialogue: 0,0:33:48.22,0:33:52.73,Default,,0,0,0,,a reducer for metadata, a reducer for any other stuff that we want to store.
+Dialogue: 0,0:33:52.73,0:33:54.48,Default,,0,0,0,,It only expects one.
+Dialogue: 0,0:33:54.48,0:33:58.64,Default,,0,0,0,,And so we actually have to combine our reducers into just a singular reducer.
+Dialogue: 0,0:33:58.64,0:34:02.42,Default,,0,0,0,,And so if you remember, when we were talking about the pillars of Redux,
+Dialogue: 0,0:34:02.42,0:34:05.58,Default,,0,0,0,,everything is stored in one singular store, so one big object.
+Dialogue: 0,0:34:05.58,0:34:10.48,Default,,0,0,0,,But right now, we have two separate things
+Dialogue: 0,0:34:10.48,0:34:15.38,Default,,0,0,0,,that track our application state, one for contacts and one for users.
+Dialogue: 0,0:34:15.38,0:34:18.94,Default,,0,0,0,,And so how might we go about combining those reducers such
+Dialogue: 0,0:34:18.94,0:34:25.44,Default,,0,0,0,,that we have just one reducer or one source of truth for our app?
+Dialogue: 0,0:34:25.44,0:34:34.54,Default,,0,0,0,,Well, the reducer is going to just take a state and some update,
+Dialogue: 0,0:34:34.54,0:34:38.29,Default,,0,0,0,,just like all of our other reducers.
+Dialogue: 0,0:34:38.29,0:34:42.90,Default,,0,0,0,,And it's going to have to return some new state.
+Dialogue: 0,0:34:42.90,0:34:49.13,Default,,0,0,0,,And so we have to somehow tell, via this update, what we should be changing.
+Dialogue: 0,0:34:49.13,0:34:52.44,Default,,0,0,0,,So we're starting to run into a little bit of trouble here.
+Dialogue: 0,0:34:52.44,0:35:03.29,Default,,0,0,0,,In our last iteration, we were just passing an object to this dispatch.
+Dialogue: 0,0:35:03.29,0:35:09.74,Default,,0,0,0,,So its object just gets blindly merged into our state in our store.
+Dialogue: 0,0:35:09.74,0:35:12.14,Default,,0,0,0,,But now our store is a little bit complicated.
+Dialogue: 0,0:35:12.14,0:35:16.20,Default,,0,0,0,,As soon as we're hitting a real world use case,
+Dialogue: 0,0:35:16.20,0:35:18.56,Default,,0,0,0,,now we have multiple different keys in our store.
+Dialogue: 0,0:35:18.56,0:35:22.88,Default,,0,0,0,,And it's nontrivial how we're going to know exactly what we should update.
+Dialogue: 0,0:35:22.88,0:35:29.48,Default,,0,0,0,,If we just pass something like foo foo into our new store,
+Dialogue: 0,0:35:29.48,0:35:33.53,Default,,0,0,0,,how do we know whether that foo foo is an update for user,
+Dialogue: 0,0:35:33.53,0:35:36.38,Default,,0,0,0,,or foo foo is a new contact?
+Dialogue: 0,0:35:36.38,0:35:39.80,Default,,0,0,0,,We're starting to run into the limitations of how
+Dialogue: 0,0:35:39.80,0:35:42.36,Default,,0,0,0,,we've implemented our current reducer.
+Dialogue: 0,0:35:42.36,0:35:43.61,Default,,0,0,0,,And so how does Redux?
+Dialogue: 0,0:35:43.61,0:35:45.13,Default,,0,0,0,,Actually solve this?
+Dialogue: 0,0:35:45.13,0:35:48.62,Default,,0,0,0,,Well, through these things called actions.
+Dialogue: 0,0:35:48.62,0:35:51.44,Default,,0,0,0,,So an action is basically just a piece of data
+Dialogue: 0,0:35:51.44,0:35:56.42,Default,,0,0,0,,that contains all of the information required to make a state update.
+Dialogue: 0,0:35:56.42,0:36:03.84,Default,,0,0,0,,And so in our previous store implementation,
+Dialogue: 0,0:36:03.84,0:36:06.80,Default,,0,0,0,,this is true about our current update.
+Dialogue: 0,0:36:06.80,0:36:12.29,Default,,0,0,0,,Everything that we needed to update our state is passed as an argument
+Dialogue: 0,0:36:12.29,0:36:13.37,Default,,0,0,0,,to dispatch.
+Dialogue: 0,0:36:13.37,0:36:17.21,Default,,0,0,0,,So this could be considered an action, because it has everything that we
+Dialogue: 0,0:36:17.21,0:36:19.97,Default,,0,0,0,,need to update our state appropriately.
+Dialogue: 0,0:36:19.97,0:36:22.62,Default,,0,0,0,,But now we're starting to hit a limitation when
+Dialogue: 0,0:36:22.62,0:36:24.98,Default,,0,0,0,,we have a more complex store like this.
+Dialogue: 0,0:36:24.98,0:36:27.68,Default,,0,0,0,,We can't just pass an object like foo foo,
+Dialogue: 0,0:36:27.68,0:36:31.46,Default,,0,0,0,,because there's no longer enough information
+Dialogue: 0,0:36:31.46,0:36:34.40,Default,,0,0,0,,to make that full-state update.
+Dialogue: 0,0:36:34.40,0:36:36.12,Default,,0,0,0,,And so how are we going to do that?
+Dialogue: 0,0:36:36.12,0:36:40.31,Default,,0,0,0,,Well, generally actions are objects with the type key.
+Dialogue: 0,0:36:40.31,0:36:45.25,Default,,0,0,0,,That didn't necessarily have to be true in our naive implementation of store.
+Dialogue: 0,0:36:45.25,0:36:47.21,Default,,0,0,0,,But now it makes more sense to have an object,
+Dialogue: 0,0:36:47.21,0:36:51.08,Default,,0,0,0,,because we need more key value pairs.
+Dialogue: 0,0:36:51.08,0:36:56.54,Default,,0,0,0,,Usually, this object has a key called type.
+Dialogue: 0,0:36:56.54,0:36:59.75,Default,,0,0,0,,Or in other words, what are we doing here?
+Dialogue: 0,0:36:59.75,0:37:02.63,Default,,0,0,0,,Like, what update are we making?
+Dialogue: 0,0:37:02.63,0:37:04.57,Default,,0,0,0,,What should we be updating?
+Dialogue: 0,0:37:04.57,0:37:09.50,Default,,0,0,0,,And so there actually is a loose spec for what
+Dialogue: 0,0:37:09.50,0:37:12.59,Default,,0,0,0,,is considered an action in Flux.
+Dialogue: 0,0:37:12.59,0:37:14.27,Default,,0,0,0,,And so let's go ahead and open that up.
+Dialogue: 0,0:37:14.27,0:37:19.91,Default,,0,0,0,,And we see here a general guideline to this thing called a standard action,
+Dialogue: 0,0:37:19.91,0:37:24.77,Default,,0,0,0,,or an action that we should be using universally for all
+Dialogue: 0,0:37:24.77,0:37:26.96,Default,,0,0,0,,of our Flux or Redux applications.
+Dialogue: 0,0:37:26.96,0:37:29.35,Default,,0,0,0,,And so the motivation behind that is that it's
+Dialogue: 0,0:37:29.35,0:37:32.60,Default,,0,0,0,,a lot easier to work with actions if we can make certain assumptions about how
+Dialogue: 0,0:37:32.60,0:37:34.77,Default,,0,0,0,,they are shaped.
+Dialogue: 0,0:37:34.77,0:37:37.55,Default,,0,0,0,,Because it wouldn't really make sense if in one application
+Dialogue: 0,0:37:37.55,0:37:41.81,Default,,0,0,0,,we have our actions as objects, and maybe in a separate application
+Dialogue: 0,0:37:41.81,0:37:42.50,Default,,0,0,0,,we have a raise.
+Dialogue: 0,0:37:42.50,0:37:44.21,Default,,0,0,0,,In a separate application, it's a number.
+Dialogue: 0,0:37:44.21,0:37:46.53,Default,,0,0,0,,And maybe in another application it's a string.
+Dialogue: 0,0:37:46.53,0:37:50.56,Default,,0,0,0,,And so as we scale up, we want to have some sort of uniformity
+Dialogue: 0,0:37:50.56,0:37:51.56,Default,,0,0,0,,across our applications.
+Dialogue: 0,0:37:51.56,0:37:55.62,Default,,0,0,0,,And so no matter what application we go to maintain, we know, hey,
+Dialogue: 0,0:37:55.62,0:37:58.68,Default,,0,0,0,,our application actions should all look the same.
+Dialogue: 0,0:37:58.68,0:38:02.15,Default,,0,0,0,,They should have some sort of key that tells me the type of update
+Dialogue: 0,0:38:02.15,0:38:04.61,Default,,0,0,0,,that we're doing here.
+Dialogue: 0,0:38:04.61,0:38:10.28,Default,,0,0,0,,And so the goal of these actions is that they should be human-friendly,
+Dialogue: 0,0:38:10.28,0:38:13.74,Default,,0,0,0,,so Flux standard actions should be easy to read, easy to write.
+Dialogue: 0,0:38:13.74,0:38:15.53,Default,,0,0,0,,They should be useful.
+Dialogue: 0,0:38:15.53,0:38:19.46,Default,,0,0,0,,Presumably, we're not just creating these arbitrary things
+Dialogue: 0,0:38:19.46,0:38:20.46,Default,,0,0,0,,for the sake of it.
+Dialogue: 0,0:38:20.46,0:38:23.54,Default,,0,0,0,,We want them to actually have a use case, to be useful for application.
+Dialogue: 0,0:38:23.54,0:38:25.91,Default,,0,0,0,,And lastly, we want them to be simple.
+Dialogue: 0,0:38:25.91,0:38:29.75,Default,,0,0,0,,There's no reason to add additional complexity when we don't need to.
+Dialogue: 0,0:38:29.75,0:38:33.57,Default,,0,0,0,,And so a basic action might look like this.
+Dialogue: 0,0:38:33.57,0:38:39.30,Default,,0,0,0,,So we have a type that designates what exactly should this action be doing.
+Dialogue: 0,0:38:39.30,0:38:42.69,Default,,0,0,0,,We have a payload, or in other words, like, OK,
+Dialogue: 0,0:38:42.69,0:38:44.07,Default,,0,0,0,,I know I should be updating this.
+Dialogue: 0,0:38:44.07,0:38:46.71,Default,,0,0,0,,What should I actually update it with?
+Dialogue: 0,0:38:46.71,0:38:50.09,Default,,0,0,0,,And so, generally, actions are objects with the type key,
+Dialogue: 0,0:38:50.09,0:38:54.39,Default,,0,0,0,,and maybe they have other things like an air property, payload, or meta.
+Dialogue: 0,0:38:54.39,0:38:56.99,Default,,0,0,0,,And for our particular implementation, we'll
+Dialogue: 0,0:38:56.99,0:39:01.55,Default,,0,0,0,,be creating objects with a type and a payload.
+Dialogue: 0,0:39:01.55,0:39:03.91,Default,,0,0,0,,And so let's go ahead and do that now.
+Dialogue: 0,0:39:03.91,0:39:16.33,Default,,0,0,0,,
+Dialogue: 0,0:39:16.33,0:39:16.83,Default,,0,0,0,,All right.
+Dialogue: 0,0:39:16.83,0:39:23.58,Default,,0,0,0,,So now we know that when we pass in this argument to dispatch,
+Dialogue: 0,0:39:23.58,0:39:25.63,Default,,0,0,0,,we need to include a little bit more information.
+Dialogue: 0,0:39:25.63,0:39:29.76,Default,,0,0,0,,It's not enough just to have an object with foo foo.
+Dialogue: 0,0:39:29.76,0:39:36.33,Default,,0,0,0,,So let's actually pass a more complex object
+Dialogue: 0,0:39:36.33,0:39:42.64,Default,,0,0,0,,where the payload ends up being foo foo, but that's passing a type,
+Dialogue: 0,0:39:42.64,0:39:44.85,Default,,0,0,0,,so that we know exactly what we should be doing here.
+Dialogue: 0,0:39:44.85,0:39:52.61,Default,,0,0,0,,And maybe the type is something like update the user.
+Dialogue: 0,0:39:52.61,0:39:54.77,Default,,0,0,0,,And maybe down here, we do the same thing.
+Dialogue: 0,0:39:54.77,0:40:02.33,Default,,0,0,0,,
+Dialogue: 0,0:40:02.33,0:40:08.88,Default,,0,0,0,,We want to update that user with a payload of that bar bar,
+Dialogue: 0,0:40:08.88,0:40:10.09,Default,,0,0,0,,and the same thing done here.
+Dialogue: 0,0:40:10.09,0:40:19.79,Default,,0,0,0,,
+Dialogue: 0,0:40:19.79,0:40:22.52,Default,,0,0,0,,So now it looks a little bit more complicated.
+Dialogue: 0,0:40:22.52,0:40:24.41,Default,,0,0,0,,Our actions are no longer simple objects.
+Dialogue: 0,0:40:24.41,0:40:26.66,Default,,0,0,0,,Now they are a nested object where they have
+Dialogue: 0,0:40:26.66,0:40:30.09,Default,,0,0,0,,a type that is letting us know that we should be updating the user.
+Dialogue: 0,0:40:30.09,0:40:32.69,Default,,0,0,0,,And it has a payload, which is just letting us know
+Dialogue: 0,0:40:32.69,0:40:34.98,Default,,0,0,0,,how we should be updating that user.
+Dialogue: 0,0:40:34.98,0:40:36.32,Default,,0,0,0,,And there's a syntax error here.
+Dialogue: 0,0:40:36.32,0:40:39.26,Default,,0,0,0,,
+Dialogue: 0,0:40:39.26,0:40:42.59,Default,,0,0,0,,And so now let's actually look for that type in our reducer.
+Dialogue: 0,0:40:42.59,0:40:45.98,Default,,0,0,0,,And so now, rather than passing a state and update to a user,
+Dialogue: 0,0:40:45.98,0:40:49.15,Default,,0,0,0,,now we're passing a state and an action.
+Dialogue: 0,0:40:49.15,0:40:54.53,Default,,0,0,0,,And so now we have some sort of signal about what part of the state
+Dialogue: 0,0:40:54.53,0:40:55.82,Default,,0,0,0,,we should be updating.
+Dialogue: 0,0:40:55.82,0:41:01.55,Default,,0,0,0,,And so let's do if action, dot, type is this thing called
+Dialogue: 0,0:41:01.55,0:41:05.57,Default,,0,0,0,,Update User, what should we do here?
+Dialogue: 0,0:41:05.57,0:41:08.88,Default,,0,0,0,,
+Dialogue: 0,0:41:08.88,0:41:13.94,Default,,0,0,0,,Well, we know exactly how we want to update the user.
+Dialogue: 0,0:41:13.94,0:41:17.57,Default,,0,0,0,,It's dictated by this userReducer.
+Dialogue: 0,0:41:17.57,0:41:19.73,Default,,0,0,0,,And we know how we want to update the contact.
+Dialogue: 0,0:41:19.73,0:41:21.03,Default,,0,0,0,,We don't.
+Dialogue: 0,0:41:21.03,0:41:33.46,Default,,0,0,0,,And so let's actually return here an object that maintains the old shape.
+Dialogue: 0,0:41:33.46,0:41:36.35,Default,,0,0,0,,So the old state is intact.
+Dialogue: 0,0:41:36.35,0:41:38.99,Default,,0,0,0,,And now we want to update the user key.
+Dialogue: 0,0:41:38.99,0:41:40.58,Default,,0,0,0,,And the user key, how do we update it?
+Dialogue: 0,0:41:40.58,0:41:43.08,Default,,0,0,0,,Well, we pass it into the userReducer.
+Dialogue: 0,0:41:43.08,0:41:45.89,Default,,0,0,0,,
+Dialogue: 0,0:41:45.89,0:41:48.56,Default,,0,0,0,,And what do we pass into the userReducer?
+Dialogue: 0,0:41:48.56,0:41:53.35,Default,,0,0,0,,So right now, the userReducer expects a state in update,
+Dialogue: 0,0:41:53.35,0:41:58.20,Default,,0,0,0,,and it's going to merge the update into the old state.
+Dialogue: 0,0:41:58.20,0:42:00.62,Default,,0,0,0,,And so what states are we passing onto user-reducer here?
+Dialogue: 0,0:42:00.62,0:42:02.87,Default,,0,0,0,,Is it the state here?
+Dialogue: 0,0:42:02.87,0:42:03.80,Default,,0,0,0,,Not really, right?
+Dialogue: 0,0:42:03.80,0:42:06.23,Default,,0,0,0,,Because the state here is responding to what state?
+Dialogue: 0,0:42:06.23,0:42:07.94,Default,,0,0,0,,It's responding to the entire application
+Dialogue: 0,0:42:07.94,0:42:12.35,Default,,0,0,0,,state, that includes all of the contacts that we have and the user.
+Dialogue: 0,0:42:12.35,0:42:15.65,Default,,0,0,0,,And the userReducer really doesn't care about any contacts.
+Dialogue: 0,0:42:15.65,0:42:18.32,Default,,0,0,0,,It only cares about the user itself.
+Dialogue: 0,0:42:18.32,0:42:21.44,Default,,0,0,0,,And so rather than passing the entire application state there,
+Dialogue: 0,0:42:21.44,0:42:23.77,Default,,0,0,0,,we only care about the user state.
+Dialogue: 0,0:42:23.77,0:42:27.35,Default,,0,0,0,,And so we can just do state, dot, user here.
+Dialogue: 0,0:42:27.35,0:42:28.73,Default,,0,0,0,,And how do you want to update it?
+Dialogue: 0,0:42:28.73,0:42:30.27,Default,,0,0,0,,Well, it's just that actions payload.
+Dialogue: 0,0:42:30.27,0:42:34.65,Default,,0,0,0,,
+Dialogue: 0,0:42:34.65,0:42:38.31,Default,,0,0,0,,And then if the action type isn't update user, just return the old state.
+Dialogue: 0,0:42:38.31,0:42:42.99,Default,,0,0,0,,
+Dialogue: 0,0:42:42.99,0:42:45.79,Default,,0,0,0,,So there's going to be invalid syntax here.
+Dialogue: 0,0:42:45.79,0:42:57.44,Default,,0,0,0,,So let's just use our merge helper function here,
+Dialogue: 0,0:42:57.44,0:43:03.05,Default,,0,0,0,,where we're merging this new object into state.
+Dialogue: 0,0:43:03.05,0:43:05.76,Default,,0,0,0,,So it's basically the same thing that we had written before, just
+Dialogue: 0,0:43:05.76,0:43:08.38,Default,,0,0,0,,in different syntax.
+Dialogue: 0,0:43:08.38,0:43:10.98,Default,,0,0,0,,So can we all follow what happened here?
+Dialogue: 0,0:43:10.98,0:43:16.32,Default,,0,0,0,,So we create a store, and we pass in a reducer.
+Dialogue: 0,0:43:16.32,0:43:17.69,Default,,0,0,0,,What is the reducer?
+Dialogue: 0,0:43:17.69,0:43:21.03,Default,,0,0,0,,Well, the reducer, it takes a state, and it takes an action.
+Dialogue: 0,0:43:21.03,0:43:26.85,Default,,0,0,0,,And what's the logic behind the way that we update the state?
+Dialogue: 0,0:43:26.85,0:43:29.55,Default,,0,0,0,,Well, if the action has a type called Update User,
+Dialogue: 0,0:43:29.55,0:43:31.32,Default,,0,0,0,,we're going to update the user.
+Dialogue: 0,0:43:31.32,0:43:33.39,Default,,0,0,0,,And we don't care about any other types.
+Dialogue: 0,0:43:33.39,0:43:38.97,Default,,0,0,0,,If it passes any other type, then we're just going to return the state as is.
+Dialogue: 0,0:43:38.97,0:43:42.69,Default,,0,0,0,,But what exactly happens when you passed in something
+Dialogue: 0,0:43:42.69,0:43:46.33,Default,,0,0,0,,where the type is update user?
+Dialogue: 0,0:43:46.33,0:43:51.54,Default,,0,0,0,,Well, we call that userReducer with the payload.
+Dialogue: 0,0:43:51.54,0:43:52.38,Default,,0,0,0,,What is the payload?
+Dialogue: 0,0:43:52.38,0:43:55.23,Default,,0,0,0,,Well, it's just any update that we want to do.
+Dialogue: 0,0:43:55.23,0:43:56.88,Default,,0,0,0,,Why are we calling it payload?
+Dialogue: 0,0:43:56.88,0:44:02.79,Default,,0,0,0,,Well, that's just the convention as dictated by Flux [INAUDIBLE]
+Dialogue: 0,0:44:02.79,0:44:05.82,Default,,0,0,0,,And so what happens in this userReducer?
+Dialogue: 0,0:44:05.82,0:44:09.32,Default,,0,0,0,,Well, we pass it the old state of the user.
+Dialogue: 0,0:44:09.32,0:44:12.09,Default,,0,0,0,,And we pass it the update that we want to make.
+Dialogue: 0,0:44:12.09,0:44:14.22,Default,,0,0,0,,And we don't really care what happens there.
+Dialogue: 0,0:44:14.22,0:44:19.47,Default,,0,0,0,,It just happens to be the case that it merges.
+Dialogue: 0,0:44:19.47,0:44:24.51,Default,,0,0,0,,And so what do we expect to happen after we dispatch these three actions?
+Dialogue: 0,0:44:24.51,0:44:26.37,Default,,0,0,0,,We update the user with foo foo.
+Dialogue: 0,0:44:26.37,0:44:28.17,Default,,0,0,0,,We update the user with bar bar.
+Dialogue: 0,0:44:28.17,0:44:30.78,Default,,0,0,0,,We update the user again with foo baz.
+Dialogue: 0,0:44:30.78,0:44:34.29,Default,,0,0,0,,And we expect to see exactly what we saw before.
+Dialogue: 0,0:44:34.29,0:44:39.80,Default,,0,0,0,,That is an object with a key foo with the value baz,
+Dialogue: 0,0:44:39.80,0:44:42.72,Default,,0,0,0,,and a key bar with the value bar.
+Dialogue: 0,0:44:42.72,0:44:46.86,Default,,0,0,0,,Is that what we actually get back, when we call store, dot, getState?
+Dialogue: 0,0:44:46.86,0:44:50.59,Default,,0,0,0,,
+Dialogue: 0,0:44:50.59,0:44:58.79,Default,,0,0,0,,I don't think that's going to be the case, because there's a syntax error.
+Dialogue: 0,0:44:58.79,0:45:04.64,Default,,0,0,0,,
+Dialogue: 0,0:45:04.64,0:45:08.82,Default,,0,0,0,,This error here is because state, right now, is undefined.
+Dialogue: 0,0:45:08.82,0:45:10.87,Default,,0,0,0,,And so there's no such thing as state, dot, user.
+Dialogue: 0,0:45:10.87,0:45:14.45,Default,,0,0,0,,And so we should probably pass in some sort of default user or default
+Dialogue: 0,0:45:14.45,0:45:16.39,Default,,0,0,0,,application state.
+Dialogue: 0,0:45:16.39,0:45:26.59,Default,,0,0,0,,And so let's just say the default state is--
+Dialogue: 0,0:45:26.59,0:45:28.69,Default,,0,0,0,,let's create a const called Default State.
+Dialogue: 0,0:45:28.69,0:45:32.11,Default,,0,0,0,,
+Dialogue: 0,0:45:32.11,0:45:35.68,Default,,0,0,0,,And let's say the user is just an empty object,
+Dialogue: 0,0:45:35.68,0:45:38.42,Default,,0,0,0,,and the contacts are an empty array.
+Dialogue: 0,0:45:38.42,0:45:42.46,Default,,0,0,0,,
+Dialogue: 0,0:45:42.46,0:45:45.07,Default,,0,0,0,,And let's pass that in when we create our new store.
+Dialogue: 0,0:45:45.07,0:45:49.64,Default,,0,0,0,,
+Dialogue: 0,0:45:49.64,0:45:51.44,Default,,0,0,0,,So now we've passed in some default states.
+Dialogue: 0,0:45:51.44,0:45:55.84,Default,,0,0,0,,So when we do state, dot, user, we're not getting an error there.
+Dialogue: 0,0:45:55.84,0:45:58.75,Default,,0,0,0,,
+Dialogue: 0,0:45:58.75,0:45:59.75,Default,,0,0,0,,And what do we get back?
+Dialogue: 0,0:45:59.75,0:46:03.43,Default,,0,0,0,,We don't get back what we were getting back earlier.
+Dialogue: 0,0:46:03.43,0:46:07.99,Default,,0,0,0,,And what we're getting back earlier was just
+Dialogue: 0,0:46:07.99,0:46:14.41,Default,,0,0,0,,this, an object with a couple of key values where it's foo baz and bar bar.
+Dialogue: 0,0:46:14.41,0:46:16.78,Default,,0,0,0,,Now we're getting back this thing.
+Dialogue: 0,0:46:16.78,0:46:23.17,Default,,0,0,0,,We see that object within our state, but that's not our entire state.
+Dialogue: 0,0:46:23.17,0:46:27.51,Default,,0,0,0,,That object is contained within a part of our state called User.
+Dialogue: 0,0:46:27.51,0:46:29.68,Default,,0,0,0,,And there's also a separate part of our state called
+Dialogue: 0,0:46:29.68,0:46:32.44,Default,,0,0,0,,Contacts, which is an empty array--
+Dialogue: 0,0:46:32.44,0:46:35.26,Default,,0,0,0,,which makes sense when you think about what we just did.
+Dialogue: 0,0:46:35.26,0:46:45.29,Default,,0,0,0,,
+Dialogue: 0,0:46:45.29,0:46:48.84,Default,,0,0,0,,Our application is no longer just a single object.
+Dialogue: 0,0:46:48.84,0:46:52.39,Default,,0,0,0,,It's now an object that looks like this.
+Dialogue: 0,0:46:52.39,0:46:57.19,Default,,0,0,0,,We have a key that corresponds to our user information.
+Dialogue: 0,0:46:57.19,0:47:01.17,Default,,0,0,0,,You have a key that corresponds to all of the contacts that we have.
+Dialogue: 0,0:47:01.17,0:47:03.95,Default,,0,0,0,,And so when we're dispatching actions that update the user,
+Dialogue: 0,0:47:03.95,0:47:05.04,Default,,0,0,0,,they're updating the user.
+Dialogue: 0,0:47:05.04,0:47:08.79,Default,,0,0,0,,But there's still a whole separate part of our application state
+Dialogue: 0,0:47:08.79,0:47:10.26,Default,,0,0,0,,that corresponds to those contacts.
+Dialogue: 0,0:47:10.26,0:47:14.32,Default,,0,0,0,,
+Dialogue: 0,0:47:14.32,0:47:21.90,Default,,0,0,0,,And so now let's strengthen our store by allowing us to add contacts.
+Dialogue: 0,0:47:21.90,0:47:23.31,Default,,0,0,0,,How might we want to do that?
+Dialogue: 0,0:47:23.31,0:47:27.44,Default,,0,0,0,,
+Dialogue: 0,0:47:27.44,0:47:29.96,Default,,0,0,0,,Maybe we should add a new type.
+Dialogue: 0,0:47:29.96,0:47:33.54,Default,,0,0,0,,So remember, at the core of Redux is the reducer,
+Dialogue: 0,0:47:33.54,0:47:39.29,Default,,0,0,0,,which handles the logic between receiving the action
+Dialogue: 0,0:47:39.29,0:47:41.51,Default,,0,0,0,,and updating the state of our application.
+Dialogue: 0,0:47:41.51,0:47:45.14,Default,,0,0,0,,And so in our reducer here, we're going to add more logic
+Dialogue: 0,0:47:45.14,0:47:48.89,Default,,0,0,0,,for when we want to add a contact.
+Dialogue: 0,0:47:48.89,0:47:52.37,Default,,0,0,0,,And how do we know when we're trying to add a contact?
+Dialogue: 0,0:47:52.37,0:47:56.31,Default,,0,0,0,,Well, it's dictated by the type of action that we're receiving.
+Dialogue: 0,0:47:56.31,0:48:08.86,Default,,0,0,0,,So if we get a new action type, and let's call this Update Contact,
+Dialogue: 0,0:48:08.86,0:48:11.11,Default,,0,0,0,,now we want to do something different.
+Dialogue: 0,0:48:11.11,0:48:14.45,Default,,0,0,0,,Now, we don't really care about any update with the user.
+Dialogue: 0,0:48:14.45,0:48:18.37,Default,,0,0,0,,Now, we only care about updating our contacts.
+Dialogue: 0,0:48:18.37,0:48:20.65,Default,,0,0,0,,And so what might we want to do?
+Dialogue: 0,0:48:20.65,0:48:25.82,Default,,0,0,0,,Well, let's return a new state.
+Dialogue: 0,0:48:25.82,0:48:28.24,Default,,0,0,0,,
+Dialogue: 0,0:48:28.24,0:48:29.87,Default,,0,0,0,,And what does that new state look like?
+Dialogue: 0,0:48:29.87,0:48:33.82,Default,,0,0,0,,Well, let's update the old state, so merge in old state
+Dialogue: 0,0:48:33.82,0:48:37.79,Default,,0,0,0,,this new thing where contacts are updated.
+Dialogue: 0,0:48:37.79,0:48:41.04,Default,,0,0,0,,And so how are you going to update contacts?
+Dialogue: 0,0:48:41.04,0:48:47.29,Default,,0,0,0,,What logic dictates how we want to update our contact?
+Dialogue: 0,0:48:47.29,0:48:54.03,Default,,0,0,0,,We could just do, give me the old contacts and add a new contacts.
+Dialogue: 0,0:48:54.03,0:48:56.12,Default,,0,0,0,,And where is the new contact action, dot, payload?
+Dialogue: 0,0:48:56.12,0:48:59.85,Default,,0,0,0,,
+Dialogue: 0,0:48:59.85,0:49:02.77,Default,,0,0,0,,But this logic is already written somewhere in our app.
+Dialogue: 0,0:49:02.77,0:49:05.48,Default,,0,0,0,,We already declared this thing called a contactReducer, which
+Dialogue: 0,0:49:05.48,0:49:08.25,Default,,0,0,0,,does this exact thing.
+Dialogue: 0,0:49:08.25,0:49:13.39,Default,,0,0,0,,What it does is it expects the state of the old contacts and a new contact.
+Dialogue: 0,0:49:13.39,0:49:16.47,Default,,0,0,0,,And so we abstracted that information away into this thing
+Dialogue: 0,0:49:16.47,0:49:22.02,Default,,0,0,0,,called the contactReducer, which expects the old state of contacts.
+Dialogue: 0,0:49:22.02,0:49:27.06,Default,,0,0,0,,And so we don't want to pass just the entire application state.
+Dialogue: 0,0:49:27.06,0:49:29.58,Default,,0,0,0,,We only care about the contacts portion of it.
+Dialogue: 0,0:49:29.58,0:49:32.53,Default,,0,0,0,,
+Dialogue: 0,0:49:32.53,0:49:35.28,Default,,0,0,0,,And then we pass the payload.
+Dialogue: 0,0:49:35.28,0:49:46.21,Default,,0,0,0,,
+Dialogue: 0,0:49:46.21,0:49:49.95,Default,,0,0,0,,So very similar to what we did up here, up here
+Dialogue: 0,0:49:49.95,0:49:52.68,Default,,0,0,0,,when we receive an action called update our user,
+Dialogue: 0,0:49:52.68,0:49:57.07,Default,,0,0,0,,we go ahead and invoke the userReducer on that user.
+Dialogue: 0,0:49:57.07,0:49:59.63,Default,,0,0,0,,And when we receive an action to update the contact,
+Dialogue: 0,0:49:59.63,0:50:02.09,Default,,0,0,0,,now we just do the same thing but for the contacts instead.
+Dialogue: 0,0:50:02.09,0:50:04.98,Default,,0,0,0,,
+Dialogue: 0,0:50:04.98,0:50:08.16,Default,,0,0,0,,So now let's test this out.
+Dialogue: 0,0:50:08.16,0:50:13.69,Default,,0,0,0,,So now let's call store, dot, dispatch, this thing
+Dialogue: 0,0:50:13.69,0:50:23.11,Default,,0,0,0,,with a type of Update Contact, and a payload of name--
+Dialogue: 0,0:50:23.11,0:50:26.71,Default,,0,0,0,,
+Dialogue: 0,0:50:26.71,0:50:33.61,Default,,0,0,0,,my name-- and number of some arbitrary string.
+Dialogue: 0,0:50:33.61,0:50:40.85,Default,,0,0,0,,
+Dialogue: 0,0:50:40.85,0:50:44.17,Default,,0,0,0,,So now we just sent a separate action.
+Dialogue: 0,0:50:44.17,0:50:48.16,Default,,0,0,0,,And so now, if you notice, this action has the same shape as the action
+Dialogue: 0,0:50:48.16,0:50:49.09,Default,,0,0,0,,up here.
+Dialogue: 0,0:50:49.09,0:50:53.00,Default,,0,0,0,,It's a type and a payload.
+Dialogue: 0,0:50:53.00,0:50:55.45,Default,,0,0,0,,Now the type is Update Contact, and the payload--
+Dialogue: 0,0:50:55.45,0:51:00.94,Default,,0,0,0,,rather than being the update for a user-- is actually the contact itself.
+Dialogue: 0,0:51:00.94,0:51:03.90,Default,,0,0,0,,And then our reducer knows exactly what to do with all of these things.
+Dialogue: 0,0:51:03.90,0:51:06.06,Default,,0,0,0,,And so now let's just run this and see what happens.
+Dialogue: 0,0:51:06.06,0:51:11.68,Default,,0,0,0,,
+Dialogue: 0,0:51:11.68,0:51:15.27,Default,,0,0,0,,So now our state got updated.
+Dialogue: 0,0:51:15.27,0:51:18.96,Default,,0,0,0,,So our user still has the information that we expect the user to have.
+Dialogue: 0,0:51:18.96,0:51:20.34,Default,,0,0,0,,But now we have some contacts.
+Dialogue: 0,0:51:20.34,0:51:24.09,Default,,0,0,0,,Now it's an array that includes me and my phone number.
+Dialogue: 0,0:51:24.09,0:51:27.55,Default,,0,0,0,,Don't call it, because it's not actually my phone number.
+Dialogue: 0,0:51:27.55,0:51:32.04,Default,,0,0,0,,And so what happens when you try to add a separate user?
+Dialogue: 0,0:51:32.04,0:51:37.21,Default,,0,0,0,,Maybe our contact has two friends of the exact same name and the same phone
+Dialogue: 0,0:51:37.21,0:51:37.71,Default,,0,0,0,,number.
+Dialogue: 0,0:51:37.71,0:51:44.88,Default,,0,0,0,,
+Dialogue: 0,0:51:44.88,0:51:49.59,Default,,0,0,0,,So now our application has two contacts in the contacts.
+Dialogue: 0,0:51:49.59,0:51:52.84,Default,,0,0,0,,And they just happen to be the same people because I cut and paste.
+Dialogue: 0,0:51:52.84,0:51:53.82,Default,,0,0,0,,Cool.
+Dialogue: 0,0:51:53.82,0:51:57.15,Default,,0,0,0,,So now we have some sort of store that's maintaining
+Dialogue: 0,0:51:57.15,0:51:59.63,Default,,0,0,0,,all of our application information.
+Dialogue: 0,0:51:59.63,0:52:02.11,Default,,0,0,0,,But admittedly, it's not super clean.
+Dialogue: 0,0:52:02.11,0:52:05.12,Default,,0,0,0,,
+Dialogue: 0,0:52:05.12,0:52:07.56,Default,,0,0,0,,So let's clean it up a little bit.
+Dialogue: 0,0:52:07.56,0:52:13.97,Default,,0,0,0,,So right now, we have our action types hardcoded.
+Dialogue: 0,0:52:13.97,0:52:15.89,Default,,0,0,0,,We can keep them hardcoded, but let's actually
+Dialogue: 0,0:52:15.89,0:52:17.30,Default,,0,0,0,,create a variable for our actions.
+Dialogue: 0,0:52:17.30,0:52:19.94,Default,,0,0,0,,That way we can easily keep track of our available actions.
+Dialogue: 0,0:52:19.94,0:52:23.61,Default,,0,0,0,,
+Dialogue: 0,0:52:23.61,0:52:33.32,Default,,0,0,0,,So let's just create this thing called Update User and call it Update User.
+Dialogue: 0,0:52:33.32,0:52:39.65,Default,,0,0,0,,And same thing, let's create a const for our action called Update Contact.
+Dialogue: 0,0:52:39.65,0:52:47.35,Default,,0,0,0,,
+Dialogue: 0,0:52:47.35,0:52:50.47,Default,,0,0,0,,And now, rather than hardcoding this string here, we can use that constant.
+Dialogue: 0,0:52:50.47,0:53:01.06,Default,,0,0,0,,
+Dialogue: 0,0:53:01.06,0:53:03.62,Default,,0,0,0,,And then same here.
+Dialogue: 0,0:53:03.62,0:53:06.31,Default,,0,0,0,,So what this does is it protects us against typos.
+Dialogue: 0,0:53:06.31,0:53:11.41,Default,,0,0,0,,So say I had accidentally typed this in as Update Users plural,
+Dialogue: 0,0:53:11.41,0:53:13.51,Default,,0,0,0,,now it's never going to match.
+Dialogue: 0,0:53:13.51,0:53:15.88,Default,,0,0,0,,And it might be difficult when we're trying to debug.
+Dialogue: 0,0:53:15.88,0:53:17.30,Default,,0,0,0,,Like, hey, what's going wrong?
+Dialogue: 0,0:53:17.30,0:53:21.41,Default,,0,0,0,,I'm passing this action called Update User, and it's not updating our user.
+Dialogue: 0,0:53:21.41,0:53:21.91,Default,,0,0,0,,Why?
+Dialogue: 0,0:53:21.91,0:53:25.71,Default,,0,0,0,,Because we're actually looking for an action type called Update Users plural.
+Dialogue: 0,0:53:25.71,0:53:35.11,Default,,0,0,0,,And so to save us from that, we just create a constant called Update User.
+Dialogue: 0,0:53:35.11,0:53:40.84,Default,,0,0,0,,And the way that we enforce that our action types are the same
+Dialogue: 0,0:53:40.84,0:53:42.82,Default,,0,0,0,,is by using JavaScript itself.
+Dialogue: 0,0:53:42.82,0:53:46.01,Default,,0,0,0,,If we made a typo here called Update Users, what's going to happen?
+Dialogue: 0,0:53:46.01,0:53:50.80,Default,,0,0,0,,
+Dialogue: 0,0:53:50.80,0:53:55.64,Default,,0,0,0,,We get an error, because this constant called Update Users is not defined.
+Dialogue: 0,0:53:55.64,0:54:04.73,Default,,0,0,0,,And so by storing our actions as constants,
+Dialogue: 0,0:54:04.73,0:54:10.27,Default,,0,0,0,,we can ensure that we don't have any weird bugs due to typos.
+Dialogue: 0,0:54:10.27,0:54:13.57,Default,,0,0,0,,So let's actually move this to the top of the file, that way we can use it
+Dialogue: 0,0:54:13.57,0:54:16.34,Default,,0,0,0,,in our reducers.
+Dialogue: 0,0:54:16.34,0:54:18.89,Default,,0,0,0,,
+Dialogue: 0,0:54:18.89,0:54:20.77,Default,,0,0,0,,And we'll leave a little comment for ourself,
+Dialogue: 0,0:54:20.77,0:54:22.18,Default,,0,0,0,,and let's call these Action Types.
+Dialogue: 0,0:54:22.18,0:54:25.01,Default,,0,0,0,,
+Dialogue: 0,0:54:25.01,0:54:25.51,Default,,0,0,0,,Cool.
+Dialogue: 0,0:54:25.51,0:54:26.77,Default,,0,0,0,,So a little bit cleaner now.
+Dialogue: 0,0:54:26.77,0:54:29.38,Default,,0,0,0,,We no longer have those hardcoded strings.
+Dialogue: 0,0:54:29.38,0:54:32.21,Default,,0,0,0,,But now, every single time we want to dispatch an action,
+Dialogue: 0,0:54:32.21,0:54:33.84,Default,,0,0,0,,we have to type that entire action out.
+Dialogue: 0,0:54:33.84,0:54:37.27,Default,,0,0,0,,And so maybe it might be better to create a function that
+Dialogue: 0,0:54:37.27,0:54:39.37,Default,,0,0,0,,creates our actions for us.
+Dialogue: 0,0:54:39.37,0:54:45.60,Default,,0,0,0,,And so let's just create a function called Update User.
+Dialogue: 0,0:54:45.60,0:54:46.46,Default,,0,0,0,,And what does it do?
+Dialogue: 0,0:54:46.46,0:54:47.83,Default,,0,0,0,,Well, it takes some new user--
+Dialogue: 0,0:54:47.83,0:54:50.70,Default,,0,0,0,,
+Dialogue: 0,0:54:50.70,0:54:52.88,Default,,0,0,0,,let's just update.
+Dialogue: 0,0:54:52.88,0:54:55.52,Default,,0,0,0,,So it takes some sort of update, and what does it do?
+Dialogue: 0,0:54:55.52,0:54:59.71,Default,,0,0,0,,Well, it returns a new object, because, as we remember,
+Dialogue: 0,0:54:59.71,0:55:03.28,Default,,0,0,0,,actions are just objects of a certain type.
+Dialogue: 0,0:55:03.28,0:55:05.98,Default,,0,0,0,,And the reason that we create those is because of the standard
+Dialogue: 0,0:55:05.98,0:55:08.05,Default,,0,0,0,,called Flux standard action.
+Dialogue: 0,0:55:08.05,0:55:11.92,Default,,0,0,0,,And so each of them have a type key.
+Dialogue: 0,0:55:11.92,0:55:15.23,Default,,0,0,0,,And what is the type every time you want to update the user?
+Dialogue: 0,0:55:15.23,0:55:19.02,Default,,0,0,0,,Well, it's just going to be Update User.
+Dialogue: 0,0:55:19.02,0:55:20.23,Default,,0,0,0,,And what is the payload here?
+Dialogue: 0,0:55:20.23,0:55:22.87,Default,,0,0,0,,
+Dialogue: 0,0:55:22.87,0:55:25.56,Default,,0,0,0,,Well, it depends what we're invoking Update User on.
+Dialogue: 0,0:55:25.56,0:55:27.15,Default,,0,0,0,,And so let's just pass the updated in.
+Dialogue: 0,0:55:27.15,0:55:31.15,Default,,0,0,0,,
+Dialogue: 0,0:55:31.15,0:55:37.35,Default,,0,0,0,,So now, rather than typing this whole thing out, we can just do Update User
+Dialogue: 0,0:55:37.35,0:55:42.81,Default,,0,0,0,,and pass the update that we want to make.
+Dialogue: 0,0:55:42.81,0:55:44.09,Default,,0,0,0,,And what happens here?
+Dialogue: 0,0:55:44.09,0:55:46.23,Default,,0,0,0,,Well, Update User up here gets invoked.
+Dialogue: 0,0:55:46.23,0:55:51.01,Default,,0,0,0,,We pass the update that we want to make, and it returns an action.
+Dialogue: 0,0:55:51.01,0:55:53.59,Default,,0,0,0,,And the action gets passed to dispatch as if we had done this.
+Dialogue: 0,0:55:53.59,0:55:55.55,Default,,0,0,0,,It's just a little bit cleaner because we don't
+Dialogue: 0,0:55:55.55,0:55:57.44,Default,,0,0,0,,have to type this whole string out.
+Dialogue: 0,0:55:57.44,0:56:02.23,Default,,0,0,0,,
+Dialogue: 0,0:56:02.23,0:56:10.36,Default,,0,0,0,,So now let's do the same thing here, and here.
+Dialogue: 0,0:56:10.36,0:56:16.03,Default,,0,0,0,,
+Dialogue: 0,0:56:16.03,0:56:16.53,Default,,0,0,0,,Cool.
+Dialogue: 0,0:56:16.53,0:56:19.26,Default,,0,0,0,,Looking cleaner already.
+Dialogue: 0,0:56:19.26,0:56:23.70,Default,,0,0,0,,This also looks a little bit gross, so let's create a creator for that
+Dialogue: 0,0:56:23.70,0:56:25.26,Default,,0,0,0,,as well.
+Dialogue: 0,0:56:25.26,0:56:28.92,Default,,0,0,0,,And let's call this Add Contact.
+Dialogue: 0,0:56:28.92,0:56:32.32,Default,,0,0,0,,And we're going to pass it to newContact.
+Dialogue: 0,0:56:32.32,0:56:33.57,Default,,0,0,0,,And how is this going to look?
+Dialogue: 0,0:56:33.57,0:56:36.30,Default,,0,0,0,,
+Dialogue: 0,0:56:36.30,0:56:39.15,Default,,0,0,0,,Well, just like our other action creator,
+Dialogue: 0,0:56:39.15,0:56:40.82,Default,,0,0,0,,it's going to return an action.
+Dialogue: 0,0:56:40.82,0:56:42.06,Default,,0,0,0,,What does an action look like?
+Dialogue: 0,0:56:42.06,0:56:43.89,Default,,0,0,0,,Well, it has a type attribute.
+Dialogue: 0,0:56:43.89,0:56:44.73,Default,,0,0,0,,And what type is it?
+Dialogue: 0,0:56:44.73,0:56:47.16,Default,,0,0,0,,It's going to be Update Contact.
+Dialogue: 0,0:56:47.16,0:56:48.75,Default,,0,0,0,,And it's also going to have a payload.
+Dialogue: 0,0:56:48.75,0:56:50.51,Default,,0,0,0,,And what is the payload here?
+Dialogue: 0,0:56:50.51,0:56:52.14,Default,,0,0,0,,Well, it's going to be that NewContact.
+Dialogue: 0,0:56:52.14,0:56:55.59,Default,,0,0,0,,
+Dialogue: 0,0:56:55.59,0:57:03.54,Default,,0,0,0,,And so now we can do the same thing by calling Add Contact here and on here as
+Dialogue: 0,0:57:03.54,0:57:04.04,Default,,0,0,0,,well.
+Dialogue: 0,0:57:04.04,0:57:08.98,Default,,0,0,0,,
+Dialogue: 0,0:57:08.98,0:57:09.48,Default,,0,0,0,,Cool.
+Dialogue: 0,0:57:09.48,0:57:12.19,Default,,0,0,0,,And now it's looking a lot more readable.
+Dialogue: 0,0:57:12.19,0:57:19.29,Default,,0,0,0,,So let's just label these as are action creators, because they're
+Dialogue: 0,0:57:19.29,0:57:21.33,Default,,0,0,0,,creating actions.
+Dialogue: 0,0:57:21.33,0:57:22.32,Default,,0,0,0,,We have our store--
+Dialogue: 0,0:57:22.32,0:57:22.89,Default,,0,0,0,,our reducer.
+Dialogue: 0,0:57:22.89,0:57:29.46,Default,,0,0,0,,We have our specific reducers for each key.
+Dialogue: 0,0:57:29.46,0:57:33.20,Default,,0,0,0,,And then we pass those to our store, and we go ahead and dispatch foo actions.
+Dialogue: 0,0:57:33.20,0:57:34.70,Default,,0,0,0,,And what actions are we dispatching?
+Dialogue: 0,0:57:34.70,0:57:37.20,Default,,0,0,0,,Well, it seems a lot easier to read now.
+Dialogue: 0,0:57:37.20,0:57:41.46,Default,,0,0,0,,First we say, hey store, go ahead and update the user.
+Dialogue: 0,0:57:41.46,0:57:42.84,Default,,0,0,0,,And what are we updating it with?
+Dialogue: 0,0:57:42.84,0:57:44.47,Default,,0,0,0,,Well, we're just passing foo foo.
+Dialogue: 0,0:57:44.47,0:57:46.35,Default,,0,0,0,,Go ahead and update the user again with this.
+Dialogue: 0,0:57:46.35,0:57:47.94,Default,,0,0,0,,Update user again with this.
+Dialogue: 0,0:57:47.94,0:57:49.74,Default,,0,0,0,,Now add a contact that looks like this.
+Dialogue: 0,0:57:49.74,0:57:51.19,Default,,0,0,0,,Add a contact that looks like this.
+Dialogue: 0,0:57:51.19,0:57:54.03,Default,,0,0,0,,And now, all of a sudden, it's very readable.
+Dialogue: 0,0:57:54.03,0:57:55.51,Default,,0,0,0,,We create a new store.
+Dialogue: 0,0:57:55.51,0:57:57.66,Default,,0,0,0,,We pass it in the reducer in the default state.
+Dialogue: 0,0:57:57.66,0:57:59.85,Default,,0,0,0,,We dispatch a few actions.
+Dialogue: 0,0:57:59.85,0:58:02.91,Default,,0,0,0,,And then we go ahead and get the store, get the state
+Dialogue: 0,0:58:02.91,0:58:04.50,Default,,0,0,0,,and see what it looks like.
+Dialogue: 0,0:58:04.50,0:58:06.07,Default,,0,0,0,,And if I didn't make any typos--
+Dialogue: 0,0:58:06.07,0:58:09.61,Default,,0,0,0,,
+Dialogue: 0,0:58:09.61,0:58:12.08,Default,,0,0,0,,oh, I made some typos.
+Dialogue: 0,0:58:12.08,0:58:17.16,Default,,0,0,0,,I never fixed the typo that I made intentionally, so let's fix that.
+Dialogue: 0,0:58:17.16,0:58:23.31,Default,,0,0,0,,
+Dialogue: 0,0:58:23.31,0:58:26.56,Default,,0,0,0,,Now we get back exactly what we wanted.
+Dialogue: 0,0:58:26.56,0:58:27.06,Default,,0,0,0,,Great.
+Dialogue: 0,0:58:27.06,0:58:32.80,Default,,0,0,0,,So now our homemade simpleRedux is looking pretty good.
+Dialogue: 0,0:58:32.80,0:58:39.19,Default,,0,0,0,,We've implemented most of what is core to Redux.
+Dialogue: 0,0:58:39.19,0:58:41.53,Default,,0,0,0,,There is a single source of truth for our data.
+Dialogue: 0,0:58:41.53,0:58:43.41,Default,,0,0,0,,It's in our store.
+Dialogue: 0,0:58:43.41,0:58:45.66,Default,,0,0,0,,The state can only be updated by actions.
+Dialogue: 0,0:58:45.66,0:58:55.28,Default,,0,0,0,,So remember, we're dispatching actions down there,
+Dialogue: 0,0:58:55.28,0:58:59.21,Default,,0,0,0,,and there's really no other way to update.
+Dialogue: 0,0:58:59.21,0:59:01.64,Default,,0,0,0,,And how are we doing the update ourselves?
+Dialogue: 0,0:59:01.64,0:59:04.64,Default,,0,0,0,,Well, it's a pure function that takes the old state,
+Dialogue: 0,0:59:04.64,0:59:07.28,Default,,0,0,0,,and some sort of payload or update--
+Dialogue: 0,0:59:07.28,0:59:08.87,Default,,0,0,0,,or action, I should say--
+Dialogue: 0,0:59:08.87,0:59:10.87,Default,,0,0,0,,and then goes ahead and does it.
+Dialogue: 0,0:59:10.87,0:59:11.87,Default,,0,0,0,,Did it do anything else?
+Dialogue: 0,0:59:11.87,0:59:12.71,Default,,0,0,0,,Did it console log?
+Dialogue: 0,0:59:12.71,0:59:15.23,Default,,0,0,0,,Did it change any variables outside its scope?
+Dialogue: 0,0:59:15.23,0:59:21.90,Default,,0,0,0,,Did it use anything outside of the arguments that it was passed?
+Dialogue: 0,0:59:21.90,0:59:22.49,Default,,0,0,0,,No, it didn't.
+Dialogue: 0,0:59:22.49,0:59:26.54,Default,,0,0,0,,It was just a pure function of the old state and the updates.
+Dialogue: 0,0:59:26.54,0:59:29.24,Default,,0,0,0,,And it has this pattern, right?
+Dialogue: 0,0:59:29.24,0:59:33.42,Default,,0,0,0,,We're sending actions that pass through the reducer and it updates our store.
+Dialogue: 0,0:59:33.42,0:59:37.76,Default,,0,0,0,,And so now, we've pretty much implemented a simpleRedux.
+Dialogue: 0,0:59:37.76,0:59:41.76,Default,,0,0,0,,
+Dialogue: 0,0:59:41.76,0:59:46.90,Default,,0,0,0,,There's just one scalability problem with our current Redux.
+Dialogue: 0,0:59:46.90,0:59:50.79,Default,,0,0,0,,
+Dialogue: 0,0:59:50.79,0:59:56.59,Default,,0,0,0,,So what happens when we want to update a user?
+Dialogue: 0,0:59:56.59,1:00:03.00,Default,,0,0,0,,We also-- or maybe we want to update a contact, and maybe, in our userReducer,
+Dialogue: 0,1:00:03.00,1:00:06.60,Default,,0,0,0,,we want to keep track of the number of contacts in our user metadata.
+Dialogue: 0,1:00:06.60,1:00:13.63,Default,,0,0,0,,We're going to have to change a lot of lines of code in order to do that.
+Dialogue: 0,1:00:13.63,1:00:17.46,Default,,0,0,0,,And so as we start to add more reducers, start to add more things to our state,
+Dialogue: 0,1:00:17.46,1:00:23.82,Default,,0,0,0,,in our current implementation of our reducer, it's non-trivial to do that.
+Dialogue: 0,1:00:23.82,1:00:27.06,Default,,0,0,0,,And so let's actually figure out a better way to do that.
+Dialogue: 0,1:00:27.06,1:00:31.20,Default,,0,0,0,,Right now, what we're doing is our reducer is taking an action,
+Dialogue: 0,1:00:31.20,1:00:36.09,Default,,0,0,0,,consuming it, and sending it to one of the smaller reducers
+Dialogue: 0,1:00:36.09,1:00:38.34,Default,,0,0,0,,that we've created.
+Dialogue: 0,1:00:38.34,1:00:40.86,Default,,0,0,0,,But there's really no reason that we need to do that.
+Dialogue: 0,1:00:40.86,1:00:44.94,Default,,0,0,0,,Maybe a better way would be to take an action
+Dialogue: 0,1:00:44.94,1:00:47.58,Default,,0,0,0,,and pass it to every single reducer.
+Dialogue: 0,1:00:47.58,1:00:52.00,Default,,0,0,0,,That way, it's up to the smaller reducer to decide, hey,
+Dialogue: 0,1:00:52.00,1:00:53.34,Default,,0,0,0,,I want to listen to this action.
+Dialogue: 0,1:00:53.34,1:00:57.48,Default,,0,0,0,,Or maybe I'm just going to ignore this action and return my type.
+Dialogue: 0,1:00:57.48,1:00:59.11,Default,,0,0,0,,So again, why are we doing that?
+Dialogue: 0,1:00:59.11,1:01:01.29,Default,,0,0,0,,It's because we run into scalability issues
+Dialogue: 0,1:01:01.29,1:01:06.66,Default,,0,0,0,,if we want multiple actions, or multiple of these smaller reducers,
+Dialogue: 0,1:01:06.66,1:01:10.95,Default,,0,0,0,,to react to multiple of the types.
+Dialogue: 0,1:01:10.95,1:01:14.37,Default,,0,0,0,,So what exactly would that look like?
+Dialogue: 0,1:01:14.37,1:01:21.11,Default,,0,0,0,,So now, rather than our main reducer here deciding which of these reducers
+Dialogue: 0,1:01:21.11,1:01:26.43,Default,,0,0,0,,to pass to, we should just pass the action to all of them.
+Dialogue: 0,1:01:26.43,1:01:32.21,Default,,0,0,0,,And so let's actually redefine our reducer down here.
+Dialogue: 0,1:01:32.21,1:01:35.37,Default,,0,0,0,,
+Dialogue: 0,1:01:35.37,1:01:38.90,Default,,0,0,0,,So right now, our reducer is taking a state in action.
+Dialogue: 0,1:01:38.90,1:01:46.49,Default,,0,0,0,,And maybe what it should be doing is passing back
+Dialogue: 0,1:01:46.49,1:01:53.95,Default,,0,0,0,,a function where we know we want users, our user,
+Dialogue: 0,1:01:53.95,1:01:55.32,Default,,0,0,0,,and we know we want our contacts.
+Dialogue: 0,1:01:55.32,1:02:00.34,Default,,0,0,0,,
+Dialogue: 0,1:02:00.34,1:02:02.53,Default,,0,0,0,,And what is responsible for keeping track
+Dialogue: 0,1:02:02.53,1:02:06.82,Default,,0,0,0,,of our user part of our global state?
+Dialogue: 0,1:02:06.82,1:02:09.59,Default,,0,0,0,,Well, it's the reducer that's specific to the user.
+Dialogue: 0,1:02:09.59,1:02:14.32,Default,,0,0,0,,And so maybe here we want to invoke the userReducer with some values.
+Dialogue: 0,1:02:14.32,1:02:20.09,Default,,0,0,0,,And maybe here, we want to invoke the contacts reducer with some value.
+Dialogue: 0,1:02:20.09,1:02:22.57,Default,,0,0,0,,So now it's starting to look a lot simpler.
+Dialogue: 0,1:02:22.57,1:02:27.96,Default,,0,0,0,,And what values does the userReducer care about?
+Dialogue: 0,1:02:27.96,1:02:33.42,Default,,0,0,0,,Well, just the part of the state that it cares about, so the state, dot, user.
+Dialogue: 0,1:02:33.42,1:02:36.46,Default,,0,0,0,,And same thing with the contactReducer.
+Dialogue: 0,1:02:36.46,1:02:45.42,Default,,0,0,0,,We only care about the part of state that's useful to the contactReducer.
+Dialogue: 0,1:02:45.42,1:02:47.05,Default,,0,0,0,,And how does it know what it should do?
+Dialogue: 0,1:02:47.05,1:02:48.38,Default,,0,0,0,,Well, we just passed the action.
+Dialogue: 0,1:02:48.38,1:02:52.08,Default,,0,0,0,,
+Dialogue: 0,1:02:52.08,1:02:55.06,Default,,0,0,0,,So that there is our new reducer.
+Dialogue: 0,1:02:55.06,1:03:01.69,Default,,0,0,0,,And so let's now modify our userReducer and contactReducer
+Dialogue: 0,1:03:01.69,1:03:07.08,Default,,0,0,0,,to only respond to the action types that they care about.
+Dialogue: 0,1:03:07.08,1:03:13.24,Default,,0,0,0,,So let's get rid of this, because now we need additional logic here,
+Dialogue: 0,1:03:13.24,1:03:15.02,Default,,0,0,0,,and maybe some additional logic here.
+Dialogue: 0,1:03:15.02,1:03:21.43,Default,,0,0,0,,
+Dialogue: 0,1:03:21.43,1:03:24.81,Default,,0,0,0,,So currently, what cares about Update User?
+Dialogue: 0,1:03:24.81,1:03:27.87,Default,,0,0,0,,Well, it's just the userReducer.
+Dialogue: 0,1:03:27.87,1:03:32.63,Default,,0,0,0,,So if the action type is Update User in the userReducer,
+Dialogue: 0,1:03:32.63,1:03:36.90,Default,,0,0,0,,let's go ahead and return that update.
+Dialogue: 0,1:03:36.90,1:03:42.64,Default,,0,0,0,,Otherwise, let's just return the state as it was before.
+Dialogue: 0,1:03:42.64,1:03:45.45,Default,,0,0,0,,And now we can get rid of all of that logic here.
+Dialogue: 0,1:03:45.45,1:03:50.52,Default,,0,0,0,,And now let's do a similar thing with the logic for contactReducer.
+Dialogue: 0,1:03:50.52,1:03:55.02,Default,,0,0,0,,So if the action type is Update Contact, the contactReducer cares about that.
+Dialogue: 0,1:03:55.02,1:03:58.02,Default,,0,0,0,,And we should return just this.
+Dialogue: 0,1:03:58.02,1:04:03.91,Default,,0,0,0,,
+Dialogue: 0,1:04:03.91,1:04:07.27,Default,,0,0,0,,Else we'll return the basic state.
+Dialogue: 0,1:04:07.27,1:04:09.90,Default,,0,0,0,,So let me just finish deleting all the code that we don't need.
+Dialogue: 0,1:04:09.90,1:04:12.67,Default,,0,0,0,,
+Dialogue: 0,1:04:12.67,1:04:13.17,Default,,0,0,0,,All right.
+Dialogue: 0,1:04:13.17,1:04:13.79,Default,,0,0,0,,Almost there.
+Dialogue: 0,1:04:13.79,1:04:15.90,Default,,0,0,0,,There are still a couple of bugs.
+Dialogue: 0,1:04:15.90,1:04:22.14,Default,,0,0,0,,So for the conductReducer, what is action?
+Dialogue: 0,1:04:22.14,1:04:24.36,Default,,0,0,0,,Action, dot, type doesn't exist currently,
+Dialogue: 0,1:04:24.36,1:04:27.63,Default,,0,0,0,,so we're no longer passing it the newContact.
+Dialogue: 0,1:04:27.63,1:04:29.74,Default,,0,0,0,,Now, we're passing it the action.
+Dialogue: 0,1:04:29.74,1:04:32.67,Default,,0,0,0,,And so we check the action, dot, type.
+Dialogue: 0,1:04:32.67,1:04:34.74,Default,,0,0,0,,And newContact no longer exists.
+Dialogue: 0,1:04:34.74,1:04:36.42,Default,,0,0,0,,Where are we storing the newContact?
+Dialogue: 0,1:04:36.42,1:04:37.96,Default,,0,0,0,,Well, it's just action, dot, payload.
+Dialogue: 0,1:04:37.96,1:04:41.00,Default,,0,0,0,,
+Dialogue: 0,1:04:41.00,1:04:42.25,Default,,0,0,0,,And we do the same thing here.
+Dialogue: 0,1:04:42.25,1:04:43.91,Default,,0,0,0,,We're no longer just passing the update.
+Dialogue: 0,1:04:43.91,1:04:48.58,Default,,0,0,0,,We're passing the whole action, and then we can do action, dot, payload.
+Dialogue: 0,1:04:48.58,1:04:51.51,Default,,0,0,0,,
+Dialogue: 0,1:04:51.51,1:04:53.84,Default,,0,0,0,,And now we're done.
+Dialogue: 0,1:04:53.84,1:04:56.20,Default,,0,0,0,,So we can make this a little bit more concise,
+Dialogue: 0,1:04:56.20,1:04:57.54,Default,,0,0,0,,if it's easier to read this way.
+Dialogue: 0,1:04:57.54,1:05:01.90,Default,,0,0,0,,
+Dialogue: 0,1:05:01.90,1:05:03.55,Default,,0,0,0,,And now it all fits on one page.
+Dialogue: 0,1:05:03.55,1:05:08.18,Default,,0,0,0,,So we have our contactReducer, which cares about the state.
+Dialogue: 0,1:05:08.18,1:05:12.16,Default,,0,0,0,,And when we say state, it's local only to the contacts part of the state.
+Dialogue: 0,1:05:12.16,1:05:14.23,Default,,0,0,0,,It received actions.
+Dialogue: 0,1:05:14.23,1:05:16.36,Default,,0,0,0,,And if the action is that it should update
+Dialogue: 0,1:05:16.36,1:05:18.58,Default,,0,0,0,,the contact, returning a new state.
+Dialogue: 0,1:05:18.58,1:05:20.47,Default,,0,0,0,,And what is the new state?
+Dialogue: 0,1:05:20.47,1:05:24.31,Default,,0,0,0,,Well, it's the old state, and we append to the end whatever the payload is.
+Dialogue: 0,1:05:24.31,1:05:29.11,Default,,0,0,0,,And in this case, the action, dot, payload is the new user.
+Dialogue: 0,1:05:29.11,1:05:32.17,Default,,0,0,0,,Does contactReducer care about Update User?
+Dialogue: 0,1:05:32.17,1:05:32.83,Default,,0,0,0,,No, it doesn't.
+Dialogue: 0,1:05:32.83,1:05:36.25,Default,,0,0,0,,
+Dialogue: 0,1:05:36.25,1:05:39.81,Default,,0,0,0,,So if the action, dot, type is an Update Contact,
+Dialogue: 0,1:05:39.81,1:05:43.36,Default,,0,0,0,,we just return whatever the state was before, no big deal.
+Dialogue: 0,1:05:43.36,1:05:45.39,Default,,0,0,0,,And the same thing is true for userReducer.
+Dialogue: 0,1:05:45.39,1:05:46.88,Default,,0,0,0,,It's taking a state.
+Dialogue: 0,1:05:46.88,1:05:48.13,Default,,0,0,0,,What state does it care about?
+Dialogue: 0,1:05:48.13,1:05:51.61,Default,,0,0,0,,Well, it's only the user part of our application state.
+Dialogue: 0,1:05:51.61,1:05:54.75,Default,,0,0,0,,It takes an action as well.
+Dialogue: 0,1:05:54.75,1:05:57.13,Default,,0,0,0,,And if the action type is that it should update the user,
+Dialogue: 0,1:05:57.13,1:05:58.50,Default,,0,0,0,,then it goes ahead and does that.
+Dialogue: 0,1:05:58.50,1:06:00.67,Default,,0,0,0,,It returns the old state.
+Dialogue: 0,1:06:00.67,1:06:04.45,Default,,0,0,0,,And into that, we merge the new action, dot, payload.
+Dialogue: 0,1:06:04.45,1:06:07.42,Default,,0,0,0,,And if the action type is in Update User,
+Dialogue: 0,1:06:07.42,1:06:11.26,Default,,0,0,0,,just return whatever the user information was before.
+Dialogue: 0,1:06:11.26,1:06:14.74,Default,,0,0,0,,And one key difference here is that for every single action,
+Dialogue: 0,1:06:14.74,1:06:17.03,Default,,0,0,0,,every single one of these reducers is called.
+Dialogue: 0,1:06:17.03,1:06:21.49,Default,,0,0,0,,This reducer is called and passes that action along with the subset of state
+Dialogue: 0,1:06:21.49,1:06:25.45,Default,,0,0,0,,that each one of these reducers cares about to them.
+Dialogue: 0,1:06:25.45,1:06:28.81,Default,,0,0,0,,And then these reducers only do something
+Dialogue: 0,1:06:28.81,1:06:30.97,Default,,0,0,0,,if the type is something that they care about.
+Dialogue: 0,1:06:30.97,1:06:33.84,Default,,0,0,0,,Otherwise, they just return the state blindly as it was.
+Dialogue: 0,1:06:33.84,1:06:37.96,Default,,0,0,0,,
+Dialogue: 0,1:06:37.96,1:06:42.98,Default,,0,0,0,,So now everything is a lot more concise.
+Dialogue: 0,1:06:42.98,1:06:47.99,Default,,0,0,0,,And now if we wanted to respond to changes
+Dialogue: 0,1:06:47.99,1:06:50.40,Default,,0,0,0,,in other types in the userReducer, we can.
+Dialogue: 0,1:06:50.40,1:06:57.08,Default,,0,0,0,,So if we wanted to store something in the user part of the state
+Dialogue: 0,1:06:57.08,1:07:02.85,Default,,0,0,0,,every single time we add a contact, we can do that now.
+Dialogue: 0,1:07:02.85,1:07:08.20,Default,,0,0,0,,So maybe if we add a new user, or a NewContact--
+Dialogue: 0,1:07:08.20,1:07:13.67,Default,,0,0,0,,maybe want to store that most recently added contact in the user information--
+Dialogue: 0,1:07:13.67,1:07:16.95,Default,,0,0,0,,we could do that by doing state.
+Dialogue: 0,1:07:16.95,1:07:18.41,Default,,0,0,0,,And what are we merging into state?
+Dialogue: 0,1:07:18.41,1:07:29.84,Default,,0,0,0,,Well, let's just do recently added or prevContact
+Dialogue: 0,1:07:29.84,1:07:32.45,Default,,0,0,0,,is whatever that contact is, so action, dot, payload.
+Dialogue: 0,1:07:32.45,1:07:36.81,Default,,0,0,0,,
+Dialogue: 0,1:07:36.81,1:07:46.90,Default,,0,0,0,,And now when we add new contacts, the previous contact is saved in the user.
+Dialogue: 0,1:07:46.90,1:07:50.47,Default,,0,0,0,,And so now, every single reducer can respond to every single action.
+Dialogue: 0,1:07:50.47,1:07:53.87,Default,,0,0,0,,
+Dialogue: 0,1:07:53.87,1:08:02.53,Default,,0,0,0,,And let's just make sure it works by adding
+Dialogue: 0,1:08:02.53,1:08:21.92,Default,,0,0,0,,the contact that wasn't the same as before, as soon
+Dialogue: 0,1:08:21.92,1:08:23.42,Default,,0,0,0,,as my computer unfreezes.
+Dialogue: 0,1:08:23.42,1:08:28.30,Default,,0,0,0,,
+Dialogue: 0,1:08:28.30,1:08:28.97,Default,,0,0,0,,Let's just kill.
+Dialogue: 0,1:08:28.97,1:08:46.75,Default,,0,0,0,,
+Dialogue: 0,1:08:46.75,1:08:56.47,Default,,0,0,0,,So let's, again, go into our simpleRedux and ensure that we
+Dialogue: 0,1:08:56.47,1:08:58.33,Default,,0,0,0,,don't pass the same user in again.
+Dialogue: 0,1:08:58.33,1:09:02.21,Default,,0,0,0,,So we can just sanity check to make sure you're saving the most recent user.
+Dialogue: 0,1:09:02.21,1:09:04.22,Default,,0,0,0,,We can add David here.
+Dialogue: 0,1:09:04.22,1:09:13.26,Default,,0,0,0,,
+Dialogue: 0,1:09:13.26,1:09:17.01,Default,,0,0,0,,And now we can confirm that the previous contacts stored in the user
+Dialogue: 0,1:09:17.01,1:09:21.46,Default,,0,0,0,,is indeed the most recently-added contact.
+Dialogue: 0,1:09:21.46,1:09:27.84,Default,,0,0,0,,And so now we have pretty much a full implementation of Redux.
+Dialogue: 0,1:09:27.84,1:09:32.27,Default,,0,0,0,,So it's a data-management utility that we've created.
+Dialogue: 0,1:09:32.27,1:09:34.52,Default,,0,0,0,,There is a single source of truth for all of our data.
+Dialogue: 0,1:09:34.52,1:09:36.33,Default,,0,0,0,,It's stored in our store.
+Dialogue: 0,1:09:36.33,1:09:39.39,Default,,0,0,0,,The state can only be updated by our actions.
+Dialogue: 0,1:09:39.39,1:09:43.56,Default,,0,0,0,,And updates are made using our peer functions or our reducers.
+Dialogue: 0,1:09:43.56,1:09:47.02,Default,,0,0,0,,And we've created a reducer.
+Dialogue: 0,1:09:47.02,1:09:49.22,Default,,0,0,0,,We've created a store that maintains the state.
+Dialogue: 0,1:09:49.22,1:09:52.10,Default,,0,0,0,,We can get the state using getState.
+Dialogue: 0,1:09:52.10,1:09:53.40,Default,,0,0,0,,And we've created some actions.
+Dialogue: 0,1:09:53.40,1:09:56.02,Default,,0,0,0,,
+Dialogue: 0,1:09:56.02,1:09:57.73,Default,,0,0,0,,So let's go ahead and take a short break.
+Dialogue: 0,1:09:57.73,1:10:02.00,Default,,0,0,0,,And then when we come back, we can add Redux to our actual application.
+Dialogue: 0,1:10:02.00,1:10:03.92,Default,,0,0,0,,All right, hello and welcome back.
+Dialogue: 0,1:10:03.92,1:10:08.44,Default,,0,0,0,,Before the break, we actually implemented our own small simpleRedux.
+Dialogue: 0,1:10:08.44,1:10:12.70,Default,,0,0,0,,And now, let's actually start moving from our simpleRedux,
+Dialogue: 0,1:10:12.70,1:10:15.92,Default,,0,0,0,,to the actual Redux implementation.
+Dialogue: 0,1:10:15.92,1:10:19.96,Default,,0,0,0,,Our Redux implementation already has a pretty similar API.
+Dialogue: 0,1:10:19.96,1:10:23.05,Default,,0,0,0,,What we're missing is just a way to notify that the state is updated.
+Dialogue: 0,1:10:23.05,1:10:27.01,Default,,0,0,0,,And so let's actually install Redux and start to convert
+Dialogue: 0,1:10:27.01,1:10:30.85,Default,,0,0,0,,what we have into actual Redux.
+Dialogue: 0,1:10:30.85,1:10:39.76,Default,,0,0,0,,So one good place to start would be to NPM install Redux.
+Dialogue: 0,1:10:39.76,1:10:42.10,Default,,0,0,0,,And so, as we talked about in previous lectures,
+Dialogue: 0,1:10:42.10,1:10:45.88,Default,,0,0,0,,NPM install will install some NPM package
+Dialogue: 0,1:10:45.88,1:10:49.06,Default,,0,0,0,,and add it automatically to our package, dot, json file.
+Dialogue: 0,1:10:49.06,1:10:53.86,Default,,0,0,0,,And so if we now look at our package, dot, json,
+Dialogue: 0,1:10:53.86,1:10:56.65,Default,,0,0,0,,we see that Redux has been added down here.
+Dialogue: 0,1:10:56.65,1:10:59.26,Default,,0,0,0,,
+Dialogue: 0,1:10:59.26,1:11:04.76,Default,,0,0,0,,So let's now go ahead and start moving what we have into actual Redux.
+Dialogue: 0,1:11:04.76,1:11:22.74,Default,,0,0,0,,
+Dialogue: 0,1:11:22.74,1:11:27.57,Default,,0,0,0,,So I just copied exactly what we had from our simple implementation
+Dialogue: 0,1:11:27.57,1:11:30.57,Default,,0,0,0,,into this new directory called Redux.
+Dialogue: 0,1:11:30.57,1:11:35.47,Default,,0,0,0,,And here, we're going to start actually using Redux.
+Dialogue: 0,1:11:35.47,1:11:42.15,Default,,0,0,0,,And so first thing we need to do is add this thing called createReducer,
+Dialogue: 0,1:11:42.15,1:11:43.66,Default,,0,0,0,,or createStore rather.
+Dialogue: 0,1:11:43.66,1:11:50.45,Default,,0,0,0,,So if we import createStore from Redux, now we
+Dialogue: 0,1:11:50.45,1:11:54.95,Default,,0,0,0,,have Redux's implementation of a store.
+Dialogue: 0,1:11:54.95,1:11:58.76,Default,,0,0,0,,And so previously we had our class store,
+Dialogue: 0,1:11:58.76,1:12:02.36,Default,,0,0,0,,which took a reducer, and maybe some initial state,
+Dialogue: 0,1:12:02.36,1:12:06.80,Default,,0,0,0,,and implemented all of the things that we thought we needed ourselves.
+Dialogue: 0,1:12:06.80,1:12:09.80,Default,,0,0,0,,But now, we're actually going to use this function called createStore
+Dialogue: 0,1:12:09.80,1:12:10.79,Default,,0,0,0,,from Redux.
+Dialogue: 0,1:12:10.79,1:12:16.70,Default,,0,0,0,,And so now, we can actually just delete that implementation ourselves.
+Dialogue: 0,1:12:16.70,1:12:23.06,Default,,0,0,0,,And so now when we do new store down here, now instead of doing new store,
+Dialogue: 0,1:12:23.06,1:12:26.48,Default,,0,0,0,,we'll just invoke that thing called createStore from Redux.
+Dialogue: 0,1:12:26.48,1:12:29.02,Default,,0,0,0,,
+Dialogue: 0,1:12:29.02,1:12:31.40,Default,,0,0,0,,And since I read that documentation, I know that it
+Dialogue: 0,1:12:31.40,1:12:34.95,Default,,0,0,0,,takes a reducer and some default state.
+Dialogue: 0,1:12:34.95,1:12:37.58,Default,,0,0,0,,And then we can dispatch some actions.
+Dialogue: 0,1:12:37.58,1:12:44.04,Default,,0,0,0,,And other than that, I think that's it.
+Dialogue: 0,1:12:44.04,1:12:48.11,Default,,0,0,0,,So that one line change there actually took us
+Dialogue: 0,1:12:48.11,1:12:54.68,Default,,0,0,0,,from our simple implementation of Redux to actual implementation of Redux.
+Dialogue: 0,1:12:54.68,1:12:57.41,Default,,0,0,0,,Unfortunately, if we want to run this in node,
+Dialogue: 0,1:12:57.41,1:12:59.61,Default,,0,0,0,,it doesn't support that import statement.
+Dialogue: 0,1:12:59.61,1:13:09.62,Default,,0,0,0,,So I'm just going to do this real quick, which does effectively the same thing,
+Dialogue: 0,1:13:09.62,1:13:10.79,Default,,0,0,0,,just so that we can test it.
+Dialogue: 0,1:13:10.79,1:13:13.56,Default,,0,0,0,,
+Dialogue: 0,1:13:13.56,1:13:15.99,Default,,0,0,0,,So let's run this.
+Dialogue: 0,1:13:15.99,1:13:17.10,Default,,0,0,0,,And what do you know?
+Dialogue: 0,1:13:17.10,1:13:20.67,Default,,0,0,0,,We got back exactly what we had before.
+Dialogue: 0,1:13:20.67,1:13:23.03,Default,,0,0,0,,So it turns out the simple implementation of Redux
+Dialogue: 0,1:13:23.03,1:13:28.79,Default,,0,0,0,,that we actually wrote pretty much adheres to the same API
+Dialogue: 0,1:13:28.79,1:13:31.70,Default,,0,0,0,,that Redux itself has.
+Dialogue: 0,1:13:31.70,1:13:37.16,Default,,0,0,0,,And so it didn't really take much for us to move from our simple implementation
+Dialogue: 0,1:13:37.16,1:13:40.50,Default,,0,0,0,,to actual Redux.
+Dialogue: 0,1:13:40.50,1:13:43.14,Default,,0,0,0,,Redux actually, also, gives us a few other goodies.
+Dialogue: 0,1:13:43.14,1:13:45.89,Default,,0,0,0,,
+Dialogue: 0,1:13:45.89,1:13:52.81,Default,,0,0,0,,So right now, the way that we create a reducer that dispatches
+Dialogue: 0,1:13:52.81,1:13:57.92,Default,,0,0,0,,or that passes actions on to their relevant reducers
+Dialogue: 0,1:13:57.92,1:14:01.47,Default,,0,0,0,,is by combining them using a function that we defined here.
+Dialogue: 0,1:14:01.47,1:14:11.12,Default,,0,0,0,,But it turns out Redux also gives us a function called combineReducer, which
+Dialogue: 0,1:14:11.12,1:14:14.12,Default,,0,0,0,,does effectively the same thing for us.
+Dialogue: 0,1:14:14.12,1:14:17.77,Default,,0,0,0,,Rather than us writing a function that combines the reducers,
+Dialogue: 0,1:14:17.77,1:14:23.60,Default,,0,0,0,,we can actually invoke this thing called createReducer,
+Dialogue: 0,1:14:23.60,1:14:27.26,Default,,0,0,0,,or combineReducers from Redux.
+Dialogue: 0,1:14:27.26,1:14:31.94,Default,,0,0,0,,That just takes an object that maps the key in the actual store
+Dialogue: 0,1:14:31.94,1:14:34.49,Default,,0,0,0,,with the reducer that controls that key.
+Dialogue: 0,1:14:34.49,1:14:43.25,Default,,0,0,0,,And so it can do user gets userReducer and contacts gets contactReducer.
+Dialogue: 0,1:14:43.25,1:14:45.92,Default,,0,0,0,,
+Dialogue: 0,1:14:45.92,1:14:49.34,Default,,0,0,0,,And now, we've basically taken a little bit more complexity
+Dialogue: 0,1:14:49.34,1:14:54.90,Default,,0,0,0,,out of our application and maintain the same functionality.
+Dialogue: 0,1:14:54.90,1:15:04.55,Default,,0,0,0,,So again, if we test this, we don't have the initial state.
+Dialogue: 0,1:15:04.55,1:15:07.29,Default,,0,0,0,,
+Dialogue: 0,1:15:07.29,1:15:11.98,Default,,0,0,0,,So one difference here is that--
+Dialogue: 0,1:15:11.98,1:15:13.86,Default,,0,0,0,,did we not pass the initial state in?
+Dialogue: 0,1:15:13.86,1:15:18.99,Default,,0,0,0,,
+Dialogue: 0,1:15:18.99,1:15:24.36,Default,,0,0,0,,Let's actually-- just to safeguard real quick, that if this is null, or empty,
+Dialogue: 0,1:15:24.36,1:15:26.07,Default,,0,0,0,,we'll go ahead and just create in Default
+Dialogue: 0,1:15:26.07,1:15:29.07,Default,,0,0,0,,State for each individual reducer.
+Dialogue: 0,1:15:29.07,1:15:32.82,Default,,0,0,0,,So for the user, let's have an empty object.
+Dialogue: 0,1:15:32.82,1:15:40.62,Default,,0,0,0,,And for the contacts, let's have an empty array like that, and now run it.
+Dialogue: 0,1:15:40.62,1:15:44.34,Default,,0,0,0,,Now we get back exactly what we had before, as expected.
+Dialogue: 0,1:15:44.34,1:15:51.03,Default,,0,0,0,,The one minor difference is that rather than having a default state app-wide,
+Dialogue: 0,1:15:51.03,1:15:55.93,Default,,0,0,0,,we can actually just define the Default State in the reducers themselves.
+Dialogue: 0,1:15:55.93,1:15:59.67,Default,,0,0,0,,And so the Default State for the contacts in our contactReducer
+Dialogue: 0,1:15:59.67,1:16:01.59,Default,,0,0,0,,is just an empty array.
+Dialogue: 0,1:16:01.59,1:16:05.13,Default,,0,0,0,,And the Default State for our user, if the userReducer
+Dialogue: 0,1:16:05.13,1:16:09.66,Default,,0,0,0,,is invoked with no current state, we'll go ahead and initialize it
+Dialogue: 0,1:16:09.66,1:16:12.40,Default,,0,0,0,,to some empty object.
+Dialogue: 0,1:16:12.40,1:16:15.93,Default,,0,0,0,,And so now, I see even more complexity gone
+Dialogue: 0,1:16:15.93,1:16:18.75,Default,,0,0,0,,that just goes into the Redux library, rather than
+Dialogue: 0,1:16:18.75,1:16:23.02,Default,,0,0,0,,our own implementation in this file.
+Dialogue: 0,1:16:23.02,1:16:23.52,Default,,0,0,0,,Great.
+Dialogue: 0,1:16:23.52,1:16:29.07,Default,,0,0,0,,So now we have a working store.
+Dialogue: 0,1:16:29.07,1:16:32.85,Default,,0,0,0,,It's just a lot of stuff in a single file.
+Dialogue: 0,1:16:32.85,1:16:35.16,Default,,0,0,0,,There's no reason that our store, dot, js
+Dialogue: 0,1:16:35.16,1:16:40.86,Default,,0,0,0,,file should have our store, but also our action creators,
+Dialogue: 0,1:16:40.86,1:16:44.69,Default,,0,0,0,,also our reducers, and also all of our actions.
+Dialogue: 0,1:16:44.69,1:16:47.10,Default,,0,0,0,,And so let's start to split those out into separate files
+Dialogue: 0,1:16:47.10,1:16:50.87,Default,,0,0,0,,so that they're easier to maintain and find.
+Dialogue: 0,1:16:50.87,1:17:01.90,Default,,0,0,0,,So let's copy the store in to read this thing called reducer, dot, js--
+Dialogue: 0,1:17:01.90,1:17:04.73,Default,,0,0,0,,and also copy the store into this thing called actions, dot, js.
+Dialogue: 0,1:17:04.73,1:17:08.31,Default,,0,0,0,,
+Dialogue: 0,1:17:08.31,1:17:12.00,Default,,0,0,0,,So in reducer-- actually, let's do actions first.
+Dialogue: 0,1:17:12.00,1:17:19.57,Default,,0,0,0,,In actions, what do we care about in actions?
+Dialogue: 0,1:17:19.57,1:17:24.73,Default,,0,0,0,,We really only care about our action types and our action creators.
+Dialogue: 0,1:17:24.73,1:17:27.20,Default,,0,0,0,,CombineReducers, those things about stores,
+Dialogue: 0,1:17:27.20,1:17:30.46,Default,,0,0,0,,we really don't care about at all, so we can just delete that.
+Dialogue: 0,1:17:30.46,1:17:32.36,Default,,0,0,0,,We don't care about that.
+Dialogue: 0,1:17:32.36,1:17:35.47,Default,,0,0,0,,We don't care about any of these reducers.
+Dialogue: 0,1:17:35.47,1:17:39.29,Default,,0,0,0,,But we do, however, care about the action creators.
+Dialogue: 0,1:17:39.29,1:17:41.98,Default,,0,0,0,,So now, in our file called actions, dot, js,
+Dialogue: 0,1:17:41.98,1:17:44.51,Default,,0,0,0,,we define the things that have to do with our actions.
+Dialogue: 0,1:17:44.51,1:17:48.49,Default,,0,0,0,,So there are our action types and our action creators.
+Dialogue: 0,1:17:48.49,1:17:52.84,Default,,0,0,0,,Some people prefer to have action types and action creators in separate files.
+Dialogue: 0,1:17:52.84,1:17:54.82,Default,,0,0,0,,But since we only have two of each, let's just
+Dialogue: 0,1:17:54.82,1:17:58.16,Default,,0,0,0,,keep them in these files called actions, dot, js for now.
+Dialogue: 0,1:17:58.16,1:17:59.62,Default,,0,0,0,,And let's go ahead and export them.
+Dialogue: 0,1:17:59.62,1:18:07.46,Default,,0,0,0,,
+Dialogue: 0,1:18:07.46,1:18:10.48,Default,,0,0,0,,So now in our actions, dot, js file, we are just
+Dialogue: 0,1:18:10.48,1:18:13.37,Default,,0,0,0,,exporting the available action types.
+Dialogue: 0,1:18:13.37,1:18:16.88,Default,,0,0,0,,And we're also exporting the available action creators.
+Dialogue: 0,1:18:16.88,1:18:21.01,Default,,0,0,0,,And that's all that this file called actions cares about.
+Dialogue: 0,1:18:21.01,1:18:23.27,Default,,0,0,0,,Now let's move on to reducer.
+Dialogue: 0,1:18:23.27,1:18:28.16,Default,,0,0,0,,So does the reducer care about combineReducers and createStore?
+Dialogue: 0,1:18:28.16,1:18:32.69,Default,,0,0,0,,Well, half of it, it cares about combineReducers but not createStore.
+Dialogue: 0,1:18:32.69,1:18:37.36,Default,,0,0,0,,And let's actually move back to our ES6 import, syntax.
+Dialogue: 0,1:18:37.36,1:18:40.27,Default,,0,0,0,,
+Dialogue: 0,1:18:40.27,1:18:43.16,Default,,0,0,0,,Do we care about action types?
+Dialogue: 0,1:18:43.16,1:18:48.24,Default,,0,0,0,,Yes, we do, because the reducer is checking against action types.
+Dialogue: 0,1:18:48.24,1:18:50.83,Default,,0,0,0,,But there's no reason that we should define them in this file.
+Dialogue: 0,1:18:50.83,1:18:54.37,Default,,0,0,0,,We should actually just import them from our file called actions.
+Dialogue: 0,1:18:54.37,1:19:04.87,Default,,0,0,0,,
+Dialogue: 0,1:19:04.87,1:19:08.44,Default,,0,0,0,,And now we can go ahead and delete the lines here.
+Dialogue: 0,1:19:08.44,1:19:16.13,Default,,0,0,0,,
+Dialogue: 0,1:19:16.13,1:19:19.63,Default,,0,0,0,,And so now, what we have in this file is basically only the things
+Dialogue: 0,1:19:19.63,1:19:22.39,Default,,0,0,0,,that we need to define our reducers.
+Dialogue: 0,1:19:22.39,1:19:24.82,Default,,0,0,0,,And so we need this helper function called merge,
+Dialogue: 0,1:19:24.82,1:19:28.30,Default,,0,0,0,,which takes a couple of objects and merges them together.
+Dialogue: 0,1:19:28.30,1:19:33.61,Default,,0,0,0,,We define our Default State here, though we don't really need to.
+Dialogue: 0,1:19:33.61,1:19:38.81,Default,,0,0,0,,And then we have two separate reducers for two parts of our application.
+Dialogue: 0,1:19:38.81,1:19:42.76,Default,,0,0,0,,So for the part of our application that cares about contacts,
+Dialogue: 0,1:19:42.76,1:19:45.19,Default,,0,0,0,,we have this reducer, which takes state, which
+Dialogue: 0,1:19:45.19,1:19:48.94,Default,,0,0,0,,is initialized to an empty array-- so just an empty list of contacts.
+Dialogue: 0,1:19:48.94,1:19:54.26,Default,,0,0,0,,We take an action, and we match against the action to see what we should do.
+Dialogue: 0,1:19:54.26,1:19:58.79,Default,,0,0,0,,We have the reducer for users here.
+Dialogue: 0,1:19:58.79,1:20:03.10,Default,,0,0,0,,So we say, give me a starting state for our users.
+Dialogue: 0,1:20:03.10,1:20:07.50,Default,,0,0,0,,If there's no previous state, just initialize it to an empty object.
+Dialogue: 0,1:20:07.50,1:20:10.75,Default,,0,0,0,,And give me an action, and we'll go ahead and match against the action type
+Dialogue: 0,1:20:10.75,1:20:12.47,Default,,0,0,0,,to see what we should do.
+Dialogue: 0,1:20:12.47,1:20:15.01,Default,,0,0,0,,And then we have our actual reducer that we're
+Dialogue: 0,1:20:15.01,1:20:20.03,Default,,0,0,0,,going to pass to our store, which just combines those two reducers.
+Dialogue: 0,1:20:20.03,1:20:24.25,Default,,0,0,0,,So just to stay maintainable and scalable, what we're doing
+Dialogue: 0,1:20:24.25,1:20:28.15,Default,,0,0,0,,is rather than having one reducer check against all action types
+Dialogue: 0,1:20:28.15,1:20:31.96,Default,,0,0,0,,and maintain the entire state, we have separate reducers
+Dialogue: 0,1:20:31.96,1:20:35.26,Default,,0,0,0,,for the part of the state that cares about user and the part
+Dialogue: 0,1:20:35.26,1:20:37.21,Default,,0,0,0,,of the state that cares about contacts.
+Dialogue: 0,1:20:37.21,1:20:39.28,Default,,0,0,0,,And if we want to scale up to the point where
+Dialogue: 0,1:20:39.28,1:20:43.78,Default,,0,0,0,,our user is starting to be an object that
+Dialogue: 0,1:20:43.78,1:20:46.54,Default,,0,0,0,,is unmaintainable by a single reducer, what we can do
+Dialogue: 0,1:20:46.54,1:20:49.92,Default,,0,0,0,,is we can create one reducer for half of that user,
+Dialogue: 0,1:20:49.92,1:20:52.63,Default,,0,0,0,,and maybe another user for another half, or maybe a third reducer
+Dialogue: 0,1:20:52.63,1:20:53.98,Default,,0,0,0,,for a third key in there--
+Dialogue: 0,1:20:53.98,1:20:59.65,Default,,0,0,0,,and go ahead and do something here, where it's, like, combine reducers.
+Dialogue: 0,1:20:59.65,1:21:06.43,Default,,0,0,0,,And maybe we have something that cares about the user's meta
+Dialogue: 0,1:21:06.43,1:21:11.03,Default,,0,0,0,,data that's called userMetaReducer.
+Dialogue: 0,1:21:11.03,1:21:18.30,Default,,0,0,0,,And maybe we have something that cares about the user's logins.
+Dialogue: 0,1:21:18.30,1:21:20.47,Default,,0,0,0,,And so every time they have a login, we'll
+Dialogue: 0,1:21:20.47,1:21:23.65,Default,,0,0,0,,go ahead and add that to this part of the user's state.
+Dialogue: 0,1:21:23.65,1:21:28.18,Default,,0,0,0,,And so maybe that is the userLoginReducer.
+Dialogue: 0,1:21:28.18,1:21:30.86,Default,,0,0,0,,And I'm just making up examples that are somewhat arbitrary.
+Dialogue: 0,1:21:30.86,1:21:34.80,Default,,0,0,0,,But I'm just trying to show that as our application scales up,
+Dialogue: 0,1:21:34.80,1:21:38.92,Default,,0,0,0,,and as our application state gets larger and larger, what we can do
+Dialogue: 0,1:21:38.92,1:21:43.87,Default,,0,0,0,,is we can still take bite-sized pieces of that state
+Dialogue: 0,1:21:43.87,1:21:46.21,Default,,0,0,0,,and manage them by one small reducer.
+Dialogue: 0,1:21:46.21,1:21:50.95,Default,,0,0,0,,And we can compose these reducers into just one massive reducer
+Dialogue: 0,1:21:50.95,1:21:53.60,Default,,0,0,0,,that can take care of the entire state.
+Dialogue: 0,1:21:53.60,1:21:55.81,Default,,0,0,0,,And so this combineReducer, what it does is
+Dialogue: 0,1:21:55.81,1:22:01.84,Default,,0,0,0,,it allows us to split up one object into a bunch of separate object keys
+Dialogue: 0,1:22:01.84,1:22:06.49,Default,,0,0,0,,that are maintained by a separate reducer.
+Dialogue: 0,1:22:06.49,1:22:08.83,Default,,0,0,0,,And so since our application is pretty simple right now,
+Dialogue: 0,1:22:08.83,1:22:09.96,Default,,0,0,0,,we can do that all in one.
+Dialogue: 0,1:22:09.96,1:22:13.57,Default,,0,0,0,,But if we wanted to scale up, it is possible to start nesting reducers
+Dialogue: 0,1:22:13.57,1:22:16.05,Default,,0,0,0,,like that.
+Dialogue: 0,1:22:16.05,1:22:17.47,Default,,0,0,0,,Great.
+Dialogue: 0,1:22:17.47,1:22:25.54,Default,,0,0,0,,So let's actually export default, this reducer,
+Dialogue: 0,1:22:25.54,1:22:29.44,Default,,0,0,0,,because that's the only thing that we want to expose from this file.
+Dialogue: 0,1:22:29.44,1:22:33.97,Default,,0,0,0,,We don't ever want somebody to use contactReducer or userReducer alone.
+Dialogue: 0,1:22:33.97,1:22:38.23,Default,,0,0,0,,We just want them to interface with that through this big reducer
+Dialogue: 0,1:22:38.23,1:22:40.94,Default,,0,0,0,,that we have at the end.
+Dialogue: 0,1:22:40.94,1:22:43.75,Default,,0,0,0,,And if it's easier for you to follow like this,
+Dialogue: 0,1:22:43.75,1:22:48.67,Default,,0,0,0,,we can define this variable called reducer and export default
+Dialogue: 0,1:22:48.67,1:22:52.09,Default,,0,0,0,,at the end, which is exactly the same as what we did before.
+Dialogue: 0,1:22:52.09,1:22:55.78,Default,,0,0,0,,But now, we have a handy variable name to let us know
+Dialogue: 0,1:22:55.78,1:22:59.67,Default,,0,0,0,,exactly what this combineReducer is.
+Dialogue: 0,1:22:59.67,1:23:00.17,Default,,0,0,0,,Great.
+Dialogue: 0,1:23:00.17,1:23:01.08,Default,,0,0,0,,So that's the reducer.
+Dialogue: 0,1:23:01.08,1:23:03.37,Default,,0,0,0,,
+Dialogue: 0,1:23:03.37,1:23:08.72,Default,,0,0,0,,And now, lastly, let's clean out this store file.
+Dialogue: 0,1:23:08.72,1:23:14.47,Default,,0,0,0,,So we no longer care about that combineReducer function.
+Dialogue: 0,1:23:14.47,1:23:17.35,Default,,0,0,0,,Now we only care about createStore.
+Dialogue: 0,1:23:17.35,1:23:21.55,Default,,0,0,0,,Do we care about action types in our store file?
+Dialogue: 0,1:23:21.55,1:23:22.78,Default,,0,0,0,,No, we don't.
+Dialogue: 0,1:23:22.78,1:23:23.86,Default,,0,0,0,,So let me delete that.
+Dialogue: 0,1:23:23.86,1:23:25.98,Default,,0,0,0,,Do we care about merge and those two reducers?
+Dialogue: 0,1:23:25.98,1:23:26.53,Default,,0,0,0,,No, we don't.
+Dialogue: 0,1:23:26.53,1:23:27.76,Default,,0,0,0,,We can delete that.
+Dialogue: 0,1:23:27.76,1:23:29.65,Default,,0,0,0,,Do we care about our main reducer?
+Dialogue: 0,1:23:29.65,1:23:31.76,Default,,0,0,0,,Yes, we do, but not in the context of this file.
+Dialogue: 0,1:23:31.76,1:23:33.85,Default,,0,0,0,,We can just import it from our other file.
+Dialogue: 0,1:23:33.85,1:23:36.55,Default,,0,0,0,,And so rather than implementing it here, we
+Dialogue: 0,1:23:36.55,1:23:43.57,Default,,0,0,0,,can just import reducer from that file and delete the declaration here.
+Dialogue: 0,1:23:43.57,1:23:44.95,Default,,0,0,0,,Do we care about action creators?
+Dialogue: 0,1:23:44.95,1:23:46.01,Default,,0,0,0,,Not in this file.
+Dialogue: 0,1:23:46.01,1:23:49.39,Default,,0,0,0,,
+Dialogue: 0,1:23:49.39,1:23:50.35,Default,,0,0,0,,Do we care about store?
+Dialogue: 0,1:23:50.35,1:23:50.98,Default,,0,0,0,,Yes, we do.
+Dialogue: 0,1:23:50.98,1:23:54.82,Default,,0,0,0,,So let's have const store be this thing that
+Dialogue: 0,1:23:54.82,1:23:57.61,Default,,0,0,0,,creates the store from the reducer.
+Dialogue: 0,1:23:57.61,1:23:59.47,Default,,0,0,0,,And we don't really need the Default State
+Dialogue: 0,1:23:59.47,1:24:05.53,Default,,0,0,0,,since we declared it in each one of the reducers themselves.
+Dialogue: 0,1:24:05.53,1:24:12.34,Default,,0,0,0,,So the Default State is basically this, where an empty contacts key just
+Dialogue: 0,1:24:12.34,1:24:13.69,Default,,0,0,0,,becomes an empty array.
+Dialogue: 0,1:24:13.69,1:24:16.21,Default,,0,0,0,,And an empty user becomes an empty object.
+Dialogue: 0,1:24:16.21,1:24:19.48,Default,,0,0,0,,
+Dialogue: 0,1:24:19.48,1:24:22.84,Default,,0,0,0,,And so we're still dispatching a bunch of actions.
+Dialogue: 0,1:24:22.84,1:24:33.28,Default,,0,0,0,,Let's comment those out for now and export this store.
+Dialogue: 0,1:24:33.28,1:24:36.68,Default,,0,0,0,,
+Dialogue: 0,1:24:36.68,1:24:37.18,Default,,0,0,0,,Great.
+Dialogue: 0,1:24:37.18,1:24:39.40,Default,,0,0,0,,So now, everything is in its own separate file.
+Dialogue: 0,1:24:39.40,1:24:40.84,Default,,0,0,0,,Everything is very readable.
+Dialogue: 0,1:24:40.84,1:24:46.08,Default,,0,0,0,,I believe every single file can basically be read without scrolling.
+Dialogue: 0,1:24:46.08,1:24:47.10,Default,,0,0,0,,Oh, I lied.
+Dialogue: 0,1:24:47.10,1:24:50.41,Default,,0,0,0,,But very close to that, which is pretty impressive since we're
+Dialogue: 0,1:24:50.41,1:24:53.00,Default,,0,0,0,,only showing fewer than 20 lines at a time.
+Dialogue: 0,1:24:53.00,1:24:56.20,Default,,0,0,0,,So it's very easy to now navigate through our application
+Dialogue: 0,1:24:56.20,1:25:00.52,Default,,0,0,0,,and know exactly where we need to update something if we need to do so.
+Dialogue: 0,1:25:00.52,1:25:03.23,Default,,0,0,0,,So if we need to add a new action, where are we going to do that?
+Dialogue: 0,1:25:03.23,1:25:07.57,Default,,0,0,0,,Well, in our actions file, we can add any action types up here
+Dialogue: 0,1:25:07.57,1:25:09.88,Default,,0,0,0,,and any action creators down here.
+Dialogue: 0,1:25:09.88,1:25:15.43,Default,,0,0,0,,If we want to change any logic in our reducer, we know exactly where that is.
+Dialogue: 0,1:25:15.43,1:25:16.72,Default,,0,0,0,,It's right here.
+Dialogue: 0,1:25:16.72,1:25:21.82,Default,,0,0,0,,If we want to change how we handle contacts, we can do that here.
+Dialogue: 0,1:25:21.82,1:25:25.11,Default,,0,0,0,,If we want to do so with four users, we can do that here.
+Dialogue: 0,1:25:25.11,1:25:28.22,Default,,0,0,0,,And I immediately see a way that we can make this more readable.
+Dialogue: 0,1:25:28.22,1:25:30.64,Default,,0,0,0,,Right now, what we're doing is we're doing if action, dot,
+Dialogue: 0,1:25:30.64,1:25:33.19,Default,,0,0,0,,type is Update User, do this.
+Dialogue: 0,1:25:33.19,1:25:34.84,Default,,0,0,0,,If action, dot, type is this, do this.
+Dialogue: 0,1:25:34.84,1:25:36.51,Default,,0,0,0,,If action, dot, type is this, do this.
+Dialogue: 0,1:25:36.51,1:25:39.64,Default,,0,0,0,,So we keep matching against this string called action, dot, type.
+Dialogue: 0,1:25:39.64,1:25:42.16,Default,,0,0,0,,There's actually something built into JavaScript
+Dialogue: 0,1:25:42.16,1:25:47.66,Default,,0,0,0,,that allows us to more easily match against a single string.
+Dialogue: 0,1:25:47.66,1:25:49.10,Default,,0,0,0,,And that's the switch statement.
+Dialogue: 0,1:25:49.10,1:25:54.91,Default,,0,0,0,,So we could do switch based on action, dot, type here.
+Dialogue: 0,1:25:54.91,1:25:57.49,Default,,0,0,0,,And if you're new to the syntax, basically what it does
+Dialogue: 0,1:25:57.49,1:26:02.44,Default,,0,0,0,,is it allows us to check a particular variable
+Dialogue: 0,1:26:02.44,1:26:04.96,Default,,0,0,0,,and match it against a bunch of different possible values.
+Dialogue: 0,1:26:04.96,1:26:06.97,Default,,0,0,0,,And so if the action, dot, type--
+Dialogue: 0,1:26:06.97,1:26:12.31,Default,,0,0,0,,it's the case where it's Update User, then we're going to do something.
+Dialogue: 0,1:26:12.31,1:26:15.83,Default,,0,0,0,,And that something is to do this.
+Dialogue: 0,1:26:15.83,1:26:20.11,Default,,0,0,0,,
+Dialogue: 0,1:26:20.11,1:26:27.48,Default,,0,0,0,,If it's Update Contact, instead we're going to do this.
+Dialogue: 0,1:26:27.48,1:26:30.53,Default,,0,0,0,,
+Dialogue: 0,1:26:30.53,1:26:33.08,Default,,0,0,0,,Otherwise, just return the old state.
+Dialogue: 0,1:26:33.08,1:26:37.54,Default,,0,0,0,,
+Dialogue: 0,1:26:37.54,1:26:39.53,Default,,0,0,0,,And now it's a lot easier to read.
+Dialogue: 0,1:26:39.53,1:26:41.66,Default,,0,0,0,,So there is no longer a bunch of if-statements.
+Dialogue: 0,1:26:41.66,1:26:45.79,Default,,0,0,0,,We just know that what we care about is action, dot, type.
+Dialogue: 0,1:26:45.79,1:26:50.35,Default,,0,0,0,,And if the case is a Update User, then we return this.
+Dialogue: 0,1:26:50.35,1:26:53.51,Default,,0,0,0,,If the case is Update Contact, we return this.
+Dialogue: 0,1:26:53.51,1:26:55.81,Default,,0,0,0,,And if it doesn't match any of those things, by default
+Dialogue: 0,1:26:55.81,1:26:59.23,Default,,0,0,0,,we should just return to the original state.
+Dialogue: 0,1:26:59.23,1:27:03.49,Default,,0,0,0,,And then again, we combine the reducers and export it at the end.
+Dialogue: 0,1:27:03.49,1:27:08.53,Default,,0,0,0,,And then we import it into our file in store, dot, js,
+Dialogue: 0,1:27:08.53,1:27:13.71,Default,,0,0,0,,which just creates a store out of that reducer and exports it.
+Dialogue: 0,1:27:13.71,1:27:16.09,Default,,0,0,0,,So again, we didn't really change any of the logic there.
+Dialogue: 0,1:27:16.09,1:27:19.58,Default,,0,0,0,,We just split things into smaller, bite-sized pieces.
+Dialogue: 0,1:27:19.58,1:27:22.66,Default,,0,0,0,,And so a lot of a recurring theme that we see in this class
+Dialogue: 0,1:27:22.66,1:27:25.96,Default,,0,0,0,,is take a big problem and split it into smaller pieces that are
+Dialogue: 0,1:27:25.96,1:27:28.88,Default,,0,0,0,,bite-size and maybe easier to digest.
+Dialogue: 0,1:27:28.88,1:27:32.17,Default,,0,0,0,,So we went ahead and did that with our store here.
+Dialogue: 0,1:27:32.17,1:27:39.64,Default,,0,0,0,,And so now, let's talk about it in the context of React.
+Dialogue: 0,1:27:39.64,1:27:42.19,Default,,0,0,0,,So far, we've only really talked about Redux
+Dialogue: 0,1:27:42.19,1:27:46.78,Default,,0,0,0,,as a standalone library that tracks some data.
+Dialogue: 0,1:27:46.78,1:27:52.27,Default,,0,0,0,,But what we really care about is having that data update some views.
+Dialogue: 0,1:27:52.27,1:27:56.98,Default,,0,0,0,,And so we want to respond to, or React to rather,
+Dialogue: 0,1:27:56.98,1:28:00.68,Default,,0,0,0,,changes in data in our application or UI.
+Dialogue: 0,1:28:00.68,1:28:03.88,Default,,0,0,0,,And so now we have a few questions to answer.
+Dialogue: 0,1:28:03.88,1:28:08.32,Default,,0,0,0,,How do we get the info from our store into our components?
+Dialogue: 0,1:28:08.32,1:28:12.40,Default,,0,0,0,,Because right now, we've been using our store as just a standalone module
+Dialogue: 0,1:28:12.40,1:28:16.01,Default,,0,0,0,,and accessing effectively the command line.
+Dialogue: 0,1:28:16.01,1:28:20.08,Default,,0,0,0,,But now, how do you get this to run in an application?
+Dialogue: 0,1:28:20.08,1:28:25.78,Default,,0,0,0,,Well, it turns out our store has a handy method for getting the info.
+Dialogue: 0,1:28:25.78,1:28:27.94,Default,,0,0,0,,It's called store, dot, getState.
+Dialogue: 0,1:28:27.94,1:28:30.10,Default,,0,0,0,,And so in our application, what we can do
+Dialogue: 0,1:28:30.10,1:28:33.65,Default,,0,0,0,,is we can actually access our state from our store directly.
+Dialogue: 0,1:28:33.65,1:28:36.92,Default,,0,0,0,,So we can do store, dot, getState to receive that.
+Dialogue: 0,1:28:36.92,1:28:42.10,Default,,0,0,0,,And so now let's start integrating Redux into our application.
+Dialogue: 0,1:28:42.10,1:28:44.20,Default,,0,0,0,,So we already have this thing called store.
+Dialogue: 0,1:28:44.20,1:28:54.46,Default,,0,0,0,,Let's uncomment our mode of adding contacts.
+Dialogue: 0,1:28:54.46,1:28:57.72,Default,,0,0,0,,And so right now, I can't run this at the command line,
+Dialogue: 0,1:28:57.72,1:29:00.54,Default,,0,0,0,,because we're using this import syntax.
+Dialogue: 0,1:29:00.54,1:29:08.06,Default,,0,0,0,,But our application state should be some contacts where the three contacts are
+Dialogue: 0,1:29:08.06,1:29:12.20,Default,,0,0,0,,myself twice and David once.
+Dialogue: 0,1:29:12.20,1:29:17.52,Default,,0,0,0,,And now we can go ahead and read from our store in our React application.
+Dialogue: 0,1:29:17.52,1:29:19.73,Default,,0,0,0,,So if you remember what our application looks like is
+Dialogue: 0,1:29:19.73,1:29:21.80,Default,,0,0,0,,we just have a bunch of contacts.
+Dialogue: 0,1:29:21.80,1:29:25.31,Default,,0,0,0,,And these contacts can be toggleable, but they just really
+Dialogue: 0,1:29:25.31,1:29:29.20,Default,,0,0,0,,just show on this simple list page.
+Dialogue: 0,1:29:29.20,1:29:34.97,Default,,0,0,0,,And so to dive back into the code from the past few lectures,
+Dialogue: 0,1:29:34.97,1:29:38.34,Default,,0,0,0,,where do we actually get those contacts?
+Dialogue: 0,1:29:38.34,1:29:41.93,Default,,0,0,0,,Is it in the contact list file?
+Dialogue: 0,1:29:41.93,1:29:45.71,Default,,0,0,0,,No, everything is in our app, dot, js file.
+Dialogue: 0,1:29:45.71,1:29:49.62,Default,,0,0,0,,
+Dialogue: 0,1:29:49.62,1:29:51.68,Default,,0,0,0,,Right now, we're just implementing our contacts
+Dialogue: 0,1:29:51.68,1:29:55.71,Default,,0,0,0,,from our random-contact generator file that we wrote a few weeks ago.
+Dialogue: 0,1:29:55.71,1:30:02.66,Default,,0,0,0,,But ultimately, we're setting states in our application class and passing that
+Dialogue: 0,1:30:02.66,1:30:06.08,Default,,0,0,0,,through our navigation via screen props, and then
+Dialogue: 0,1:30:06.08,1:30:13.61,Default,,0,0,0,,accessing it in our relevant page by doing, like, this, dot, props, dot,
+Dialogue: 0,1:30:13.61,1:30:17.90,Default,,0,0,0,,navigator, dot, getParam, dot, whatever.
+Dialogue: 0,1:30:17.90,1:30:24.31,Default,,0,0,0,,And so it's a lot of work just to get our single key there.
+Dialogue: 0,1:30:24.31,1:30:25.73,Default,,0,0,0,,But there's actually more to that.
+Dialogue: 0,1:30:25.73,1:30:29.11,Default,,0,0,0,,We're also passing our contacts to every single other page in our application,
+Dialogue: 0,1:30:29.11,1:30:31.15,Default,,0,0,0,,even the ones that don't care about it.
+Dialogue: 0,1:30:31.15,1:30:33.89,Default,,0,0,0,,And so now what's nice about Redux is we can only
+Dialogue: 0,1:30:33.89,1:30:38.57,Default,,0,0,0,,listen to that information in the pages that we actively
+Dialogue: 0,1:30:38.57,1:30:40.13,Default,,0,0,0,,care about the information.
+Dialogue: 0,1:30:40.13,1:30:46.70,Default,,0,0,0,,And so we don't really care about contacts in all of our pages, right?
+Dialogue: 0,1:30:46.70,1:30:49.80,Default,,0,0,0,,We only care about it in the page that displays them.
+Dialogue: 0,1:30:49.80,1:30:57.94,Default,,0,0,0,,And so let's delete this code that passes the contacts as a screen
+Dialogue: 0,1:30:57.94,1:31:00.29,Default,,0,0,0,,prop to every single page.
+Dialogue: 0,1:31:00.29,1:31:02.45,Default,,0,0,0,,So if you remember, back a few weeks ago,
+Dialogue: 0,1:31:02.45,1:31:06.03,Default,,0,0,0,,Brent was saying that there's a better way than passing
+Dialogue: 0,1:31:06.03,1:31:07.16,Default,,0,0,0,,screen props to every page.
+Dialogue: 0,1:31:07.16,1:31:09.61,Default,,0,0,0,,And he used that word Redux, which we didn't know what that
+Dialogue: 0,1:31:09.61,1:31:11.18,Default,,0,0,0,,meant a few weeks ago, but now we do.
+Dialogue: 0,1:31:11.18,1:31:13.82,Default,,0,0,0,,Now there's actually a way where we can say,
+Dialogue: 0,1:31:13.82,1:31:17.36,Default,,0,0,0,,oh, this information is only relevant to this particular component.
+Dialogue: 0,1:31:17.36,1:31:19.32,Default,,0,0,0,,And so now in that particular component, we
+Dialogue: 0,1:31:19.32,1:31:21.20,Default,,0,0,0,,can just have it listen directly to the state
+Dialogue: 0,1:31:21.20,1:31:26.31,Default,,0,0,0,,without having to pass that state to every single component.
+Dialogue: 0,1:31:26.31,1:31:29.48,Default,,0,0,0,,And again, how are we going to get that information
+Dialogue: 0,1:31:29.48,1:31:31.13,Default,,0,0,0,,from the store to our components?
+Dialogue: 0,1:31:31.13,1:31:33.38,Default,,0,0,0,,Well, we can use store, dot, getState.
+Dialogue: 0,1:31:33.38,1:31:34.26,Default,,0,0,0,,And so let's do that.
+Dialogue: 0,1:31:34.26,1:31:38.19,Default,,0,0,0,,
+Dialogue: 0,1:31:38.19,1:31:43.16,Default,,0,0,0,,So our screen called ContactListScreen is where
+Dialogue: 0,1:31:43.16,1:31:45.50,Default,,0,0,0,,we're getting that information, right?
+Dialogue: 0,1:31:45.50,1:31:54.44,Default,,0,0,0,,Now, what we're doing is this, dot, props, dot, screenProps, dot, contacts.
+Dialogue: 0,1:31:54.44,1:31:58.79,Default,,0,0,0,,And so let's actually do something different.
+Dialogue: 0,1:31:58.79,1:32:01.01,Default,,0,0,0,,So rather than looking at our screenProps,
+Dialogue: 0,1:32:01.01,1:32:11.84,Default,,0,0,0,,let's do import store for Redux, slash, store.
+Dialogue: 0,1:32:11.84,1:32:13.88,Default,,0,0,0,,So now that's our store.
+Dialogue: 0,1:32:13.88,1:32:16.73,Default,,0,0,0,,How do we get our information?
+Dialogue: 0,1:32:16.73,1:32:24.40,Default,,0,0,0,,Well, we can just do const contacts is store, dot, getState--
+Dialogue: 0,1:32:24.40,1:32:26.32,Default,,0,0,0,,which is how we get the state from our store--
+Dialogue: 0,1:32:26.32,1:32:29.01,Default,,0,0,0,,dot, contacts.
+Dialogue: 0,1:32:29.01,1:32:32.58,Default,,0,0,0,,Because getState returns the entire state of our application.
+Dialogue: 0,1:32:32.58,1:32:36.05,Default,,0,0,0,,And if you remember, what that looks like is user with some user information
+Dialogue: 0,1:32:36.05,1:32:38.24,Default,,0,0,0,,and contacts with our list of contacts.
+Dialogue: 0,1:32:38.24,1:32:40.76,Default,,0,0,0,,We only care about the dot contacts part.
+Dialogue: 0,1:32:40.76,1:32:44.19,Default,,0,0,0,,And so we can grab that and just pass that directly to here.
+Dialogue: 0,1:32:44.19,1:32:51.06,Default,,0,0,0,,
+Dialogue: 0,1:32:51.06,1:32:53.79,Default,,0,0,0,,And so now, hopefully--
+Dialogue: 0,1:32:53.79,1:32:56.77,Default,,0,0,0,,
+Dialogue: 0,1:32:56.77,1:32:57.80,Default,,0,0,0,,so AddContact.
+Dialogue: 0,1:32:57.80,1:33:02.41,Default,,0,0,0,,Oh, I uncommented something without importing what it needed.
+Dialogue: 0,1:33:02.41,1:33:03.81,Default,,0,0,0,,So let's just go back to Redux.
+Dialogue: 0,1:33:03.81,1:33:07.83,Default,,0,0,0,,
+Dialogue: 0,1:33:07.83,1:33:10.56,Default,,0,0,0,,So I ended up using addContact here without importing it.
+Dialogue: 0,1:33:10.56,1:33:15.03,Default,,0,0,0,,And so if I wanted to use that addContact action creator,
+Dialogue: 0,1:33:15.03,1:33:19.56,Default,,0,0,0,,I need to first import addContact from our actions file.
+Dialogue: 0,1:33:19.56,1:33:23.38,Default,,0,0,0,,
+Dialogue: 0,1:33:23.38,1:33:29.24,Default,,0,0,0,,And so now, we can see that we're creating our--
+Dialogue: 0,1:33:29.24,1:33:35.03,Default,,0,0,0,,people are showing up, however their phone numbers are not--
+Dialogue: 0,1:33:35.03,1:33:37.41,Default,,0,0,0,,let's see why that's happening.
+Dialogue: 0,1:33:37.41,1:33:45.90,Default,,0,0,0,,
+Dialogue: 0,1:33:45.90,1:33:48.26,Default,,0,0,0,,So we're creating people with name and numbers.
+Dialogue: 0,1:33:48.26,1:33:53.69,Default,,0,0,0,,And I assume that row is actually looking at a different--
+Dialogue: 0,1:33:53.69,1:33:56.63,Default,,0,0,0,,I think it's looking for a prop called phone,
+Dialogue: 0,1:33:56.63,1:34:03.22,Default,,0,0,0,,so let's actually just change number to phone.
+Dialogue: 0,1:34:03.22,1:34:09.13,Default,,0,0,0,,
+Dialogue: 0,1:34:09.13,1:34:11.62,Default,,0,0,0,,And so now, we should be getting those phone numbers.
+Dialogue: 0,1:34:11.62,1:34:16.63,Default,,0,0,0,,So basically we had a bug where I thought contacts were name and number,
+Dialogue: 0,1:34:16.63,1:34:20.74,Default,,0,0,0,,but we actually defined a contact to be name and phone.
+Dialogue: 0,1:34:20.74,1:34:25.24,Default,,0,0,0,,And so by storing the correct data, we then get it back in our application
+Dialogue: 0,1:34:25.24,1:34:26.43,Default,,0,0,0,,here.
+Dialogue: 0,1:34:26.43,1:34:26.93,Default,,0,0,0,,Cool.
+Dialogue: 0,1:34:26.93,1:34:33.73,Default,,0,0,0,,So this is awesome because if you ignore the keys that we didn't add, now
+Dialogue: 0,1:34:33.73,1:34:37.78,Default,,0,0,0,,we're getting that data in only the list that cares about it.
+Dialogue: 0,1:34:37.78,1:34:41.50,Default,,0,0,0,,So the separate screens that don't care about the contacts
+Dialogue: 0,1:34:41.50,1:34:43.72,Default,,0,0,0,,don't get access to our contacts.
+Dialogue: 0,1:34:43.72,1:34:46.51,Default,,0,0,0,,The scope of that information is limited only
+Dialogue: 0,1:34:46.51,1:34:50.75,Default,,0,0,0,,to the component that cares about it, which is a good thing.
+Dialogue: 0,1:34:50.75,1:34:54.94,Default,,0,0,0,,So now, how are we going to update that store?
+Dialogue: 0,1:34:54.94,1:34:58.36,Default,,0,0,0,,So if you remember back to the drawing of Redux,
+Dialogue: 0,1:34:58.36,1:35:02.47,Default,,0,0,0,,what's the only way to update a store?
+Dialogue: 0,1:35:02.47,1:35:06.22,Default,,0,0,0,,Well, it's by dispatching an action.
+Dialogue: 0,1:35:06.22,1:35:07.60,Default,,0,0,0,,And how do we dispatch an action?
+Dialogue: 0,1:35:07.60,1:35:09.64,Default,,0,0,0,,Well, we do it from a view.
+Dialogue: 0,1:35:09.64,1:35:14.50,Default,,0,0,0,,And so we can go ahead and add that action to our view.
+Dialogue: 0,1:35:14.50,1:35:17.06,Default,,0,0,0,,
+Dialogue: 0,1:35:17.06,1:35:19.24,Default,,0,0,0,,So we need to use store, dot, dispatch in order
+Dialogue: 0,1:35:19.24,1:35:22.76,Default,,0,0,0,,to send that action to our store.
+Dialogue: 0,1:35:22.76,1:35:24.88,Default,,0,0,0,,We need to do store, dot, dispatch in order
+Dialogue: 0,1:35:24.88,1:35:26.09,Default,,0,0,0,,to send that information to our store.
+Dialogue: 0,1:35:26.09,1:35:27.33,Default,,0,0,0,,And so let's actually do that.
+Dialogue: 0,1:35:27.33,1:35:31.03,Default,,0,0,0,,
+Dialogue: 0,1:35:31.03,1:35:34.24,Default,,0,0,0,,So in our previous iteration of the app--
+Dialogue: 0,1:35:34.24,1:35:39.41,Default,,0,0,0,,
+Dialogue: 0,1:35:39.41,1:35:41.29,Default,,0,0,0,,earlier what we were doing is we were passing
+Dialogue: 0,1:35:41.29,1:35:45.37,Default,,0,0,0,,this function called Add Contact to every single one of our screens
+Dialogue: 0,1:35:45.37,1:35:48.08,Default,,0,0,0,,via this thing called screen prompts.
+Dialogue: 0,1:35:48.08,1:35:55.60,Default,,0,0,0,,But now, we can do better by only passing the Add Contact function
+Dialogue: 0,1:35:55.60,1:35:57.19,Default,,0,0,0,,to the screen that cares about it.
+Dialogue: 0,1:35:57.19,1:35:58.23,Default,,0,0,0,,And what screen is that?
+Dialogue: 0,1:35:58.23,1:36:04.81,Default,,0,0,0,,Well, it's the one called Add ContactScreen.
+Dialogue: 0,1:36:04.81,1:36:08.32,Default,,0,0,0,,And if you remember right now, the way that we're handling the Submit
+Dialogue: 0,1:36:08.32,1:36:11.41,Default,,0,0,0,,is by doing this dot props, dot, screenProps, dot addContact,
+Dialogue: 0,1:36:11.41,1:36:14.32,Default,,0,0,0,,and then we pass form state.
+Dialogue: 0,1:36:14.32,1:36:16.54,Default,,0,0,0,,But we have a better way to do that now.
+Dialogue: 0,1:36:16.54,1:36:19.39,Default,,0,0,0,,We can actually just directly dispatch an action.
+Dialogue: 0,1:36:19.39,1:36:20.87,Default,,0,0,0,,And so let's do that.
+Dialogue: 0,1:36:20.87,1:36:25.75,Default,,0,0,0,,So first, we need to import store from our store.
+Dialogue: 0,1:36:25.75,1:36:28.87,Default,,0,0,0,,
+Dialogue: 0,1:36:28.87,1:36:30.83,Default,,0,0,0,,And we also need our action that we care about.
+Dialogue: 0,1:36:30.83,1:36:39.04,Default,,0,0,0,,So let's import Add Contact from Redux actions.
+Dialogue: 0,1:36:39.04,1:36:41.38,Default,,0,0,0,,
+Dialogue: 0,1:36:41.38,1:36:43.51,Default,,0,0,0,,And so now, what do we want to do for handleSubmit?
+Dialogue: 0,1:36:43.51,1:36:48.14,Default,,0,0,0,,So rather than this, we can actually just do store, dot, dispatch.
+Dialogue: 0,1:36:48.14,1:36:49.31,Default,,0,0,0,,And what are we dispatching?
+Dialogue: 0,1:36:49.31,1:36:51.72,Default,,0,0,0,,Well, it's the same thing that we were dispatching before.
+Dialogue: 0,1:36:51.72,1:36:54.43,Default,,0,0,0,,It's an action called addContact, or action creator
+Dialogue: 0,1:36:54.43,1:36:56.59,Default,,0,0,0,,I should say-- called addContact.
+Dialogue: 0,1:36:56.59,1:36:58.82,Default,,0,0,0,,And what is our action?
+Dialogue: 0,1:36:58.82,1:37:00.12,Default,,0,0,0,,Well, it's just our form state.
+Dialogue: 0,1:37:00.12,1:37:06.92,Default,,0,0,0,,
+Dialogue: 0,1:37:06.92,1:37:08.51,Default,,0,0,0,,And that's it.
+Dialogue: 0,1:37:08.51,1:37:11.22,Default,,0,0,0,,Actually, our form state has more information than we care about.
+Dialogue: 0,1:37:11.22,1:37:14.36,Default,,0,0,0,,So if we really want to be succinct, we can
+Dialogue: 0,1:37:14.36,1:37:17.30,Default,,0,0,0,,say the name is formState, dot, name.
+Dialogue: 0,1:37:17.30,1:37:21.06,Default,,0,0,0,,
+Dialogue: 0,1:37:21.06,1:37:26.17,Default,,0,0,0,,And our phone is formState, dot, phone.
+Dialogue: 0,1:37:26.17,1:37:30.10,Default,,0,0,0,,
+Dialogue: 0,1:37:30.10,1:37:35.44,Default,,0,0,0,,And now, presumably we did what we wanted to do.
+Dialogue: 0,1:37:35.44,1:37:36.70,Default,,0,0,0,,So let's go and check.
+Dialogue: 0,1:37:36.70,1:37:38.58,Default,,0,0,0,,We can add a new contact.
+Dialogue: 0,1:37:38.58,1:37:42.92,Default,,0,0,0,,Let's add Yowon Y, and give a phone number.
+Dialogue: 0,1:37:42.92,1:37:43.63,Default,,0,0,0,,What do you know?
+Dialogue: 0,1:37:43.63,1:37:45.46,Default,,0,0,0,,He has the same phone number as I do.
+Dialogue: 0,1:37:45.46,1:37:48.74,Default,,0,0,0,,And submit-- oh, wait a second.
+Dialogue: 0,1:37:48.74,1:37:49.84,Default,,0,0,0,,Yowon didn't show up.
+Dialogue: 0,1:37:49.84,1:37:52.36,Default,,0,0,0,,
+Dialogue: 0,1:37:52.36,1:37:55.89,Default,,0,0,0,,But if we toggle contacts and reappear, look, there-- oh, I spelled name wrong.
+Dialogue: 0,1:37:55.89,1:38:00.97,Default,,0,0,0,,But there is what should be Yowon.
+Dialogue: 0,1:38:00.97,1:38:06.14,Default,,0,0,0,,So why didn't he show up the first time?
+Dialogue: 0,1:38:06.14,1:38:10.80,Default,,0,0,0,,So there's one thing that we're missing as we've added Redux to our app.
+Dialogue: 0,1:38:10.80,1:38:13.18,Default,,0,0,0,,It's that we're not getting the application
+Dialogue: 0,1:38:13.18,1:38:14.56,Default,,0,0,0,,to update when the store changes.
+Dialogue: 0,1:38:14.56,1:38:20.68,Default,,0,0,0,,And this is a bug that we've seen before, but this time it's different.
+Dialogue: 0,1:38:20.68,1:38:26.58,Default,,0,0,0,,And so how might we get our application to automatically re-render
+Dialogue: 0,1:38:26.58,1:38:28.08,Default,,0,0,0,,every single time our store changes?
+Dialogue: 0,1:38:28.08,1:38:30.74,Default,,0,0,0,,
+Dialogue: 0,1:38:30.74,1:38:36.89,Default,,0,0,0,,Well, presumably, we would want to use the other part of Redux that
+Dialogue: 0,1:38:36.89,1:38:39.54,Default,,0,0,0,,calls a callback every single time it adds,
+Dialogue: 0,1:38:39.54,1:38:42.77,Default,,0,0,0,,which is a lot of extra work for us.
+Dialogue: 0,1:38:42.77,1:38:46.47,Default,,0,0,0,,I wonder if there's a way that we could do that better.
+Dialogue: 0,1:38:46.47,1:38:50.24,Default,,0,0,0,,So we've talked about this thing in a few lectures
+Dialogue: 0,1:38:50.24,1:38:54.36,Default,,0,0,0,,before, this thing called a HOC, or in other words a higher-order component.
+Dialogue: 0,1:38:54.36,1:38:57.68,Default,,0,0,0,,What a higher-order component is it takes a component as an argument,
+Dialogue: 0,1:38:57.68,1:39:01.78,Default,,0,0,0,,or it returns a component as a result of a function.
+Dialogue: 0,1:39:01.78,1:39:03.65,Default,,0,0,0,,And so we could actually create a HOC that
+Dialogue: 0,1:39:03.65,1:39:07.49,Default,,0,0,0,,does a lot of what we've just done manually for us.
+Dialogue: 0,1:39:07.49,1:39:09.80,Default,,0,0,0,,What if we created a HOC that is the following?
+Dialogue: 0,1:39:09.80,1:39:11.55,Default,,0,0,0,,It checks for state updates automatically,
+Dialogue: 0,1:39:11.55,1:39:17.39,Default,,0,0,0,,or it subscribes to them, and then it passes new props to when that happens.
+Dialogue: 0,1:39:17.39,1:39:20.77,Default,,0,0,0,,And wouldn't it be also cool if rather than having to go bind
+Dialogue: 0,1:39:20.77,1:39:25.28,Default,,0,0,0,,our action creators ourselves, like we did here--
+Dialogue: 0,1:39:25.28,1:39:27.89,Default,,0,0,0,,or here, this line--
+Dialogue: 0,1:39:27.89,1:39:31.04,Default,,0,0,0,,what if we instead did that automatically?
+Dialogue: 0,1:39:31.04,1:39:34.67,Default,,0,0,0,,What if our HOC for us automatically bound our action creators
+Dialogue: 0,1:39:34.67,1:39:37.76,Default,,0,0,0,,to our dispatch function for us?
+Dialogue: 0,1:39:37.76,1:39:39.69,Default,,0,0,0,,That would be really cool.
+Dialogue: 0,1:39:39.69,1:39:44.57,Default,,0,0,0,,Then we wouldn't need to subscribe to store updates.
+Dialogue: 0,1:39:44.57,1:39:47.08,Default,,0,0,0,,Our higher-order component can do that for us.
+Dialogue: 0,1:39:47.08,1:39:48.83,Default,,0,0,0,,And when I say our higher-order component,
+Dialogue: 0,1:39:48.83,1:39:52.59,Default,,0,0,0,,I mean the one that React conveniently implemented for us.
+Dialogue: 0,1:39:52.59,1:39:55.73,Default,,0,0,0,,And so if we check this thing called React Redux,
+Dialogue: 0,1:39:55.73,1:39:59.27,Default,,0,0,0,,we see some official React bindings for Redux,
+Dialogue: 0,1:39:59.27,1:40:00.98,Default,,0,0,0,,which gives us a few cool things.
+Dialogue: 0,1:40:00.98,1:40:02.71,Default,,0,0,0,,And by a few, I mean two.
+Dialogue: 0,1:40:02.71,1:40:06.02,Default,,0,0,0,,We have this thing called a provider and this thing called connect.
+Dialogue: 0,1:40:06.02,1:40:10.88,Default,,0,0,0,,And if we look at what this is, a provider--
+Dialogue: 0,1:40:10.88,1:40:15.47,Default,,0,0,0,,it basically handles the binding for us.
+Dialogue: 0,1:40:15.47,1:40:19.19,Default,,0,0,0,,It listens to a store, and it'll see when it updates.
+Dialogue: 0,1:40:19.19,1:40:23.48,Default,,0,0,0,,And then this thing called connect is a higher-order component,
+Dialogue: 0,1:40:23.48,1:40:28.29,Default,,0,0,0,,so it takes a component as an argument.
+Dialogue: 0,1:40:28.29,1:40:33.11,Default,,0,0,0,,Or actually it takes some configuration as an argument, returns a function
+Dialogue: 0,1:40:33.11,1:40:36.53,Default,,0,0,0,,that's now expecting a component as an argument.
+Dialogue: 0,1:40:36.53,1:40:38.70,Default,,0,0,0,,We'll see exactly what that means in a second.
+Dialogue: 0,1:40:38.70,1:40:40.92,Default,,0,0,0,,But basically it does a lot of things for us.
+Dialogue: 0,1:40:40.92,1:40:45.68,Default,,0,0,0,,It passes only the relevant props that we care about.
+Dialogue: 0,1:40:45.68,1:40:48.92,Default,,0,0,0,,So this function-- the first argument we pass
+Dialogue: 0,1:40:48.92,1:40:52.49,Default,,0,0,0,,it is this thing called mapStateToProps, which is actually a function that
+Dialogue: 0,1:40:52.49,1:40:58.91,Default,,0,0,0,,takes our entire application state and will return an object of props
+Dialogue: 0,1:40:58.91,1:41:03.83,Default,,0,0,0,,that we care about, meaning for this particular component,
+Dialogue: 0,1:41:03.83,1:41:05.99,Default,,0,0,0,,it doesn't care about our entire application state.
+Dialogue: 0,1:41:05.99,1:41:08.09,Default,,0,0,0,,It only cares about a subset of it.
+Dialogue: 0,1:41:08.09,1:41:14.60,Default,,0,0,0,,And for a particular example, our ContactListScreen
+Dialogue: 0,1:41:14.60,1:41:18.29,Default,,0,0,0,,doesn't care about our entire state of our component.
+Dialogue: 0,1:41:18.29,1:41:21.56,Default,,0,0,0,,We only care about this one key called contacts.
+Dialogue: 0,1:41:21.56,1:41:24.74,Default,,0,0,0,,And so it would be great if we had in higher-order function--
+Dialogue: 0,1:41:24.74,1:41:28.40,Default,,0,0,0,,which handles this for us.
+Dialogue: 0,1:41:28.40,1:41:29.82,Default,,0,0,0,,It listens to the store.
+Dialogue: 0,1:41:29.82,1:41:32.77,Default,,0,0,0,,It grabs the state, and it only passes contacts down.
+Dialogue: 0,1:41:32.77,1:41:35.69,Default,,0,0,0,,And the way it does it is a prop.
+Dialogue: 0,1:41:35.69,1:41:39.14,Default,,0,0,0,,And so this connect function implements that behavior for us.
+Dialogue: 0,1:41:39.14,1:41:42.08,Default,,0,0,0,,We pass a function that maps our application
+Dialogue: 0,1:41:42.08,1:41:44.45,Default,,0,0,0,,state to own the props that we care about,
+Dialogue: 0,1:41:44.45,1:41:46.77,Default,,0,0,0,,and then it passes those down as props for us.
+Dialogue: 0,1:41:46.77,1:41:52.00,Default,,0,0,0,,And so let's go ahead and first install this library so that we can use it.
+Dialogue: 0,1:41:52.00,1:41:54.72,Default,,0,0,0,,And if you haven't, install React, Redux.
+Dialogue: 0,1:41:54.72,1:42:02.21,Default,,0,0,0,,
+Dialogue: 0,1:42:02.21,1:42:06.10,Default,,0,0,0,,And as you remember, this will also add it to our package, dot, json.
+Dialogue: 0,1:42:06.10,1:42:15.28,Default,,0,0,0,,So if I look at our package, dot, json, I can see React, Redux got added.
+Dialogue: 0,1:42:15.28,1:42:18.26,Default,,0,0,0,,And now, we can go ahead and use that connect function.
+Dialogue: 0,1:42:18.26,1:42:25.47,Default,,0,0,0,,So in our ContactListScreen, rather than importing the store itself,
+Dialogue: 0,1:42:25.47,1:42:27.99,Default,,0,0,0,,let's actually only import connect.
+Dialogue: 0,1:42:27.99,1:42:33.49,Default,,0,0,0,,
+Dialogue: 0,1:42:33.49,1:42:40.06,Default,,0,0,0,,So we now have access to this higher-order component called connect,
+Dialogue: 0,1:42:40.06,1:42:41.71,Default,,0,0,0,,which we can now use.
+Dialogue: 0,1:42:41.71,1:42:45.54,Default,,0,0,0,,So rather than default exporting this entire class,
+Dialogue: 0,1:42:45.54,1:42:50.62,Default,,0,0,0,,let's actually wrap it in a higher-order component.
+Dialogue: 0,1:42:50.62,1:42:54.43,Default,,0,0,0,,So let's down here do export, default, connect.
+Dialogue: 0,1:42:54.43,1:42:56.50,Default,,0,0,0,,We're going to pass it something.
+Dialogue: 0,1:42:56.50,1:42:59.44,Default,,0,0,0,,And then we're going to pass the class that we created,
+Dialogue: 0,1:42:59.44,1:43:01.39,Default,,0,0,0,,so this thing called ContactListScreen.
+Dialogue: 0,1:43:01.39,1:43:04.86,Default,,0,0,0,,
+Dialogue: 0,1:43:04.86,1:43:05.82,Default,,0,0,0,,And what do we pass it?
+Dialogue: 0,1:43:05.82,1:43:10.36,Default,,0,0,0,,Well, we pass it a function that maps our application state to our props.
+Dialogue: 0,1:43:10.36,1:43:15.67,Default,,0,0,0,,And so we can do const mapStateToProps.
+Dialogue: 0,1:43:15.67,1:43:17.71,Default,,0,0,0,,I can really call this whatever I want.
+Dialogue: 0,1:43:17.71,1:43:21.19,Default,,0,0,0,,Let's have it take our entire application state
+Dialogue: 0,1:43:21.19,1:43:26.72,Default,,0,0,0,,and only return the subset that we care about, or in other words, the contacts.
+Dialogue: 0,1:43:26.72,1:43:30.16,Default,,0,0,0,,And so a prop called contacts will get mapped to sate,
+Dialogue: 0,1:43:30.16,1:43:34.90,Default,,0,0,0,,dot, contacts, and then of course pass that function into connect.
+Dialogue: 0,1:43:34.90,1:43:38.32,Default,,0,0,0,,
+Dialogue: 0,1:43:38.32,1:43:42.94,Default,,0,0,0,,So again, the first argument to connect is just a function,
+Dialogue: 0,1:43:42.94,1:43:44.81,Default,,0,0,0,,which I happen to call mapStateToProps.
+Dialogue: 0,1:43:44.81,1:43:46.42,Default,,0,0,0,,We can call it whatever you want.
+Dialogue: 0,1:43:46.42,1:43:49.98,Default,,0,0,0,,We can call it getState--
+Dialogue: 0,1:43:49.98,1:43:51.03,Default,,0,0,0,,or PropsFromState.
+Dialogue: 0,1:43:51.03,1:43:54.28,Default,,0,0,0,,
+Dialogue: 0,1:43:54.28,1:43:56.95,Default,,0,0,0,,But I'll just follow convention and call it mapStateToProps,
+Dialogue: 0,1:43:56.95,1:44:00.34,Default,,0,0,0,,which takes the entire application state and returns
+Dialogue: 0,1:44:00.34,1:44:02.39,Default,,0,0,0,,a subset that we care about, or in other words,
+Dialogue: 0,1:44:02.39,1:44:06.85,Default,,0,0,0,,the prop contacts, which maps to state, dot, contacts.
+Dialogue: 0,1:44:06.85,1:44:09.10,Default,,0,0,0,,And then in here, we no longer have to do that.
+Dialogue: 0,1:44:09.10,1:44:15.88,Default,,0,0,0,,Now we just do this, dot, props, dot, contacts.
+Dialogue: 0,1:44:15.88,1:44:19.12,Default,,0,0,0,,Because what this higher-order function does is it
+Dialogue: 0,1:44:19.12,1:44:22.54,Default,,0,0,0,,listens to our application state.
+Dialogue: 0,1:44:22.54,1:44:25.03,Default,,0,0,0,,It will automatically update as the state updates,
+Dialogue: 0,1:44:25.03,1:44:27.47,Default,,0,0,0,,and it will pass down some number of props.
+Dialogue: 0,1:44:27.47,1:44:31.17,Default,,0,0,0,,And the props are just contacts for now.
+Dialogue: 0,1:44:31.17,1:44:32.05,Default,,0,0,0,,And what is contacts?
+Dialogue: 0,1:44:32.05,1:44:34.96,Default,,0,0,0,,Well, it's whatever the state value of contacts is.
+Dialogue: 0,1:44:34.96,1:44:38.28,Default,,0,0,0,,
+Dialogue: 0,1:44:38.28,1:44:40.47,Default,,0,0,0,,And so that is done.
+Dialogue: 0,1:44:40.47,1:44:46.66,Default,,0,0,0,,Unfortunately, it doesn't quite work, because it
+Dialogue: 0,1:44:46.66,1:44:51.62,Default,,0,0,0,,doesn't know what our store is.
+Dialogue: 0,1:44:51.62,1:44:55.41,Default,,0,0,0,,And so now we also have to use the other part of React Redux
+Dialogue: 0,1:44:55.41,1:44:58.21,Default,,0,0,0,,and let our application know what our store is.
+Dialogue: 0,1:44:58.21,1:45:04.13,Default,,0,0,0,,And that is through that component called Provider.
+Dialogue: 0,1:45:04.13,1:45:13.15,Default,,0,0,0,,So if we import Provider from React, Redux, what that does
+Dialogue: 0,1:45:13.15,1:45:18.16,Default,,0,0,0,,is it provides our app with a concept of what our Redux store is.
+Dialogue: 0,1:45:18.16,1:45:21.45,Default,,0,0,0,,So we can just wrap our entire application in this provider
+Dialogue: 0,1:45:21.45,1:45:22.87,Default,,0,0,0,,and let it know what our store is.
+Dialogue: 0,1:45:22.87,1:45:29.24,Default,,0,0,0,,
+Dialogue: 0,1:45:29.24,1:45:33.74,Default,,0,0,0,,And this component will provide any of its children with our store.
+Dialogue: 0,1:45:33.74,1:45:40.70,Default,,0,0,0,,And so our store, we should just import from Redux, or the reduction
+Dialogue: 0,1:45:40.70,1:45:43.91,Default,,0,0,0,,implementation that we wrote.
+Dialogue: 0,1:45:43.91,1:45:49.10,Default,,0,0,0,,And now, the store is passed to any of the connect functions that we have.
+Dialogue: 0,1:45:49.10,1:45:56.13,Default,,0,0,0,,And the connect function, which we wrote in ContactListScreen,
+Dialogue: 0,1:45:56.13,1:46:01.43,Default,,0,0,0,,it can now listen to the store and map any changes in the application state
+Dialogue: 0,1:46:01.43,1:46:05.25,Default,,0,0,0,,to props that it passes to this ContactListScreen, which we then
+Dialogue: 0,1:46:05.25,1:46:10.19,Default,,0,0,0,,listen to to fill our list.
+Dialogue: 0,1:46:10.19,1:46:17.30,Default,,0,0,0,,And so now we see that it's been sent here, which is cool.
+Dialogue: 0,1:46:17.30,1:46:20.55,Default,,0,0,0,,Lastly, real quick.
+Dialogue: 0,1:46:20.55,1:46:22.85,Default,,0,0,0,,What it also does is we can automatically
+Dialogue: 0,1:46:22.85,1:46:25.49,Default,,0,0,0,,bind our action creators to dispatch.
+Dialogue: 0,1:46:25.49,1:46:31.34,Default,,0,0,0,,And so a quick example of that is in our addContact screen.
+Dialogue: 0,1:46:31.34,1:46:34.08,Default,,0,0,0,,Currently we're not doing any binding at all.
+Dialogue: 0,1:46:34.08,1:46:38.33,Default,,0,0,0,,We're just passing addContact, the return value of that,
+Dialogue: 0,1:46:38.33,1:46:40.24,Default,,0,0,0,,straight to store, dot, dispatch.
+Dialogue: 0,1:46:40.24,1:46:44.90,Default,,0,0,0,,And it turns out, rather than doing that manually, we can just
+Dialogue: 0,1:46:44.90,1:46:52.74,Default,,0,0,0,,import connect from React, Redux.
+Dialogue: 0,1:46:52.74,1:46:57.71,Default,,0,0,0,,And rather than default exporting this entire class,
+Dialogue: 0,1:46:57.71,1:47:04.82,Default,,0,0,0,,we can just export a wrapped version of this.
+Dialogue: 0,1:47:04.82,1:47:08.24,Default,,0,0,0,,So we'll pass connect, some configuration,
+Dialogue: 0,1:47:08.24,1:47:10.46,Default,,0,0,0,,and then pass it our addContact screen.
+Dialogue: 0,1:47:10.46,1:47:14.66,Default,,0,0,0,,
+Dialogue: 0,1:47:14.66,1:47:16.33,Default,,0,0,0,,And connect takes a couple of arguments.
+Dialogue: 0,1:47:16.33,1:47:19.74,Default,,0,0,0,,The first one is mapStateToProps.
+Dialogue: 0,1:47:19.74,1:47:25.36,Default,,0,0,0,,Our addContacts screen doesn't care about any of our application states.
+Dialogue: 0,1:47:25.36,1:47:27.97,Default,,0,0,0,,So let's just pass some null value there.
+Dialogue: 0,1:47:27.97,1:47:30.36,Default,,0,0,0,,But it does care about our actions.
+Dialogue: 0,1:47:30.36,1:47:35.10,Default,,0,0,0,,And so we can pass an object into our second argument here,
+Dialogue: 0,1:47:35.10,1:47:38.53,Default,,0,0,0,,and it will automatically bind our action creators with dispatch.
+Dialogue: 0,1:47:38.53,1:47:41.71,Default,,0,0,0,,And so if I did something like addContact,
+Dialogue: 0,1:47:41.71,1:47:44.15,Default,,0,0,0,,so we're going to get a prop called addContact.
+Dialogue: 0,1:47:44.15,1:47:45.36,Default,,0,0,0,,What's its value going to be?
+Dialogue: 0,1:47:45.36,1:47:48.93,Default,,0,0,0,,Well, it's going to be addContact, which is the function that we
+Dialogue: 0,1:47:48.93,1:47:53.07,Default,,0,0,0,,imported from our Redux actions.
+Dialogue: 0,1:47:53.07,1:48:00.51,Default,,0,0,0,,And then it'll actually just pass as a prop to our component.
+Dialogue: 0,1:48:00.51,1:48:08.05,Default,,0,0,0,,So we can do this, dot, props, dot, addContact,
+Dialogue: 0,1:48:08.05,1:48:13.66,Default,,0,0,0,,which will automatically dispatch that up for us, because it
+Dialogue: 0,1:48:13.66,1:48:18.70,Default,,0,0,0,,gets automatically bound by connect.
+Dialogue: 0,1:48:18.70,1:48:21.01,Default,,0,0,0,,And if you want to read more about how that happens,
+Dialogue: 0,1:48:21.01,1:48:23.41,Default,,0,0,0,,the documentation is linked in the slide.
+Dialogue: 0,1:48:23.41,1:48:32.73,Default,,0,0,0,,And now, just to ensure this works, we can go ahead and add Yowon Y here
+Dialogue: 0,1:48:32.73,1:48:36.27,Default,,0,0,0,,with a phone number like so.
+Dialogue: 0,1:48:36.27,1:48:37.35,Default,,0,0,0,,Submit.
+Dialogue: 0,1:48:37.35,1:48:38.45,Default,,0,0,0,,And look at that.
+Dialogue: 0,1:48:38.45,1:48:44.70,Default,,0,0,0,,Our application automatically updated due to a update in our application
+Dialogue: 0,1:48:44.70,1:48:46.15,Default,,0,0,0,,state.
+Dialogue: 0,1:48:46.15,1:48:50.28,Default,,0,0,0,,So this was a quick example of how we use Redux and React.
+Dialogue: 0,1:48:50.28,1:48:52.62,Default,,0,0,0,,And next week, we'll dive even farther into Redux
+Dialogue: 0,1:48:52.62,1:48:56.37,Default,,0,0,0,,and show how we handle stuff like asynchronous actions
+Dialogue: 0,1:48:56.37,1:48:57.84,Default,,0,0,0,,once we do some data-fetching.
+Dialogue: 0,1:48:57.84,1:49:00.89,Default,,0,0,0,,So thanks, I'll see you next week.
+Dialogue: 0,1:49:00.89,1:49:02.15,Default,,0,0,0,,
