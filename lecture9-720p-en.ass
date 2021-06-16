@@ -404,51 +404,50 @@ Dialogue: 0,0:21:47.44,0:21:49.57,Default,,0,0,0,,အဲ့ဒါကိုstore�
 Dialogue: 0,0:21:49.57,0:21:51.79,Default,,0,0,0,,storeဆိုရင် ဘာတွေလိုလဲပေါ့
 Dialogue: 0,0:21:51.79,0:21:54.64,Default,,0,0,0,,storeသည်သူ့ထဲကstateကို maintainလုပ်သင့်တာပေါ့ 
 Dialogue: 0,0:21:54.64,0:21:58.57,Default,,0,0,0,,getStateလိုမျိုးgetter methodတစ်ခုတော့public interfaceအနေနဲ့ ပေးထားရမှာပေါ့
-Dialogue: 0,0:21:58.57,0:22:01.27,Default,,0,0,0,,And it should expose this method called dispatch,
-Dialogue: 0,0:22:01.27,0:22:03.91,Default,,0,0,0,,which is the way that you update these actions.
-Dialogue: 0,0:22:03.91,0:22:08.26,Default,,0,0,0,,And so let's start to do that.
-Dialogue: 0,0:22:08.26,0:22:12.64,Default,,0,0,0,,And so let's create this class called Store.
-Dialogue: 0,0:22:12.64,0:22:14.29,Default,,0,0,0,,And how do you create a store?
-Dialogue: 0,0:22:14.29,0:22:21.55,Default,,0,0,0,,Well, let's just say you pass it, maybe a reducer.
-Dialogue: 0,0:22:21.55,0:22:25.27,Default,,0,0,0,,So how does a store know how to update itself?
-Dialogue: 0,0:22:25.27,0:22:27.78,Default,,0,0,0,,And you also pass it, maybe some initial state.
+Dialogue: 0,0:21:58.57,0:22:01.27,Default,,0,0,0,,နောက်dispatchလည်း ပေးထားရမယ်,
+Dialogue: 0,0:22:01.27,0:22:03.91,Default,,0,0,0,,ဒါမှသာ actionတွေပို့ပြီး updateလုပ်လို့ရမှာဖြစ်တယ်
+Dialogue: 0,0:22:03.91,0:22:08.26,Default,,0,0,0,,ဒါဆိုစရေးလိုက်ရအောင်
+Dialogue: 0,0:22:08.26,0:22:12.64,Default,,0,0,0,,storeဆိုတဲ့classတစ်ခုဆောက်လိုက်မယ်
+Dialogue: 0,0:22:12.64,0:22:14.29,Default,,0,0,0,,storeကိုဘယ်လိုဆောက်မလဲဆိုတော့
+Dialogue: 0,0:22:14.29,0:22:21.55,Default,,0,0,0,,reducerတစ်ခုထည့်ပေးမယ်
+Dialogue: 0,0:22:21.55,0:22:25.27,Default,,0,0,0,,အဲ့မှာ storeက သူ့ကိုယ်သူ updateဖြစ်မှန်းဘယ်လိုသိမလဲပေါ့
+Dialogue: 0,0:22:25.27,0:22:27.78,Default,,0,0,0,,initial state လည်း ထည့်ပေးမယ်
 Dialogue: 0,0:22:27.78,0:22:32.33,Default,,0,0,0,,
-Dialogue: 0,0:22:32.33,0:22:34.04,Default,,0,0,0,,And what should it do in the constructor?
-Dialogue: 0,0:22:34.04,0:22:35.79,Default,,0,0,0,,Well, it should remember these things.
-Dialogue: 0,0:22:35.79,0:22:38.39,Default,,0,0,0,,And so maybe it'll say this.reducer--
-Dialogue: 0,0:22:38.39,0:22:41.30,Default,,0,0,0,,is that reducer that you passed it.
-Dialogue: 0,0:22:41.30,0:22:45.83,Default,,0,0,0,,And maybe the initial state, or the state, is that initial state.
+Dialogue: 0,0:22:32.33,0:22:34.04,Default,,0,0,0,,constructorထဲမှာဘာလုပ်သင့်သလဲဆိုတော့
+Dialogue: 0,0:22:34.04,0:22:35.79,Default,,0,0,0,,ဒါတွေမှတ်ထားရမယ်
+Dialogue: 0,0:22:35.79,0:22:38.39,Default,,0,0,0,,this.reducerဆိုပြီးတော့
+Dialogue: 0,0:22:38.39,0:22:41.30,Default,,0,0,0,,ကိုယ့်ထည့်ပေးလိုက်တဲ့ reducerလေးရမယ်
+Dialogue: 0,0:22:41.30,0:22:45.83,Default,,0,0,0,,initial stateကတော့ ဒီinitial stateလေးပေါ့
 Dialogue: 0,0:22:45.83,0:22:51.81,Default,,0,0,0,,
 Dialogue: 0,0:22:51.81,0:22:52.31,Default,,0,0,0,,Cool.
-Dialogue: 0,0:22:52.31,0:22:54.57,Default,,0,0,0,,So now we have a store.
-Dialogue: 0,0:22:54.57,0:22:58.28,Default,,0,0,0,,It's kind of useless because all it does is create this class instance,
-Dialogue: 0,0:22:58.28,0:23:00.39,Default,,0,0,0,,and you can't actually interface with it at all.
-Dialogue: 0,0:23:00.39,0:23:05.30,Default,,0,0,0,,And so let's start to add these methods by which you can interface with it.
-Dialogue: 0,0:23:05.30,0:23:08.99,Default,,0,0,0,,So first, we said you should be able to get the state by invoking
-Dialogue: 0,0:23:08.99,0:23:10.77,Default,,0,0,0,,this thing called getState.
-Dialogue: 0,0:23:10.77,0:23:16.41,Default,,0,0,0,,And so let's create this method called getState, which is pretty simple.
+Dialogue: 0,0:22:52.31,0:22:54.57,Default,,0,0,0,,storeလေးတော့ရပြီ
+Dialogue: 0,0:22:54.57,0:22:58.28,Default,,0,0,0,,သိပ်တော့အသုံးမဝင်ဘူး ဘာလို့လဲဆိုတော့ class instanceကိုcreateလုပ်လိုက်တာပဲရှိတယ်
+Dialogue: 0,0:22:58.28,0:23:00.39,Default,,0,0,0,,သုံးစရာဘာinterfaceမှမပါသေးဘူး
+Dialogue: 0,0:23:00.39,0:23:05.30,Default,,0,0,0,,သုံးလို့ရအောင် methodတချို့ထပ်ထည့်လိုက်မယ်
+Dialogue: 0,0:23:05.30,0:23:08.99,Default,,0,0,0,,ပထမဆုံးဆုံး  stateကို accessလုပ်ဖို့အတွက်
+Dialogue: 0,0:23:08.99,0:23:10.77,Default,,0,0,0,,getStateထည့်ရမယ်
+Dialogue: 0,0:23:10.77,0:23:16.41,Default,,0,0,0,,getState methodကိုအရိုးရှင်းဆုံးထည့်ထားလိုက်မယ်
 Dialogue: 0,0:23:16.41,0:23:19.07,Default,,0,0,0,,
-Dialogue: 0,0:23:19.07,0:23:24.10,Default,,0,0,0,,All it does is return this.state.
-Dialogue: 0,0:23:24.10,0:23:26.23,Default,,0,0,0,,And so now we're starting to make our simple store.
-Dialogue: 0,0:23:26.23,0:23:27.39,Default,,0,0,0,,We can test it a little bit.
+Dialogue: 0,0:23:19.07,0:23:24.10,Default,,0,0,0,,this.stateကိုပဲ return ပြန်ပေးထားတာပေါ့
+Dialogue: 0,0:23:24.10,0:23:26.23,Default,,0,0,0,,စတော့လုပ်ပြီးပြီ
+Dialogue: 0,0:23:26.23,0:23:27.39,Default,,0,0,0,,နည်းနည်းလောက်စမ်းကြည့်မယ်
 Dialogue: 0,0:23:27.39,0:23:36.37,Default,,0,0,0,,
-Dialogue: 0,0:23:36.37,0:23:40.51,Default,,0,0,0,,Let's just pass our simple reducer, and then you'll
-Dialogue: 0,0:23:40.51,0:23:44.56,Default,,0,0,0,,see the initial state of empty.
-Dialogue: 0,0:23:44.56,0:23:50.01,Default,,0,0,0,,And then let's see what the initial state is.
-Dialogue: 0,0:23:50.01,0:23:56.65,Default,,0,0,0,,And so we can do store, dot, get the State.
+Dialogue: 0,0:23:36.37,0:23:40.51,Default,,0,0,0,,simple reducerကိုထည့်ပေးလိုက်မယ်
+Dialogue: 0,0:23:40.51,0:23:44.56,Default,,0,0,0,,အခုinitial stateကemptyဖြစ်နေတာတွေ့ရမယ်
+Dialogue: 0,0:23:44.56,0:23:50.01,Default,,0,0,0,,initial stateဘာဖြစ်သွားပီလဲကြည့်ရအောင်.
+Dialogue: 0,0:23:50.01,0:23:56.65,Default,,0,0,0,,store.getState လို့ရေးလို့ရတယ်
 Dialogue: 0,0:23:56.65,0:24:03.53,Default,,0,0,0,,
-Dialogue: 0,0:24:03.53,0:24:08.66,Default,,0,0,0,,So if we run that, we just get an empty object back, which is as expected.
-Dialogue: 0,0:24:08.66,0:24:12.05,Default,,0,0,0,,All store is currently a constructor that
-Dialogue: 0,0:24:12.05,0:24:15.02,Default,,0,0,0,,takes the reducer in an initial state, initializes
-Dialogue: 0,0:24:15.02,0:24:16.70,Default,,0,0,0,,the state to the initial state.
-Dialogue: 0,0:24:16.70,0:24:18.62,Default,,0,0,0,,And then we have no way of updating the state.
-Dialogue: 0,0:24:18.62,0:24:22.56,Default,,0,0,0,,And so when you call this.state, it just returns an empty object.
-Dialogue: 0,0:24:22.56,0:24:30.90,Default,,0,0,0,,And if we add instead past its arbitrary object like foo foo, and then ran it,
-Dialogue: 0,0:24:30.90,0:24:33.84,Default,,0,0,0,,we'll get that same object back.
+Dialogue: 0,0:24:03.53,0:24:08.66,Default,,0,0,0,,runလိုက်မယ်ဆိုရင် မျှော်လင့်ထားတဲ့အတိုင်းempty objectလေးရမယ်
+Dialogue: 0,0:24:08.66,0:24:12.05,Default,,0,0,0,,အခုလောလောဆယ် storeတစ်ခုလုံးမှာ constructorတခုရှိမယ်
+Dialogue: 0,0:24:12.05,0:24:15.02,Default,,0,0,0,,reducerနဲ့  initial stateကိုလက်ခံမယ် 
+Dialogue: 0,0:24:15.02,0:24:16.70,Default,,0,0,0,,
+Dialogue: 0,0:24:16.70,0:24:18.62,Default,,0,0,0,,stateကို updateလုပ်စရာ methodမပါသေးဘူး
+Dialogue: 0,0:24:18.62,0:24:22.56,Default,,0,0,0,,this.stateကိုခေါ်လိုက်မယ်ဆိုရင်၊ empty objectကို return ပြန်လိမ့်မယ်
+Dialogue: 0,0:24:22.56,0:24:30.90,Default,,0,0,0,,foo fooလိုဟာမျိုးထည့်ပြီး runလိုက်ရင် 
+Dialogue: 0,0:24:30.90,0:24:33.84,Default,,0,0,0,,အဲ့ဒီ objectကိုပဲပြန်ရမယ်
 Dialogue: 0,0:24:33.84,0:24:34.34,Default,,0,0,0,,Cool.
-Dialogue: 0,0:24:34.34,0:24:41.03,Default,,0,0,0,,So not very useful yet, and so let's start to add some features to it.
-Dialogue: 0,0:24:41.03,0:24:44.03,Default,,0,0,0,,So first, and most importantly, we should have some sort of way
-Dialogue: 0,0:24:44.03,0:24:45.56,Default,,0,0,0,,to update that state.
+Dialogue: 0,0:24:34.34,0:24:41.03,Default,,0,0,0,,သိပ်တော့ အသုံးမတည့်သေးဘူး နောက်ထပ် featureလေးတွေထပ်ထည့်လိုက်ရအောင်
+Dialogue: 0,0:24:41.03,0:24:45.56,Default,,0,0,0,,ပထမဆုံးအရေးကြီးတာက stateကို updateလုပ်ဖို့နည်းလမ်းရှိရမယ်
 Dialogue: 0,0:24:45.56,0:24:49.37,Default,,0,0,0,,And the way that we do this in Redux is by dispatching an action
 Dialogue: 0,0:24:49.37,0:24:54.98,Default,,0,0,0,,or by just invoking this method called dispatch with some way of updating.
 Dialogue: 0,0:24:54.98,0:24:59.00,Default,,0,0,0,,And so the way that we've been doing this thus far
