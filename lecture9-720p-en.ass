@@ -448,118 +448,113 @@ Dialogue: 0,0:24:30.90,0:24:33.84,Default,,0,0,0,,အဲ့ဒီ objectကိ�
 Dialogue: 0,0:24:33.84,0:24:34.34,Default,,0,0,0,,Cool.
 Dialogue: 0,0:24:34.34,0:24:41.03,Default,,0,0,0,,သိပ်တော့ အသုံးမတည့်သေးဘူး နောက်ထပ် featureလေးတွေထပ်ထည့်လိုက်ရအောင်
 Dialogue: 0,0:24:41.03,0:24:45.56,Default,,0,0,0,,ပထမဆုံးအရေးကြီးတာက stateကို updateလုပ်ဖို့နည်းလမ်းရှိရမယ်
-Dialogue: 0,0:24:45.56,0:24:49.37,Default,,0,0,0,,And the way that we do this in Redux is by dispatching an action
-Dialogue: 0,0:24:49.37,0:24:54.98,Default,,0,0,0,,or by just invoking this method called dispatch with some way of updating.
-Dialogue: 0,0:24:54.98,0:24:59.00,Default,,0,0,0,,And so the way that we've been doing this thus far
-Dialogue: 0,0:24:59.00,0:25:02.64,Default,,0,0,0,,is by just passing an object that we want merged into a state.
-Dialogue: 0,0:25:02.64,0:25:04.31,Default,,0,0,0,,And so let's do that.
-Dialogue: 0,0:25:04.31,0:25:07.40,Default,,0,0,0,,So let's have this thing called dispatch.
-Dialogue: 0,0:25:07.40,0:25:08.08,Default,,0,0,0,,We pass it.
-Dialogue: 0,0:25:08.08,0:25:11.79,Default,,0,0,0,,Well, we pass it some sort of update.
-Dialogue: 0,0:25:11.79,0:25:13.23,Default,,0,0,0,,And what does it do?
-Dialogue: 0,0:25:13.23,0:25:19.85,Default,,0,0,0,,Well, it should update the current state to be what?
-Dialogue: 0,0:25:19.85,0:25:21.77,Default,,0,0,0,,We want to run this reducer function.
+Dialogue: 0,0:24:45.56,0:24:49.37,Default,,0,0,0,,Reduxမှာလုပ်တဲ့ပုံစံကတော့ actionကိုdispatchကနေပေးတာပေါ့
+Dialogue: 0,0:24:49.37,0:24:54.98,Default,,0,0,0,,ဒါမှမဟုတ် dispatch methodကိုခေါ်တာမျိုးပေါ့
+Dialogue: 0,0:24:54.98,0:24:59.00,Default,,0,0,0,,ကျွန်တော်တို့ တစ်လျှောက်လုံးလုပ်လာခဲ့တဲ့ပုံစံကတော့ 
+Dialogue: 0,0:24:59.00,0:25:02.64,Default,,0,0,0,,stateထဲကိုmergeလုပ်ချင်တဲ့dataကိုpassလုပ်တာမျိုးပေါ့
+Dialogue: 0,0:25:02.64,0:25:04.31,Default,,0,0,0,,ဒါဆိုလုပ်ကြည့်လိုက်ရအောင်
+Dialogue: 0,0:25:04.31,0:25:07.40,Default,,0,0,0,,dispatchဆိုတာကိုရေးမယ်
+Dialogue: 0,0:25:07.40,0:25:08.08,Default,,0,0,0,,အဲ့ကောင်ကိုထည့်မယ်
+Dialogue: 0,0:25:08.08,0:25:11.79,Default,,0,0,0,,အဲ့ထဲမှာမှ updateလုပ်မယ့်ကောင်ကိုpassလုပ်လိုက်မယ်
+Dialogue: 0,0:25:11.79,0:25:13.23,Default,,0,0,0,,ထဲပေးလိုက်တော့ဘာလုပ်လဲဆိုတော့
+Dialogue: 0,0:25:13.23,0:25:19.85,Default,,0,0,0,,current stateကိုupdateလုပ်လိုက်တယ်ပေါ့
+Dialogue: 0,0:25:19.85,0:25:21.77,Default,,0,0,0,,ကျွန်တော်တို့က reducer functionကို runချင်တယ်
 Dialogue: 0,0:25:21.77,0:25:24.85,Default,,0,0,0,,
-Dialogue: 0,0:25:24.85,0:25:26.00,Default,,0,0,0,,And which reducer function?
-Dialogue: 0,0:25:26.00,0:25:29.45,Default,,0,0,0,,Well, whichever one that we passed in the original constructor
-Dialogue: 0,0:25:29.45,0:25:31.19,Default,,0,0,0,,and stored as this.reducer.
-Dialogue: 0,0:25:31.19,0:25:36.89,Default,,0,0,0,,So let's invoke that with the current state, and then any update
-Dialogue: 0,0:25:36.89,0:25:40.07,Default,,0,0,0,,that we want to pass it.
-Dialogue: 0,0:25:40.07,0:25:43.44,Default,,0,0,0,,And that's pretty much it.
-Dialogue: 0,0:25:43.44,0:25:49.19,Default,,0,0,0,,And so now down here, rather than having to handle this ourselves--
-Dialogue: 0,0:25:49.19,0:25:55.40,Default,,0,0,0,,and by this I mean replacing the old state with the reducer,
-Dialogue: 0,0:25:55.40,0:25:58.16,Default,,0,0,0,,with value after passing it through the reducer--
-Dialogue: 0,0:25:58.16,0:26:01.31,Default,,0,0,0,,that's now abstracted away from us using this thing called a store.
-Dialogue: 0,0:26:01.31,0:26:07.35,Default,,0,0,0,,And so now we can just do store, dot, dispatch this object.
-Dialogue: 0,0:26:07.35,0:26:08.44,Default,,0,0,0,,And the same goes to here.
+Dialogue: 0,0:25:24.85,0:25:26.00,Default,,0,0,0,,ဘယ်reducer functionကိုrunမှာလဲပေါ့
+Dialogue: 0,0:25:26.00,0:25:29.45,Default,,0,0,0,,contructorထဲကိုထည့်ပေးခဲ့တဲ့ကောင်ဖြစ်တဲ့
+Dialogue: 0,0:25:29.45,0:25:31.19,Default,,0,0,0,,this.reducerထဲမှာပေါ့
+Dialogue: 0,0:25:31.19,0:25:36.89,Default,,0,0,0,,အဲ့ကောင်ကိုခေါ်ရင်current stateနဲ့updateလုပ်ချင်တဲ့dataကို
+Dialogue: 0,0:25:36.89,0:25:40.07,Default,,0,0,0,, passလုပ်ပေးလိုက်မယ်
+Dialogue: 0,0:25:40.07,0:25:43.44,Default,,0,0,0,,တော်တော်လန်းသွားပြီ
+Dialogue: 0,0:25:43.44,0:25:49.19,Default,,0,0,0,,ဒီအောက်နားမှာ ကိုယ့်ဘာသာဖြေရှင်းလိုက်တာထပ်
+Dialogue: 0,0:25:49.19,0:25:55.40,Default,,0,0,0,,ဆိုလိုတာက old stateနေရာမှာ reducerကိုထားပြီးတော့,
+Dialogue: 0,0:25:55.40,0:25:58.16,Default,,0,0,0,,reducerကိုဖြတ်ပြီး valueကိုpass လုပ်ပေးလိုက်တဲ့အခါမှာ 
+Dialogue: 0,0:25:58.16,0:26:01.31,Default,,0,0,0,,storeကိုသုံးလိုက်တဲ့အခါ abstractတော်တော်ကျသွားပြီ
+Dialogue: 0,0:26:01.31,0:26:07.35,Default,,0,0,0,,ဒါဆိုstore.dispatch objectလုပ်လို့ရပြီ
+Dialogue: 0,0:26:07.35,0:26:08.44,Default,,0,0,0,,ဒီမှာလည်း အဲ့လိုပဲ
 Dialogue: 0,0:26:08.44,0:26:23.71,Default,,0,0,0,,
-Dialogue: 0,0:26:23.71,0:26:26.10,Default,,0,0,0,,And so now, we're doing things a little bit differently.
-Dialogue: 0,0:26:26.10,0:26:29.43,Default,,0,0,0,,So rather than creating the state ourselves
-Dialogue: 0,0:26:29.43,0:26:36.90,Default,,0,0,0,,and manually going through and replacing state with the output of the reducer
-Dialogue: 0,0:26:36.90,0:26:39.78,Default,,0,0,0,,and passing in the old state, now that's handled for us by this thing
-Dialogue: 0,0:26:39.78,0:26:40.43,Default,,0,0,0,,called a store.
-Dialogue: 0,0:26:40.43,0:26:41.64,Default,,0,0,0,,And how is it handled for us?
-Dialogue: 0,0:26:41.64,0:26:48.18,Default,,0,0,0,,Well, the store is actually storing the state as part of its class.
-Dialogue: 0,0:26:48.18,0:26:50.91,Default,,0,0,0,,And so the state gets initialized to some initial state.
-Dialogue: 0,0:26:50.91,0:26:55.41,Default,,0,0,0,,And every time we dispatch an action or dispatch an update,
-Dialogue: 0,0:26:55.41,0:26:56.43,Default,,0,0,0,,it handles that for us.
-Dialogue: 0,0:26:56.43,0:26:58.29,Default,,0,0,0,,It remembers what the reducer is.
-Dialogue: 0,0:26:58.29,0:27:01.18,Default,,0,0,0,,It knows how it should update its own state by just doing this,
-Dialogue: 0,0:27:01.18,0:27:05.30,Default,,0,0,0,,dot, state, equals the old state, applying an update through the reducer.
-Dialogue: 0,0:27:05.30,0:27:06.51,Default,,0,0,0,,But we don't care about that.
-Dialogue: 0,0:27:06.51,0:27:08.64,Default,,0,0,0,,We don't need to know the implementation details.
-Dialogue: 0,0:27:08.64,0:27:09.75,Default,,0,0,0,,We don't really care.
-Dialogue: 0,0:27:09.75,0:27:15.24,Default,,0,0,0,,All we care is that we just pass this store.dispatch function,
-Dialogue: 0,0:27:15.24,0:27:17.19,Default,,0,0,0,,some update that we want to apply.
-Dialogue: 0,0:27:17.19,0:27:19.53,Default,,0,0,0,,And it goes ahead and does the rest of it.
-Dialogue: 0,0:27:19.53,0:27:22.47,Default,,0,0,0,,We don't even care that state is stored as an object.
-Dialogue: 0,0:27:22.47,0:27:24.24,Default,,0,0,0,,That's all just abstracted away.
-Dialogue: 0,0:27:24.24,0:27:27.21,Default,,0,0,0,,All that we care about is we update the state
-Dialogue: 0,0:27:27.21,0:27:30.36,Default,,0,0,0,,by passing something into dispatch.
-Dialogue: 0,0:27:30.36,0:27:35.37,Default,,0,0,0,,And we get the state back by invoking this thing called getState.
-Dialogue: 0,0:27:35.37,0:27:38.78,Default,,0,0,0,,We don't care that the state is just stored on the constructor.
-Dialogue: 0,0:27:38.78,0:27:40.83,Default,,0,0,0,,For all we know, maybe it's a tree, or maybe it's
-Dialogue: 0,0:27:40.83,0:27:43.65,Default,,0,0,0,,some weird data structure for performance.
-Dialogue: 0,0:27:43.65,0:27:45.47,Default,,0,0,0,,It doesn't matter.
-Dialogue: 0,0:27:45.47,0:27:48.09,Default,,0,0,0,,All that we care about is the API for this store.
-Dialogue: 0,0:27:48.09,0:27:52.17,Default,,0,0,0,,And this API is just getting the state and dispatching state updates.
-Dialogue: 0,0:27:52.17,0:27:53.76,Default,,0,0,0,,And so let's make sure it works.
+Dialogue: 0,0:26:23.71,0:26:26.10,Default,,0,0,0,,အခုဆိုရင် ရေးထားတာတွေက တော်တော်လေး ကွဲပြားသွားပြီ
+Dialogue: 0,0:26:26.10,0:26:29.43,Default,,0,0,0,,stateကိုကျွန်တော်တို့ကိုယ်တိုင်လုပ်တာထက်
+Dialogue: 0,0:26:29.43,0:26:36.90,Default,,0,0,0,,reducerကရလာတဲ့outputကို stateမှာသိမ်းလိုက်တာပေါ့
+Dialogue: 0,0:26:36.90,0:26:40.43,Default,,0,0,0,,old stateကိုပြန် passလုပ်ပြီးကျန်တာကို storeကပဲလုပ်ပေးသွားလိမ့်မယ်
+Dialogue: 0,0:26:40.43,0:26:41.64,Default,,0,0,0,,ကျွန်တော်တို့အတွက်ဘယ်လိုများဖြေရှင်းသွားသလဲပေါ့
+Dialogue: 0,0:26:41.64,0:26:48.18,Default,,0,0,0,,store သည် stateကို သူ့classရဲ့ အစိတ်အပိုင်းတစ်ခုအနေနဲ့ သိမ်းပေးထားတာပေါ့
+Dialogue: 0,0:26:48.18,0:26:50.91,Default,,0,0,0,,stateထဲကို နောက်stateကဝင်လာတာမျိုးပေါ့
+Dialogue: 0,0:26:50.91,0:26:55.41,Default,,0,0,0,,actionတစ်ခုကိုdispatchလုပ်တဲ့အခါဒါမှမဟုတ် dispatchကိုခေါ်ပြီး updateလုပ်တဲ့အခါ
+Dialogue: 0,0:26:55.41,0:26:56.43,Default,,0,0,0,,storeကအလိုလိုလုပ်ပေးသွားတယ်
+Dialogue: 0,0:26:56.43,0:26:58.29,Default,,0,0,0,,reducerကဘာလဲဆိုတာလဲ မှတ်ထားတယ်
+Dialogue: 0,0:26:58.29,0:27:01.18,Default,,0,0,0,,ဒီလိုလေးလုပ်လိုက်ရုံနဲ့stateကိုဘယ်လိုupdateလုပ်ရမလဲဆိုတာသိတယ်
+Dialogue: 0,0:27:01.18,0:27:05.30,Default,,0,0,0,,this.stateကold stateနဲ့အတူတူပဲ ဒီreducerကိုဖြတ်ပြီးupdateလုပ်သွားတယ်.
+Dialogue: 0,0:27:05.30,0:27:06.51,Default,,0,0,0,,ကျွန်တော်တို့ကအဲ့တာကိုဂရုစိုက်စရာမလိုဘူး
+Dialogue: 0,0:27:06.51,0:27:08.64,Default,,0,0,0,,implementation detailကိုသိစရာမလိုဘူး
+Dialogue: 0,0:27:08.64,0:27:09.75,Default,,0,0,0,,တကယ်သိဖို့မလိုဘူး
+Dialogue: 0,0:27:09.75,0:27:15.24,Default,,0,0,0,,ကျွန်တော်တို့ဂရုစိုက်ရမှာသည် store.dispatchထဲကို ထည့်ပေးရမယ့်ဟာကိုပေါ့
+Dialogue: 0,0:27:15.24,0:27:17.19,Default,,0,0,0,,ကျွန်တော်တို့updateလုပ်ချင်တဲ့ကောင်ပေါ့
+Dialogue: 0,0:27:17.19,0:27:19.53,Default,,0,0,0,,ရှေ့ဆက်သွားတယ် ၊ ကျန်တာတွေဆက်လုပ်သွားတယ်
+Dialogue: 0,0:27:19.53,0:27:22.47,Default,,0,0,0,,stateကိုobjectအနေနဲ့သိမ်းတယ်ဆိုတာကိုတောင် ဂရုစိုက်စရာမလိုဘူး
+Dialogue: 0,0:27:22.47,0:27:24.24,Default,,0,0,0,,အဲ့လောက်ထိ abstractဖြစ်သွားတာပေါ့
+Dialogue: 0,0:27:24.24,0:27:27.21,Default,,0,0,0,,ကျွန်တော်တို့သိထားရမှာသည် 
+Dialogue: 0,0:27:27.21,0:27:30.36,Default,,0,0,0,,updateလုပ်မယ့်ကောင်ကိုdispatchထဲကိုထည့်ပေးလိုက်ရုံပေါ့
+Dialogue: 0,0:27:30.36,0:27:35.37,Default,,0,0,0,,getStateကနေstateကိုပြန်ခေါ်လို့ရတယ်
+Dialogue: 0,0:27:35.37,0:27:38.78,Default,,0,0,0,,stateကို constructorထဲမှာပဲသိမ်းထားတာကိုလည်း သိစရာမလိုဘူး
+Dialogue: 0,0:27:38.78,0:27:40.83,Default,,0,0,0,,ကျွန်တော်တို့သိထားရမှာသည် stateသည် treeပုံစံဖြစ်ချင်ဖြစ်မယ် ဒါမှမဟုတ်
+Dialogue: 0,0:27:40.83,0:27:43.65,Default,,0,0,0,,performanaceအတွက်သုံးတဲ့data structure တစ်ခုခုဖြစ်ချင်ဖြစ်မယ်
+Dialogue: 0,0:27:43.65,0:27:45.47,Default,,0,0,0,,အရေးမကြီးဘူး
+Dialogue: 0,0:27:45.47,0:27:48.09,Default,,0,0,0,,storeကနေပေးထားတဲ့ apiတွေကိုတော့သိရမယ်
+Dialogue: 0,0:27:48.09,0:27:52.17,Default,,0,0,0,,getStateနဲ့ dispatchလိုကောင်မျိုးပေါ့
+Dialogue: 0,0:27:52.17,0:27:53.76,Default,,0,0,0,,အလုပ်တကယ်လုပ်သလား စစ်ကြည့်ရအောင်
 Dialogue: 0,0:27:53.76,0:27:56.94,Default,,0,0,0,,
-Dialogue: 0,0:27:56.94,0:28:00.67,Default,,0,0,0,,So we create a new store down here by saying, give me a new store.
-Dialogue: 0,0:28:00.67,0:28:03.47,Default,,0,0,0,,I'm going to pass it, the reducer function that we defined up here.
-Dialogue: 0,0:28:03.47,0:28:07.09,Default,,0,0,0,,So let's actually just move this down.
-Dialogue: 0,0:28:07.09,0:28:08.05,Default,,0,0,0,,And maybe this as well.
+Dialogue: 0,0:27:56.94,0:28:00.67,Default,,0,0,0,store အသစ်createလုပ်လိုက်မယ်
+Dialogue: 0,0:28:00.67,0:28:03.47,Default,,0,0,0,,အပေါ်မှာရေးခဲ့တဲ့ reducerလေးထည့်ပေးလိုက်မယ်
+Dialogue: 0,0:28:03.47,0:28:07.09,Default,,0,0,0,,ဒီကောင်ကိုအောက်ကိုရွှေ့လိုက်မယ်
+Dialogue: 0,0:28:07.09,0:28:08.05,Default,,0,0,0,,ဒီကောင်ကိုရောပဲ
 Dialogue: 0,0:28:08.05,0:28:12.10,Default,,0,0,0,,
-Dialogue: 0,0:28:12.10,0:28:15.33,Default,,0,0,0,,So now, let's just not care about the implementation details of store.
-Dialogue: 0,0:28:15.33,0:28:17.83,Default,,0,0,0,,All that we care about is we define this thing called merge,
-Dialogue: 0,0:28:17.83,0:28:19.23,Default,,0,0,0,,which merges objects.
-Dialogue: 0,0:28:19.23,0:28:23.71,Default,,0,0,0,,We define a reducer which takes some states and some update,
-Dialogue: 0,0:28:23.71,0:28:26.05,Default,,0,0,0,,and applies the update by merging it in.
-Dialogue: 0,0:28:26.05,0:28:30.55,Default,,0,0,0,,And then we create that new store with that reducer and some initial value
-Dialogue: 0,0:28:30.55,0:28:31.18,Default,,0,0,0,,called foo foo.
-Dialogue: 0,0:28:31.18,0:28:36.61,Default,,0,0,0,,And let's, for now, actually just not pass an initial value at all.
-Dialogue: 0,0:28:36.61,0:28:39.35,Default,,0,0,0,,And let's see what happens.
-Dialogue: 0,0:28:39.35,0:28:43.90,Default,,0,0,0,,And so we dispatch a few updates, and then now let's
-Dialogue: 0,0:28:43.90,0:28:51.08,Default,,0,0,0,,log some initials, or the state after those dispatches.
-Dialogue: 0,0:28:51.08,0:28:52.83,Default,,0,0,0,,And so we get back what we wanted.
-Dialogue: 0,0:28:52.83,0:28:58.10,Default,,0,0,0,,We get back foo baz, bar bar, which is the same thing as up here.
-Dialogue: 0,0:28:58.10,0:28:59.40,Default,,0,0,0,,And what's the main difference?
-Dialogue: 0,0:28:59.40,0:29:02.94,Default,,0,0,0,,Well, the main difference is that in reducer, we
-Dialogue: 0,0:29:02.94,0:29:04.90,Default,,0,0,0,,had to handle the updates ourselves.
-Dialogue: 0,0:29:04.90,0:29:11.31,Default,,0,0,0,,We had to handle passing in to reducer the old state and the new updates.
-Dialogue: 0,0:29:11.31,0:29:21.04,Default,,0,0,0,,And in this new file called Store, we no longer care about those things.
-Dialogue: 0,0:29:21.04,0:29:25.03,Default,,0,0,0,,We just care that we have a new store, and we're passing a new reducer.
-Dialogue: 0,0:29:25.03,0:29:29.38,Default,,0,0,0,,And we're just dispatching some additional changes.
+Dialogue: 0,0:28:12.10,0:28:15.33,Default,,0,0,0,,ဒါဆို အခု storeကိုဘယ်လိုရေးထားလဲဆိုတာ ခဏမေ့ထားလိုက်ရအောင်
+Dialogue: 0,0:28:15.33,0:28:17.83,Default,,0,0,0,,သတိထားရမှာက merge functionပေါ့
+Dialogue: 0,0:28:17.83,0:28:19.23,Default,,0,0,0,,mergeသည် objectတွေကိုmergeလုပ်ပေးတယ်
+Dialogue: 0,0:28:19.23,0:28:23.71,Default,,0,0,0,,stateနဲ့update dataကိုလက်ခံတဲ့reducerကိုရေးတယ်
+Dialogue: 0,0:28:23.71,0:28:26.05,Default,,0,0,0,,stateထဲကိုupdateနဲ့mergeလုပ်ပေးလိုက်တယ်
+Dialogue: 0,0:28:26.05,0:28:30.55,Default,,0,0,0,,storeအသစ်ကိုဒီreducerရယ် initial stateအနေနဲ့
+Dialogue: 0,0:28:30.55,0:28:31.18,Default,,0,0,0,, foo fooကိုပေးပြီး ဆောက်လိုက်မယ်
+Dialogue: 0,0:28:31.18,0:28:36.61,Default,,0,0,0,,အခုလောလောဆယ် initial stateကိုမထည့်ဘဲထားကြည့်ရအောင်
+Dialogue: 0,0:28:36.61,0:28:39.35,Default,,0,0,0,,ဘာဖြစ်မလဲကြည့်ကြည့်ရအောင်
+Dialogue: 0,0:28:39.35,0:28:43.90,Default,,0,0,0,,updateလုပ်စရာတချို့dispatchထဲပေးလိုက်မယ်
+Dialogue: 0,0:28:43.90,0:28:51.08,Default,,0,0,0,,ပြီးရင် stateကို logထုတ်ကြည့်မယ်
+Dialogue: 0,0:28:51.08,0:28:52.83,Default,,0,0,0,,ကျွန်တော်တို့လိုချင်တဲ့valueကိုပြန်ရတယ်
+Dialogue: 0,0:28:52.83,0:28:58.10,Default,,0,0,0,,အပေါ်မှာလိုပဲ foo baz bar bar ပြန်ရတယ်
+Dialogue: 0,0:28:58.10,0:28:59.40,Default,,0,0,0,,အဓိက ဘာတွေကွာသွားတာတွေ့လဲ
+Dialogue: 0,0:28:59.40,0:29:02.94,Default,,0,0,0,,အဓိကကတော့ reducerထဲမှာ 
+Dialogue: 0,0:29:02.94,0:29:04.90,Default,,0,0,0,,updateကိုကိုယ်တိုင် handleလုပ်ခဲ့ရတယ်
+Dialogue: 0,0:29:04.90,0:29:11.31,Default,,0,0,0,,stateအဟောင်းနဲ့updateအသစ်တွေကိုreducerထဲကိုpassလုပ်ရတာတွေဖြေရှင်းခဲ့ကြတယ်
+Dialogue: 0,0:29:11.31,0:29:21.04,Default,,0,0,0,,Storeဆိုတဲ့ကောင်ရှိပြီဆိုတော့ အဲ့တာတွေကို လိုက်လုပ်စရာမလိုတော့ဘူး
+Dialogue: 0,0:29:21.04,0:29:25.03,Default,,0,0,0,,အဓိကလုပ်ရမှာသည် storeအသစ်ဆောက်မယ် reducerထည့်ပေးရမယ်
+Dialogue: 0,0:29:25.03,0:29:29.38,Default,,0,0,0,,ပြောင်းချင်တာကိုdispatchကနေပေးရမယ်
 Dialogue: 0,0:29:29.38,0:29:32.16,Default,,0,0,0,,
 Dialogue: 0,0:29:32.16,0:29:32.99,Default,,0,0,0,,Cool.
-Dialogue: 0,0:29:32.99,0:29:36.14,Default,,0,0,0,,And so this is not really super helpful for us right now.
-Dialogue: 0,0:29:36.14,0:29:37.78,Default,,0,0,0,,All it does is merge some objects.
-Dialogue: 0,0:29:37.78,0:29:41.61,Default,,0,0,0,,But let's actually modify this such that it will help us.
-Dialogue: 0,0:29:41.61,0:29:45.65,Default,,0,0,0,,And so in previous weeks, what we've been working on is this contacts app.
-Dialogue: 0,0:29:45.65,0:29:50.33,Default,,0,0,0,,And so I changed a few things from last week, or couple weeks ago to this week,
-Dialogue: 0,0:29:50.33,0:29:53.99,Default,,0,0,0,,namely that the login screen is gone and the asynchronous request
-Dialogue: 0,0:29:53.99,0:29:55.82,Default,,0,0,0,,for fetching the contacts is gone.
-Dialogue: 0,0:29:55.82,0:29:58.52,Default,,0,0,0,,And so I just reverted the app to where it
-Dialogue: 0,0:29:58.52,0:30:02.92,Default,,0,0,0,,was before we add asynchronous actions.
-Dialogue: 0,0:30:02.92,0:30:06.19,Default,,0,0,0,,And so what do we care about in this simple application?
-Dialogue: 0,0:30:06.19,0:30:09.20,Default,,0,0,0,,Well, we care about the context, obviously.
-Dialogue: 0,0:30:09.20,0:30:15.17,Default,,0,0,0,,We care about maybe adding new contacts by using this Add button in the top.
-Dialogue: 0,0:30:15.17,0:30:16.73,Default,,0,0,0,,And we kind of care about the user.
-Dialogue: 0,0:30:16.73,0:30:22.34,Default,,0,0,0,,And so before we had this login page where a user would log in--
-Dialogue: 0,0:30:22.34,0:30:25.10,Default,,0,0,0,,and presumably we should be storing some sort of token
-Dialogue: 0,0:30:25.10,0:30:27.05,Default,,0,0,0,,or store the fact that the users logged in--
-Dialogue: 0,0:30:27.05,0:30:30.28,Default,,0,0,0,,and so we need to care about the contacts,
-Dialogue: 0,0:30:30.28,0:30:33.39,Default,,0,0,0,,and we need to care about some concept of having a user-user app,
-Dialogue: 0,0:30:33.39,0:30:35.49,Default,,0,0,0,,so we can tell if they're logged in or not.
-Dialogue: 0,0:30:35.49,0:30:38.80,Default,,0,0,0,,And so let's use what we've implemented in Redux thus far
-Dialogue: 0,0:30:38.80,0:30:40.55,Default,,0,0,0,,to actually keep track of that information
-Dialogue: 0,0:30:40.55,0:30:43.67,Default,,0,0,0,,in Redux, rather than having to do it ourself scattered throughout our app.
+Dialogue: 0,0:29:32.99,0:29:36.14,Default,,0,0,0,,အခုထိတော့ကျွန်တော်တို့အတွက်သိပ်အသုံးမတည့်သေးဘူး
+Dialogue: 0,0:29:36.14,0:29:37.78,Default,,0,0,0,,ဒီကောင်လုပ်တာဆိုလို့objectတွေကိုmergeလုပ်ထားတာပဲရှိတယ်
+Dialogue: 0,0:29:37.78,0:29:41.61,Default,,0,0,0,,အသုံးတည့်အောင်  ပြင်ကြည့်ရအောင်
+Dialogue: 0,0:29:41.61,0:29:45.65,Default,,0,0,0,,ပြီးခဲ့တဲ့အပတ်တွေတုန်းက ရေးတဲ့ contact appထဲမှာ
+Dialogue: 0,0:29:45.65,0:29:50.33,Default,,0,0,0,,ဒီတစ်ပတ် နည်းနည်းလောက်ပြောင်းလိုက်မယ်
+Dialogue: 0,0:29:50.33,0:29:55.82,Default,,0,0,0,,login screen နဲ့ contactယူတဲ့async requestမပါတော့ဘူး
+Dialogue: 0,0:29:55.82,0:30:02.92,Default,,0,0,0,,appကို asynchronous actionမထည့်ခင်ကနေရာထိ ပြန်သွားလိုက်တယ်
+Dialogue: 0,0:30:02.92,0:30:06.19,Default,,0,0,0,,ဒီappထဲမှာကိုဘာကိုဂရုစိုက်ရမလဲဆိုတော့
+Dialogue: 0,0:30:06.19,0:30:09.20,Default,,0,0,0,,သိသာပါတယ် contactတွေပေါ့
+Dialogue: 0,0:30:09.20,0:30:15.17,Default,,0,0,0,,ဒီအပါ်ကaddခလုပ်နှိပ်contact အသစ်ထည့်တာသိတယ်
+Dialogue: 0,0:30:15.17,0:30:16.73,Default,,0,0,0,,userပါမယ်
+Dialogue: 0,0:30:16.73,0:30:22.34,Default,,0,0,0,,login pageမတိုင်ခင် user loginလုပ်ရင် 
+Dialogue: 0,0:30:22.34,0:30:25.10,Default,,0,0,0,,ရလာတဲ့tokenကိုပဲဖြစ်ဖြစ်
+Dialogue: 0,0:30:25.10,0:30:27.05,Default,,0,0,0,,user loginဝင်ထားတဲ့အထောက်ထားတခုခုပေါ့
+Dialogue: 0,0:30:27.05,0:30:30.28,Default,,0,0,0,,အဲ့တာကိုသုံးပြီး log in ဝင်ထားလားမဝင်ထားလားစစ်ပြီးတော့မှ
+Dialogue: 0,0:30:30.28,0:30:35.49,Default,,0,0,0,,login pageဒါမှမဟုတ် contactတွေကို ပြသင့်တယ်
+Dialogue: 0,0:30:35.49,0:30:38.80,Default,,0,0,0,,ဒါဆိုကျွန်တော်တို့ရေးထားတဲ့ redux ကိုသုံးကြည့်ရအောင်
+Dialogue: 0,0:30:38.80,0:30:40.55,Default,,0,0,0,,app တစ်ခုလုံးက informationတွေကို ကိုယ့်ဘာသာလိုက်မထိန်းတော့ပဲနဲ့
+Dialogue: 0,0:30:40.55,0:30:43.67,Default,,0,0,0,,reduxကနေပဲ ထိန်းပေးလိမ့်မယ်
 Dialogue: 0,0:30:43.67,0:30:59.55,Default,,0,0,0,,
-Dialogue: 0,0:30:59.55,0:31:04.65,Default,,0,0,0,,So currently our store takes a reducer in an initial state.
-Dialogue: 0,0:31:04.65,0:31:05.78,Default,,0,0,0,,It stores those things.
-Dialogue: 0,0:31:05.78,0:31:08.94,Default,,0,0,0,,It gives us this thing called getState, which returns our state,
-Dialogue: 0,0:31:08.94,0:31:14.16,Default,,0,0,0,,and gives us a method called dispatch which applies any updates that we
-Dialogue: 0,0:31:14.16,0:31:16.27,Default,,0,0,0,,pass it to our state.
+Dialogue: 0,0:30:59.55,0:31:04.65,Default,,0,0,0,,အခုstoreကတော့ initial stateနေရာမှာ reducerကိုယူထားတယ်
+Dialogue: 0,0:31:04.65,0:31:05.78,Default,,0,0,0,,ဒါတွေကိုstoreလုပ်တယ်
+Dialogue: 0,0:31:05.78,0:31:08.94,Default,,0,0,0,,stateကိုထုတ်လို့ရတဲ့getStateကိုပေးထားတယ်
+Dialogue: 0,0:31:08.94,0:31:16.27,Default,,0,0,0,,upd‌ateလုပ်ဖို့ dispatchပါမယ်
 Dialogue: 0,0:31:16.27,0:31:18.15,Default,,0,0,0,,And so we don't have to change anything there
 Dialogue: 0,0:31:18.15,0:31:20.67,Default,,0,0,0,,for the context of our contacts app.
 Dialogue: 0,0:31:20.67,0:31:23.64,Default,,0,0,0,,Though we do have to change this reducer.
