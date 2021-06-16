@@ -310,103 +310,100 @@ Dialogue: 0,0:16:01.45,0:16:06.02,Default,,0,0,0,,ဒါသည် အရို�
 Dialogue: 0,0:16:06.02,0:16:08.40,Default,,0,0,0,,ဒီreducerသုံးပြီး နည်းနည်းလောက်စမ်းကြည့်ရအောင်
 Dialogue: 0,0:16:08.40,0:16:13.61,Default,,0,0,0,,initial state ကိုempty objectပေးထားလိုက်မယ်
 Dialogue: 0,0:16:13.61,0:16:19.05,Default,,0,0,0,,stateကိုဒီလိုလေးထားလိုက်မယ်
-Dialogue: 0,0:16:19.05,0:16:25.29,Default,,0,0,0,,reducerကိုခေါ်မယ် old stateပေးလိုက်မယ် fooပေးလိုက်မယ်
-Dialogue: 0,0:16:25.29,0:16:28.17,Default,,0,0,0,,fooပြန်ရတယ်
-Dialogue: 0,0:16:28.17,0:16:31.92,Default,,0,0,0,,And then now let's update the state again.
-Dialogue: 0,0:16:31.92,0:16:34.67,Default,,0,0,0,,And so that's passed into our reducer--
-Dialogue: 0,0:16:34.67,0:16:37.05,Default,,0,0,0,,the old states, and maybe bar gets bar.
+Dialogue: 0,0:16:19.05,0:16:25.29,Default,,0,0,0,,reducerကိုခေါ်မယ် old stateပေးလိုက်မယ် fooဆို
+Dialogue: 0,0:16:25.29,0:16:28.17,Default,,0,0,0,,fooရမယ်
+Dialogue: 0,0:16:28.17,0:16:31.92,Default,,0,0,0,,stateကို updateထပ်လုပ်လိုက်မယ်
+Dialogue: 0,0:16:31.92,0:16:34.67,Default,,0,0,0,,အဲ့ကောင်သည် reducerထဲကိုရောက်သွားမယ်
+Dialogue: 0,0:16:34.67,0:16:37.05,Default,,0,0,0,,old stateနဲ့ bar ဆို barရမယ်
 Dialogue: 0,0:16:37.05,0:16:39.81,Default,,0,0,0,,
-Dialogue: 0,0:16:39.81,0:16:46.38,Default,,0,0,0,,And lastly, let's update the state again, passes into the reducer,
-Dialogue: 0,0:16:46.38,0:16:48.75,Default,,0,0,0,,and give it now foo gets baz.
+Dialogue: 0,0:16:39.81,0:16:46.38,Default,,0,0,0,,နောက်ဆုံးတစ်ခေါက် stateကို updateထပ်လုပ်မယ်
+Dialogue: 0,0:16:46.38,0:16:48.75,Default,,0,0,0,,foo ဆို bazရမယ်
 Dialogue: 0,0:16:48.75,0:16:51.31,Default,,0,0,0,,
-Dialogue: 0,0:16:51.31,0:16:53.90,Default,,0,0,0,,And so what do we expect to see back here?
-Dialogue: 0,0:16:53.90,0:16:59.74,Default,,0,0,0,,So we have state initialises an empty object.
-Dialogue: 0,0:16:59.74,0:17:04.24,Default,,0,0,0,,And then first we invoke it and passing this object that
-Dialogue: 0,0:17:04.24,0:17:06.81,Default,,0,0,0,,has a key value pair of foo and foo.
-Dialogue: 0,0:17:06.81,0:17:11.32,Default,,0,0,0,,And so when we invoke that, we have an empty object here and foo here.
-Dialogue: 0,0:17:11.32,0:17:16.01,Default,,0,0,0,,And so after line 7, our state is just foo, foo.
-Dialogue: 0,0:17:16.01,0:17:17.31,Default,,0,0,0,,How about line 8?
-Dialogue: 0,0:17:17.31,0:17:23.26,Default,,0,0,0,,Now we pass foo foo into the reducer, and also pass an update called bar bar.
-Dialogue: 0,0:17:23.26,0:17:25.78,Default,,0,0,0,,And so state is foo foo.
-Dialogue: 0,0:17:25.78,0:17:26.65,Default,,0,0,0,,Update is bar bar.
-Dialogue: 0,0:17:26.65,0:17:31.21,Default,,0,0,0,,And so we now are ended up with an object with a key of foo
-Dialogue: 0,0:17:31.21,0:17:34.84,Default,,0,0,0,,and a value of foo, a key of bar and a value of bar.
-Dialogue: 0,0:17:34.84,0:17:37.46,Default,,0,0,0,,And then lastly, we pass that object into the reducer again,
-Dialogue: 0,0:17:37.46,0:17:40.57,Default,,0,0,0,,this time with a key value pair of foo and baz.
-Dialogue: 0,0:17:40.57,0:17:44.92,Default,,0,0,0,,And so what we expect to see out of that is an object with a key of foo,
-Dialogue: 0,0:17:44.92,0:17:49.23,Default,,0,0,0,,value of baz, and a key bar with a value of bar.
-Dialogue: 0,0:17:49.23,0:17:50.53,Default,,0,0,0,,So let's go ahead and run this.
-Dialogue: 0,0:17:50.53,0:17:55.84,Default,,0,0,0,,But first, since object spread is not yet supported by node,
-Dialogue: 0,0:17:55.84,0:17:59.89,Default,,0,0,0,,let's just replace it with something like a helper function called
-Dialogue: 0,0:17:59.89,0:18:05.39,Default,,0,0,0,,merge, where it'll take a bunch of arguments-- some number of arguments.
-Dialogue: 0,0:18:05.39,0:18:08.74,Default,,0,0,0,,Let's actually just to prev and next.
-Dialogue: 0,0:18:08.74,0:18:13.63,Default,,0,0,0,,And it will do this thing called object, dot, assign,
-Dialogue: 0,0:18:13.63,0:18:15.91,Default,,0,0,0,,which is the way that we used to merge objects before.
-Dialogue: 0,0:18:15.91,0:18:19.42,Default,,0,0,0,,This object spread became a syntax.
-Dialogue: 0,0:18:19.42,0:18:24.67,Default,,0,0,0,,And so let's just assign a new object, the key value pairs of previous,
-Dialogue: 0,0:18:24.67,0:18:27.16,Default,,0,0,0,,and then the key value pairs of next.
-Dialogue: 0,0:18:27.16,0:18:29.83,Default,,0,0,0,,And then rather than doing this manually here,
-Dialogue: 0,0:18:29.83,0:18:34.60,Default,,0,0,0,,let's just merge state and update.
-Dialogue: 0,0:18:34.60,0:18:37.13,Default,,0,0,0,,So let's run this and see what we get.
-Dialogue: 0,0:18:37.13,0:18:39.43,Default,,0,0,0,,I guess nothing will happen when you run that, so let's
-Dialogue: 0,0:18:39.43,0:18:41.23,Default,,0,0,0,,just console log the state at the end.
+Dialogue: 0,0:16:51.31,0:16:53.90,Default,,0,0,0,,ဒီမှာဘာပြန်ရမယ်လို့ထင်လဲ
+Dialogue: 0,0:16:53.90,0:16:59.74,Default,,0,0,0,,ပထမဆုံး stateကိုempty objectပေးလိုက်မယ်
+Dialogue: 0,0:16:59.74,0:17:04.24,Default,,0,0,0,,ပထမတစ်ခေါက် ခေါ်လိုက်တယ် object ပေးလိုက်မယ်
+Dialogue: 0,0:17:04.24,0:17:06.81,Default,,0,0,0,,foo:foo ဆိုတဲ့ key,valueရမယ်
+Dialogue: 0,0:17:06.81,0:17:11.32,Default,,0,0,0,,invoke လုပ်လိုက်ရင်, ဒီမှာ empty object နဲ့ ဒီမှာ foo.
+Dialogue: 0,0:17:11.32,0:17:16.01,Default,,0,0,0,,line 7ပြီး သွားတော့ stateသည် foo fooဆိုပီးရတယ်
+Dialogue: 0,0:17:16.01,0:17:17.31,Default,,0,0,0,,line 8 ကရော
+Dialogue: 0,0:17:17.31,0:17:23.26,Default,,0,0,0,,foo fooကို reducerထဲထည့်လိုက်မယ်  updateမှာbar barပေးလိုက်မယ်
+Dialogue: 0,0:17:23.26,0:17:25.78,Default,,0,0,0,,stateက ဖူးဖူး
+Dialogue: 0,0:17:25.78,0:17:26.65,Default,,0,0,0,,updateက ဘဘ 
+Dialogue: 0,0:17:26.65,0:17:34.84,Default,,0,0,0,,အဲ့တော့ဘာရလဲဆိုတော့ ဖူးဖူး ဘဘဆိုတဲ့objectတစ်ခုရတယ်
+Dialogue: 0,0:17:34.84,0:17:37.46,Default,,0,0,0,,နောက်ဆုံးခေါက် objectကိုreducerထဲကိုထည့်လိုက်မယ်
+Dialogue: 0,0:17:37.46,0:17:40.57,Default,,0,0,0,,ဒီတစ်ခေါက်တော့ foo bazဆိုတဲ့ key valueအတွဲလေး
+Dialogue: 0,0:17:40.57,0:17:49.23,Default,,0,0,0,,ဘာပြန်ရမလဲဆိုတော့ fool baz ၊ bar bar ဆိုတဲ့အတွဲလေးပြန်ရတယ်
+Dialogue: 0,0:17:49.23,0:17:50.53,Default,,0,0,0,,run ကြည့်လိုက်ရအောင်
+Dialogue: 0,0:17:50.53,0:17:55.84,Default,,0,0,0,,ပထမဆုံး မrunခင်မှာ သိထားရမှာက object spread ကို nodeမှာ supportမလုပ်သေးဘူး(v6 လောက်တုန်းက)
+Dialogue: 0,0:17:55.84,0:17:59.89,Default,,0,0,0,,merge ဆို helper functionလေးထည့်ရေးလိုက်မယ်
+Dialogue: 0,0:17:59.89,0:18:05.39,Default,,0,0,0,,argumentsတချို့ယူမယ်
+Dialogue: 0,0:18:05.39,0:18:08.74,Default,,0,0,0,,prevနဲ့nextလို့ထားလိုက်မယ်
+Dialogue: 0,0:18:08.74,0:18:13.63,Default,,0,0,0,,object.assignသုံးပြီးရေးလိုက်မယ်
+Dialogue: 0,0:18:13.63,0:18:15.91,Default,,0,0,0,,အရင်တုန်းက object mergeလုပ်ချင်ရင် ဒီလိုသုံးတာပေါ့
+Dialogue: 0,0:18:15.91,0:18:19.42,Default,,0,0,0,,နောက်မှ object spreadက syntaxအနေနဲ့ဖြစ်လာတာပေါ့
+Dialogue: 0,0:18:19.42,0:18:24.67,Default,,0,0,0,,object အသစ်တခု assignလုပ်လိုက်မယ် prevရဲ့key valueတွေနဲ့
+Dialogue: 0,0:18:24.67,0:18:27.16,Default,,0,0,0,,nextရဲ့key value တွေပေါ့
+Dialogue: 0,0:18:27.16,0:18:34.60,Default,,0,0,0,,အကုန်လိုက်ရေးမယ့်အစား mergeကိုပဲခေါ်သုံးလိုက်မယ်
+Dialogue: 0,0:18:34.60,0:18:37.13,Default,,0,0,0,,runပြီးတော့ ဘာရလဲကြည့်လိုက်မယ်
+Dialogue: 0,0:18:37.13,0:18:39.43,Default,,0,0,0,,runလိုက်ရုံနဲ့တော့ဘာမှတွေ့မှာမဟုတ်ဘူး
+Dialogue: 0,0:18:39.43,0:18:41.23,Default,,0,0,0,,console.logထုတ်ကြည့်လိုက်မယ်
 Dialogue: 0,0:18:41.23,0:18:46.40,Default,,0,0,0,,
-Dialogue: 0,0:18:46.40,0:18:48.69,Default,,0,0,0,,And so we get what we expected.
-Dialogue: 0,0:18:48.69,0:18:51.23,Default,,0,0,0,,So we expect it to get this thing with foo baz and bar bar.
-Dialogue: 0,0:18:51.23,0:18:53.21,Default,,0,0,0,,And that's exactly what we got.
-Dialogue: 0,0:18:53.21,0:18:58.49,Default,,0,0,0,,And so to recap, all a reducer is is something
-Dialogue: 0,0:18:58.49,0:19:02.96,Default,,0,0,0,,that takes some previous state and something that we want to update it
-Dialogue: 0,0:19:02.96,0:19:06.87,Default,,0,0,0,,with and then returns a new state.
-Dialogue: 0,0:19:06.87,0:19:11.46,Default,,0,0,0,,So in our particular reducer, we chose to just merge the update into states.
-Dialogue: 0,0:19:11.46,0:19:15.41,Default,,0,0,0,,But what happens here doesn't matter, as long
-Dialogue: 0,0:19:15.41,0:19:17.39,Default,,0,0,0,,as it's returning a new state object.
-Dialogue: 0,0:19:17.39,0:19:22.91,Default,,0,0,0,,And so like I alluded to earlier, we can make our reducer even simpler
-Dialogue: 0,0:19:22.91,0:19:23.84,Default,,0,0,0,,by just doing this.
+Dialogue: 0,0:18:46.40,0:18:48.69,Default,,0,0,0,,ကျွန်တော်တို့ထင်တဲ့အတိုင်းထွက်လာတယ်
+Dialogue: 0,0:18:48.69,0:18:51.23,Default,,0,0,0,,foo bazနဲ့bar bar ပေါ့
+Dialogue: 0,0:18:51.23,0:18:53.21,Default,,0,0,0,,အဲဒီအတိုင်းအတိအကျပါပဲ
+Dialogue: 0,0:18:53.21,0:18:58.49,Default,,0,0,0,,ပြန်ပြောရရင်
+Dialogue: 0,0:18:58.49,0:19:02.96,Default,,0,0,0,,reducerဆိုတာ previous stateနဲ့updateလုပ်စရာယူမယ်
+Dialogue: 0,0:19:02.96,0:19:06.87,Default,,0,0,0,,ပြီးရင် stateအသစ်ပြန်ပေးတယ်
+Dialogue: 0,0:19:06.87,0:19:11.46,Default,,0,0,0,,ကျွန်တော်တို့  reducerမှာဆိုရင် updateကိုstateထဲမှာ mergeလုပ်လိုက်တယ်
+Dialogue: 0,0:19:11.46,0:19:15.41,Default,,0,0,0,,stateအသစ်ပြန်ပေးနေသမျှတော့
+Dialogue: 0,0:19:15.41,0:19:17.39,Default,,0,0,0,,ဘာလုပ်လိုက်သလဲဆိုတာသည် အရေးမကြီးဘူး
+Dialogue: 0,0:19:17.39,0:19:22.91,Default,,0,0,0,,အစောပိုင်းကပြသလို  reducerကိုပိုပြီးရှင်းအောင် 
+Dialogue: 0,0:19:22.91,0:19:23.84,Default,,0,0,0,,ဒီလိုလေးပဲရေးပေးလိုက်လည်းရတယ်.
 Dialogue: 0,0:19:23.84,0:19:27.66,Default,,0,0,0,,
-Dialogue: 0,0:19:27.66,0:19:36.60,Default,,0,0,0,,So if we did this, and ran it, we just get
-Dialogue: 0,0:19:36.60,0:19:38.43,Default,,0,0,0,,an empty object, which is as expected.
-Dialogue: 0,0:19:38.43,0:19:41.27,Default,,0,0,0,,Because all we're doing is we're just passing the old state backward
-Dialogue: 0,0:19:41.27,0:19:43.94,Default,,0,0,0,,and completely ignoring the update and passing an old state.
-Dialogue: 0,0:19:43.94,0:19:47.57,Default,,0,0,0,,So this is a completely valid reducer.
-Dialogue: 0,0:19:47.57,0:19:51.08,Default,,0,0,0,,It just happened to be that it doesn't do anything.
-Dialogue: 0,0:19:51.08,0:19:55.79,Default,,0,0,0,,And so instead, we made it do something by merging these objects.
+Dialogue: 0,0:19:27.66,0:19:36.60,Default,,0,0,0,,အဲ့လိုရေးပြီး runလိုက်ရင် 
+Dialogue: 0,0:19:36.60,0:19:38.43,Default,,0,0,0,,ထင်ထားသလိုပဲ empty objectလေးပဲပြန်ရမှာပေါ့
+Dialogue: 0,0:19:38.43,0:19:41.27,Default,,0,0,0,,ကျွန်တော်တို့လုပ်နေသမျှသည် old stateကြီးကိုပဲပြန်ထည့်ပေးနေတာကိုး
+Dialogue: 0,0:19:41.27,0:19:43.94,Default,,0,0,0,,updateလုပ်ရမှာတွေမလုပ်ဘဲထားလိုက်တာပေါ့
+Dialogue: 0,0:19:43.94,0:19:47.57,Default,,0,0,0,,ဒါသည်လည်းvalid ဖြစ်တဲ့reducerတစ်ခုပေါ့
+Dialogue: 0,0:19:47.57,0:19:51.08,Default,,0,0,0,,ဘာမှမလုပ်တာပဲရှိတာပေါ့
+Dialogue: 0,0:19:51.08,0:19:55.79,Default,,0,0,0,,အဲ့ဒီအစား objectတွေကိုmergeလုပ်လိုက်တာပေါ့
 Dialogue: 0,0:19:55.79,0:20:01.43,Default,,0,0,0,,
 Dialogue: 0,0:20:01.43,0:20:01.93,Default,,0,0,0,,Cool.
-Dialogue: 0,0:20:01.93,0:20:06.16,Default,,0,0,0,,So let's make our Redux model a little bit more advanced.
-Dialogue: 0,0:20:06.16,0:20:09.61,Default,,0,0,0,,So how was it responsible for invoking the reducer?
-Dialogue: 0,0:20:09.61,0:20:12.04,Default,,0,0,0,,And how do we actually manage the state?
-Dialogue: 0,0:20:12.04,0:20:15.40,Default,,0,0,0,,Because currently, it's not very good that the way
-Dialogue: 0,0:20:15.40,0:20:21.16,Default,,0,0,0,,that we're managing the state is just this state object that we're mutating.
-Dialogue: 0,0:20:21.16,0:20:25.00,Default,,0,0,0,,Why not try to wrap this up in something self-contained, like a class?
-Dialogue: 0,0:20:25.00,0:20:30.91,Default,,0,0,0,,And that's exactly what Redux does with this concept of a store.
-Dialogue: 0,0:20:30.91,0:20:31.71,Default,,0,0,0,,So what is a store?
-Dialogue: 0,0:20:31.71,0:20:33.52,Default,,0,0,0,,So as we talked about earlier, a store is
-Dialogue: 0,0:20:33.52,0:20:35.79,Default,,0,0,0,,responsible for maintaining some sort of state.
+Dialogue: 0,0:20:01.93,0:20:06.16,Default,,0,0,0,,ဒါဆို Redux modelနည်းနည်း အဆင့်မြင့်မြင့်လေးရေးကြည့်ရအောင်
+Dialogue: 0,0:20:06.16,0:20:09.61,Default,,0,0,0,,reducerကိုဘယ်သူကခေါ်ပေးမှာလဲပေါ့
+Dialogue: 0,0:20:09.61,0:20:12.04,Default,,0,0,0,,stateကိုရောဘယ်လို manageလုပ်မလဲ
+Dialogue: 0,0:20:12.04,0:20:15.40,Default,,0,0,0,,ဘာလို့လဲဆိုတော့အခုလုပ်ထားတာကြီးကသိပ်မကောင်းဘူး
+Dialogue: 0,0:20:15.40,0:20:21.16,Default,,0,0,0,,ဒီ state objectကိုလှမ်းလှမ်းပြောင်းနေတဲ့သဘောပဲရှိနေသေးတယ်
+Dialogue: 0,0:20:21.16,0:20:25.00,Default,,0,0,0,,containerသဘောမျိုးဖြစ်အောင်ဘာလို့မရေးတာလဲ  classလိုဟာမျိုးပေါ့
+Dialogue: 0,0:20:25.00,0:20:30.91,Default,,0,0,0,,Redux သည် storeကိုဒီ self-container conceptသုံးပြီးပဲရေးထားတာဖြစ်တယ်
+Dialogue: 0,0:20:30.91,0:20:31.71,Default,,0,0,0,,storeဆိုတာဘာလဲပေါ့
+Dialogue: 0,0:20:31.71,0:20:33.52,Default,,0,0,0,,ကျွန်တော်တို့အစောပိုင်းကပြောခဲ့သလိုပဲ storeဆိုတာ
+Dialogue: 0,0:20:33.52,0:20:35.79,Default,,0,0,0,,stateကိုထိန်းသိမ်းရတဲ့ကောင်ပေါ့
 Dialogue: 0,0:20:35.79,0:20:39.39,Default,,0,0,0,,
-Dialogue: 0,0:20:39.39,0:20:40.87,Default,,0,0,0,,It does a bunch of other stuff.
-Dialogue: 0,0:20:40.87,0:20:46.11,Default,,0,0,0,,But at its core, it's just responsible for remembering what the state is.
-Dialogue: 0,0:20:46.11,0:20:49.50,Default,,0,0,0,,The way that you access that state is through this [INAUDIBLE] method
-Dialogue: 0,0:20:49.50,0:20:50.48,Default,,0,0,0,,called getState.
-Dialogue: 0,0:20:50.48,0:20:52.62,Default,,0,0,0,,And so you can invoke this method called getState,
-Dialogue: 0,0:20:52.62,0:20:55.35,Default,,0,0,0,,and it'll return the current state.
-Dialogue: 0,0:20:55.35,0:20:56.73,Default,,0,0,0,,And how do you update that state?
-Dialogue: 0,0:20:56.73,0:20:58.77,Default,,0,0,0,,Well, as we talked about earlier, the only way
-Dialogue: 0,0:20:58.77,0:21:02.49,Default,,0,0,0,,to do it is by using this thing called dispatch-- by dispatching an action
-Dialogue: 0,0:21:02.49,0:21:05.25,Default,,0,0,0,,to update the state.
-Dialogue: 0,0:21:05.25,0:21:08.52,Default,,0,0,0,,And lastly, you can add listeners that get invoked when the state changes.
-Dialogue: 0,0:21:08.52,0:21:12.42,Default,,0,0,0,,And so it wouldn't be super great of a reactive model
-Dialogue: 0,0:21:12.42,0:21:16.44,Default,,0,0,0,,if the store just updated itself and didn't tell anybody,
-Dialogue: 0,0:21:16.44,0:21:19.77,Default,,0,0,0,,because the whole point of React is that the UI will react
-Dialogue: 0,0:21:19.77,0:21:23.41,Default,,0,0,0,,to updates in the application state.
-Dialogue: 0,0:21:23.41,0:21:29.49,Default,,0,0,0,,And so what Redux does is when the application state gets updated,
-Dialogue: 0,0:21:29.49,0:21:32.10,Default,,0,0,0,,it'll run some callbacks.
-Dialogue: 0,0:21:32.10,0:21:34.72,Default,,0,0,0,,But let's not include that in our implementation for now.
+Dialogue: 0,0:20:39.39,0:20:40.87,Default,,0,0,0,,တခြားလုပ်ထားတာတွေလည်း အများကြီးပါတာပေါ့
+Dialogue: 0,0:20:40.87,0:20:46.11,Default,,0,0,0,,သူ့အဓိကတာဝန်ကတော့ stateကိုသေချာသိမ်းထားတာမျိုးပေါ့
+Dialogue: 0,0:20:46.11,0:20:49.50,Default,,0,0,0,,stateကိုဘယ်လို accessလုပ်သလဲဆိုတော့ methodတစ်ခုရှိတယ်
+Dialogue: 0,0:20:49.50,0:20:50.48,Default,,0,0,0,,getStateလို့ခေါ်တယ်
+Dialogue: 0,0:20:50.48,0:20:52.62,Default,,0,0,0,,မင်းကgetStateဆိုတဲ့ methodလေးကိုခေါ်လိုက်ရင်
+Dialogue: 0,0:20:52.62,0:20:55.35,Default,,0,0,0,,current stateကို returnပြန်ပေးမယ်
+Dialogue: 0,0:20:55.35,0:20:56.73,Default,,0,0,0,,အဲ့ဒီstateကိုဘယ်လိုupdateလုပ်မလဲပေါ့
+Dialogue: 0,0:20:56.73,0:20:58.77,Default,,0,0,0,,အစောပိုင်းတုန်းကပြောခဲ့သလိုပဲ stateကို updateလုပ်ဖို့
+Dialogue: 0,0:20:58.77,0:21:02.49,Default,,0,0,0,,တစ်နည်းပဲရှိတယ် actionကို dispatchလုပ်ပေးတာပေါ့
+Dialogue: 0,0:21:02.49,0:21:05.25,Default,,0,0,0,,
+Dialogue: 0,0:21:05.25,0:21:08.52,Default,,0,0,0,,နောက်ဆုံးဘာလုပ်လဲဆိုတော့ listenerတွေထည့်ပြီးတော့state ကို changeတာနဲ့ invokeလုပ်တာပေါ့
+Dialogue: 0,0:21:08.52,0:21:12.42,Default,,0,0,0,,reactive modelမှာလို storeက က သူ့ဟာသူupdateဖြစ်သွားပြီး
+Dialogue: 0,0:21:12.42,0:21:16.44,Default,,0,0,0,,ဘယ်သူ့မှမပြောရင် သိပ်မမိုက်ဘူး ဘာလို့လဲဆိုတော့
+Dialogue: 0,0:21:16.44,0:21:19.77,Default,,0,0,0,,React ရဲ့အဓိကအသက်သည် application stateပြောင်းတာနဲ့ 
+Dialogue: 0,0:21:19.77,0:21:23.41,Default,,0,0,0,, UI ပါလိုက်ပြောင်းတာမျိုးပေါ့
+Dialogue: 0,0:21:23.41,0:21:29.49,Default,,0,0,0,,Redux ကဘာလုပ်လဲဆိုတော့ updateလုပ်ပြီးရင် invokeလုပ်ဖို့
+Dialogue: 0,0:21:29.49,0:21:32.10,Default,,0,0,0,,callbackတွေသုံးတယ်
+Dialogue: 0,0:21:32.10,0:21:34.72,Default,,0,0,0,,အခုလောလောဆယ်အဲ့တာကို ထည့်မရေးသေးဘဲထားရအောင်
 Dialogue: 0,0:21:34.72,0:21:44.92,Default,,0,0,0,,
-Dialogue: 0,0:21:44.92,0:21:47.44,Default,,0,0,0,,So currently, we have this very simple reducer.
-Dialogue: 0,0:21:47.44,0:21:49.57,Default,,0,0,0,,And now let's turn it into a store.
-Dialogue: 0,0:21:49.57,0:21:51.79,Default,,0,0,0,,And so what does a store need?
-Dialogue: 0,0:21:51.79,0:21:54.64,Default,,0,0,0,,Well, it should maintain the state within itself.
-Dialogue: 0,0:21:54.64,0:21:58.57,Default,,0,0,0,,It should expose some sort of getter method called getState.
+Dialogue: 0,0:21:44.92,0:21:47.44,Default,,0,0,0,,အခုလောလောဆယ် ဒီreducerလေးတော့ရပြီ
+Dialogue: 0,0:21:47.44,0:21:49.57,Default,,0,0,0,,အဲ့ဒါကိုstoreအဖြစ်ပြောင်းလိုက်မယ်
+Dialogue: 0,0:21:49.57,0:21:51.79,Default,,0,0,0,,storeဆိုရင် ဘာတွေလိုလဲပေါ့
+Dialogue: 0,0:21:51.79,0:21:54.64,Default,,0,0,0,,storeသည်သူ့ထဲကstateကို maintainလုပ်သင့်တာပေါ့ 
+Dialogue: 0,0:21:54.64,0:21:58.57,Default,,0,0,0,,getStateလိုမျိုးgetter methodတစ်ခုတော့public interfaceအနေနဲ့ ပေးထားရမှာပေါ့
 Dialogue: 0,0:21:58.57,0:22:01.27,Default,,0,0,0,,And it should expose this method called dispatch,
 Dialogue: 0,0:22:01.27,0:22:03.91,Default,,0,0,0,,which is the way that you update these actions.
 Dialogue: 0,0:22:03.91,0:22:08.26,Default,,0,0,0,,And so let's start to do that.
