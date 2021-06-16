@@ -214,105 +214,104 @@ Dialogue: 0,0:10:33.25,0:10:37.09,Default,,0,0,0,,centralize storeကိုအ�
 Dialogue: 0,0:10:37.09,0:10:45.82,Default,,0,0,0,,Redux မှာ storeသည် အကြီးဆုံးအပိုင်းလို့မှတ်ယူလို့ရတယ်
 Dialogue: 0,0:10:45.82,0:10:48.99,Default,,0,0,0,,actionကိုdispatchလုပ်ပြီးတော့storeကိုupdateလုပ်လို့ရတယ်
 Dialogue: 0,0:10:48.99,0:10:54.64,Default,,0,0,0,,
-Dialogue: 0,0:10:54.64,0:10:58.36,Default,,0,0,0,,And lastly, updates are made using a pure function.
-Dialogue: 0,0:10:58.36,0:11:02.32,Default,,0,0,0,,And so by pure function, I mean a function that takes in arguments
-Dialogue: 0,0:11:02.32,0:11:05.09,Default,,0,0,0,,and will always return the same thing for those arguments.
-Dialogue: 0,0:11:05.09,0:11:08.74,Default,,0,0,0,,So it's fully deterministic, meaning given the same arguments,
-Dialogue: 0,0:11:08.74,0:11:10.76,Default,,0,0,0,,it will always return the same answer.
-Dialogue: 0,0:11:10.76,0:11:12.64,Default,,0,0,0,,And also, it doesn't look anywhere else other
-Dialogue: 0,0:11:12.64,0:11:15.88,Default,,0,0,0,,than those arguments for the computation that it gives.
-Dialogue: 0,0:11:15.88,0:11:19.36,Default,,0,0,0,,So you're not using things like the current time
-Dialogue: 0,0:11:19.36,0:11:21.97,Default,,0,0,0,,or anything in the environment to calculate things,
-Dialogue: 0,0:11:21.97,0:11:24.95,Default,,0,0,0,,only a function of the input.
-Dialogue: 0,0:11:24.95,0:11:26.54,Default,,0,0,0,,And lastly, there are no side effects.
-Dialogue: 0,0:11:26.54,0:11:30.36,Default,,0,0,0,,So I take input, and I give output.
-Dialogue: 0,0:11:30.36,0:11:31.57,Default,,0,0,0,,And I don't do anything else.
-Dialogue: 0,0:11:31.57,0:11:32.51,Default,,0,0,0,,I don't print.
-Dialogue: 0,0:11:32.51,0:11:35.05,Default,,0,0,0,,I don't change variables outside my scope, nothing like that.
+Dialogue: 0,0:10:54.64,0:10:58.36,Default,,0,0,0,,နောက်ဆုံးပြောဖို့ကျန်တာက update လုပ်တဲ့အခါမှာ pure functionတွေကိုပဲသုံးတယ်
+Dialogue: 0,0:10:58.36,0:11:02.32,Default,,0,0,0,,pure functionဆိုတာဘာလဲဆိုတော့ argumentတစ်ခု ပေးလိုက်တယ်ဆိုပါစို့
+Dialogue: 0,0:11:02.32,0:11:05.09,Default,,0,0,0,,တူညီတဲ့argumentတိုင်းအတွက် ရလာတဲ့return valueသည် အတူတူပဲဖြစ်တယ်
+Dialogue: 0,0:11:05.09,0:11:08.74,Default,,0,0,0,,ဒီargumentလာရင်,
+Dialogue: 0,0:11:08.74,0:11:10.76,Default,,0,0,0,, ဒါပဲreturnပြန်ရမယ်ပေါ့
+Dialogue: 0,0:11:10.76,0:11:12.64,Default,,0,0,0,,ဥပမာ addဆိုတဲ့ functionထဲကို 1နဲ့2ပေးလိုက်ရင်
+Dialogue: 0,0:11:12.64,0:11:15.88,Default,,0,0,0,,အမြဲတမ်းreturn valueသည် 3ပဲရမယ်
+Dialogue: 0,0:11:15.88,0:11:19.36,Default,,0,0,0,,functionရဲ့inputကို
+Dialogue: 0,0:11:19.36,0:11:21.97,Default,,0,0,0,,တကယ်လို့မင်းကcurrent timeလိုဟာမျိုး
+Dialogue: 0,0:11:21.97,0:11:24.95,Default,,0,0,0,,environmentထဲကတစ်ခုခုကိုတွက်ဖို့ယူတာမျိုးမဟုတ်ဘူးဆိုရင်
+Dialogue: 0,0:11:24.95,0:11:26.54,Default,,0,0,0,,နောက်ဆုံးမှာရလာမှာသည် side effectမပါဘူး
+Dialogue: 0,0:11:26.54,0:11:30.36,Default,,0,0,0,,Input ယူတယ် Outputထွက်တယ်
+Dialogue: 0,0:11:30.36,0:11:31.57,Default,,0,0,0,,တခြားဘာမှမလုပ်ဘူး
+Dialogue: 0,0:11:31.57,0:11:32.51,Default,,0,0,0,,printလည်းမထုတ်ဘူး
+Dialogue: 0,0:11:32.51,0:11:35.05,Default,,0,0,0,,function scope ရဲ့အပြင်က variableကိုလည်း သွားမပြင်ဘူး၊ ဒါမျိုးပေါ့၊side effectမရှိဘူးဆိုတာက။
 Dialogue: 0,0:11:35.05,0:11:37.25,Default,,0,0,0,,
-Dialogue: 0,0:11:37.25,0:11:38.47,Default,,0,0,0,,And so we have this thing.
-Dialogue: 0,0:11:38.47,0:11:43.01,Default,,0,0,0,,We have an action, goes to a reducer, which then updates the store.
-Dialogue: 0,0:11:43.01,0:11:45.52,Default,,0,0,0,,And so to draw that--
-Dialogue: 0,0:11:45.52,0:11:48.85,Default,,0,0,0,,if you remember this from Flux, we have actions
-Dialogue: 0,0:11:48.85,0:11:53.05,Default,,0,0,0,,go through a dispatcher, which updates some number of stores,
-Dialogue: 0,0:11:53.05,0:11:55.78,Default,,0,0,0,,which then update some number of views.
-Dialogue: 0,0:11:55.78,0:12:09.38,Default,,0,0,0,,And in Reduxland, we have an action, gets dispatched,
-Dialogue: 0,0:12:09.38,0:12:11.21,Default,,0,0,0,,and updates some central store.
+Dialogue: 0,0:11:37.25,0:11:38.47,Default,,0,0,0,,ကျွန်တော်တို့မှာ reduxရှိပြီ
+Dialogue: 0,0:11:38.47,0:11:43.01,Default,,0,0,0,,actionရှိမယ်reducerဆီသွားမယ် storeကိုupdateလုပ်မယ်
+Dialogue: 0,0:11:43.01,0:11:45.52,Default,,0,0,0,,ပုံဆွဲပြရရင်
+Dialogue: 0,0:11:45.52,0:11:48.85,Default,,0,0,0,,Flux တုန်းကဟာကိုမှတ်မိမယ်ထင်တယ် actionတွေရှိမယ်
+Dialogue: 0,0:11:48.85,0:11:53.05,Default,,0,0,0,,နောက်dispatcherဆီသွားမယ် storeတချို့ကိုupdateလုပ်မယ်
+Dialogue: 0,0:11:53.05,0:11:55.78,Default,,0,0,0,,အဲ့ဒီကနေမှ viewတွေလိုက်ပြောင်းသွားမယ်
+Dialogue: 0,0:11:55.78,0:12:09.38,Default,,0,0,0,,Redux အပိုင်းမှာကျတော့actionတွေdispatchလုပ်မယ်
+Dialogue: 0,0:12:09.38,0:12:11.21,Default,,0,0,0,,central storeသည် updateဖြစ်သွားမယ်
 Dialogue: 0,0:12:11.21,0:12:15.52,Default,,0,0,0,,
-Dialogue: 0,0:12:15.52,0:12:19.18,Default,,0,0,0,,And that will update any of its views.
+Dialogue: 0,0:12:15.52,0:12:19.18,Default,,0,0,0,,အဲ့ကနေတစ်ဆင့် viewတွေလိုက်ပြောင်းမယ်
 Dialogue: 0,0:12:19.18,0:12:32.14,Default,,0,0,0,,
-Dialogue: 0,0:12:32.14,0:12:37.09,Default,,0,0,0,,And those views, with user interaction, can trigger more actions.
-Dialogue: 0,0:12:37.09,0:12:39.19,Default,,0,0,0,,And so it's a very similar diagram to Flux.
-Dialogue: 0,0:12:39.19,0:12:43.78,Default,,0,0,0,,And it's the exact same in that it's a unidirectional flow of data.
-Dialogue: 0,0:12:43.78,0:12:46.15,Default,,0,0,0,,But the main difference is here where you
-Dialogue: 0,0:12:46.15,0:12:50.71,Default,,0,0,0,,have a singular store, rather than a potentially large number of stores
-Dialogue: 0,0:12:50.71,0:12:51.35,Default,,0,0,0,,like in Flux.
+Dialogue: 0,0:12:32.14,0:12:37.09,Default,,0,0,0,,အဲ့viewတွေကနေပဲ user interact လုပ်ပြီးတော့actionတွေရမယ် ဆိုလိုတာကခလုပ်တွေနှိပ်တာမျိုးပေါ့
+Dialogue: 0,0:12:37.09,0:12:39.19,Default,,0,0,0,,Fluxရဲ့ပုံနဲ့တော်တော်ဆင်တယ်
+Dialogue: 0,0:12:39.19,0:12:43.78,Default,,0,0,0,,unidirectional data flowဖြစ်တာချင်းလည်း တူတယ်
+Dialogue: 0,0:12:43.78,0:12:46.15,Default,,0,0,0,,အဓိကမတူတာကတော့ ဒီမှာဆိုရင် storeသည်
+Dialogue: 0,0:12:46.15,0:12:50.71,Default,,0,0,0,,တစ်ခုပဲရှိတယ်၊ Flux မှာလို အများကြီးမရှိဘူး
+Dialogue: 0,0:12:50.71,0:12:51.35,Default,,0,0,0,,
 Dialogue: 0,0:12:51.35,0:12:58.13,Default,,0,0,0,,
-Dialogue: 0,0:12:58.13,0:13:01.10,Default,,0,0,0,,And if you want to read about Redux and its background,
-Dialogue: 0,0:13:01.10,0:13:02.96,Default,,0,0,0,,you can go to this URL, which is ITS Docs.
+Dialogue: 0,0:12:58.13,0:13:01.10,Default,,0,0,0,,Redux အကြောင်းဖတ်ချင်ရင်တော့
+Dialogue: 0,0:13:01.10,0:13:02.96,Default,,0,0,0,,သူ့ရဲ့docsမှာသွားဖတ်လို့ရတယ်
 Dialogue: 0,0:13:02.96,0:13:06.78,Default,,0,0,0,,
-Dialogue: 0,0:13:06.78,0:13:09.89,Default,,0,0,0,,So let's do something fun this lecture and actually implement
-Dialogue: 0,0:13:09.89,0:13:12.49,Default,,0,0,0,,something like Redux ourselves.
-Dialogue: 0,0:13:12.49,0:13:13.62,Default,,0,0,0,,And so where do we start?
-Dialogue: 0,0:13:13.62,0:13:21.45,Default,,0,0,0,,Let's go ahead and just create a directory
-Dialogue: 0,0:13:21.45,0:13:23.29,Default,,0,0,0,,into which we'll start creating these files.
+Dialogue: 0,0:13:06.78,0:13:09.89,Default,,0,0,0,,နည်းနည်းလောက်ပျော်စရာလေးဖန်တီးရအောင် ကိုယ်တိုင်
+Dialogue: 0,0:13:09.89,0:13:12.49,Default,,0,0,0,,Redux လိုဟာမျိုးရေးကြည့်မယ်
+Dialogue: 0,0:13:12.49,0:13:13.62,Default,,0,0,0,,ဘယ်ကနေစရေးကြမလဲ
+Dialogue: 0,0:13:13.62,0:13:21.45,Default,,0,0,0,,directoryတစ်ခုစဆောက်လိုက်မယ်
+Dialogue: 0,0:13:21.45,0:13:23.29,Default,,0,0,0,,ဒီဖိုင်လေးတွေထည့်လိုက်မယ်
 Dialogue: 0,0:13:23.29,0:13:27.89,Default,,0,0,0,,
-Dialogue: 0,0:13:27.89,0:13:29.54,Default,,0,0,0,,So what's first?
-Dialogue: 0,0:13:29.54,0:13:32.84,Default,,0,0,0,,So there's this thing called a reducer, which
-Dialogue: 0,0:13:32.84,0:13:35.43,Default,,0,0,0,,is what calculates the next state.
-Dialogue: 0,0:13:35.43,0:13:38.87,Default,,0,0,0,,And so it takes a previous state, and it takes some information
-Dialogue: 0,0:13:38.87,0:13:40.33,Default,,0,0,0,,on how it should update.
-Dialogue: 0,0:13:40.33,0:13:43.68,Default,,0,0,0,,And it goes ahead and applies the update and returns some new state.
-Dialogue: 0,0:13:43.68,0:13:47.64,Default,,0,0,0,,So some constraints, it should be a pure function.
-Dialogue: 0,0:13:47.64,0:13:49.63,Default,,0,0,0,,So in other words, the result is deterministic.
-Dialogue: 0,0:13:49.63,0:13:52.51,Default,,0,0,0,,So given the same input, it'll always give the same output.
-Dialogue: 0,0:13:52.51,0:13:56.12,Default,,0,0,0,,And it's determined exclusively by those arguments.
-Dialogue: 0,0:13:56.12,0:13:59.00,Default,,0,0,0,,And there are no side effects, so no logging, no changing variables,
-Dialogue: 0,0:13:59.00,0:14:00.68,Default,,0,0,0,,no doing anything like that--
-Dialogue: 0,0:14:00.68,0:14:03.74,Default,,0,0,0,,no changing variables outside of its own scope that should.
-Dialogue: 0,0:14:03.74,0:14:05.01,Default,,0,0,0,,Should be immutable.
-Dialogue: 0,0:14:05.01,0:14:08.16,Default,,0,0,0,,And so we've talked about immutability in previous lectures.
-Dialogue: 0,0:14:08.16,0:14:11.79,Default,,0,0,0,,So it should always return a new object.
-Dialogue: 0,0:14:11.79,0:14:14.01,Default,,0,0,0,,So the keys in the object might not change,
-Dialogue: 0,0:14:14.01,0:14:15.93,Default,,0,0,0,,but the object reference itself should change.
+Dialogue: 0,0:13:27.89,0:13:29.54,Default,,0,0,0,,ပထမဆုံးအနေနဲ့ဘာလုပ်မလဲဆိုတော့
+Dialogue: 0,0:13:29.54,0:13:32.84,Default,,0,0,0,,reducerဆိုတာရှိမယ် ဒီကောင်ကနေမှ
+Dialogue: 0,0:13:32.84,0:13:35.43,Default,,0,0,0,,stateကိုcalculateလုပ်တာဘာညာလုပ်ပေးတာပေါ့
+Dialogue: 0,0:13:35.43,0:13:38.87,Default,,0,0,0,,previous stateကိုယူတယ် informationတချို့ယူတယ်
+Dialogue: 0,0:13:38.87,0:13:40.33,Default,,0,0,0,,ဘယ်လိုupdateလုပ်မယ်ဆိုတာအပေါ်မူတည်ပြီးတော့ပေါ့
+Dialogue: 0,0:13:40.33,0:13:43.68,Default,,0,0,0,,ရှေ့ဆက်သွားမယ် updateလုပ်မယ် state အသစ်ရမယ်
+Dialogue: 0,0:13:43.68,0:13:47.64,Default,,0,0,0,,သတိထားရမှာကတော့ update functionသည် pure functionဖြစ်ရမယ်
+Dialogue: 0,0:13:47.64,0:13:49.63,Default,,0,0,0,,ပြောရရင် result ဘာဖြစ်မလဲဆိုတာ တန်းသိနိုင်ရမယ်
+Dialogue: 0,0:13:49.63,0:13:52.51,Default,,0,0,0,,တူညီတဲ့ inputပေးရင် တူညီတဲ့ outputပဲအမြဲတမ်းရရမယ်
+Dialogue: 0,0:13:52.51,0:13:56.12,Default,,0,0,0,,argumentကိုကြည့်လိုက်တာနဲ့ resultကို တန်းသိနိုင်ရမယ် ဥပမာ 1နဲ့2ပေါင်း3ရတယ်ဆိုရင် 1နဲ့2ပေးရင် ပေါင်းကြည့်စရာမလိုဘဲ 3ဆိုတာတန်းပြောနိုင်ရမယ်
+Dialogue: 0,0:13:56.12,0:13:59.00,Default,,0,0,0,,side effectမရှိဘူး logမထုတ်ဘူးvariable တွေကိုမပြောင်းဘူး
+Dialogue: 0,0:13:59.00,0:14:00.68,Default,,0,0,0,, အဲ့လိုဟာမျိုးတစ်ခုမှ မလုပ်ဘူး
+Dialogue: 0,0:14:00.68,0:14:05.01,Default,,0,0,0,,scope အပြင်ဘက်က variable တွေသည် immutableဖြစ်သင့်တယ် ဆိုလိုတာက သွားမပြောင်းသင့်ဘူး
+Dialogue: 0,0:14:05.01,0:14:08.16,Default,,0,0,0,,ပြီးခဲ့တဲ့lectureတွေတုန်းက immutable အကြောင်းပြောပြီးပြီ
+Dialogue: 0,0:14:08.16,0:14:11.79,Default,,0,0,0,,အဲ့တော့ return valueသည် အမြဲတမ်းnew objectဖြစ်ရမယ်
+Dialogue: 0,0:14:11.79,0:14:14.01,Default,,0,0,0,,Object ရဲ့key(properties)တွေသည် မပြောင်းဘူး
+Dialogue: 0,0:14:14.01,0:14:15.93,Default,,0,0,0,,Object ရဲ့Referenceကတော့အသစ်ဖြစ်သွားမယ်
 Dialogue: 0,0:14:15.93,0:14:18.97,Default,,0,0,0,,
-Dialogue: 0,0:14:18.97,0:14:21.52,Default,,0,0,0,,And let's actually go ahead and start implementing a reducer.
+Dialogue: 0,0:14:18.97,0:14:21.52,Default,,0,0,0,,ဒါဆိုreducerတစ်ခုဆက်ရေးကြည့်ရအောင်
 Dialogue: 0,0:14:21.52,0:14:25.82,Default,,0,0,0,,
-Dialogue: 0,0:14:25.82,0:14:31.34,Default,,0,0,0,,And so we said a reducer takes the previous state and some sort of update
-Dialogue: 0,0:14:31.34,0:14:32.93,Default,,0,0,0,,and returns some new state.
-Dialogue: 0,0:14:32.93,0:14:34.70,Default,,0,0,0,,And let's go ahead and implement that.
+Dialogue: 0,0:14:25.82,0:14:31.34,Default,,0,0,0,,ပြောခဲ့သလိုပဲ reducerသည် previous state ကိုယူတယ်၊ updateလုပ်မယ့်dataယူမယ်
+Dialogue: 0,0:14:31.34,0:14:32.93,Default,,0,0,0,,stateအသစ်ကို return ပြန်မယ်
+Dialogue: 0,0:14:32.93,0:14:34.70,Default,,0,0,0,,အဲ့တာကိုရေးကြည့်မယ်
 Dialogue: 0,0:14:34.70,0:14:40.01,Default,,0,0,0,,
-Dialogue: 0,0:14:40.01,0:14:47.20,Default,,0,0,0,,So some function that takes a previous state and an update
-Dialogue: 0,0:14:47.20,0:14:48.94,Default,,0,0,0,,and it returns some sort of new state.
-Dialogue: 0,0:14:48.94,0:14:52.63,Default,,0,0,0,,And so how it calculates that state is completely up to us.
-Dialogue: 0,0:14:52.63,0:14:55.69,Default,,0,0,0,,And so let's make the simplest reducer possible.
-Dialogue: 0,0:14:55.69,0:14:59.41,Default,,0,0,0,,Well, the simplest reducer possible would actually be this,
-Dialogue: 0,0:14:59.41,0:15:03.33,Default,,0,0,0,,where we take the previous date, we take an update,
-Dialogue: 0,0:15:03.33,0:15:06.80,Default,,0,0,0,,and we just completely ignore the update and return the previous state.
-Dialogue: 0,0:15:06.80,0:15:08.81,Default,,0,0,0,,But let's actually do something.
-Dialogue: 0,0:15:08.81,0:15:12.16,Default,,0,0,0,,So rather than just returning the state blindly, let's apply some update.
-Dialogue: 0,0:15:12.16,0:15:15.96,Default,,0,0,0,,And so let's assume the state isn't an object,
-Dialogue: 0,0:15:15.96,0:15:18.71,Default,,0,0,0,,and let's assume the update is also an object.
-Dialogue: 0,0:15:18.71,0:15:21.88,Default,,0,0,0,,And let's just merge those objects.
-Dialogue: 0,0:15:21.88,0:15:23.51,Default,,0,0,0,,And so we could do something like this.
+Dialogue: 0,0:14:40.01,0:14:47.20,Default,,0,0,0,,functionသည် previous stateယူတယ် updateလုပ်မယ့် dataယူမယ်
+Dialogue: 0,0:14:47.20,0:14:48.94,Default,,0,0,0,,state အသစ်return ပြန်တယ်
+Dialogue: 0,0:14:48.94,0:14:52.63,Default,,0,0,0,,stateကိုဘယ်လိုcalculationတွေလုပ်မလဲဆိုတာသည် ကျွန်တော်တို့ပေါ်ပဲမူတည်တယ်
+Dialogue: 0,0:14:52.63,0:14:55.69,Default,,0,0,0,,reducerကိုအရိုးရှင်းဆုံးဖြစ်အောင် ရေးရအောင်
+Dialogue: 0,0:14:55.69,0:14:59.41,Default,,0,0,0,,ဟုတ်ပြီးအရှင်းဆုံး reducer သည် ဒီလိုလေးဖြစ်မယ်
+Dialogue: 0,0:14:59.41,0:15:03.33,Default,,0,0,0,,previous stateနဲ့updateလုပ်ချင်တဲ့dataကိုယူမယ်
+Dialogue: 0,0:15:03.33,0:15:06.80,Default,,0,0,0,,updateမလုပ်သေးဘဲ previous stateကို return ပြန်ထားမယ်
+Dialogue: 0,0:15:06.80,0:15:08.81,Default,,0,0,0,,ဒါပေမယ့် တခုခုရေးလိုက်မယ်
+Dialogue: 0,0:15:08.81,0:15:12.16,Default,,0,0,0,,stateကို ဒီတိုင်းကြီးပြန်ပေးလိုက်တာထက် updateလုပ်လိုက်မယ်
+Dialogue: 0,0:15:12.16,0:15:15.96,Default,,0,0,0,,stateသည် objectလို့ယူဆလိုက်မယ်,
+Dialogue: 0,0:15:15.96,0:15:18.71,Default,,0,0,0,,updateသည် objectလို့ယူဆလိုက်မယ်
+Dialogue: 0,0:15:18.71,0:15:21.88,Default,,0,0,0,,အဲ့ဒီobjectတွေကိုပေါင်းလိုက်မယ်
+Dialogue: 0,0:15:21.88,0:15:23.51,Default,,0,0,0,,ဒီလိုမျိုးလေးရေးလိုက်မယ်
 Dialogue: 0,0:15:23.51,0:15:30.28,Default,,0,0,0,,
-Dialogue: 0,0:15:30.28,0:15:32.58,Default,,0,0,0,,So this would be a very, very simple reducer.
-Dialogue: 0,0:15:32.58,0:15:36.60,Default,,0,0,0,,So given a state and an update, where they're both objects,
-Dialogue: 0,0:15:36.60,0:15:38.19,Default,,0,0,0,,just merge those objects.
-Dialogue: 0,0:15:38.19,0:15:40.19,Default,,0,0,0,,And so take all of the keys and states of-- you
-Dialogue: 0,0:15:40.19,0:15:41.61,Default,,0,0,0,,don't remember what the syntax is.
-Dialogue: 0,0:15:41.61,0:15:45.36,Default,,0,0,0,,It's object spread by which you take all of the key and value
-Dialogue: 0,0:15:45.36,0:15:50.12,Default,,0,0,0,,pairs of an object, and you add them to this new object that we're creating.
-Dialogue: 0,0:15:50.12,0:15:51.75,Default,,0,0,0,,And then do the same thing with update.
-Dialogue: 0,0:15:51.75,0:15:55.78,Default,,0,0,0,,Take all of its keys and value pairs, and then apply them to the same object.
-Dialogue: 0,0:15:55.78,0:15:57.75,Default,,0,0,0,,And so if there are any duplicate keys, they'll
-Dialogue: 0,0:15:57.75,0:16:01.45,Default,,0,0,0,,get overwritten by this second update.
-Dialogue: 0,0:16:01.45,0:16:06.02,Default,,0,0,0,,And so this is an example of an extremely simple reducer.
-Dialogue: 0,0:16:06.02,0:16:08.40,Default,,0,0,0,,And so let's actually play with our reducer a little bit.
-Dialogue: 0,0:16:08.40,0:16:13.61,Default,,0,0,0,,We can do something like let state start as an empty object.
-Dialogue: 0,0:16:13.61,0:16:19.05,Default,,0,0,0,,We can do state is now--
-Dialogue: 0,0:16:19.05,0:16:25.29,Default,,0,0,0,,invoke the reducer on the old state, and that it's passing something like foo
-Dialogue: 0,0:16:25.29,0:16:28.17,Default,,0,0,0,,gets foo.
+Dialogue: 0,0:15:30.28,0:15:32.58,Default,,0,0,0,,ဒါသည် တကယ့်ကိုအရိုးရှင်းဆုံး reducerဖြစ်တယ်
+Dialogue: 0,0:15:32.58,0:15:36.60,Default,,0,0,0,,stateနဲ့updateနဲ့ယူမယ် သူတို့နှစ်ခုသည် objectတွေဖြစ်တယ်
+Dialogue: 0,0:15:36.60,0:15:38.19,Default,,0,0,0,,အဲ့ဒီobjectတွေကိုပေါင်းလိုက်မယ်
+Dialogue: 0,0:15:38.19,0:15:40.19,Default,,0,0,0,,stateထဲကkeyတွေယူမယ်- 
+Dialogue: 0,0:15:40.19,0:15:41.61,Default,,0,0,0,,syntaxကဘာတွေလဲဆိုတာမှတ်မိဖို့မလိုဘူး
+Dialogue: 0,0:15:41.61,0:15:45.36,Default,,0,0,0,,spread operatorသုံးပြီး ယူလိုက်မယ်
+Dialogue: 0,0:15:45.36,0:15:50.12,Default,,0,0,0,,object နှစ်ခုကိုဒီလိုယူပြီး stateအသစ်အနေနဲ့ return ပြန်ပေးမယ်
+Dialogue: 0,0:15:50.12,0:15:51.75,Default,,0,0,0,,updateမှာလည်း ဒီလိုပဲပေါ့
+Dialogue: 0,0:15:51.75,0:15:55.78,Default,,0,0,0,,keyနဲ့ valueတွေကိုယူမယ် objectတစ်ခုထဲကို ထည့်ပေးလိုက်မယ်
+Dialogue: 0,0:15:55.78,0:15:57.75,Default,,0,0,0,,တကယ်လို့duplicate keyတွေရှိတယ်ဆိုရင်
+Dialogue: 0,0:15:57.75,0:16:01.45,Default,,0,0,0,,ဒုတိယ updateထဲကဟာကိုပဲယူသွားလိမ့်မယ်
+Dialogue: 0,0:16:01.45,0:16:06.02,Default,,0,0,0,,ဒါသည် အရိုးရှင်းဆုံး reducerတစ်ခုရဲ့ ဥပမာပဲဖြစ်တယ်.
+Dialogue: 0,0:16:06.02,0:16:08.40,Default,,0,0,0,,ဒီreducerသုံးပြီး နည်းနည်းလောက်စမ်းကြည့်ရအောင်
+Dialogue: 0,0:16:08.40,0:16:13.61,Default,,0,0,0,,initial state ကိုempty objectပေးထားလိုက်မယ်
+Dialogue: 0,0:16:13.61,0:16:19.05,Default,,0,0,0,,stateကိုဒီလိုလေးထားလိုက်မယ်
+Dialogue: 0,0:16:19.05,0:16:25.29,Default,,0,0,0,,reducerကိုခေါ်မယ် old stateပေးလိုက်မယ် fooပေးလိုက်မယ်
+Dialogue: 0,0:16:25.29,0:16:28.17,Default,,0,0,0,,fooပြန်ရတယ်
 Dialogue: 0,0:16:28.17,0:16:31.92,Default,,0,0,0,,And then now let's update the state again.
 Dialogue: 0,0:16:31.92,0:16:34.67,Default,,0,0,0,,And so that's passed into our reducer--
 Dialogue: 0,0:16:34.67,0:16:37.05,Default,,0,0,0,,the old states, and maybe bar gets bar.
