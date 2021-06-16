@@ -539,7 +539,7 @@ Dialogue: 0,0:29:45.65,0:29:50.33,Default,,0,0,0,,ဒီတစ်ပတ် န�
 Dialogue: 0,0:29:50.33,0:29:55.82,Default,,0,0,0,,login screen နဲ့ contactယူတဲ့async requestမပါတော့ဘူး
 Dialogue: 0,0:29:55.82,0:30:02.92,Default,,0,0,0,,appကို asynchronous actionမထည့်ခင်ကနေရာထိ ပြန်သွားလိုက်တယ်
 Dialogue: 0,0:30:02.92,0:30:06.19,Default,,0,0,0,,ဒီappထဲမှာကိုဘာကိုဂရုစိုက်ရမလဲဆိုတော့
-Dialogue: 0,0:30:06.19,0:30:09.20,Default,,0,0,0,,သိသာပါတယ် contactတွေပေါ့
+Dialogue: 0,0:30:06.19,0:30:09.20,Default,,0,0,0,,သိသာပါတယ် cont‌actsပေါ့
 Dialogue: 0,0:30:09.20,0:30:15.17,Default,,0,0,0,,ဒီအပါ်ကaddခလုပ်နှိပ်contact အသစ်ထည့်တာသိတယ်
 Dialogue: 0,0:30:15.17,0:30:16.73,Default,,0,0,0,,userပါမယ်
 Dialogue: 0,0:30:16.73,0:30:22.34,Default,,0,0,0,,login pageမတိုင်ခင် user loginလုပ်ရင် 
@@ -555,106 +555,100 @@ Dialogue: 0,0:30:59.55,0:31:04.65,Default,,0,0,0,,အခုstoreကတော့ 
 Dialogue: 0,0:31:04.65,0:31:05.78,Default,,0,0,0,,ဒါတွေကိုstoreလုပ်တယ်
 Dialogue: 0,0:31:05.78,0:31:08.94,Default,,0,0,0,,stateကိုထုတ်လို့ရတဲ့getStateကိုပေးထားတယ်
 Dialogue: 0,0:31:08.94,0:31:16.27,Default,,0,0,0,,upd‌ateလုပ်ဖို့ dispatchပါမယ်
-Dialogue: 0,0:31:16.27,0:31:18.15,Default,,0,0,0,,And so we don't have to change anything there
-Dialogue: 0,0:31:18.15,0:31:20.67,Default,,0,0,0,,for the context of our contacts app.
-Dialogue: 0,0:31:20.67,0:31:23.64,Default,,0,0,0,,Though we do have to change this reducer.
-Dialogue: 0,0:31:23.64,0:31:27.32,Default,,0,0,0,,So presumably, if we want to update--
-Dialogue: 0,0:31:27.32,0:31:28.98,Default,,0,0,0,,maybe we want to add a contact.
-Dialogue: 0,0:31:28.98,0:31:32.26,Default,,0,0,0,,The way that we would do that would be appending that to an array.
-Dialogue: 0,0:31:32.26,0:31:34.14,Default,,0,0,0,,And so there's not really a convenient way
-Dialogue: 0,0:31:34.14,0:31:38.94,Default,,0,0,0,,to do this with our current reducers, since it's just merging objects.
-Dialogue: 0,0:31:38.94,0:31:42.96,Default,,0,0,0,,So let's actually implement a reducer that will.
-Dialogue: 0,0:31:42.96,0:31:53.85,Default,,0,0,0,,So say we-- let's call it the contacts reducer.
-Dialogue: 0,0:31:53.85,0:31:58.44,Default,,0,0,0,,And the contacts reducer, or contact reducer, takes the state
-Dialogue: 0,0:31:58.44,0:32:01.29,Default,,0,0,0,,and presumably the state is all the old contacts,
-Dialogue: 0,0:32:01.29,0:32:05.16,Default,,0,0,0,,and rather than passing an update, let's just pass it a new contact.
+Dialogue: 0,0:31:16.27,0:31:18.15,Default,,0,0,0,,ဒီနားမှာတော့ဘာမှသိပ်ပြောင်းစရာမပါဘူး
+Dialogue: 0,0:31:18.15,0:31:20.67,Default,,0,0,0,,appရဲ့contactတွေအတွက်
+Dialogue: 0,0:31:20.67,0:31:23.64,Default,,0,0,0,,reducerကို ပြင်မယ်
+Dialogue: 0,0:31:23.64,0:31:28.98,Default,,0,0,0,,contactထပ်ထည့်ချင်ရင်
+Dialogue: 0,0:31:28.98,0:31:32.26,Default,,0,0,0,,အရင်တိုင်းဆိုရင်တော့ arrayထဲကိုထပ်ထည့်ရမှာပေါ့
+Dialogue: 0,0:31:32.26,0:31:34.14,Default,,0,0,0,,အဲ့လိုလုပ်တာသည် သိပ်တော့အဆင်မပြေဘူး
+Dialogue: 0,0:31:34.14,0:31:38.94,Default,,0,0,0,,ဘာလို့လဲဆိုတော့ current reducerသည်stateတွေကိုmerge လုပ်ရုံသက်သက်ပဲ
+Dialogue: 0,0:31:38.94,0:31:42.96,Default,,0,0,0,,တကယ်အဆင်ပြေမယ့် reducer တစ်ခုရေးလိုက်မယ်
+Dialogue: 0,0:31:42.96,0:31:53.85,Default,,0,0,0,,contact reducerလို့ပေးလိုက်မယ်
+Dialogue: 0,0:31:53.85,0:31:58.44,Default,,0,0,0,,ဒီreducerသည်stateကိုလက်ခံမယ်
+Dialogue: 0,0:31:58.44,0:32:01.29,Default,,0,0,0,,အရင်ဆုံးကတော့ ရှိပြီးသားcontactတွေပေါ့
+Dialogue: 0,0:32:01.29,0:32:05.16,Default,,0,0,0,,updateနေရာမှာcontactအသစ်ကိုပေးမယ်
 Dialogue: 0,0:32:05.16,0:32:07.70,Default,,0,0,0,,
-Dialogue: 0,0:32:07.70,0:32:09.27,Default,,0,0,0,,And what should this do?
-Dialogue: 0,0:32:09.27,0:32:13.82,Default,,0,0,0,,So state, presumably, is just a list of old contacts.
-Dialogue: 0,0:32:13.82,0:32:21.80,Default,,0,0,0,,And so let's just spread those old contacts,
-Dialogue: 0,0:32:21.80,0:32:25.64,Default,,0,0,0,,and then add a new content at the end.
-Dialogue: 0,0:32:25.64,0:32:29.33,Default,,0,0,0,,And there's our reducer for our contacts.
-Dialogue: 0,0:32:29.33,0:32:34.38,Default,,0,0,0,,How about four-hour user?
-Dialogue: 0,0:32:34.38,0:32:36.65,Default,,0,0,0,,So maybe we should have--
-Dialogue: 0,0:32:36.65,0:32:40.25,Default,,0,0,0,,how should we keep track of our user?
-Dialogue: 0,0:32:40.25,0:32:43.37,Default,,0,0,0,,Or more importantly, what is important to know about our user?
-Dialogue: 0,0:32:43.37,0:32:47.42,Default,,0,0,0,,Maybe something about their username, maybe whether they are logged in
-Dialogue: 0,0:32:47.42,0:32:52.38,Default,,0,0,0,,or not, maybe some other keys which have values.
-Dialogue: 0,0:32:52.38,0:32:55.78,Default,,0,0,0,,And so what's the way that we generally store key value pairs in JavaScript?
-Dialogue: 0,0:32:55.78,0:32:57.59,Default,,0,0,0,,It's usually just a simple array.
-Dialogue: 0,0:32:57.59,0:32:59.97,Default,,0,0,0,,I mean a simple object.
-Dialogue: 0,0:32:59.97,0:33:03.92,Default,,0,0,0,,So let's have this thing called a userReducer, which takes
-Dialogue: 0,0:33:03.92,0:33:09.53,Default,,0,0,0,,an old state and maybe an update again.
-Dialogue: 0,0:33:09.53,0:33:12.00,Default,,0,0,0,,And how are we going to handle this?
-Dialogue: 0,0:33:12.00,0:33:14.12,Default,,0,0,0,,Well, we'll just apply the update to this state.
-Dialogue: 0,0:33:14.12,0:33:16.37,Default,,0,0,0,,So it's basically the same as our reducer from before.
-Dialogue: 0,0:33:16.37,0:33:21.85,Default,,0,0,0,,We'll just merge into the old state that update.
+Dialogue: 0,0:32:07.70,0:32:09.27,Default,,0,0,0,,ဒါဆိုကျွန်တော်တို့ဘာလုပ်သင့်သလဲပေါ့
+Dialogue: 0,0:32:09.27,0:32:13.82,Default,,0,0,0,,stateကတော့contactအဟောင်းတွေပါတဲ့listပေါ့
+Dialogue: 0,0:32:13.82,0:32:21.80,Default,,0,0,0,,အဲ့contactတွေကိုspreadလုပ်လိုက်မယ်
+Dialogue: 0,0:32:21.80,0:32:25.64,Default,,0,0,0,,နောက်ဆုံး contactအသစ်ကိုထည့်လိုက်မယ်
+Dialogue: 0,0:32:25.64,0:32:29.33,Default,,0,0,0,,ဒါဆို contact reducerရပြီ
+Dialogue: 0,0:32:29.33,0:32:34.38,Default,,0,0,0,,ဒါဆိုuserအတွက်ကျတော့ရော
+Dialogue: 0,0:32:34.38,0:32:36.65,Default,,0,0,0,,ကျွန်တော်တို့တွေ userကိုလည်းစစ်သင့်တယ်
+Dialogue: 0,0:32:36.65,0:32:40.25,Default,,0,0,0,,ဘယ်လိုလုပ်မလဲပေါ့
+Dialogue: 0,0:32:40.25,0:32:43.37,Default,,0,0,0,,ပိုအရေးကြီးတာက userနဲ့ပတ်သတ်ပြီး ဘာတွေသိထားဖို့ အရေးကြီးလဲပေါ့
+Dialogue: 0,0:32:43.37,0:32:47.42,Default,,0,0,0,,usernameဖြစ်နိုင်တယ် ဒါမှမဟုတ် loginဝင်ထားလားမဝင်ထားလားဆိုတဲ့
+Dialogue: 0,0:32:47.42,0:32:52.38,Default,,0,0,0,,key valueပဲဖြစ်ဖြစ်ပေါ့
+Dialogue: 0,0:32:52.38,0:32:55.78,Default,,0,0,0,,  JSမှာ key valueသုံးချင်ရင် ဘာသုံးရလဲဆိုတော့
+Dialogue: 0,0:32:55.78,0:32:59.97,Default,,0,0,0,,objectကိုပဲသုံးရတယ်
+Dialogue: 0,0:32:59.97,0:33:03.92,Default,,0,0,0,,ဒါဆို userReducerသည် 
+Dialogue: 0,0:33:03.92,0:33:09.53,Default,,0,0,0,, old stateကိုယူမယ် updateလုပ်မယ့်ဟာယူမယ်
+Dialogue: 0,0:33:09.53,0:33:12.00,Default,,0,0,0,,ဒါဆို ဘယ်လိုလုပ်မလဲ
+Dialogue: 0,0:33:12.00,0:33:14.12,Default,,0,0,0,,updateကိုstateထဲထည့်ပေးလိုက်မယ်
+Dialogue: 0,0:33:14.12,0:33:16.37,Default,,0,0,0,,အခြေခံအားဖြင့်တော့အရင် reducerနဲ့အတူတူပါပဲ
+Dialogue: 0,0:33:16.37,0:33:21.85,Default,,0,0,0,,old stateထဲကိုupdateလုပ်ရမယ့်ကောင်နဲ့ mergeလုပ်ပေးလိုက်မယ်
 Dialogue: 0,0:33:21.85,0:33:22.35,Default,,0,0,0,,Cool.
-Dialogue: 0,0:33:22.35,0:33:24.98,Default,,0,0,0,,So now we have two separate reducers.
-Dialogue: 0,0:33:24.98,0:33:29.21,Default,,0,0,0,,One handles any updates for contacts.
-Dialogue: 0,0:33:29.21,0:33:33.44,Default,,0,0,0,,One handles any updates for a user.
-Dialogue: 0,0:33:33.44,0:33:40.46,Default,,0,0,0,,And so how are we going to apply that for our store as implemented?
-Dialogue: 0,0:33:40.46,0:33:43.43,Default,,0,0,0,,Because the store right now only takes a single reducer.
-Dialogue: 0,0:33:43.43,0:33:48.22,Default,,0,0,0,,It doesn't expect a reducer for contacts, a reducer for users,
-Dialogue: 0,0:33:48.22,0:33:52.73,Default,,0,0,0,,a reducer for metadata, a reducer for any other stuff that we want to store.
-Dialogue: 0,0:33:52.73,0:33:54.48,Default,,0,0,0,,It only expects one.
-Dialogue: 0,0:33:54.48,0:33:58.64,Default,,0,0,0,,And so we actually have to combine our reducers into just a singular reducer.
-Dialogue: 0,0:33:58.64,0:34:02.42,Default,,0,0,0,,And so if you remember, when we were talking about the pillars of Redux,
-Dialogue: 0,0:34:02.42,0:34:05.58,Default,,0,0,0,,everything is stored in one singular store, so one big object.
-Dialogue: 0,0:34:05.58,0:34:10.48,Default,,0,0,0,,But right now, we have two separate things
-Dialogue: 0,0:34:10.48,0:34:15.38,Default,,0,0,0,,that track our application state, one for contacts and one for users.
-Dialogue: 0,0:34:15.38,0:34:18.94,Default,,0,0,0,,And so how might we go about combining those reducers such
-Dialogue: 0,0:34:18.94,0:34:25.44,Default,,0,0,0,,that we have just one reducer or one source of truth for our app?
-Dialogue: 0,0:34:25.44,0:34:34.54,Default,,0,0,0,,Well, the reducer is going to just take a state and some update,
-Dialogue: 0,0:34:34.54,0:34:38.29,Default,,0,0,0,,just like all of our other reducers.
-Dialogue: 0,0:34:38.29,0:34:42.90,Default,,0,0,0,,And it's going to have to return some new state.
-Dialogue: 0,0:34:42.90,0:34:49.13,Default,,0,0,0,,And so we have to somehow tell, via this update, what we should be changing.
-Dialogue: 0,0:34:49.13,0:34:52.44,Default,,0,0,0,,So we're starting to run into a little bit of trouble here.
-Dialogue: 0,0:34:52.44,0:35:03.29,Default,,0,0,0,,In our last iteration, we were just passing an object to this dispatch.
-Dialogue: 0,0:35:03.29,0:35:09.74,Default,,0,0,0,,So its object just gets blindly merged into our state in our store.
-Dialogue: 0,0:35:09.74,0:35:12.14,Default,,0,0,0,,But now our store is a little bit complicated.
-Dialogue: 0,0:35:12.14,0:35:16.20,Default,,0,0,0,,As soon as we're hitting a real world use case,
-Dialogue: 0,0:35:16.20,0:35:18.56,Default,,0,0,0,,now we have multiple different keys in our store.
-Dialogue: 0,0:35:18.56,0:35:22.88,Default,,0,0,0,,And it's nontrivial how we're going to know exactly what we should update.
-Dialogue: 0,0:35:22.88,0:35:29.48,Default,,0,0,0,,If we just pass something like foo foo into our new store,
-Dialogue: 0,0:35:29.48,0:35:33.53,Default,,0,0,0,,how do we know whether that foo foo is an update for user,
-Dialogue: 0,0:35:33.53,0:35:36.38,Default,,0,0,0,,or foo foo is a new contact?
-Dialogue: 0,0:35:36.38,0:35:39.80,Default,,0,0,0,,We're starting to run into the limitations of how
-Dialogue: 0,0:35:39.80,0:35:42.36,Default,,0,0,0,,we've implemented our current reducer.
-Dialogue: 0,0:35:42.36,0:35:43.61,Default,,0,0,0,,And so how does Redux?
-Dialogue: 0,0:35:43.61,0:35:45.13,Default,,0,0,0,,Actually solve this?
-Dialogue: 0,0:35:45.13,0:35:48.62,Default,,0,0,0,,Well, through these things called actions.
-Dialogue: 0,0:35:48.62,0:35:51.44,Default,,0,0,0,,So an action is basically just a piece of data
-Dialogue: 0,0:35:51.44,0:35:56.42,Default,,0,0,0,,that contains all of the information required to make a state update.
-Dialogue: 0,0:35:56.42,0:36:03.84,Default,,0,0,0,,And so in our previous store implementation,
-Dialogue: 0,0:36:03.84,0:36:06.80,Default,,0,0,0,,this is true about our current update.
-Dialogue: 0,0:36:06.80,0:36:12.29,Default,,0,0,0,,Everything that we needed to update our state is passed as an argument
-Dialogue: 0,0:36:12.29,0:36:13.37,Default,,0,0,0,,to dispatch.
-Dialogue: 0,0:36:13.37,0:36:17.21,Default,,0,0,0,,So this could be considered an action, because it has everything that we
-Dialogue: 0,0:36:17.21,0:36:19.97,Default,,0,0,0,,need to update our state appropriately.
-Dialogue: 0,0:36:19.97,0:36:22.62,Default,,0,0,0,,But now we're starting to hit a limitation when
-Dialogue: 0,0:36:22.62,0:36:24.98,Default,,0,0,0,,we have a more complex store like this.
-Dialogue: 0,0:36:24.98,0:36:27.68,Default,,0,0,0,,We can't just pass an object like foo foo,
-Dialogue: 0,0:36:27.68,0:36:31.46,Default,,0,0,0,,because there's no longer enough information
-Dialogue: 0,0:36:31.46,0:36:34.40,Default,,0,0,0,,to make that full-state update.
-Dialogue: 0,0:36:34.40,0:36:36.12,Default,,0,0,0,,And so how are we going to do that?
-Dialogue: 0,0:36:36.12,0:36:40.31,Default,,0,0,0,,Well, generally actions are objects with the type key.
-Dialogue: 0,0:36:40.31,0:36:45.25,Default,,0,0,0,,That didn't necessarily have to be true in our naive implementation of store.
-Dialogue: 0,0:36:45.25,0:36:47.21,Default,,0,0,0,,But now it makes more sense to have an object,
-Dialogue: 0,0:36:47.21,0:36:51.08,Default,,0,0,0,,because we need more key value pairs.
-Dialogue: 0,0:36:51.08,0:36:56.54,Default,,0,0,0,,Usually, this object has a key called type.
-Dialogue: 0,0:36:56.54,0:36:59.75,Default,,0,0,0,,Or in other words, what are we doing here?
-Dialogue: 0,0:36:59.75,0:37:02.63,Default,,0,0,0,,Like, what update are we making?
-Dialogue: 0,0:37:02.63,0:37:04.57,Default,,0,0,0,,What should we be updating?
-Dialogue: 0,0:37:04.57,0:37:09.50,Default,,0,0,0,,And so there actually is a loose spec for what
-Dialogue: 0,0:37:09.50,0:37:12.59,Default,,0,0,0,,is considered an action in Flux.
-Dialogue: 0,0:37:12.59,0:37:14.27,Default,,0,0,0,,And so let's go ahead and open that up.
-Dialogue: 0,0:37:14.27,0:37:19.91,Default,,0,0,0,,And we see here a general guideline to this thing called a standard action,
-Dialogue: 0,0:37:19.91,0:37:24.77,Default,,0,0,0,,or an action that we should be using universally for all
-Dialogue: 0,0:37:24.77,0:37:26.96,Default,,0,0,0,,of our Flux or Redux applications.
-Dialogue: 0,0:37:26.96,0:37:29.35,Default,,0,0,0,,And so the motivation behind that is that it's
-Dialogue: 0,0:37:29.35,0:37:32.60,Default,,0,0,0,,a lot easier to work with actions if we can make certain assumptions about how
-Dialogue: 0,0:37:32.60,0:37:34.77,Default,,0,0,0,,they are shaped.
+Dialogue: 0,0:33:22.35,0:33:24.98,Default,,0,0,0,,ဒါဆို reducerနှစ်ခုရသွားပြီ
+Dialogue: 0,0:33:24.98,0:33:29.21,Default,,0,0,0,,တစ်ခုသည် contactအတွက်
+Dialogue: 0,0:33:29.21,0:33:33.44,Default,,0,0,0,,တစ်ခုသည် userအတွက်
+Dialogue: 0,0:33:33.44,0:33:40.46,Default,,0,0,0,,အဲ့ကောင်တွေကိုstoreနဲ့ဘယ်လိုတွဲသုံးမလဲ
+Dialogue: 0,0:33:40.46,0:33:43.43,Default,,0,0,0,,ဘာလို့လဲဆိုတော့storeသည်reducerတစ်ခုကိုပဲလက်ခံတယ်
+Dialogue: 0,0:33:43.43,0:33:48.22,Default,,0,0,0,,contact reducer, user reducerဆိုပြီး လက်မခံဘူး
+Dialogue: 0,0:33:48.22,0:33:52.73,Default,,0,0,0,,ကျွန်တော်တို့သိမ်းချင်တဲ့ dataဒါမှမဟုတ်metadataတွေအတွက် 
+Dialogue: 0,0:33:52.73,0:33:54.48,Default,,0,0,0,,stateတစ်ခုပဲရမယ်.
+Dialogue: 0,0:33:54.48,0:33:58.64,Default,,0,0,0,,ဒါကြောင့်reducerတွေကိုပေါင်းမှရမယ်
+Dialogue: 0,0:33:58.64,0:34:02.42,Default,,0,0,0,, Reduxရဲ့pillarတွေပြောခဲ့တယ် မှတ်မိလားတော့မသိဘူး
+Dialogue: 0,0:34:02.42,0:34:05.58,Default,,0,0,0,,အားလုံးကို central storeတစ်ခုထဲမှာပဲသိမ်းတယ်
+Dialogue: 0,0:34:05.58,0:34:10.48,Default,,0,0,0,,အခုလောလောဆယ်မတူတဲ့နှစ်ခုရှိတယ်
+Dialogue: 0,0:34:10.48,0:34:15.38,Default,,0,0,0,,appကသုံးနေတဲ့ stateတွေပေါ့ user stateနဲ့contact stateပေါ့
+Dialogue: 0,0:34:15.38,0:34:18.94,Default,,0,0,0,,အဲဒီ reducerတွေကို တစ်ခုတည်းရအောင်
+Dialogue: 0,0:34:18.94,0:34:25.44,Default,,0,0,0,,ဘယ်လိုရေးမလဲပေါ့
+Dialogue: 0,0:34:25.44,0:34:34.54,Default,,0,0,0,,reducer ကတော့stateနဲ့ update dataကိုလက်ခံမယ်
+Dialogue: 0,0:34:34.54,0:34:38.29,Default,,0,0,0,,တခြား reducerတွေလိုပဲ
+Dialogue: 0,0:34:38.29,0:34:42.90,Default,,0,0,0,,stateအသစ်ကိုတော့returnပြန်မယ်
+Dialogue: 0,0:34:42.90,0:34:49.13,Default,,0,0,0,,ဒီupdateကနေ ဘာကိုပြောင်းချင်တာလဲဆိုတာကိုပြောရမယ်
+Dialogue: 0,0:34:49.13,0:34:52.44,Default,,0,0,0,,အဲ့မှာ ဒုက္ခနဲ့ လှလှနဲ့စတွေ့တော့တာပေါ့
+Dialogue: 0,0:34:52.44,0:35:03.29,Default,,0,0,0,,နောက်ဆုံးတစ်ခေါက်တုန်းက dispatchထဲကို objectတစ်ခုပေးရတယ်
+Dialogue: 0,0:35:03.29,0:35:09.74,Default,,0,0,0,,အဲ့objectကိုstateထဲမှာ တန်းmergeလုပ်ပစ်လိုက်တယ်
+Dialogue: 0,0:35:09.74,0:35:12.14,Default,,0,0,0,,အခုတော့ storeကနည်းနည်း ရှုပ်သွားပြီ
+Dialogue: 0,0:35:12.14,0:35:16.20,Default,,0,0,0,,real world use case ပုံစံမျိုးပေါ့ အခုကြုံရတာသည်
+Dialogue: 0,0:35:16.20,0:35:18.56,Default,,0,0,0,,storeထဲမှာ မတူတဲ့keyတွေရောက်လာပြီ
+Dialogue: 0,0:35:18.56,0:35:22.88,Default,,0,0,0,,ဘယ်ကောင်ကိုupdateလုပ်မလဲဆိုတာ သေချာသိမှရတော့မယ်
+Dialogue: 0,0:35:22.88,0:35:29.48,Default,,0,0,0,,storeထဲကို foo fooဆိုတာကိုပဲ pass လုပ်လိုက်မယ်ဆိုရင်
+Dialogue: 0,0:35:29.48,0:35:33.53,Default,,0,0,0,,foo fooသည် userအတွက် updateလုပ်ရမယ်ဆိုတာ ဘယ်လိုသိမလဲပေါ့
+Dialogue: 0,0:35:33.53,0:35:36.38,Default,,0,0,0,, ဒါမှမဟုတ် foo fooသည် contactအသစ်လားပေါ့
+Dialogue: 0,0:35:36.38,0:35:42.36,Default,,0,0,0,,လက်ရှိreducerကိုဘယ်လို ရေးရမလဲဆိုတဲ့ ကန့်သတ်ချက်တွေပါလာပြီ
+Dialogue: 0,0:35:42.36,0:35:43.61,Default,,0,0,0,,Redux ကဘယ်လိုလုပ်သလဲပေါ့
+Dialogue: 0,0:35:43.61,0:35:45.13,Default,,0,0,0,,ဒါကိုရော ဖြေရှင်းလို့ရသလားပေါ့
+Dialogue: 0,0:35:45.13,0:35:48.62,Default,,0,0,0,,အဲ့မှာ actionဆိုတာတွေကိုသုံးရတယ်
+Dialogue: 0,0:35:48.62,0:35:51.44,Default,,0,0,0,,action ဆိုတာလည်း piece of dataလို့ပြောလို့ရတယ်
+Dialogue: 0,0:35:51.44,0:35:56.42,Default,,0,0,0,,state updateလုပ်ဖို့ လိုအပ်တဲ့ informationပါတဲ့ကောင်ပေါ့
+Dialogue: 0,0:35:56.42,0:36:03.84,Default,,0,0,0,,အရင် storeကိုရေးထားတဲ့ထဲမှာတော့
+Dialogue: 0,0:36:03.84,0:36:06.80,Default,,0,0,0,,လက်ရှိ updateလောက်နဲ့အလုပ်ဖြစ်တယ်လို့ပြောရမှာပေါ့
+Dialogue: 0,0:36:06.80,0:36:12.29,Default,,0,0,0,,updateလုပ်ချင်တဲ့ကောင်ကိုargument နဲ့
+Dialogue: 0,0:36:12.29,0:36:13.37,Default,,0,0,0,,dispatchထဲ pass ပေးလိုက်ရုံပဲ
+Dialogue: 0,0:36:13.37,0:36:17.21,Default,,0,0,0,,အဲ့နေရာမှာတော့actionမလိုသေးဘူးပေါ့
+Dialogue: 0,0:36:17.21,0:36:19.97,Default,,0,0,0,,ဝင်လာတဲ့objectကိုတန်းmergeရုံလောက်ကိုး
+Dialogue: 0,0:36:19.97,0:36:22.62,Default,,0,0,0,,အခုကျ အဲ့လိုမရတော့ဘူး
+Dialogue: 0,0:36:22.62,0:36:24.98,Default,,0,0,0,,နည်းနည်းရှုပ်လာတဲ့ဟာကျတော့
+Dialogue: 0,0:36:24.98,0:36:27.68,Default,,0,0,0,,ဖူးဖူးဆိုပြီးထည့်ပေးလိုက်လို့မရဘူး
+Dialogue: 0,0:36:27.68,0:36:31.46,Default,,0,0,0,,ဘာလို့လဲတော့informationက မပြည့်စုံဘူး
+Dialogue: 0,0:36:31.46,0:36:34.40,Default,,0,0,0,,informationပြည့်စုံမှ state ကို updateလုပ်လို့ရမယ်
+Dialogue: 0,0:36:34.40,0:36:36.12,Default,,0,0,0,,ဒါဆို ဘယ်လိုလုပ်မလဲပေါ့
+Dialogue: 0,0:36:36.12,0:36:40.31,Default,,0,0,0,,ယေဘူယျအားဖြင့် actionဆိုတာ typeဆိုတဲ့keyနဲ့ကောင်တွေပဲ
+Dialogue: 0,0:36:40.31,0:36:45.25,Default,,0,0,0,,ကျွန်တော်တို့ရေးထားတဲ့ storeထဲမှာ မှန်ချင်မှမှန်ဦးမယ်ပေါ့
+Dialogue: 0,0:36:45.25,0:36:47.21,Default,,0,0,0,,ဒီနေရာမှာ object သုံးတာသည် ပိုပြီးတော့make senseဖြစ်တယ်
+Dialogue: 0,0:36:47.21,0:36:51.08,Default,,0,0,0,,ဘာလို့လဲဆိုတော့ key value pairတွေသုံးမှာမလို့
+Dialogue: 0,0:36:51.08,0:36:56.54,Default,,0,0,0,,ပုံမှန်ဆိုရင်တော့action objectသည် typeဆိုတဲ့ keyပါတယ်
+Dialogue: 0,0:36:56.54,0:36:59.75,Default,,0,0,0,, ဒီမှာရောဘာလုပ်မလဲဆိုတော့
+Dialogue: 0,0:36:59.75,0:37:04.57,Default,,0,0,0,,ဘာတွေကို updateလုပ်မှာလဲဆိုတာသိရမယ်
+Dialogue: 0,0:37:04.57,0:37:12.59,Default,,0,0,0,,Fluxမှာ သုံးတဲ့ actionသည် specသိပ်မပါဘူး updateလုပ်မယ့်ကောင်ပါရင် ပြီးရောလို့ပြောလို့ရတယ်
+Dialogue: 0,0:37:12.59,0:37:14.27,Default,,0,0,0,,ဆက်ဖွင့်ကြည့်ရအောင်
+Dialogue: 0,0:37:14.27,0:37:19.91,Default,,0,0,0,,standard actionအတွက် guidelineဆိုတာရှိတယ်
+Dialogue: 0,0:37:19.91,0:37:24.77,Default,,0,0,0,,အဲ့ဒီactionသည် အားလုံးသုံးဖို့ အဆင်ပြေရမယ်ပေါ့
+Dialogue: 0,0:37:24.77,0:37:26.96,Default,,0,0,0,,ကျွန်တော်တို့ applicationထဲမှာသုံးရင်လည်း အဆင်ပြေရမယ်
+Dialogue: 0,0:37:26.96,0:37:29.35,Default,,0,0,0,,ဒါနဲ့ပတ်သတ်ပြီး motivationကဘာလဲဆိုတော့
+Dialogue: 0,0:37:29.35,0:37:34.77,Default,,0,0,0,,actionတွေသည် သူတို့ရဲ့အားသာချက်သည် သုံးရအတော်လွယ်စေတယ်
 Dialogue: 0,0:37:34.77,0:37:37.55,Default,,0,0,0,,Because it wouldn't really make sense if in one application
 Dialogue: 0,0:37:37.55,0:37:41.81,Default,,0,0,0,,we have our actions as objects, and maybe in a separate application
 Dialogue: 0,0:37:41.81,0:37:42.50,Default,,0,0,0,,we have a raise.
