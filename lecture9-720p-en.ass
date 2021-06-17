@@ -1022,102 +1022,98 @@ Dialogue: 0,1:00:13.63,1:00:17.46,Default,,0,0,0,,အမြဲတမ်းreduce
 Dialogue: 0,1:00:17.46,1:00:23.82,Default,,0,0,0,,သိပ်တော့မဟုတ်သေးဘူး
 Dialogue: 0,1:00:23.82,1:00:27.06,Default,,0,0,0,,ပိုကောင်းအောင်ရေးကြည့်ရအောင်
 Dialogue: 0,1:00:27.06,1:00:31.20,Default,,0,0,0,,အခု ဘယ်လိုလုပ်ထားလဲဆိုတော့ actionလက်ခံတယ် 
-Dialogue: 0,1:00:31.20,1:00:36.09,Default,,0,0,0,,နောက်reducerအသေးဆီထပ်ပို့လိုက်တယ်
-Dialogue: 0,1:00:36.09,1:00:38.34,Default,,0,0,0,,that we've created.
-Dialogue: 0,1:00:38.34,1:00:40.86,Default,,0,0,0,,But there's really no reason that we need to do that.
-Dialogue: 0,1:00:40.86,1:00:44.94,Default,,0,0,0,,Maybe a better way would be to take an action
-Dialogue: 0,1:00:44.94,1:00:47.58,Default,,0,0,0,,and pass it to every single reducer.
-Dialogue: 0,1:00:47.58,1:00:52.00,Default,,0,0,0,,That way, it's up to the smaller reducer to decide, hey,
-Dialogue: 0,1:00:52.00,1:00:53.34,Default,,0,0,0,,I want to listen to this action.
-Dialogue: 0,1:00:53.34,1:00:57.48,Default,,0,0,0,,Or maybe I'm just going to ignore this action and return my type.
-Dialogue: 0,1:00:57.48,1:00:59.11,Default,,0,0,0,,So again, why are we doing that?
-Dialogue: 0,1:00:59.11,1:01:01.29,Default,,0,0,0,,It's because we run into scalability issues
-Dialogue: 0,1:01:01.29,1:01:06.66,Default,,0,0,0,,if we want multiple actions, or multiple of these smaller reducers,
-Dialogue: 0,1:01:06.66,1:01:10.95,Default,,0,0,0,,to react to multiple of the types.
-Dialogue: 0,1:01:10.95,1:01:14.37,Default,,0,0,0,,So what exactly would that look like?
-Dialogue: 0,1:01:14.37,1:01:21.11,Default,,0,0,0,,So now, rather than our main reducer here deciding which of these reducers
-Dialogue: 0,1:01:21.11,1:01:26.43,Default,,0,0,0,,to pass to, we should just pass the action to all of them.
-Dialogue: 0,1:01:26.43,1:01:32.21,Default,,0,0,0,,And so let's actually redefine our reducer down here.
+Dialogue: 0,1:00:31.20,1:00:38.34,Default,,0,0,0,,နောက်reducerအသေးဆီထပ်ပို့လိုက်တယ်
+Dialogue: 0,1:00:38.34,1:00:40.86,Default,,0,0,0,,တကယ်တမ်းကအဲ့လိုလုပ်စရာမလိုဘူး
+Dialogue: 0,1:00:40.86,1:00:47.58,Default,,0,0,0,,actionကို reducerတစ်ခုချင်းစီကိုပေးလိုက်မယ်
+Dialogue: 0,1:00:47.58,1:00:52.00,Default,,0,0,0,, ဘာလုပ်မလဲဆိုတာသည် smaller reducerပေါ်မှာ မူတည်သွားပြီ
+Dialogue: 0,1:00:52.00,1:00:53.34,Default,,0,0,0,,ဒီactionကိုလုပ်ချင်တယ်ဘာညာပေါ့
+Dialogue: 0,1:00:53.34,1:00:57.48,Default,,0,0,0,,ဒါမှမဟုတ် ignoreလုပ်မလားပေါ့
+Dialogue: 0,1:00:57.48,1:00:59.11,Default,,0,0,0,,ဘာလို့အဲ့လိုပဲလုပ်နေမလဲပေါ့
+Dialogue: 0,1:00:59.11,1:01:01.29,Default,,0,0,0,,အဲ့လိုလုပ်တာသည် scalability issueတက်စေတယ်
+Dialogue: 0,1:01:01.29,1:01:10.95,Default,,0,0,0,,action typeတစ်ခုတိုင်းအတွက်reducerတွေလိုက်လိုက်ရေးနေရမလားပေါ့
+Dialogue: 0,1:01:10.95,1:01:14.37,Default,,0,0,0,,
+Dialogue: 0,1:01:14.37,1:01:21.11,Default,,0,0,0,,main reducerကနေဘယ်reducerဆီထပ်ပို့ပေးရမလဲဆုံးဖြတ်နေရမယ့်အစား
+Dialogue: 0,1:01:21.11,1:01:26.43,Default,,0,0,0,,အကုန်လုံးဆီကိုပို့ပေးလိုက်မယ်
+Dialogue: 0,1:01:26.43,1:01:32.21,Default,,0,0,0,,reducerကိုနည်းနည်းလောက်ပြန်ရေးလိုက်မယ်
 Dialogue: 0,1:01:32.21,1:01:35.37,Default,,0,0,0,,
-Dialogue: 0,1:01:35.37,1:01:38.90,Default,,0,0,0,,So right now, our reducer is taking a state in action.
-Dialogue: 0,1:01:38.90,1:01:46.49,Default,,0,0,0,,And maybe what it should be doing is passing back
-Dialogue: 0,1:01:46.49,1:01:53.95,Default,,0,0,0,,a function where we know we want users, our user,
-Dialogue: 0,1:01:53.95,1:01:55.32,Default,,0,0,0,,and we know we want our contacts.
+Dialogue: 0,1:01:35.37,1:01:38.90,Default,,0,0,0,,reducerသည် stateနဲ့actionကိုပဲလက်ခံမယ်
+Dialogue: 0,1:01:38.90,1:01:46.49,Default,,0,0,0,,ဘာလုပ်မလဲဆိုတော့ ဝင်လာတဲ့ကောင်တွေကို
+Dialogue: 0,1:01:46.49,1:01:53.95,Default,,0,0,0,,userနဲ့ contactတို့အတွက်လုပ်ထားတဲ့functionတစ်ခုချင်းဆီကို
+Dialogue: 0,1:01:53.95,1:01:55.32,Default,,0,0,0,,ပို့ပေးလိုက်မယ်
 Dialogue: 0,1:01:55.32,1:02:00.34,Default,,0,0,0,,
-Dialogue: 0,1:02:00.34,1:02:02.53,Default,,0,0,0,,And what is responsible for keeping track
-Dialogue: 0,1:02:02.53,1:02:06.82,Default,,0,0,0,,of our user part of our global state?
-Dialogue: 0,1:02:06.82,1:02:09.59,Default,,0,0,0,,Well, it's the reducer that's specific to the user.
-Dialogue: 0,1:02:09.59,1:02:14.32,Default,,0,0,0,,And so maybe here we want to invoke the userReducer with some values.
-Dialogue: 0,1:02:14.32,1:02:20.09,Default,,0,0,0,,And maybe here, we want to invoke the contacts reducer with some value.
-Dialogue: 0,1:02:20.09,1:02:22.57,Default,,0,0,0,,So now it's starting to look a lot simpler.
-Dialogue: 0,1:02:22.57,1:02:27.96,Default,,0,0,0,,And what values does the userReducer care about?
-Dialogue: 0,1:02:27.96,1:02:33.42,Default,,0,0,0,,Well, just the part of the state that it cares about, so the state, dot, user.
-Dialogue: 0,1:02:33.42,1:02:36.46,Default,,0,0,0,,And same thing with the contactReducer.
-Dialogue: 0,1:02:36.46,1:02:45.42,Default,,0,0,0,,We only care about the part of state that's useful to the contactReducer.
-Dialogue: 0,1:02:45.42,1:02:47.05,Default,,0,0,0,,And how does it know what it should do?
-Dialogue: 0,1:02:47.05,1:02:48.38,Default,,0,0,0,,Well, we just passed the action.
+Dialogue: 0,1:02:00.34,1:02:06.82,Default,,0,0,0,,global stateအတွက် ဘယ်ကောင်ကထိန်းပေးမလဲဆိုတော့
+Dialogue: 0,1:02:06.82,1:02:09.59,Default,,0,0,0,,userဆိုရင် 
+Dialogue: 0,1:02:09.59,1:02:14.32,Default,,0,0,0,,userReducerကလုပ်ပေးမှာပေါ့
+Dialogue: 0,1:02:14.32,1:02:20.09,Default,,0,0,0,,contactဆိုရင် contactReducerကလုပ်ပေးမှာပေါ့
+Dialogue: 0,1:02:20.09,1:02:22.57,Default,,0,0,0,,ဒါဆိုပိုရှင်းမသွားဘူးလား
+Dialogue: 0,1:02:22.57,1:02:27.96,Default,,0,0,0,,userReducerကိုဘာvalueတွေပေးရမလဲဆိုတော့
+Dialogue: 0,1:02:27.96,1:02:33.42,Default,,0,0,0,,သူနဲ့ဆိုင်တဲ့state.userပေါ့
+Dialogue: 0,1:02:33.42,1:02:36.46,Default,,0,0,0,,contactReducerသည် state.contactsပေါ့
+Dialogue: 0,1:02:36.46,1:02:45.42,Default,,0,0,0,,ဆိုင်ရာဆိုင်ရာပေါ့
+Dialogue: 0,1:02:45.42,1:02:47.05,Default,,0,0,0,,ဘာလုပ်မလဲဆိုတာ reducerတွေကဘယ်လိုသိမလဲဆိုတော့
+Dialogue: 0,1:02:47.05,1:02:48.38,Default,,0,0,0,,ထည့်ပေးလိုက်တဲ့actionပေါ်မူတည်ပြီးလုပ်သွားမှာပေါ့
 Dialogue: 0,1:02:48.38,1:02:52.08,Default,,0,0,0,,
-Dialogue: 0,1:02:52.08,1:02:55.06,Default,,0,0,0,,So that there is our new reducer.
-Dialogue: 0,1:02:55.06,1:03:01.69,Default,,0,0,0,,And so let's now modify our userReducer and contactReducer
-Dialogue: 0,1:03:01.69,1:03:07.08,Default,,0,0,0,,to only respond to the action types that they care about.
-Dialogue: 0,1:03:07.08,1:03:13.24,Default,,0,0,0,,So let's get rid of this, because now we need additional logic here,
-Dialogue: 0,1:03:13.24,1:03:15.02,Default,,0,0,0,,and maybe some additional logic here.
+Dialogue: 0,1:02:52.08,1:02:55.06,Default,,0,0,0,,ဒါဆိုreducerအသစ်ရပါပြီ
+Dialogue: 0,1:02:55.06,1:03:01.69,Default,,0,0,0,,userReducerနဲ့contactReducerကိုလည်း နည်းနည်းပြင်ရမယ်
+Dialogue: 0,1:03:01.69,1:03:07.08,Default,,0,0,0,,သူတို့နဲ့ဆိုင်တာကိုပဲ updateလုပ်ပေါ့
+Dialogue: 0,1:03:07.08,1:03:13.24,Default,,0,0,0,,ဒီကောင်ကိုဖျက်ပြီး ထပ်ထည့်ရမယ့်ဟာလေးထည့်လိုက်မယ်
+Dialogue: 0,1:03:13.24,1:03:15.02,Default,,0,0,0,,ဒီနားမှာလည်း ထပ်ထည့်ရမယ်
 Dialogue: 0,1:03:15.02,1:03:21.43,Default,,0,0,0,,
-Dialogue: 0,1:03:21.43,1:03:24.81,Default,,0,0,0,,So currently, what cares about Update User?
-Dialogue: 0,1:03:24.81,1:03:27.87,Default,,0,0,0,,Well, it's just the userReducer.
-Dialogue: 0,1:03:27.87,1:03:32.63,Default,,0,0,0,,So if the action type is Update User in the userReducer,
-Dialogue: 0,1:03:32.63,1:03:36.90,Default,,0,0,0,,let's go ahead and return that update.
-Dialogue: 0,1:03:36.90,1:03:42.64,Default,,0,0,0,,Otherwise, let's just return the state as it was before.
-Dialogue: 0,1:03:42.64,1:03:45.45,Default,,0,0,0,,And now we can get rid of all of that logic here.
-Dialogue: 0,1:03:45.45,1:03:50.52,Default,,0,0,0,,And now let's do a similar thing with the logic for contactReducer.
-Dialogue: 0,1:03:50.52,1:03:55.02,Default,,0,0,0,,So if the action type is Update Contact, the contactReducer cares about that.
-Dialogue: 0,1:03:55.02,1:03:58.02,Default,,0,0,0,,And we should return just this.
+Dialogue: 0,1:03:21.43,1:03:24.81,Default,,0,0,0,,Update Userကိုဘယ်ကောင်ကလုပ်ပေးလဲဆိုတော့
+Dialogue: 0,1:03:24.81,1:03:27.87,Default,,0,0,0,,userReducerပေါ့
+Dialogue: 0,1:03:27.87,1:03:32.63,Default,,0,0,0,,action typeသည် userReducerထဲက Update Userဆိုရင်
+Dialogue: 0,1:03:32.63,1:03:36.90,Default,,0,0,0,,လုပ်စရာရှိတာလုပ်ပြီး updateဖြစ်သွားတဲ့stateကို return ပြန်ပေးလိမ့်မယ်
+Dialogue: 0,1:03:36.90,1:03:42.64,Default,,0,0,0,,မဟုတ်ဘူးဆိုရင် stateကိုဒီတိုင်းထားပြီး return ပြန်လိုက်မယ်
+Dialogue: 0,1:03:42.64,1:03:45.45,Default,,0,0,0,,ဒီlogicကိုဖျက်လိုက်လို့ရပြီ
+Dialogue: 0,1:03:45.45,1:03:50.52,Default,,0,0,0,,contactReducreရဲ့logicကိုလည်း အဲ့လိုပဲပြင်ပေးလိုက်မယ်
+Dialogue: 0,1:03:50.52,1:03:55.02,Default,,0,0,0,,action typeသည် Update Contactဖြစ်ရင် contactReducerကနေလုပ်ပေးမယ်
+Dialogue: 0,1:03:55.02,1:03:58.02,Default,,0,0,0,,ဒါကိုreturnပြန်လိမ့်မယ်
 Dialogue: 0,1:03:58.02,1:04:03.91,Default,,0,0,0,,
-Dialogue: 0,1:04:03.91,1:04:07.27,Default,,0,0,0,,Else we'll return the basic state.
-Dialogue: 0,1:04:07.27,1:04:09.90,Default,,0,0,0,,So let me just finish deleting all the code that we don't need.
+Dialogue: 0,1:04:03.91,1:04:07.27,Default,,0,0,0,,အဲ့တာမှမဟုတ်ရင် နဂိုstateကိုပဲပြန်ပေးမယ်
+Dialogue: 0,1:04:07.27,1:04:09.90,Default,,0,0,0,,မလိုတဲ့codeတွေဖျက်လိုက်မယ်
 Dialogue: 0,1:04:09.90,1:04:12.67,Default,,0,0,0,,
-Dialogue: 0,1:04:12.67,1:04:13.17,Default,,0,0,0,,All right.
-Dialogue: 0,1:04:13.17,1:04:13.79,Default,,0,0,0,,Almost there.
-Dialogue: 0,1:04:13.79,1:04:15.90,Default,,0,0,0,,There are still a couple of bugs.
-Dialogue: 0,1:04:15.90,1:04:22.14,Default,,0,0,0,,So for the conductReducer, what is action?
-Dialogue: 0,1:04:22.14,1:04:24.36,Default,,0,0,0,,Action, dot, type doesn't exist currently,
-Dialogue: 0,1:04:24.36,1:04:27.63,Default,,0,0,0,,so we're no longer passing it the newContact.
-Dialogue: 0,1:04:27.63,1:04:29.74,Default,,0,0,0,,Now, we're passing it the action.
-Dialogue: 0,1:04:29.74,1:04:32.67,Default,,0,0,0,,And so we check the action, dot, type.
-Dialogue: 0,1:04:32.67,1:04:34.74,Default,,0,0,0,,And newContact no longer exists.
-Dialogue: 0,1:04:34.74,1:04:36.42,Default,,0,0,0,,Where are we storing the newContact?
-Dialogue: 0,1:04:36.42,1:04:37.96,Default,,0,0,0,,Well, it's just action, dot, payload.
+Dialogue: 0,1:04:12.67,1:04:13.17,Default,,0,0,0,,ဟုတ်ပြီ
+Dialogue: 0,1:04:13.17,1:04:13.79,Default,,0,0,0,,ပြီးခါနီးပါပြီ
+Dialogue: 0,1:04:13.79,1:04:15.90,Default,,0,0,0,,တချို့bugလေးတွေရှိနေသေးတယ်
+Dialogue: 0,1:04:15.90,1:04:22.14,Default,,0,0,0,,contactReducerအတွက် က ဘာactionတွေလဲဆိုတော့
+Dialogue: 0,1:04:22.14,1:04:24.36,Default,,0,0,0,,မရှိသေးဘူး
+Dialogue: 0,1:04:24.36,1:04:27.63,Default,,0,0,0,,ဒါကြောင့်newContactကိုထည့်ပေးလို့မရသေးဘူး
+Dialogue: 0,1:04:27.63,1:04:29.74,Default,,0,0,0,,actionထည့်ပေးမယ်
+Dialogue: 0,1:04:29.74,1:04:32.67,Default,,0,0,0,, action typeကိုစစ်မယ်
+Dialogue: 0,1:04:32.67,1:04:34.74,Default,,0,0,0,, newContactကမရှိတော့ဘူး
+Dialogue: 0,1:04:34.74,1:04:36.42,Default,,0,0,0,,newContactကိုဘယ်နားသွားသိမ်းမလဲဆိုတော့
+Dialogue: 0,1:04:36.42,1:04:37.96,Default,,0,0,0,,action.payloadပေါ့
 Dialogue: 0,1:04:37.96,1:04:41.00,Default,,0,0,0,,
-Dialogue: 0,1:04:41.00,1:04:42.25,Default,,0,0,0,,And we do the same thing here.
-Dialogue: 0,1:04:42.25,1:04:43.91,Default,,0,0,0,,We're no longer just passing the update.
-Dialogue: 0,1:04:43.91,1:04:48.58,Default,,0,0,0,,We're passing the whole action, and then we can do action, dot, payload.
+Dialogue: 0,1:04:41.00,1:04:42.25,Default,,0,0,0,,ဒီမှာလည်း အတူတူပဲ
+Dialogue: 0,1:04:42.25,1:04:43.91,Default,,0,0,0,,updateကိုမထည့်ပေးတော့ဘူး
+Dialogue: 0,1:04:43.91,1:04:48.58,Default,,0,0,0,,actionလိုက်ကြီးထည့်ပေးပြီး payloadထဲမှာ ထားလိုက်မယ်
 Dialogue: 0,1:04:48.58,1:04:51.51,Default,,0,0,0,,
-Dialogue: 0,1:04:51.51,1:04:53.84,Default,,0,0,0,,And now we're done.
-Dialogue: 0,1:04:53.84,1:04:56.20,Default,,0,0,0,,So we can make this a little bit more concise,
-Dialogue: 0,1:04:56.20,1:04:57.54,Default,,0,0,0,,if it's easier to read this way.
+Dialogue: 0,1:04:51.51,1:04:53.84,Default,,0,0,0,,ဒါဆိုပြီးသွားပြီ
+Dialogue: 0,1:04:53.84,1:04:56.20,Default,,0,0,0,,ဒါဆိုနည်းနည်းပိုတိကျသွားအောင်လုပ်လိုက်မယ်
+Dialogue: 0,1:04:56.20,1:04:57.54,Default,,0,0,0,,ဒီတိုင်းကဖတ်ရပိုလွယ်တယ်
 Dialogue: 0,1:04:57.54,1:05:01.90,Default,,0,0,0,,
-Dialogue: 0,1:05:01.90,1:05:03.55,Default,,0,0,0,,And now it all fits on one page.
-Dialogue: 0,1:05:03.55,1:05:08.18,Default,,0,0,0,,So we have our contactReducer, which cares about the state.
-Dialogue: 0,1:05:08.18,1:05:12.16,Default,,0,0,0,,And when we say state, it's local only to the contacts part of the state.
-Dialogue: 0,1:05:12.16,1:05:14.23,Default,,0,0,0,,It received actions.
-Dialogue: 0,1:05:14.23,1:05:16.36,Default,,0,0,0,,And if the action is that it should update
-Dialogue: 0,1:05:16.36,1:05:18.58,Default,,0,0,0,,the contact, returning a new state.
-Dialogue: 0,1:05:18.58,1:05:20.47,Default,,0,0,0,,And what is the new state?
-Dialogue: 0,1:05:20.47,1:05:24.31,Default,,0,0,0,,Well, it's the old state, and we append to the end whatever the payload is.
-Dialogue: 0,1:05:24.31,1:05:29.11,Default,,0,0,0,,And in this case, the action, dot, payload is the new user.
-Dialogue: 0,1:05:29.11,1:05:32.17,Default,,0,0,0,,Does contactReducer care about Update User?
-Dialogue: 0,1:05:32.17,1:05:32.83,Default,,0,0,0,,No, it doesn't.
+Dialogue: 0,1:05:01.90,1:05:03.55,Default,,0,0,0,,pageတစ်ခုတည်းဆံ့သားပဲ
+Dialogue: 0,1:05:03.55,1:05:08.18,Default,,0,0,0,,contactReducerရှိမယ်
+Dialogue: 0,1:05:08.18,1:05:12.16,Default,,0,0,0,,သူသည် contactတွေကိုထိန်းပေးတယ်
+Dialogue: 0,1:05:12.16,1:05:14.23,Default,,0,0,0,,actionတွေလက်ခံမယ်
+Dialogue: 0,1:05:14.23,1:05:16.36,Default,,0,0,0,,updateလုပ်ရမယ့်actionဆိုရင်
+Dialogue: 0,1:05:16.36,1:05:18.58,Default,,0,0,0,,updateလုပ်ပြီး new stateကိုပြန်ပေးလိမ့်မယ်
+Dialogue: 0,1:05:18.58,1:05:20.47,Default,,0,0,0,,new stateကဘယ်ကောင်တွေလဲဆိုတော့
+Dialogue: 0,1:05:20.47,1:05:24.31,Default,,0,0,0,,နဂိုstateထဲကကောင်တွေရယ် အသစ်ထည့်လိုက်တဲ့ တစ်ခုရယ်ပေါ့
+Dialogue: 0,1:05:24.31,1:05:29.11,Default,,0,0,0,,ဒီနေရာမှာ action.payloadသည် new userပေါ့
+Dialogue: 0,1:05:29.11,1:05:32.17,Default,,0,0,0,,contactReducerသည် Update Userကိုရောလုပ်သလားဆိုတော့
+Dialogue: 0,1:05:32.17,1:05:32.83,Default,,0,0,0,,မလုပ်ဘူး
 Dialogue: 0,1:05:32.83,1:05:36.25,Default,,0,0,0,,
-Dialogue: 0,1:05:36.25,1:05:39.81,Default,,0,0,0,,So if the action, dot, type is an Update Contact,
-Dialogue: 0,1:05:39.81,1:05:43.36,Default,,0,0,0,,we just return whatever the state was before, no big deal.
-Dialogue: 0,1:05:43.36,1:05:45.39,Default,,0,0,0,,And the same thing is true for userReducer.
-Dialogue: 0,1:05:45.39,1:05:46.88,Default,,0,0,0,,It's taking a state.
-Dialogue: 0,1:05:46.88,1:05:48.13,Default,,0,0,0,,What state does it care about?
-Dialogue: 0,1:05:48.13,1:05:51.61,Default,,0,0,0,,Well, it's only the user part of our application state.
-Dialogue: 0,1:05:51.61,1:05:54.75,Default,,0,0,0,,It takes an action as well.
-Dialogue: 0,1:05:54.75,1:05:57.13,Default,,0,0,0,,And if the action type is that it should update the user,
-Dialogue: 0,1:05:57.13,1:05:58.50,Default,,0,0,0,,then it goes ahead and does that.
-Dialogue: 0,1:05:58.50,1:06:00.67,Default,,0,0,0,,It returns the old state.
+Dialogue: 0,1:05:36.25,1:05:39.81,Default,,0,0,0,,action.type သည် update contactဖြစ်ရင်
+Dialogue: 0,1:05:39.81,1:05:43.36,Default,,0,0,0,,ဘာမှမလုပ်ဘဲ နဂိုstateကိုပဲreturnပြန်ပေးလိုက်တယ်
+Dialogue: 0,1:05:43.36,1:05:45.39,Default,,0,0,0,,userReducerမှာလဲအဲ့တိုင်းပဲပေါ့
+Dialogue: 0,1:05:45.39,1:05:46.88,Default,,0,0,0,,stateကိုလက်ခံမယ်
+Dialogue: 0,1:05:46.88,1:05:48.13,Default,,0,0,0,,ဘာstateလဲဆိုတော့
+Dialogue: 0,1:05:48.13,1:05:51.61,Default,,0,0,0,,userအပိုင်းပေါ့
+Dialogue: 0,1:05:51.61,1:05:54.75,Default,,0,0,0,,actionကိုလည်းလက်ခံမယ်
+Dialogue: 0,1:05:54.75,1:05:57.13,Default,,0,0,0,,Action typeသည် ဒီကောင်ဆိုရင် userကိုupdateလုပ်သွားမယ်
+Dialogue: 0,1:05:57.13,1:05:58.50,Default,,0,0,0,,
+Dialogue: 0,1:05:58.50,1:06:00.67,Default,,0,0,0,,အဲ့လိုမဟုတ်ရင် နဂိုstateပဲပြန်ရမယ်
 Dialogue: 0,1:06:00.67,1:06:04.45,Default,,0,0,0,,And into that, we merge the new action, dot, payload.
 Dialogue: 0,1:06:04.45,1:06:07.42,Default,,0,0,0,,And if the action type is in Update User,
 Dialogue: 0,1:06:07.42,1:06:11.26,Default,,0,0,0,,just return whatever the user information was before.
