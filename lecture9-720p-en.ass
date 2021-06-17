@@ -730,311 +730,299 @@ Dialogue: 0,0:42:15.65,0:42:18.32,Default,,0,0,0,,သူ့အလုပ်ပဲ
 Dialogue: 0,0:42:18.32,0:42:21.44,Default,,0,0,0,, ဒါကြောင့် app stateတစ်ခုလုံးကြီးပေးမယ့်အစား
 Dialogue: 0,0:42:21.44,0:42:23.77,Default,,0,0,0,, user stateပဲလိုချင်တာဆိုတော့
 Dialogue: 0,0:42:23.77,0:42:27.35,Default,,0,0,0,,state.userလို့ပဲပေးလိုက်မယ်
-Dialogue: 0,0:42:27.35,0:42:28.73,Default,,0,0,0,,And how do you want to update it?
-Dialogue: 0,0:42:28.73,0:42:30.27,Default,,0,0,0,,Well, it's just that actions payload.
+Dialogue: 0,0:42:27.35,0:42:28.73,Default,,0,0,0,,ဘယ်လို updateလုပ်မလဲဆိုတော့
+Dialogue: 0,0:42:28.73,0:42:30.27,Default,,0,0,0,,action payloadပဲပေါ့
 Dialogue: 0,0:42:30.27,0:42:34.65,Default,,0,0,0,,
-Dialogue: 0,0:42:34.65,0:42:38.31,Default,,0,0,0,,And then if the action type isn't update user, just return the old state.
+Dialogue: 0,0:42:34.65,0:42:38.31,Default,,0,0,0,,တကယ်လို့action typeသည် user updateမဟုတ်ရင်old stateကိုပဲ return ပြန်လိုက်မယ်
 Dialogue: 0,0:42:38.31,0:42:42.99,Default,,0,0,0,,
-Dialogue: 0,0:42:42.99,0:42:45.79,Default,,0,0,0,,So there's going to be invalid syntax here.
-Dialogue: 0,0:42:45.79,0:42:57.44,Default,,0,0,0,,So let's just use our merge helper function here,
-Dialogue: 0,0:42:57.44,0:43:03.05,Default,,0,0,0,,where we're merging this new object into state.
-Dialogue: 0,0:43:03.05,0:43:05.76,Default,,0,0,0,,So it's basically the same thing that we had written before, just
-Dialogue: 0,0:43:05.76,0:43:08.38,Default,,0,0,0,,in different syntax.
-Dialogue: 0,0:43:08.38,0:43:10.98,Default,,0,0,0,,So can we all follow what happened here?
-Dialogue: 0,0:43:10.98,0:43:16.32,Default,,0,0,0,,So we create a store, and we pass in a reducer.
-Dialogue: 0,0:43:16.32,0:43:17.69,Default,,0,0,0,,What is the reducer?
-Dialogue: 0,0:43:17.69,0:43:21.03,Default,,0,0,0,,Well, the reducer, it takes a state, and it takes an action.
-Dialogue: 0,0:43:21.03,0:43:26.85,Default,,0,0,0,,And what's the logic behind the way that we update the state?
-Dialogue: 0,0:43:26.85,0:43:29.55,Default,,0,0,0,,Well, if the action has a type called Update User,
-Dialogue: 0,0:43:29.55,0:43:31.32,Default,,0,0,0,,we're going to update the user.
-Dialogue: 0,0:43:31.32,0:43:33.39,Default,,0,0,0,,And we don't care about any other types.
-Dialogue: 0,0:43:33.39,0:43:38.97,Default,,0,0,0,,If it passes any other type, then we're just going to return the state as is.
-Dialogue: 0,0:43:38.97,0:43:42.69,Default,,0,0,0,,But what exactly happens when you passed in something
-Dialogue: 0,0:43:42.69,0:43:46.33,Default,,0,0,0,,where the type is update user?
-Dialogue: 0,0:43:46.33,0:43:51.54,Default,,0,0,0,,Well, we call that userReducer with the payload.
-Dialogue: 0,0:43:51.54,0:43:52.38,Default,,0,0,0,,What is the payload?
-Dialogue: 0,0:43:52.38,0:43:55.23,Default,,0,0,0,,Well, it's just any update that we want to do.
-Dialogue: 0,0:43:55.23,0:43:56.88,Default,,0,0,0,,Why are we calling it payload?
-Dialogue: 0,0:43:56.88,0:44:02.79,Default,,0,0,0,,Well, that's just the convention as dictated by Flux [INAUDIBLE]
-Dialogue: 0,0:44:02.79,0:44:05.82,Default,,0,0,0,,And so what happens in this userReducer?
-Dialogue: 0,0:44:05.82,0:44:09.32,Default,,0,0,0,,Well, we pass it the old state of the user.
-Dialogue: 0,0:44:09.32,0:44:12.09,Default,,0,0,0,,And we pass it the update that we want to make.
-Dialogue: 0,0:44:12.09,0:44:14.22,Default,,0,0,0,,And we don't really care what happens there.
-Dialogue: 0,0:44:14.22,0:44:19.47,Default,,0,0,0,,It just happens to be the case that it merges.
-Dialogue: 0,0:44:19.47,0:44:24.51,Default,,0,0,0,,And so what do we expect to happen after we dispatch these three actions?
-Dialogue: 0,0:44:24.51,0:44:26.37,Default,,0,0,0,,We update the user with foo foo.
-Dialogue: 0,0:44:26.37,0:44:28.17,Default,,0,0,0,,We update the user with bar bar.
-Dialogue: 0,0:44:28.17,0:44:30.78,Default,,0,0,0,,We update the user again with foo baz.
-Dialogue: 0,0:44:30.78,0:44:34.29,Default,,0,0,0,,And we expect to see exactly what we saw before.
-Dialogue: 0,0:44:34.29,0:44:39.80,Default,,0,0,0,,That is an object with a key foo with the value baz,
-Dialogue: 0,0:44:39.80,0:44:42.72,Default,,0,0,0,,and a key bar with the value bar.
-Dialogue: 0,0:44:42.72,0:44:46.86,Default,,0,0,0,,Is that what we actually get back, when we call store, dot, getState?
+Dialogue: 0,0:42:42.99,0:42:45.79,Default,,0,0,0,,ဒီနေရာမှာ syntax မှားသွားတယ်
+Dialogue: 0,0:42:45.79,0:42:57.44,Default,,0,0,0,,ဒီမှာ merge functionကိုပဲ သုံးလိုက်မယ်
+Dialogue: 0,0:42:57.44,0:43:03.05,Default,,0,0,0,,new object ကို stateထဲ mergeလိုက်မယ်
+Dialogue: 0,0:43:03.05,0:43:05.76,Default,,0,0,0,,အရင်ရေးဖူးသလိုပါပဲ
+Dialogue: 0,0:43:05.76,0:43:08.38,Default,,0,0,0,,syntaxလေးနည်းနည်းတော့ ပြောင်းသွားတယ်
+Dialogue: 0,0:43:08.38,0:43:10.98,Default,,0,0,0,,ဘာတွေပြင်ရမလဲဆိုတော့
+Dialogue: 0,0:43:10.98,0:43:16.32,Default,,0,0,0,,store createလုပ်မယ် reducer ထည့်ပေးရမယ်
+Dialogue: 0,0:43:16.32,0:43:17.69,Default,,0,0,0,,ဘာreducerလဲဆိုတော့
+Dialogue: 0,0:43:17.69,0:43:21.03,Default,,0,0,0,,stateနဲ့actionပဲယူတဲ့ကောင်ပေါ့
+Dialogue: 0,0:43:21.03,0:43:26.85,Default,,0,0,0,,stateကို updateလုပ်တဲ့နောက်ကွယ်က logicကဘာလဲဆိုတော့
+Dialogue: 0,0:43:26.85,0:43:29.55,Default,,0,0,0,,update userဆိုတဲ့ typeပါရင်
+Dialogue: 0,0:43:29.55,0:43:31.32,Default,,0,0,0,,user ကို updateလုပ်မယ်
+Dialogue: 0,0:43:31.32,0:43:33.39,Default,,0,0,0,,တခြားကောင်တွေကို လိုက်လုပ်စရာမလိုဘူး
+Dialogue: 0,0:43:33.39,0:43:38.97,Default,,0,0,0,, တခြားကောင်တွေထည့်ပေးရင် stateကိုဒီတိုင်းပဲပြန်ပေးလိုက်မယ်
+Dialogue: 0,0:43:38.97,0:43:42.69,Default,,0,0,0,,ဒါပေမယ့် update userဆိုတဲ့ typeထည့်ပေးလိုက်ရင်ရော
+Dialogue: 0,0:43:42.69,0:43:46.33,Default,,0,0,0,,ဘာဖြစ်သွားသလဲပေါ့
+Dialogue: 0,0:43:46.33,0:43:51.54,Default,,0,0,0,,payloadနဲ့အတူuserReducerကိုခေါ်လိုက်တယ်
+Dialogue: 0,0:43:51.54,0:43:52.38,Default,,0,0,0,,payloadကဘာလဲ
+Dialogue: 0,0:43:52.38,0:43:55.23,Default,,0,0,0,,updateလုပ်ချင်တဲ့ကောင်တွေပေါ့
+Dialogue: 0,0:43:55.23,0:43:56.88,Default,,0,0,0,,ဘာလို့payloadလို့ခေါ်တာလဲပေါ့
+Dialogue: 0,0:43:56.88,0:44:02.79,Default,,0,0,0,,Fluxကလာတဲ့conventionပေါ့
+Dialogue: 0,0:44:02.79,0:44:05.82,Default,,0,0,0,,userReducerထဲမှာဘာဖြစ်သွားလဲဆိုတော့
+Dialogue: 0,0:44:05.82,0:44:09.32,Default,,0,0,0,,userရဲ့old stateကိုထည့်ပေးလိုက်တယ်
+Dialogue: 0,0:44:09.32,0:44:12.09,Default,,0,0,0,, ပြီးတော့updateလုပ်ချင်တဲ့ကောင်ကိုထည့်ပေးလိုက်တယ်
+Dialogue: 0,0:44:12.09,0:44:14.22,Default,,0,0,0,,ဒီမှာဘာဖြစ်သွားလဲဆိုတာသိစရာမလိုဘူး
+Dialogue: 0,0:44:14.22,0:44:19.47,Default,,0,0,0,,mergeလုပ်လိုက်ရုံပဲပေါ့
+Dialogue: 0,0:44:19.47,0:44:24.51,Default,,0,0,0,,ဒီactionသုံးခုdispatchလုပ်ပေးလိုက်ရင် ဘာဖြစ်သွားမလဲပေါ့
+Dialogue: 0,0:44:24.51,0:44:26.37,Default,,0,0,0,,userကိုfoo fooနဲ့updateလုပ်လိုက်မယ်
+Dialogue: 0,0:44:26.37,0:44:28.17,Default,,0,0,0,,userကို bar barနဲ့ updateလုပ်လိုက်မယ်
+Dialogue: 0,0:44:28.17,0:44:30.78,Default,,0,0,0,, user ကို foo bazနဲ့ updateလုပ်လိုက်မယ်
+Dialogue: 0,0:44:30.78,0:44:34.29,Default,,0,0,0,,အရင်တစ်ခေါက်ကရထားသလိုပဲ
+Dialogue: 0,0:44:34.29,0:44:39.80,Default,,0,0,0,,foo bazနဲ့ 
+Dialogue: 0,0:44:39.80,0:44:42.72,Default,,0,0,0,,bar barပေါ့
+Dialogue: 0,0:44:42.72,0:44:46.86,Default,,0,0,0,,getStateကိုခေါ်လိုက်ရင် အဲ့အတိုင်းရပါ့မလား
 Dialogue: 0,0:44:46.86,0:44:50.59,Default,,0,0,0,,
-Dialogue: 0,0:44:50.59,0:44:58.79,Default,,0,0,0,,I don't think that's going to be the case, because there's a syntax error.
+Dialogue: 0,0:44:50.59,0:44:58.79,Default,,0,0,0,,syntax errorတက်နေတယ် 
 Dialogue: 0,0:44:58.79,0:45:04.64,Default,,0,0,0,,
-Dialogue: 0,0:45:04.64,0:45:08.82,Default,,0,0,0,,This error here is because state, right now, is undefined.
-Dialogue: 0,0:45:08.82,0:45:10.87,Default,,0,0,0,,And so there's no such thing as state, dot, user.
-Dialogue: 0,0:45:10.87,0:45:14.45,Default,,0,0,0,,And so we should probably pass in some sort of default user or default
-Dialogue: 0,0:45:14.45,0:45:16.39,Default,,0,0,0,,application state.
-Dialogue: 0,0:45:16.39,0:45:26.59,Default,,0,0,0,,And so let's just say the default state is--
-Dialogue: 0,0:45:26.59,0:45:28.69,Default,,0,0,0,,let's create a const called Default State.
+Dialogue: 0,0:45:04.64,0:45:08.82,Default,,0,0,0,,ဘာလို့လဲဆိုတော့ဒီနေရာstateသည်undefinedဖြစ်နေလို့
+Dialogue: 0,0:45:08.82,0:45:10.87,Default,,0,0,0,, ဒါကြောင့်state.userသည်မရှိဘူး
+Dialogue: 0,0:45:10.87,0:45:16.39,Default,,0,0,0,,default userဒါမှမဟုတ် default stateတစ်ခုထည့်ပေးထားသင့်တယ်ပေါ့
+Dialogue: 0,0:45:16.39,0:45:26.59,Default,,0,0,0,,default stateကိုဒီလိုလေးထားလိုက်မယ်
+Dialogue: 0,0:45:26.59,0:45:28.69,Default,,0,0,0,,default stateဆိုတဲ့ constဆောက်လိုက်မယ်
 Dialogue: 0,0:45:28.69,0:45:32.11,Default,,0,0,0,,
-Dialogue: 0,0:45:32.11,0:45:35.68,Default,,0,0,0,,And let's say the user is just an empty object,
-Dialogue: 0,0:45:35.68,0:45:38.42,Default,,0,0,0,,and the contacts are an empty array.
+Dialogue: 0,0:45:32.11,0:45:35.68,Default,,0,0,0,, userသည် empty objectဖြစ်တယ်ပေါ့
+Dialogue: 0,0:45:35.68,0:45:38.42,Default,,0,0,0,,contactတွေသည် empty arrayဖြစ်တယ်
 Dialogue: 0,0:45:38.42,0:45:42.46,Default,,0,0,0,,
-Dialogue: 0,0:45:42.46,0:45:45.07,Default,,0,0,0,,And let's pass that in when we create our new store.
+Dialogue: 0,0:45:42.46,0:45:45.07,Default,,0,0,0,,storeအသစ်ဆောက်ရင် အဲ့ကောင်ကိုထည့်ပေးလိုက်မယ်
 Dialogue: 0,0:45:45.07,0:45:49.64,Default,,0,0,0,,
-Dialogue: 0,0:45:49.64,0:45:51.44,Default,,0,0,0,,So now we've passed in some default states.
-Dialogue: 0,0:45:51.44,0:45:55.84,Default,,0,0,0,,So when we do state, dot, user, we're not getting an error there.
+Dialogue: 0,0:45:49.64,0:45:51.44,Default,,0,0,0,,ဒါဆို default stateတော့ထည့်ပေးလိုက်ပြီ
+Dialogue: 0,0:45:51.44,0:45:55.84,Default,,0,0,0,,state.userလို့ခေါ်ရင် errorမတက်တော့ဘူး
 Dialogue: 0,0:45:55.84,0:45:58.75,Default,,0,0,0,,
-Dialogue: 0,0:45:58.75,0:45:59.75,Default,,0,0,0,,And what do we get back?
-Dialogue: 0,0:45:59.75,0:46:03.43,Default,,0,0,0,,We don't get back what we were getting back earlier.
-Dialogue: 0,0:46:03.43,0:46:07.99,Default,,0,0,0,,And what we're getting back earlier was just
-Dialogue: 0,0:46:07.99,0:46:14.41,Default,,0,0,0,,this, an object with a couple of key values where it's foo baz and bar bar.
-Dialogue: 0,0:46:14.41,0:46:16.78,Default,,0,0,0,,Now we're getting back this thing.
-Dialogue: 0,0:46:16.78,0:46:23.17,Default,,0,0,0,,We see that object within our state, but that's not our entire state.
-Dialogue: 0,0:46:23.17,0:46:27.51,Default,,0,0,0,,That object is contained within a part of our state called User.
-Dialogue: 0,0:46:27.51,0:46:29.68,Default,,0,0,0,,And there's also a separate part of our state called
-Dialogue: 0,0:46:29.68,0:46:32.44,Default,,0,0,0,,Contacts, which is an empty array--
-Dialogue: 0,0:46:32.44,0:46:35.26,Default,,0,0,0,,which makes sense when you think about what we just did.
+Dialogue: 0,0:45:58.75,0:45:59.75,Default,,0,0,0,,ဘာပြန်ရလဲဆိုတော့
+Dialogue: 0,0:45:59.75,0:46:03.43,Default,,0,0,0,, အစောပိုင်းကရတဲ့ဟာ ဟုတ်သေးလား
+Dialogue: 0,0:46:03.43,0:46:07.99,Default,,0,0,0,,အစောပိုင်းကဘာလဲဆိုတော့
+Dialogue: 0,0:46:07.99,0:46:14.41,Default,,0,0,0,,foo baz နဲ့ bar barပေါ့
+Dialogue: 0,0:46:14.41,0:46:16.78,Default,,0,0,0,,အခုရတာက ဒါပေါ့
+Dialogue: 0,0:46:16.78,0:46:23.17,Default,,0,0,0,,ကျွန်တော်တို့မြင်ရတာသည် stateထဲမှာပါတဲ့ကောင်တွေပေါ့
+Dialogue: 0,0:46:23.17,0:46:27.51,Default,,0,0,0,,user state  ထဲမှာပါတဲ့ objectပေါ့
+Dialogue: 0,0:46:27.51,0:46:29.68,Default,,0,0,0,,stateထဲမှာတခြားတစ်ခုလည်းရှိသေးတယ်
+Dialogue: 0,0:46:29.68,0:46:32.44,Default,,0,0,0,,contactဆိုတဲ့ empty ‌arrayပေါ့
+Dialogue: 0,0:46:32.44,0:46:35.26,Default,,0,0,0,,ဒါသည်make senseဖြစ်တယ်ပေါ့
 Dialogue: 0,0:46:35.26,0:46:45.29,Default,,0,0,0,,
-Dialogue: 0,0:46:45.29,0:46:48.84,Default,,0,0,0,,Our application is no longer just a single object.
-Dialogue: 0,0:46:48.84,0:46:52.39,Default,,0,0,0,,It's now an object that looks like this.
-Dialogue: 0,0:46:52.39,0:46:57.19,Default,,0,0,0,,We have a key that corresponds to our user information.
-Dialogue: 0,0:46:57.19,0:47:01.17,Default,,0,0,0,,You have a key that corresponds to all of the contacts that we have.
-Dialogue: 0,0:47:01.17,0:47:03.95,Default,,0,0,0,,And so when we're dispatching actions that update the user,
-Dialogue: 0,0:47:03.95,0:47:05.04,Default,,0,0,0,,they're updating the user.
-Dialogue: 0,0:47:05.04,0:47:08.79,Default,,0,0,0,,But there's still a whole separate part of our application state
-Dialogue: 0,0:47:08.79,0:47:10.26,Default,,0,0,0,,that corresponds to those contacts.
+Dialogue: 0,0:46:45.29,0:46:48.84,Default,,0,0,0,,applicationသည် single objectတစ်ခုတင်တော့မဟုတ်တော့ဘူး
+Dialogue: 0,0:46:48.84,0:46:52.39,Default,,0,0,0,,ဒီလိုobjectလေးဖြစ်သွားပြီ
+Dialogue: 0,0:46:52.39,0:46:57.19,Default,,0,0,0,,user keyလည်းပါတယ်
+Dialogue: 0,0:46:57.19,0:47:01.17,Default,,0,0,0,,contact keyလည်းပါတယ်
+Dialogue: 0,0:47:01.17,0:47:03.95,Default,,0,0,0,,user update actionကိုdispatchလုပ်လိုက်ရင်
+Dialogue: 0,0:47:03.95,0:47:05.04,Default,,0,0,0,,user ကိုပဲupdateလုပ်သွားမယ်
+Dialogue: 0,0:47:05.04,0:47:10.26,Default,,0,0,0,,တခြားတစ်ခုဖြစ်တဲ့ contactလည်းရှိနေသေးတယ်
 Dialogue: 0,0:47:10.26,0:47:14.32,Default,,0,0,0,,
-Dialogue: 0,0:47:14.32,0:47:21.90,Default,,0,0,0,,And so now let's strengthen our store by allowing us to add contacts.
-Dialogue: 0,0:47:21.90,0:47:23.31,Default,,0,0,0,,How might we want to do that?
+Dialogue: 0,0:47:14.32,0:47:21.90,Default,,0,0,0,,contactအသစ်ထည့်ဖို့လုပ်ရအုံးမယ်
+Dialogue: 0,0:47:21.90,0:47:23.31,Default,,0,0,0,,ဘယ်လိုလုပ်ကြမလဲ
 Dialogue: 0,0:47:23.31,0:47:27.44,Default,,0,0,0,,
-Dialogue: 0,0:47:27.44,0:47:29.96,Default,,0,0,0,,Maybe we should add a new type.
-Dialogue: 0,0:47:29.96,0:47:33.54,Default,,0,0,0,,So remember, at the core of Redux is the reducer,
-Dialogue: 0,0:47:33.54,0:47:39.29,Default,,0,0,0,,which handles the logic between receiving the action
-Dialogue: 0,0:47:39.29,0:47:41.51,Default,,0,0,0,,and updating the state of our application.
-Dialogue: 0,0:47:41.51,0:47:45.14,Default,,0,0,0,,And so in our reducer here, we're going to add more logic
-Dialogue: 0,0:47:45.14,0:47:48.89,Default,,0,0,0,,for when we want to add a contact.
-Dialogue: 0,0:47:48.89,0:47:52.37,Default,,0,0,0,,And how do we know when we're trying to add a contact?
-Dialogue: 0,0:47:52.37,0:47:56.31,Default,,0,0,0,,Well, it's dictated by the type of action that we're receiving.
-Dialogue: 0,0:47:56.31,0:48:08.86,Default,,0,0,0,,So if we get a new action type, and let's call this Update Contact,
-Dialogue: 0,0:48:08.86,0:48:11.11,Default,,0,0,0,,now we want to do something different.
-Dialogue: 0,0:48:11.11,0:48:14.45,Default,,0,0,0,,Now, we don't really care about any update with the user.
-Dialogue: 0,0:48:14.45,0:48:18.37,Default,,0,0,0,,Now, we only care about updating our contacts.
-Dialogue: 0,0:48:18.37,0:48:20.65,Default,,0,0,0,,And so what might we want to do?
-Dialogue: 0,0:48:20.65,0:48:25.82,Default,,0,0,0,,Well, let's return a new state.
+Dialogue: 0,0:47:27.44,0:47:29.96,Default,,0,0,0,,typeတစ်ခုထပ်ထည့်လိုက်ရင်ရော
+Dialogue: 0,0:47:29.96,0:47:33.54,Default,,0,0,0,,reduxရဲ့အဓိကသည် reducerပဲ
+Dialogue: 0,0:47:33.54,0:47:41.51,Default,,0,0,0,,actionလက်ခံတာတွေ state  updateလုပ်တာတွေသည်reducerကပဲလုပ်ပေးတယ်
+Dialogue: 0,0:47:41.51,0:47:45.14,Default,,0,0,0,,reducerရဲ့ဒီနားမှာ logic တစ်ခုထပ်ထည့်မယ်
+Dialogue: 0,0:47:45.14,0:47:48.89,Default,,0,0,0,,contactထပ်ထည့်ချင်ရင်
+Dialogue: 0,0:47:48.89,0:47:52.37,Default,,0,0,0,,contact ထည့်မှန်းသိအောင် ဘယ်လိုလုပ်မလဲ
+Dialogue: 0,0:47:52.37,0:47:56.31,Default,,0,0,0,,ဝင်လာတဲ့typeကနေပဲ သိမှာပေါ့
+Dialogue: 0,0:47:56.31,0:48:08.86,Default,,0,0,0,,update contactဆိုတဲ့ action typeတစ်ခုထပ်ထည့်လိုက်မယ်
+Dialogue: 0,0:48:08.86,0:48:11.11,Default,,0,0,0,,မတူတဲ့တစ်ခုလုပ်တော့မယ်
+Dialogue: 0,0:48:11.11,0:48:14.45,Default,,0,0,0,,user updateနဲ့မဆိုင်ဘူးနော်
+Dialogue: 0,0:48:14.45,0:48:18.37,Default,,0,0,0,, contact  updateလုပ်တာနဲ့ပဲဆိုင်တယ်
+Dialogue: 0,0:48:18.37,0:48:20.65,Default,,0,0,0,,ဘာလုပ်မလဲဆိုတော့
+Dialogue: 0,0:48:20.65,0:48:25.82,Default,,0,0,0,,stateအသစ်returnပြန်မယ်
 Dialogue: 0,0:48:25.82,0:48:28.24,Default,,0,0,0,,
-Dialogue: 0,0:48:28.24,0:48:29.87,Default,,0,0,0,,And what does that new state look like?
-Dialogue: 0,0:48:29.87,0:48:33.82,Default,,0,0,0,,Well, let's update the old state, so merge in old state
-Dialogue: 0,0:48:33.82,0:48:37.79,Default,,0,0,0,,this new thing where contacts are updated.
-Dialogue: 0,0:48:37.79,0:48:41.04,Default,,0,0,0,,And so how are you going to update contacts?
-Dialogue: 0,0:48:41.04,0:48:47.29,Default,,0,0,0,,What logic dictates how we want to update our contact?
-Dialogue: 0,0:48:47.29,0:48:54.03,Default,,0,0,0,,We could just do, give me the old contacts and add a new contacts.
-Dialogue: 0,0:48:54.03,0:48:56.12,Default,,0,0,0,,And where is the new contact action, dot, payload?
+Dialogue: 0,0:48:28.24,0:48:29.87,Default,,0,0,0,,state အသစ်သည် ဘယ်လိုပုံဖြစ်မလဲဆိုတော့
+Dialogue: 0,0:48:29.87,0:48:33.82,Default,,0,0,0,,old stateထဲကို mergeလုပ်လိုက်တာပေါ့
+Dialogue: 0,0:48:33.82,0:48:37.79,Default,,0,0,0,,contact updateလုပ်ပြီးသားကောင်ရမှာပေါ့
+Dialogue: 0,0:48:37.79,0:48:41.04,Default,,0,0,0,,
+Dialogue: 0,0:48:41.04,0:48:47.29,Default,,0,0,0,,ဘယ်လိုlogicသုံးမလဲဆိုတော့
+Dialogue: 0,0:48:47.29,0:48:54.03,Default,,0,0,0,,old contactsတောင်းမယ် new  contactsပြန်ပေးလိုက်မယ်
+Dialogue: 0,0:48:54.03,0:48:56.12,Default,,0,0,0,, new contactဖြစ်တဲ့ action.payloadပေါ့
 Dialogue: 0,0:48:56.12,0:48:59.85,Default,,0,0,0,,
-Dialogue: 0,0:48:59.85,0:49:02.77,Default,,0,0,0,,But this logic is already written somewhere in our app.
-Dialogue: 0,0:49:02.77,0:49:05.48,Default,,0,0,0,,We already declared this thing called a contactReducer, which
-Dialogue: 0,0:49:05.48,0:49:08.25,Default,,0,0,0,,does this exact thing.
-Dialogue: 0,0:49:08.25,0:49:13.39,Default,,0,0,0,,What it does is it expects the state of the old contacts and a new contact.
-Dialogue: 0,0:49:13.39,0:49:16.47,Default,,0,0,0,,And so we abstracted that information away into this thing
-Dialogue: 0,0:49:16.47,0:49:22.02,Default,,0,0,0,,called the contactReducer, which expects the old state of contacts.
-Dialogue: 0,0:49:22.02,0:49:27.06,Default,,0,0,0,,And so we don't want to pass just the entire application state.
-Dialogue: 0,0:49:27.06,0:49:29.58,Default,,0,0,0,,We only care about the contacts portion of it.
+Dialogue: 0,0:48:59.85,0:49:02.77,Default,,0,0,0,,appထဲမှာ အဲ့logicသည် ရေးပြီးသားရှိတယ် 
+Dialogue: 0,0:49:02.77,0:49:05.48,Default,,0,0,0,,contactReducerဆိုတဲ့ကောင်ပေါ့
+Dialogue: 0,0:49:05.48,0:49:08.25,Default,,0,0,0,,အဲ့logicနဲ့အတူတူပဲပေါ့
+Dialogue: 0,0:49:08.25,0:49:13.39,Default,,0,0,0,,old contactနဲ့new updateတောင်းထားတယ်
+Dialogue: 0,0:49:13.39,0:49:16.47,Default,,0,0,0,,contactReducerအနေနဲ့ပဲ abstractလုပ်လိုက်တယ်
+Dialogue: 0,0:49:16.47,0:49:22.02,Default,,0,0,0,,contactအဟောင်းတွေပြန်တောင်းထားတယ်
+Dialogue: 0,0:49:22.02,0:49:27.06,Default,,0,0,0,,application stateတစ်ခုလုံးကြီးတော့ထည့်ပေးစရာမလိုဘူး
+Dialogue: 0,0:49:27.06,0:49:29.58,Default,,0,0,0,,contactအပိုင်းလေးကိုပဲလိုချင်တာ
 Dialogue: 0,0:49:29.58,0:49:32.53,Default,,0,0,0,,
-Dialogue: 0,0:49:32.53,0:49:35.28,Default,,0,0,0,,And then we pass the payload.
+Dialogue: 0,0:49:32.53,0:49:35.28,Default,,0,0,0,,ပြီးရင် payloadထည့်ပေးလိုက်မယ်
 Dialogue: 0,0:49:35.28,0:49:46.21,Default,,0,0,0,,
-Dialogue: 0,0:49:46.21,0:49:49.95,Default,,0,0,0,,So very similar to what we did up here, up here
-Dialogue: 0,0:49:49.95,0:49:52.68,Default,,0,0,0,,when we receive an action called update our user,
-Dialogue: 0,0:49:52.68,0:49:57.07,Default,,0,0,0,,we go ahead and invoke the userReducer on that user.
-Dialogue: 0,0:49:57.07,0:49:59.63,Default,,0,0,0,,And when we receive an action to update the contact,
-Dialogue: 0,0:49:59.63,0:50:02.09,Default,,0,0,0,,now we just do the same thing but for the contacts instead.
+Dialogue: 0,0:49:46.21,0:49:49.95,Default,,0,0,0,,အပေါ်မှာလုပ်ထားတဲ့အတိုင်းပါပဲ
+Dialogue: 0,0:49:49.95,0:49:52.68,Default,,0,0,0,,update userဆိုတဲ့actionရရင်
+Dialogue: 0,0:49:52.68,0:49:57.07,Default,,0,0,0,,userReducerကိုခေါ်လိုက်တယ်
+Dialogue: 0,0:49:57.07,0:49:59.63,Default,,0,0,0,,update contactဆိုရင်တော့
+Dialogue: 0,0:49:59.63,0:50:02.09,Default,,0,0,0,,contactReducerကိုပဲခေါ်ရမှာပေါ့
 Dialogue: 0,0:50:02.09,0:50:04.98,Default,,0,0,0,,
-Dialogue: 0,0:50:04.98,0:50:08.16,Default,,0,0,0,,So now let's test this out.
-Dialogue: 0,0:50:08.16,0:50:13.69,Default,,0,0,0,,So now let's call store, dot, dispatch, this thing
-Dialogue: 0,0:50:13.69,0:50:23.11,Default,,0,0,0,,with a type of Update Contact, and a payload of name--
+Dialogue: 0,0:50:04.98,0:50:08.16,Default,,0,0,0,,ဒါဆို စမ်းကြည့်ရအောင်
+Dialogue: 0,0:50:08.16,0:50:13.69,Default,,0,0,0,,store.dispatchဆိုပြီးတော့
+Dialogue: 0,0:50:13.69,0:50:23.11,Default,,0,0,0,,update contactဆိုတဲ့typeရယ် payloadရယ်
 Dialogue: 0,0:50:23.11,0:50:26.71,Default,,0,0,0,,
-Dialogue: 0,0:50:26.71,0:50:33.61,Default,,0,0,0,,my name-- and number of some arbitrary string.
+Dialogue: 0,0:50:26.71,0:50:33.61,Default,,0,0,0,,နာမည်နဲ့ နံပါတ်ပါတဲ့ ကောင်ပေါ့
 Dialogue: 0,0:50:33.61,0:50:40.85,Default,,0,0,0,,
-Dialogue: 0,0:50:40.85,0:50:44.17,Default,,0,0,0,,So now we just sent a separate action.
-Dialogue: 0,0:50:44.17,0:50:48.16,Default,,0,0,0,,And so now, if you notice, this action has the same shape as the action
-Dialogue: 0,0:50:48.16,0:50:49.09,Default,,0,0,0,,up here.
-Dialogue: 0,0:50:49.09,0:50:53.00,Default,,0,0,0,,It's a type and a payload.
-Dialogue: 0,0:50:53.00,0:50:55.45,Default,,0,0,0,,Now the type is Update Contact, and the payload--
-Dialogue: 0,0:50:55.45,0:51:00.94,Default,,0,0,0,,rather than being the update for a user-- is actually the contact itself.
-Dialogue: 0,0:51:00.94,0:51:03.90,Default,,0,0,0,,And then our reducer knows exactly what to do with all of these things.
-Dialogue: 0,0:51:03.90,0:51:06.06,Default,,0,0,0,,And so now let's just run this and see what happens.
+Dialogue: 0,0:50:40.85,0:50:44.17,Default,,0,0,0,,တခြားactionတစ်ခုထည့်ပေးလိုက်ပြီ
+Dialogue: 0,0:50:44.17,0:50:49.09,Default,,0,0,0,,သတိထားကြည့်မယ်ဆိုရင် actionသည် အပေါ်ကလိုပဲ တူညီတဲ့ပုံစံတစ်ခုရှိနေတယ်
+Dialogue: 0,0:50:49.09,0:50:53.00,Default,,0,0,0,,typeနဲ့ payloadနဲ့ပါတယ်
+Dialogue: 0,0:50:53.00,0:50:55.45,Default,,0,0,0,,typeသည်update contactဖြစ်ပြီးတော့ payloadသည်
+Dialogue: 0,0:50:55.45,0:51:00.94,Default,,0,0,0,,userမဟုတ်တော့ဘဲ contactဖြစ်သွားတာပေါ့
+Dialogue: 0,0:51:00.94,0:51:03.90,Default,,0,0,0,,reducerသည် သူလုပ်ရမယ့်ဟာသူသိတယ်
+Dialogue: 0,0:51:03.90,0:51:06.06,Default,,0,0,0,,runပြီး ဘာရလဲကြည့်လိုက်မယ်
 Dialogue: 0,0:51:06.06,0:51:11.68,Default,,0,0,0,,
-Dialogue: 0,0:51:11.68,0:51:15.27,Default,,0,0,0,,So now our state got updated.
-Dialogue: 0,0:51:15.27,0:51:18.96,Default,,0,0,0,,So our user still has the information that we expect the user to have.
-Dialogue: 0,0:51:18.96,0:51:20.34,Default,,0,0,0,,But now we have some contacts.
-Dialogue: 0,0:51:20.34,0:51:24.09,Default,,0,0,0,,Now it's an array that includes me and my phone number.
-Dialogue: 0,0:51:24.09,0:51:27.55,Default,,0,0,0,,Don't call it, because it's not actually my phone number.
-Dialogue: 0,0:51:27.55,0:51:32.04,Default,,0,0,0,,And so what happens when you try to add a separate user?
-Dialogue: 0,0:51:32.04,0:51:37.21,Default,,0,0,0,,Maybe our contact has two friends of the exact same name and the same phone
-Dialogue: 0,0:51:37.21,0:51:37.71,Default,,0,0,0,,number.
+Dialogue: 0,0:51:11.68,0:51:15.27,Default,,0,0,0,,stateသည် updateဖြစ်သွားတယ်
+Dialogue: 0,0:51:15.27,0:51:18.96,Default,,0,0,0,,ထင်ထားသလိုပဲ userရှိနေတယ်
+Dialogue: 0,0:51:18.96,0:51:20.34,Default,,0,0,0,,contactတွေလည်းရှိနေသေးတယ်
+Dialogue: 0,0:51:20.34,0:51:24.09,Default,,0,0,0,,ကျွန်တော့်နာမည်နဲ့ဖုန်းနံပါတ်ပါတဲ့arrayပေါ့
+Dialogue: 0,0:51:24.09,0:51:27.55,Default,,0,0,0,,သွားလည်း ခေါ်ကြည့်မနေနဲ့အုံး ဖုန်းနံပါတ်က လျှောက်ထည့်ထားတာ
+Dialogue: 0,0:51:27.55,0:51:32.04,Default,,0,0,0,,နောက်ထပ် user အသစ်ထပ်ထည့်ချင်ရင်ရော
+Dialogue: 0,0:51:32.04,0:51:37.21,Default,,0,0,0,,နာမည်တူ ဖုန်းနံပါတ်ဆင်တူ သူငယ်ချင်းနှစ်ယောက်ရှိတယ်ဆိုပါတော့
+Dialogue: 0,0:51:37.21,0:51:37.71,Default,,0,0,0,,
 Dialogue: 0,0:51:37.71,0:51:44.88,Default,,0,0,0,,
-Dialogue: 0,0:51:44.88,0:51:49.59,Default,,0,0,0,,So now our application has two contacts in the contacts.
-Dialogue: 0,0:51:49.59,0:51:52.84,Default,,0,0,0,,And they just happen to be the same people because I cut and paste.
+Dialogue: 0,0:51:44.88,0:51:49.59,Default,,0,0,0,,contactထဲမှာ contactနှစ်ခုတော့ရှိတယ်
+Dialogue: 0,0:51:49.59,0:51:52.84,Default,,0,0,0,,cut and pasteလုပ်ထားတာဆိုတော့ လူကတော့ အတူတူပါပဲ
 Dialogue: 0,0:51:52.84,0:51:53.82,Default,,0,0,0,,Cool.
-Dialogue: 0,0:51:53.82,0:51:57.15,Default,,0,0,0,,So now we have some sort of store that's maintaining
-Dialogue: 0,0:51:57.15,0:51:59.63,Default,,0,0,0,,all of our application information.
-Dialogue: 0,0:51:59.63,0:52:02.11,Default,,0,0,0,,But admittedly, it's not super clean.
+Dialogue: 0,0:51:53.82,0:51:59.63,Default,,0,0,0,,applicationကို ထိန်းပေးမယ့်storeတစ်ခုတော့ရပြီ
+Dialogue: 0,0:51:59.63,0:52:02.11,Default,,0,0,0,,အမှန်တိုင်းပြောရရင်  သိပ်တော့ cleanမဖြစ်ဘူး
 Dialogue: 0,0:52:02.11,0:52:05.12,Default,,0,0,0,,
-Dialogue: 0,0:52:05.12,0:52:07.56,Default,,0,0,0,,So let's clean it up a little bit.
-Dialogue: 0,0:52:07.56,0:52:13.97,Default,,0,0,0,,So right now, we have our action types hardcoded.
-Dialogue: 0,0:52:13.97,0:52:15.89,Default,,0,0,0,,We can keep them hardcoded, but let's actually
-Dialogue: 0,0:52:15.89,0:52:17.30,Default,,0,0,0,,create a variable for our actions.
-Dialogue: 0,0:52:17.30,0:52:19.94,Default,,0,0,0,,That way we can easily keep track of our available actions.
+Dialogue: 0,0:52:05.12,0:52:07.56,Default,,0,0,0,,ဒါဆို နည်းနည်းလောက်ရှင်းအောင်လုပ်ကြည့်ရအောင်
+Dialogue: 0,0:52:07.56,0:52:13.97,Default,,0,0,0,, အခုက action typeတွေ
+Dialogue: 0,0:52:13.97,0:52:15.89,Default,,0,0,0,,ကိုအသေထည့်ထားတာ
+Dialogue: 0,0:52:15.89,0:52:17.30,Default,,0,0,0,,actionတွေအတွက် variable တစ်ခုဆောက်လိုက်မယ်
+Dialogue: 0,0:52:17.30,0:52:19.94,Default,,0,0,0,,ဒါမှ actionတွေကို အလွယ်တကူယူသုံးလို့ရမယ်
 Dialogue: 0,0:52:19.94,0:52:23.61,Default,,0,0,0,,
-Dialogue: 0,0:52:23.61,0:52:33.32,Default,,0,0,0,,So let's just create this thing called Update User and call it Update User.
-Dialogue: 0,0:52:33.32,0:52:39.65,Default,,0,0,0,,And same thing, let's create a const for our action called Update Contact.
+Dialogue: 0,0:52:23.61,0:52:33.32,Default,,0,0,0,,Update user ထည့်လိုက်မယ်
+Dialogue: 0,0:52:33.32,0:52:39.65,Default,,0,0,0,,Update Contactလည်းထည့်လိုက်မယ်
 Dialogue: 0,0:52:39.65,0:52:47.35,Default,,0,0,0,,
-Dialogue: 0,0:52:47.35,0:52:50.47,Default,,0,0,0,,And now, rather than hardcoding this string here, we can use that constant.
+Dialogue: 0,0:52:47.35,0:52:50.47,Default,,0,0,0,,ဒီမှာ string အနေနဲ့ အသေထားမယ့်အစား constantတစ်ခုလုပ်လိုက်မယ်
 Dialogue: 0,0:52:50.47,0:53:01.06,Default,,0,0,0,,
-Dialogue: 0,0:53:01.06,0:53:03.62,Default,,0,0,0,,And then same here.
-Dialogue: 0,0:53:03.62,0:53:06.31,Default,,0,0,0,,So what this does is it protects us against typos.
-Dialogue: 0,0:53:06.31,0:53:11.41,Default,,0,0,0,,So say I had accidentally typed this in as Update Users plural,
-Dialogue: 0,0:53:11.41,0:53:13.51,Default,,0,0,0,,now it's never going to match.
-Dialogue: 0,0:53:13.51,0:53:15.88,Default,,0,0,0,,And it might be difficult when we're trying to debug.
-Dialogue: 0,0:53:15.88,0:53:17.30,Default,,0,0,0,,Like, hey, what's going wrong?
-Dialogue: 0,0:53:17.30,0:53:21.41,Default,,0,0,0,,I'm passing this action called Update User, and it's not updating our user.
-Dialogue: 0,0:53:21.41,0:53:21.91,Default,,0,0,0,,Why?
-Dialogue: 0,0:53:21.91,0:53:25.71,Default,,0,0,0,,Because we're actually looking for an action type called Update Users plural.
-Dialogue: 0,0:53:25.71,0:53:35.11,Default,,0,0,0,,And so to save us from that, we just create a constant called Update User.
-Dialogue: 0,0:53:35.11,0:53:40.84,Default,,0,0,0,,And the way that we enforce that our action types are the same
-Dialogue: 0,0:53:40.84,0:53:42.82,Default,,0,0,0,,is by using JavaScript itself.
-Dialogue: 0,0:53:42.82,0:53:46.01,Default,,0,0,0,,If we made a typo here called Update Users, what's going to happen?
+Dialogue: 0,0:53:01.06,0:53:03.62,Default,,0,0,0,,ဒီမှာရောပဲ
+Dialogue: 0,0:53:03.62,0:53:06.31,Default,,0,0,0,,ဘာပိုကောင်းလဲဆိုတော့ စာလုံးပေါင်းမှားပြီး အလုပ်မလုပ်တဲ့ ပြဿနာကိုရှင်းပေးတာပေါ့
+Dialogue: 0,0:53:06.31,0:53:11.41,Default,,0,0,0,, ဥပမာ Update user pluralလို့မှားရိုက်လိုက်ရင် 
+Dialogue: 0,0:53:11.41,0:53:13.51,Default,,0,0,0,,မတူတော့ဘဲနေမယ်
+Dialogue: 0,0:53:13.51,0:53:15.88,Default,,0,0,0,,ရေးတာအရမ်းများတဲ့အခါကျ အဲ့လို အမှားသည် ရှာရခက်တယ်
+Dialogue: 0,0:53:15.88,0:53:17.30,Default,,0,0,0,,ဘာမှားနေမှန်းမသိတာမျိုးပေါ့
+Dialogue: 0,0:53:17.30,0:53:21.41,Default,,0,0,0,,Update userဆိုတဲ့ actionထည့်ပေးတာတောင် userကupdateမလုပ်သွားဘူး
+Dialogue: 0,0:53:21.41,0:53:21.91,Default,,0,0,0,,ဘာကြောင့်လဲ
+Dialogue: 0,0:53:21.91,0:53:25.71,Default,,0,0,0,,တကယ်တမ်းက user update pluralကိုသွားရှာရမှာကိုး
+Dialogue: 0,0:53:25.71,0:53:35.11,Default,,0,0,0,,ဒါကြောင့်မို့လို့ update userဆိုတဲ့ constပဲလုပ်လိုက်မယ်
+Dialogue: 0,0:53:35.11,0:53:42.82,Default,,0,0,0,,ဒါကြောင့်action typeတွေမတူမှာပူစရာမလိုတော့ဘူး
+Dialogue: 0,0:53:42.82,0:53:46.01,Default,,0,0,0,,Update users ဆိုတဲ့typoဖြစ်သွားရင် 
 Dialogue: 0,0:53:46.01,0:53:50.80,Default,,0,0,0,,
-Dialogue: 0,0:53:50.80,0:53:55.64,Default,,0,0,0,,We get an error, because this constant called Update Users is not defined.
-Dialogue: 0,0:53:55.64,0:54:04.73,Default,,0,0,0,,And so by storing our actions as constants,
-Dialogue: 0,0:54:04.73,0:54:10.27,Default,,0,0,0,,we can ensure that we don't have any weird bugs due to typos.
-Dialogue: 0,0:54:10.27,0:54:13.57,Default,,0,0,0,,So let's actually move this to the top of the file, that way we can use it
-Dialogue: 0,0:54:13.57,0:54:16.34,Default,,0,0,0,,in our reducers.
+Dialogue: 0,0:53:50.80,0:53:55.64,Default,,0,0,0,,Update users is not definedဆိုတဲ့error messageတစ်ခုရမယ်
+Dialogue: 0,0:53:55.64,0:54:04.73,Default,,0,0,0,,actionတွေကိုconstအနေနဲ့သိမ်းလိုက်ခြင်းအားဖြင့်
+Dialogue: 0,0:54:04.73,0:54:10.27,Default,,0,0,0,,typoအမှားကြောင့်ဖြစ်မယ့်bugမျိုးကနေ ကာထားလို့ရတာပေါ့
+Dialogue: 0,0:54:10.27,0:54:13.57,Default,,0,0,0,,ဒီကောင်ကိုfileရဲ့ထိပ်ဆုံးကိုပို့လိုက်မယ်
+Dialogue: 0,0:54:13.57,0:54:16.34,Default,,0,0,0,,
 Dialogue: 0,0:54:16.34,0:54:18.89,Default,,0,0,0,,
-Dialogue: 0,0:54:18.89,0:54:20.77,Default,,0,0,0,,And we'll leave a little comment for ourself,
-Dialogue: 0,0:54:20.77,0:54:22.18,Default,,0,0,0,,and let's call these Action Types.
+Dialogue: 0,0:54:18.89,0:54:20.77,Default,,0,0,0,,commentလေးရေးထားလိုက်မယ်
+Dialogue: 0,0:54:20.77,0:54:22.18,Default,,0,0,0,,Action Typesပေါ့
 Dialogue: 0,0:54:22.18,0:54:25.01,Default,,0,0,0,,
 Dialogue: 0,0:54:25.01,0:54:25.51,Default,,0,0,0,,Cool.
-Dialogue: 0,0:54:25.51,0:54:26.77,Default,,0,0,0,,So a little bit cleaner now.
-Dialogue: 0,0:54:26.77,0:54:29.38,Default,,0,0,0,,We no longer have those hardcoded strings.
-Dialogue: 0,0:54:29.38,0:54:32.21,Default,,0,0,0,,But now, every single time we want to dispatch an action,
-Dialogue: 0,0:54:32.21,0:54:33.84,Default,,0,0,0,,we have to type that entire action out.
-Dialogue: 0,0:54:33.84,0:54:37.27,Default,,0,0,0,,And so maybe it might be better to create a function that
-Dialogue: 0,0:54:37.27,0:54:39.37,Default,,0,0,0,,creates our actions for us.
-Dialogue: 0,0:54:39.37,0:54:45.60,Default,,0,0,0,,And so let's just create a function called Update User.
-Dialogue: 0,0:54:45.60,0:54:46.46,Default,,0,0,0,,And what does it do?
-Dialogue: 0,0:54:46.46,0:54:47.83,Default,,0,0,0,,Well, it takes some new user--
+Dialogue: 0,0:54:25.51,0:54:26.77,Default,,0,0,0,,ဒါဆို နည်းနည်းတော့ရှင်းသွားပြီပြောလို့ရတယ်
+Dialogue: 0,0:54:26.77,0:54:29.38,Default,,0,0,0,,hardcoded stringတွေမရှိတော့ဘူး
+Dialogue: 0,0:54:29.38,0:54:32.21,Default,,0,0,0,,actionကိုdispatchလုပ်ပေးချင်တဲ့အခါတိုင်းမှာ
+Dialogue: 0,0:54:32.21,0:54:33.84,Default,,0,0,0,,actionတစ်ခုလုံးကိုရိုက်နေရတယ်
+Dialogue: 0,0:54:33.84,0:54:39.37,Default,,0,0,0,,အဲ့အစား actionကိုcreateလုပ်ပေးမယ့်function တစ်ခုရေးလိုက်မယ်
+Dialogue: 0,0:54:39.37,0:54:45.60,Default,,0,0,0,,Update Userဆိုတဲ့functionလေးရေးလိုက်မယ်
+Dialogue: 0,0:54:45.60,0:54:46.46,Default,,0,0,0,,အဲ့ကောင်သည် ဘာလုပ်ပေးလဲဆိုတော့
+Dialogue: 0,0:54:46.46,0:54:47.83,Default,,0,0,0,,new userကိုလက်ခံမယ်
 Dialogue: 0,0:54:47.83,0:54:50.70,Default,,0,0,0,,
-Dialogue: 0,0:54:50.70,0:54:52.88,Default,,0,0,0,,let's just update.
-Dialogue: 0,0:54:52.88,0:54:55.52,Default,,0,0,0,,So it takes some sort of update, and what does it do?
-Dialogue: 0,0:54:55.52,0:54:59.71,Default,,0,0,0,,Well, it returns a new object, because, as we remember,
-Dialogue: 0,0:54:59.71,0:55:03.28,Default,,0,0,0,,actions are just objects of a certain type.
-Dialogue: 0,0:55:03.28,0:55:05.98,Default,,0,0,0,,And the reason that we create those is because of the standard
-Dialogue: 0,0:55:05.98,0:55:08.05,Default,,0,0,0,,called Flux standard action.
-Dialogue: 0,0:55:08.05,0:55:11.92,Default,,0,0,0,,And so each of them have a type key.
-Dialogue: 0,0:55:11.92,0:55:15.23,Default,,0,0,0,,And what is the type every time you want to update the user?
-Dialogue: 0,0:55:15.23,0:55:19.02,Default,,0,0,0,,Well, it's just going to be Update User.
-Dialogue: 0,0:55:19.02,0:55:20.23,Default,,0,0,0,,And what is the payload here?
+Dialogue: 0,0:54:52.88,0:54:55.52,Default,,0,0,0,,updateလုပ်မယ့်ကောင်ယူမယ် ပြီးရင် ဘာလုပ်လဲဆိုတော့
+Dialogue: 0,0:54:55.52,0:54:59.71,Default,,0,0,0,,မှတ်မိတယ်မလား object အသစ်ကိုပဲ returnပြန်ပေးလိုက်တယ်
+Dialogue: 0,0:54:59.71,0:55:03.28,Default,,0,0,0,,actionဆိုတာ typeပါတဲ့objectတွေပဲ
+Dialogue: 0,0:55:03.28,0:55:08.05,Default,,0,0,0,,ဒီကောင်တွေကို createလုပ်ထားတာသည် Flux standard actionအတိုင်းပဲဖြစ်တယ်
+Dialogue: 0,0:55:08.05,0:55:11.92,Default,,0,0,0,,ဒီကောင်တွေတစ်ခုတိုင်းမှာ type keyရှိတယ်
+Dialogue: 0,0:55:11.92,0:55:15.23,Default,,0,0,0,,user updateလုပ်ချင်ရင် သုံးတဲ့typeကဘာဖြစ်မလဲဆိုတော့
+Dialogue: 0,0:55:15.23,0:55:19.02,Default,,0,0,0,,Update Userပေါ့
+Dialogue: 0,0:55:19.02,0:55:20.23,Default,,0,0,0,,ဒီနားက payloadကဘာပေးမလဲဆိုတော့
 Dialogue: 0,0:55:20.23,0:55:22.87,Default,,0,0,0,,
-Dialogue: 0,0:55:22.87,0:55:25.56,Default,,0,0,0,,Well, it depends what we're invoking Update User on.
-Dialogue: 0,0:55:25.56,0:55:27.15,Default,,0,0,0,,And so let's just pass the updated in.
+Dialogue: 0,0:55:22.87,0:55:25.56,Default,,0,0,0,,ဒါကတော့ ကိုယ်ဘာပြင်ချင်လဲဆိုတာပေါ်မူတည်တာပေါ့
+Dialogue: 0,0:55:25.56,0:55:27.15,Default,,0,0,0,,ဒါကြောင့် updateလုပ်စရာကိုထည့်ပေးလိုက်မယ်
 Dialogue: 0,0:55:27.15,0:55:31.15,Default,,0,0,0,,
-Dialogue: 0,0:55:31.15,0:55:37.35,Default,,0,0,0,,So now, rather than typing this whole thing out, we can just do Update User
-Dialogue: 0,0:55:37.35,0:55:42.81,Default,,0,0,0,,and pass the update that we want to make.
-Dialogue: 0,0:55:42.81,0:55:44.09,Default,,0,0,0,,And what happens here?
-Dialogue: 0,0:55:44.09,0:55:46.23,Default,,0,0,0,,Well, Update User up here gets invoked.
-Dialogue: 0,0:55:46.23,0:55:51.01,Default,,0,0,0,,We pass the update that we want to make, and it returns an action.
-Dialogue: 0,0:55:51.01,0:55:53.59,Default,,0,0,0,,And the action gets passed to dispatch as if we had done this.
-Dialogue: 0,0:55:53.59,0:55:55.55,Default,,0,0,0,,It's just a little bit cleaner because we don't
-Dialogue: 0,0:55:55.55,0:55:57.44,Default,,0,0,0,,have to type this whole string out.
+Dialogue: 0,0:55:31.15,0:55:37.35,Default,,0,0,0,,တစ်ခုလုံးကြီးရိုက်ထည့်နေမယ့်အစား Update User functionကိုခေါ်လိုက်မယ်
+Dialogue: 0,0:55:37.35,0:55:42.81,Default,,0,0,0,,ပြင်ချင်တဲ့ကောင်ကိုထည့်ပေးလိုက်မယ်
+Dialogue: 0,0:55:42.81,0:55:44.09,Default,,0,0,0,,အဲ့မှာ ဘာဖြစ်သွားလဲဆိုတော့
+Dialogue: 0,0:55:44.09,0:55:46.23,Default,,0,0,0,,Update  Userကိုinvokeလုပ်လိုက်တယ်
+Dialogue: 0,0:55:46.23,0:55:51.01,Default,,0,0,0,,updateလုပ်ချင်တဲ့ကောင်ထည့်ပေးလိုက်တယ် actionတစ်ခုreturnပြန်လာမယ်
+Dialogue: 0,0:55:51.01,0:55:53.59,Default,,0,0,0,,အဲ့ဒီactionသည် dispatchထဲကိုဝင်သွားမယ်
+Dialogue: 0,0:55:53.59,0:55:55.55,Default,,0,0,0,,တော်တော်လေးရှင်းသွားတယ်
+Dialogue: 0,0:55:55.55,0:55:57.44,Default,,0,0,0,,ဘာလို့လဲဆိုတော့ action objectကြီးအကုန်လုံးကိုရိုက်ထည့်ပေးနေစရာမလိုတော့ဘူး
 Dialogue: 0,0:55:57.44,0:56:02.23,Default,,0,0,0,,
-Dialogue: 0,0:56:02.23,0:56:10.36,Default,,0,0,0,,So now let's do the same thing here, and here.
+Dialogue: 0,0:56:02.23,0:56:10.36,Default,,0,0,0,,ဒီမှာလည်းအတူတူပဲ လုပ်ရမယ်
 Dialogue: 0,0:56:10.36,0:56:16.03,Default,,0,0,0,,
 Dialogue: 0,0:56:16.03,0:56:16.53,Default,,0,0,0,,Cool.
-Dialogue: 0,0:56:16.53,0:56:19.26,Default,,0,0,0,,Looking cleaner already.
-Dialogue: 0,0:56:19.26,0:56:23.70,Default,,0,0,0,,This also looks a little bit gross, so let's create a creator for that
-Dialogue: 0,0:56:23.70,0:56:25.26,Default,,0,0,0,,as well.
-Dialogue: 0,0:56:25.26,0:56:28.92,Default,,0,0,0,,And let's call this Add Contact.
-Dialogue: 0,0:56:28.92,0:56:32.32,Default,,0,0,0,,And we're going to pass it to newContact.
-Dialogue: 0,0:56:32.32,0:56:33.57,Default,,0,0,0,,And how is this going to look?
+Dialogue: 0,0:56:16.53,0:56:19.26,Default,,0,0,0,,ရှင်းနေပြီးသားပဲ
+Dialogue: 0,0:56:19.26,0:56:25.26,Default,,0,0,0,,ဒီကောင်ကတော့ ကြည့်ရတော်တော်ဆိုးတယ် သူ့ကိုလည်း ပြင်ပေးလိုက်မယ်
+Dialogue: 0,0:56:25.26,0:56:28.92,Default,,0,0,0,,Add Contactလို့ပေးလိုက်မယ်
+Dialogue: 0,0:56:28.92,0:56:32.32,Default,,0,0,0,,newContactထည့်ပေးလိုက်မယ်
+Dialogue: 0,0:56:32.32,0:56:33.57,Default,,0,0,0,,ဘယ်လိုမျိုးဖြစ်သွားမလဲဆိုတော့
 Dialogue: 0,0:56:33.57,0:56:36.30,Default,,0,0,0,,
-Dialogue: 0,0:56:36.30,0:56:39.15,Default,,0,0,0,,Well, just like our other action creator,
-Dialogue: 0,0:56:39.15,0:56:40.82,Default,,0,0,0,,it's going to return an action.
-Dialogue: 0,0:56:40.82,0:56:42.06,Default,,0,0,0,,What does an action look like?
-Dialogue: 0,0:56:42.06,0:56:43.89,Default,,0,0,0,,Well, it has a type attribute.
-Dialogue: 0,0:56:43.89,0:56:44.73,Default,,0,0,0,,And what type is it?
-Dialogue: 0,0:56:44.73,0:56:47.16,Default,,0,0,0,,It's going to be Update Contact.
-Dialogue: 0,0:56:47.16,0:56:48.75,Default,,0,0,0,,And it's also going to have a payload.
-Dialogue: 0,0:56:48.75,0:56:50.51,Default,,0,0,0,,And what is the payload here?
-Dialogue: 0,0:56:50.51,0:56:52.14,Default,,0,0,0,,Well, it's going to be that NewContact.
+Dialogue: 0,0:56:36.30,0:56:39.15,Default,,0,0,0,,တခြားaction creatorတွေလိုပဲ
+Dialogue: 0,0:56:39.15,0:56:40.82,Default,,0,0,0,, action တစ်ခု returnပြန်ရမယ်
+Dialogue: 0,0:56:40.82,0:56:42.06,Default,,0,0,0,, အဲ့action သည် ဘယ်လိုမျိုးဖြစ်မလဲဆိုတော့
+Dialogue: 0,0:56:42.06,0:56:43.89,Default,,0,0,0,,type attributeပါမယ်
+Dialogue: 0,0:56:43.89,0:56:44.73,Default,,0,0,0,,ဘာtypeဖြစ်မလဲဆိုတော့
+Dialogue: 0,0:56:44.73,0:56:47.16,Default,,0,0,0,,Update Contactပေါ့
+Dialogue: 0,0:56:47.16,0:56:48.75,Default,,0,0,0,,payload တစ်ခုလည်းပါမယ်
+Dialogue: 0,0:56:48.75,0:56:50.51,Default,,0,0,0,,ဘာpayloadလည်းဆိုတော့
+Dialogue: 0,0:56:50.51,0:56:52.14,Default,,0,0,0,,newContactဖြစ်မှာပေါ့
 Dialogue: 0,0:56:52.14,0:56:55.59,Default,,0,0,0,,
-Dialogue: 0,0:56:55.59,0:57:03.54,Default,,0,0,0,,And so now we can do the same thing by calling Add Contact here and on here as
-Dialogue: 0,0:57:03.54,0:57:04.04,Default,,0,0,0,,well.
+Dialogue: 0,0:56:55.59,0:57:03.54,Default,,0,0,0,,ဒီနေရာမှာလည်း Add Contactကိုခေါ်ပေးလိုက်မယ်
+Dialogue: 0,0:57:03.54,0:57:04.04,Default,,0,0,0,,
 Dialogue: 0,0:57:04.04,0:57:08.98,Default,,0,0,0,,
 Dialogue: 0,0:57:08.98,0:57:09.48,Default,,0,0,0,,Cool.
-Dialogue: 0,0:57:09.48,0:57:12.19,Default,,0,0,0,,And now it's looking a lot more readable.
-Dialogue: 0,0:57:12.19,0:57:19.29,Default,,0,0,0,,So let's just label these as are action creators, because they're
-Dialogue: 0,0:57:19.29,0:57:21.33,Default,,0,0,0,,creating actions.
-Dialogue: 0,0:57:21.33,0:57:22.32,Default,,0,0,0,,We have our store--
-Dialogue: 0,0:57:22.32,0:57:22.89,Default,,0,0,0,,our reducer.
-Dialogue: 0,0:57:22.89,0:57:29.46,Default,,0,0,0,,We have our specific reducers for each key.
-Dialogue: 0,0:57:29.46,0:57:33.20,Default,,0,0,0,,And then we pass those to our store, and we go ahead and dispatch foo actions.
-Dialogue: 0,0:57:33.20,0:57:34.70,Default,,0,0,0,,And what actions are we dispatching?
-Dialogue: 0,0:57:34.70,0:57:37.20,Default,,0,0,0,,Well, it seems a lot easier to read now.
-Dialogue: 0,0:57:37.20,0:57:41.46,Default,,0,0,0,,First we say, hey store, go ahead and update the user.
-Dialogue: 0,0:57:41.46,0:57:42.84,Default,,0,0,0,,And what are we updating it with?
-Dialogue: 0,0:57:42.84,0:57:44.47,Default,,0,0,0,,Well, we're just passing foo foo.
-Dialogue: 0,0:57:44.47,0:57:46.35,Default,,0,0,0,,Go ahead and update the user again with this.
-Dialogue: 0,0:57:46.35,0:57:47.94,Default,,0,0,0,,Update user again with this.
-Dialogue: 0,0:57:47.94,0:57:49.74,Default,,0,0,0,,Now add a contact that looks like this.
-Dialogue: 0,0:57:49.74,0:57:51.19,Default,,0,0,0,,Add a contact that looks like this.
-Dialogue: 0,0:57:51.19,0:57:54.03,Default,,0,0,0,,And now, all of a sudden, it's very readable.
-Dialogue: 0,0:57:54.03,0:57:55.51,Default,,0,0,0,,We create a new store.
-Dialogue: 0,0:57:55.51,0:57:57.66,Default,,0,0,0,,We pass it in the reducer in the default state.
-Dialogue: 0,0:57:57.66,0:57:59.85,Default,,0,0,0,,We dispatch a few actions.
-Dialogue: 0,0:57:59.85,0:58:02.91,Default,,0,0,0,,And then we go ahead and get the store, get the state
-Dialogue: 0,0:58:02.91,0:58:04.50,Default,,0,0,0,,and see what it looks like.
-Dialogue: 0,0:58:04.50,0:58:06.07,Default,,0,0,0,,And if I didn't make any typos--
+Dialogue: 0,0:57:09.48,0:57:12.19,Default,,0,0,0,,ဒါဆို ဖတ်လို့တော်တော်အဆင်ပြေသွားပြီ
+Dialogue: 0,0:57:12.19,0:57:19.29,Default,,0,0,0,,  action creatorလို့တပ်ပေးလိုက်မယ်ဘာလို့လဲဆိုတော့
+Dialogue: 0,0:57:19.29,0:57:21.33,Default,,0,0,0,, action ကိုcreateလုပ်ပေးလို့
+Dialogue: 0,0:57:21.33,0:57:22.32,Default,,0,0,0,, storeရှိပြီ
+Dialogue: 0,0:57:22.32,0:57:22.89,Default,,0,0,0,, reducerရှိပြီ
+Dialogue: 0,0:57:22.89,0:57:29.46,Default,,0,0,0,,keyတစ်ခုချင်းစီအတွက်reducerတွေရှိနေပြီ
+Dialogue: 0,0:57:29.46,0:57:33.20,Default,,0,0,0,,storeထဲထည့်လိုက်တယ် actionကိုdispatchလုပ်ပေးလိုက်တယ်
+Dialogue: 0,0:57:33.20,0:57:34.70,Default,,0,0,0,,ဘယ်actionတွေလဲဆိုတော့
+Dialogue: 0,0:57:34.70,0:57:37.20,Default,,0,0,0,,ဖတ်လို့လွယ်ပါတယ်
+Dialogue: 0,0:57:37.20,0:57:41.46,Default,,0,0,0,,ဟေး store ရေ userကိုupdateလုပ်လိုက်ပါအုံးပေါ့
+Dialogue: 0,0:57:41.46,0:57:42.84,Default,,0,0,0,,ဘာနဲ့updateလုပ်မလဲဆိုတော့
+Dialogue: 0,0:57:42.84,0:57:44.47,Default,,0,0,0,,ဖူးဖူးကိုထည့်ပေးလိုက်မယ်
+Dialogue: 0,0:57:44.47,0:57:46.35,Default,,0,0,0,,နောက်ထပ် userကို updateလုပ်ပေးလိုက်မယ်
+Dialogue: 0,0:57:46.35,0:57:47.94,Default,,0,0,0,,userကိုဒီကောင်နဲ့updateလုပ်လိုက်မယ်
+Dialogue: 0,0:57:47.94,0:57:49.74,Default,,0,0,0,,contact တစ်ခုထည့်လိုက်မယ်
+Dialogue: 0,0:57:49.74,0:57:51.19,Default,,0,0,0,,ဒီcontactထပ်ထည့်လိုက်မယ်
+Dialogue: 0,0:57:51.19,0:57:54.03,Default,,0,0,0,,ကြည့်လိုက်အုံး ဖတ်ရအတော်ရှင်းသွားပြီ
+Dialogue: 0,0:57:54.03,0:57:55.51,Default,,0,0,0,,storeအသစ်ဆောက်လိုက်တယ်
+Dialogue: 0,0:57:55.51,0:57:57.66,Default,,0,0,0,,reducerနဲ့default stateထည့်ပေးလိုက်တယ်
+Dialogue: 0,0:57:57.66,0:57:59.85,Default,,0,0,0,,actionတချို့dispatchလုပ်လိုက်မယ်
+Dialogue: 0,0:57:59.85,0:58:02.91,Default,,0,0,0,,getStateလုပ်လိုက်ရင်
+Dialogue: 0,0:58:02.91,0:58:04.50,Default,,0,0,0,,ဘာရမလဲကြည့်ကြည့်ရအောင်
+Dialogue: 0,0:58:04.50,0:58:06.07,Default,,0,0,0,,စာလုံးပေါင်းမှားတာမရှိရင်တော့
 Dialogue: 0,0:58:06.07,0:58:09.61,Default,,0,0,0,,
-Dialogue: 0,0:58:09.61,0:58:12.08,Default,,0,0,0,,oh, I made some typos.
-Dialogue: 0,0:58:12.08,0:58:17.16,Default,,0,0,0,,I never fixed the typo that I made intentionally, so let's fix that.
+Dialogue: 0,0:58:09.61,0:58:12.08,Default,,0,0,0,,အိုး မှားသွားပြီ
+Dialogue: 0,0:58:12.08,0:58:17.16,Default,,0,0,0,,သိသိကြီးနဲ့ကိုမှားသေးတာ ပြင်လိုက်မယ်
 Dialogue: 0,0:58:17.16,0:58:23.31,Default,,0,0,0,,
-Dialogue: 0,0:58:23.31,0:58:26.56,Default,,0,0,0,,Now we get back exactly what we wanted.
+Dialogue: 0,0:58:23.31,0:58:26.56,Default,,0,0,0,,အခုဆို လိုချင်တဲ့အတိုင်းရလာပြီ
 Dialogue: 0,0:58:26.56,0:58:27.06,Default,,0,0,0,,Great.
-Dialogue: 0,0:58:27.06,0:58:32.80,Default,,0,0,0,,So now our homemade simpleRedux is looking pretty good.
-Dialogue: 0,0:58:32.80,0:58:39.19,Default,,0,0,0,,We've implemented most of what is core to Redux.
-Dialogue: 0,0:58:39.19,0:58:41.53,Default,,0,0,0,,There is a single source of truth for our data.
-Dialogue: 0,0:58:41.53,0:58:43.41,Default,,0,0,0,,It's in our store.
-Dialogue: 0,0:58:43.41,0:58:45.66,Default,,0,0,0,,The state can only be updated by actions.
-Dialogue: 0,0:58:45.66,0:58:55.28,Default,,0,0,0,,So remember, we're dispatching actions down there,
-Dialogue: 0,0:58:55.28,0:58:59.21,Default,,0,0,0,,and there's really no other way to update.
-Dialogue: 0,0:58:59.21,0:59:01.64,Default,,0,0,0,,And how are we doing the update ourselves?
-Dialogue: 0,0:59:01.64,0:59:04.64,Default,,0,0,0,,Well, it's a pure function that takes the old state,
-Dialogue: 0,0:59:04.64,0:59:07.28,Default,,0,0,0,,and some sort of payload or update--
-Dialogue: 0,0:59:07.28,0:59:08.87,Default,,0,0,0,,or action, I should say--
-Dialogue: 0,0:59:08.87,0:59:10.87,Default,,0,0,0,,and then goes ahead and does it.
-Dialogue: 0,0:59:10.87,0:59:11.87,Default,,0,0,0,,Did it do anything else?
-Dialogue: 0,0:59:11.87,0:59:12.71,Default,,0,0,0,,Did it console log?
-Dialogue: 0,0:59:12.71,0:59:15.23,Default,,0,0,0,,Did it change any variables outside its scope?
-Dialogue: 0,0:59:15.23,0:59:21.90,Default,,0,0,0,,Did it use anything outside of the arguments that it was passed?
-Dialogue: 0,0:59:21.90,0:59:22.49,Default,,0,0,0,,No, it didn't.
-Dialogue: 0,0:59:22.49,0:59:26.54,Default,,0,0,0,,It was just a pure function of the old state and the updates.
-Dialogue: 0,0:59:26.54,0:59:29.24,Default,,0,0,0,,And it has this pattern, right?
-Dialogue: 0,0:59:29.24,0:59:33.42,Default,,0,0,0,,We're sending actions that pass through the reducer and it updates our store.
-Dialogue: 0,0:59:33.42,0:59:37.76,Default,,0,0,0,,And so now, we've pretty much implemented a simpleRedux.
+Dialogue: 0,0:58:27.06,0:58:32.80,Default,,0,0,0,,အခု homemade simpleRedux ကတော်တော်ကြီးလန်းနေပြီ
+Dialogue: 0,0:58:32.80,0:58:39.19,Default,,0,0,0,,Reduxရဲ့အဓိကလုပ်ဆောင်ချက်တွေပါအောင် ရေးခဲ့ပြီးပြီ
+Dialogue: 0,0:58:39.19,0:58:41.53,Default,,0,0,0,,data source သည်လည်း တစ်ခုပဲရှိတယ်
+Dialogue: 0,0:58:41.53,0:58:43.41,Default,,0,0,0,, storeထဲမယ်ရှိတယ်
+Dialogue: 0,0:58:43.41,0:58:45.66,Default,,0,0,0,,actionတွေကနေပဲ stateကိုupdateလုပ်လို့ရတယ်
+Dialogue: 0,0:58:45.66,0:58:55.28,Default,,0,0,0,,အောက်နားလေးမယ် actionတွေ dispatchလုပ်ထားတယ်
+Dialogue: 0,0:58:55.28,0:58:59.21,Default,,0,0,0,,တခြားupdateလုပ်တဲ့နည်းလမ်းမရှိဘူး
+Dialogue: 0,0:58:59.21,0:59:01.64,Default,,0,0,0,,updateလုပ်တာကိုဘယ်လိုရေးထားလဲဆိုတော့
+Dialogue: 0,0:59:01.64,0:59:07.28,Default,,0,0,0,,old stateနဲ့updateကိုလက်ခံတဲ့pure functionတစ်ခုနဲ့ပေါ့
+Dialogue: 0,0:59:07.28,0:59:08.87,Default,,0,0,0,,
+Dialogue: 0,0:59:08.87,0:59:10.87,Default,,0,0,0,,အဲ့အတိုင်းပဲလုပ်ထားတယ်
+Dialogue: 0,0:59:10.87,0:59:11.87,Default,,0,0,0,,တခြားလုပ်ထားတာရှိလား
+Dialogue: 0,0:59:11.87,0:59:12.71,Default,,0,0,0,,console logထုတ်ထားလား
+Dialogue: 0,0:59:12.71,0:59:15.23,Default,,0,0,0,,scopeအပြင်ကvariableတွေကိုchangeလား
+Dialogue: 0,0:59:15.23,0:59:21.90,Default,,0,0,0,,ပေးလိုက်တဲ့argumentအပြင်တခြားကောင်တွေကိုရောယူသုံးသေးလား
+Dialogue: 0,0:59:21.90,0:59:22.49,Default,,0,0,0,,တစ်ခုမှမဟုတ်ဘူးနော်
+Dialogue: 0,0:59:22.49,0:59:26.54,Default,,0,0,0,,pure functionသက်သက်ပဲ side effectမပါဘူး
+Dialogue: 0,0:59:26.54,0:59:29.24,Default,,0,0,0,,အဲ့ပုံစံအတိုင်းပဲ
+Dialogue: 0,0:59:29.24,0:59:33.42,Default,,0,0,0,,ကျွန်တော်တို့ပို့လိုက်တဲ့actionတွေသည်reducerထဲကိုရောက်ပြီးတော့မှ storeကိုupdateလုပ်သွားတယ်
+Dialogue: 0,0:59:33.42,0:59:37.76,Default,,0,0,0,, ဒီsimpleReduxမှာ တော်တော်များများရေးပြီးသွားပြီ
 Dialogue: 0,0:59:37.76,0:59:41.76,Default,,0,0,0,,
-Dialogue: 0,0:59:41.76,0:59:46.90,Default,,0,0,0,,There's just one scalability problem with our current Redux.
+Dialogue: 0,0:59:41.76,0:59:46.90,Default,,0,0,0,,scalabilityပြဿနာတစ်ခုတော့ရှိနေသေးတယ်
 Dialogue: 0,0:59:46.90,0:59:50.79,Default,,0,0,0,,
-Dialogue: 0,0:59:50.79,0:59:56.59,Default,,0,0,0,,So what happens when we want to update a user?
-Dialogue: 0,0:59:56.59,1:00:03.00,Default,,0,0,0,,We also-- or maybe we want to update a contact, and maybe, in our userReducer,
-Dialogue: 0,1:00:03.00,1:00:06.60,Default,,0,0,0,,we want to keep track of the number of contacts in our user metadata.
-Dialogue: 0,1:00:06.60,1:00:13.63,Default,,0,0,0,,We're going to have to change a lot of lines of code in order to do that.
-Dialogue: 0,1:00:13.63,1:00:17.46,Default,,0,0,0,,And so as we start to add more reducers, start to add more things to our state,
-Dialogue: 0,1:00:17.46,1:00:23.82,Default,,0,0,0,,in our current implementation of our reducer, it's non-trivial to do that.
-Dialogue: 0,1:00:23.82,1:00:27.06,Default,,0,0,0,,And so let's actually figure out a better way to do that.
-Dialogue: 0,1:00:27.06,1:00:31.20,Default,,0,0,0,,Right now, what we're doing is our reducer is taking an action,
-Dialogue: 0,1:00:31.20,1:00:36.09,Default,,0,0,0,,consuming it, and sending it to one of the smaller reducers
+Dialogue: 0,0:59:50.79,0:59:56.59,Default,,0,0,0,,user ကိုupdateလုပ်ချင်ရင်ရော
+Dialogue: 0,0:59:56.59,1:00:06.60,Default,,0,0,0,,userနဲ့contactနံပါတ်နဲ့တွဲထားတာမျိုးပေါ့
+Dialogue: 0,1:00:06.60,1:00:13.63,Default,,0,0,0,,အဲ့လိုလုပ်ချင်ရင် codeတွေအများကြီးပြင်ရေးရတော့မယ်.
+Dialogue: 0,1:00:13.63,1:00:17.46,Default,,0,0,0,,အမြဲတမ်းreducerတွေထပ်ထည့်ရတာမျိုးက
+Dialogue: 0,1:00:17.46,1:00:23.82,Default,,0,0,0,,သိပ်တော့မဟုတ်သေးဘူး
+Dialogue: 0,1:00:23.82,1:00:27.06,Default,,0,0,0,,ပိုကောင်းအောင်ရေးကြည့်ရအောင်
+Dialogue: 0,1:00:27.06,1:00:31.20,Default,,0,0,0,,အခု ဘယ်လိုလုပ်ထားလဲဆိုတော့ actionလက်ခံတယ် 
+Dialogue: 0,1:00:31.20,1:00:36.09,Default,,0,0,0,,နောက်reducerအသေးဆီထပ်ပို့လိုက်တယ်
 Dialogue: 0,1:00:36.09,1:00:38.34,Default,,0,0,0,,that we've created.
 Dialogue: 0,1:00:38.34,1:00:40.86,Default,,0,0,0,,But there's really no reason that we need to do that.
 Dialogue: 0,1:00:40.86,1:00:44.94,Default,,0,0,0,,Maybe a better way would be to take an action
