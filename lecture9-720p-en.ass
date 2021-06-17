@@ -1111,61 +1111,51 @@ Dialogue: 0,1:05:45.39,1:05:46.88,Default,,0,0,0,,stateကိုလက်ခံ�
 Dialogue: 0,1:05:46.88,1:05:48.13,Default,,0,0,0,,ဘာstateလဲဆိုတော့
 Dialogue: 0,1:05:48.13,1:05:51.61,Default,,0,0,0,,userအပိုင်းပေါ့
 Dialogue: 0,1:05:51.61,1:05:54.75,Default,,0,0,0,,actionကိုလည်းလက်ခံမယ်
-Dialogue: 0,1:05:54.75,1:05:57.13,Default,,0,0,0,,Action typeသည် ဒီကောင်ဆိုရင် userကိုupdateလုပ်သွားမယ်
-Dialogue: 0,1:05:57.13,1:05:58.50,Default,,0,0,0,,
-Dialogue: 0,1:05:58.50,1:06:00.67,Default,,0,0,0,,အဲ့လိုမဟုတ်ရင် နဂိုstateပဲပြန်ရမယ်
-Dialogue: 0,1:06:00.67,1:06:04.45,Default,,0,0,0,,And into that, we merge the new action, dot, payload.
-Dialogue: 0,1:06:04.45,1:06:07.42,Default,,0,0,0,,And if the action type is in Update User,
-Dialogue: 0,1:06:07.42,1:06:11.26,Default,,0,0,0,,just return whatever the user information was before.
-Dialogue: 0,1:06:11.26,1:06:14.74,Default,,0,0,0,,And one key difference here is that for every single action,
-Dialogue: 0,1:06:14.74,1:06:17.03,Default,,0,0,0,,every single one of these reducers is called.
-Dialogue: 0,1:06:17.03,1:06:21.49,Default,,0,0,0,,This reducer is called and passes that action along with the subset of state
-Dialogue: 0,1:06:21.49,1:06:25.45,Default,,0,0,0,,that each one of these reducers cares about to them.
-Dialogue: 0,1:06:25.45,1:06:28.81,Default,,0,0,0,,And then these reducers only do something
-Dialogue: 0,1:06:28.81,1:06:30.97,Default,,0,0,0,,if the type is something that they care about.
-Dialogue: 0,1:06:30.97,1:06:33.84,Default,,0,0,0,,Otherwise, they just return the state blindly as it was.
+Dialogue: 0,1:05:54.75,1:05:57.13,Default,,0,0,0,,Action typeသည် user updateဆိုရင်
+Dialogue: 0,1:05:57.13,1:05:58.50,Default,,0,0,0,,နဂိုstateနဲ့
+Dialogue: 0,1:05:58.50,1:06:00.67,Default,,0,0,0,,payload အသစ်နဲ့mergeလုပ်ပြီးတော့
+Dialogue: 0,1:06:00.67,1:06:04.45,Default,,0,0,0,,ရလာတဲ့stateအသစ်ကိုreturnပြန်ပေးလိုက်တယ်
+Dialogue: 0,1:06:04.45,1:06:07.42,Default,,0,0,0,,action typeသည် update userမဟုတ်ဘူးဆိုရင် နဂိုstateကိုပဲreturn ပြန်ပေးလိုက်မယ်
+Dialogue: 0,1:06:07.42,1:06:11.26,Default,,0,0,0,,အရင်user informationတွေအတိုင်းပဲပေါ့
+Dialogue: 0,1:06:11.26,1:06:14.74,Default,,0,0,0,,ဒီမှာဘာမတူတာတွေ့လဲဆိုတော့ 
+Dialogue: 0,1:06:14.74,1:06:17.03,Default,,0,0,0,,actionတစ်ခုတိုင်းအတွက် reducerတစ်စီကိုခေါ်ပေးရတယ်
+Dialogue: 0,1:06:17.03,1:06:21.49,Default,,0,0,0,,reducerတွေကို သက်ဆိုင်ရာstateတွေနဲ့ခေါ်ပေးလိုက်တာပေါ့
+Dialogue: 0,1:06:21.49,1:06:25.45,Default,,0,0,0,,ဆိုင်ရာဆိုင်ရာ ထိန်းပေးတဲ့ သဘောပေါ့
+Dialogue: 0,1:06:25.45,1:06:30.97,Default,,0,0,0,,သူတို့နဲ့မဆိုင်တဲ့ကောင်ဆိုရင်
+Dialogue: 0,1:06:30.97,1:06:33.84,Default,,0,0,0,,old stateကိုပဲ  return ပြန်ပေးလိုက်တယ်
 Dialogue: 0,1:06:33.84,1:06:37.96,Default,,0,0,0,,
-Dialogue: 0,1:06:37.96,1:06:42.98,Default,,0,0,0,,So now everything is a lot more concise.
-Dialogue: 0,1:06:42.98,1:06:47.99,Default,,0,0,0,,And now if we wanted to respond to changes
-Dialogue: 0,1:06:47.99,1:06:50.40,Default,,0,0,0,,in other types in the userReducer, we can.
-Dialogue: 0,1:06:50.40,1:06:57.08,Default,,0,0,0,,So if we wanted to store something in the user part of the state
-Dialogue: 0,1:06:57.08,1:07:02.85,Default,,0,0,0,,every single time we add a contact, we can do that now.
-Dialogue: 0,1:07:02.85,1:07:08.20,Default,,0,0,0,,So maybe if we add a new user, or a NewContact--
-Dialogue: 0,1:07:08.20,1:07:13.67,Default,,0,0,0,,maybe want to store that most recently added contact in the user information--
-Dialogue: 0,1:07:13.67,1:07:16.95,Default,,0,0,0,,we could do that by doing state.
-Dialogue: 0,1:07:16.95,1:07:18.41,Default,,0,0,0,,And what are we merging into state?
-Dialogue: 0,1:07:18.41,1:07:29.84,Default,,0,0,0,,Well, let's just do recently added or prevContact
-Dialogue: 0,1:07:29.84,1:07:32.45,Default,,0,0,0,,is whatever that contact is, so action, dot, payload.
+Dialogue: 0,1:06:37.96,1:06:42.98,Default,,0,0,0,,အားလုံးကပိုတိကျသွားတာပေါ့
+Dialogue: 0,1:06:42.98,1:06:47.99,Default,,0,0,0,,တခြားထပ်ထည့်ချင်တာရှိရင် ထပ်ထည့်ပေါ့
+Dialogue: 0,1:06:47.99,1:06:50.40,Default,,0,0,0,,
+Dialogue: 0,1:06:50.40,1:07:02.85,Default,,0,0,0,,contactအသစ်ထည့်တိုင်းuserမှာ တစ်ခုခုသွားမှတ်ချင်လည်း မှတ်လို့ရပြီ
+Dialogue: 0,1:07:02.85,1:07:08.20,Default,,0,0,0,,userအသစ်ဒါမှမဟုတ်contactအသစ်ထပ်ထည့်မယ်ဆိုရင်
+Dialogue: 0,1:07:08.20,1:07:32.45,Default,,0,0,0,,newContactသည် ဒီကောင်ဆိုပြီးသိမ်းလိုက်လို့ရတယ်
 Dialogue: 0,1:07:32.45,1:07:36.81,Default,,0,0,0,,
-Dialogue: 0,1:07:36.81,1:07:46.90,Default,,0,0,0,,And now when we add new contacts, the previous contact is saved in the user.
-Dialogue: 0,1:07:46.90,1:07:50.47,Default,,0,0,0,,And so now, every single reducer can respond to every single action.
+Dialogue: 0,1:07:36.81,1:07:46.90,Default,,0,0,0,,contactအသစ်ထည့်မယ်ဆိုရင် previous contactသည် userထဲမှာသွားကြည့်လို့ရတယ်
+Dialogue: 0,1:07:46.90,1:07:50.47,Default,,0,0,0,,ဒါမျိုးပေါ့ actionတစ်ခုပေးလိုက်တိုင်းမှာ reducer တစ်ခုချင်းစီကနေhandleလုပ်လို့ရတာပေါ့
 Dialogue: 0,1:07:50.47,1:07:53.87,Default,,0,0,0,,
-Dialogue: 0,1:07:53.87,1:08:02.53,Default,,0,0,0,,And let's just make sure it works by adding
-Dialogue: 0,1:08:02.53,1:08:21.92,Default,,0,0,0,,the contact that wasn't the same as before, as soon
-Dialogue: 0,1:08:21.92,1:08:23.42,Default,,0,0,0,,as my computer unfreezes.
+Dialogue: 0,1:07:53.87,1:08:21.92,Default,,0,0,0,,မတူတဲ့contactအသစ်ထည့်ကြည့်ရအောင်
 Dialogue: 0,1:08:23.42,1:08:28.30,Default,,0,0,0,,
-Dialogue: 0,1:08:28.30,1:08:28.97,Default,,0,0,0,,Let's just kill.
+Dialogue: 0,1:08:28.30,1:08:28.97,Default,,0,0,0,,ပိတ်လိုက်မယ်
 Dialogue: 0,1:08:28.97,1:08:46.75,Default,,0,0,0,,
-Dialogue: 0,1:08:46.75,1:08:56.47,Default,,0,0,0,,So let's, again, go into our simpleRedux and ensure that we
-Dialogue: 0,1:08:56.47,1:08:58.33,Default,,0,0,0,,don't pass the same user in again.
-Dialogue: 0,1:08:58.33,1:09:02.21,Default,,0,0,0,,So we can just sanity check to make sure you're saving the most recent user.
-Dialogue: 0,1:09:02.21,1:09:04.22,Default,,0,0,0,,We can add David here.
+Dialogue: 0,1:08:46.75,1:08:58.33,Default,,0,0,0,,simpleReduxထဲမှာ same userကြီးပဲ ပြန်မဝင်နေအောင် လုပ်လိုက်မယ်
+Dialogue: 0,1:08:58.33,1:09:02.21,Default,,0,0,0,,နောက်ဆုံးထည့်လိုက်တဲ့userကို မှတ်ထားလား ကြည့်ကြည့်ရအောင်
+Dialogue: 0,1:09:02.21,1:09:04.22,Default,,0,0,0,,Davidဆိုတာကိုတွေ့ရတယ်
 Dialogue: 0,1:09:04.22,1:09:13.26,Default,,0,0,0,,
-Dialogue: 0,1:09:13.26,1:09:17.01,Default,,0,0,0,,And now we can confirm that the previous contacts stored in the user
-Dialogue: 0,1:09:17.01,1:09:21.46,Default,,0,0,0,,is indeed the most recently-added contact.
-Dialogue: 0,1:09:21.46,1:09:27.84,Default,,0,0,0,,And so now we have pretty much a full implementation of Redux.
-Dialogue: 0,1:09:27.84,1:09:32.27,Default,,0,0,0,,So it's a data-management utility that we've created.
-Dialogue: 0,1:09:32.27,1:09:34.52,Default,,0,0,0,,There is a single source of truth for all of our data.
-Dialogue: 0,1:09:34.52,1:09:36.33,Default,,0,0,0,,It's stored in our store.
-Dialogue: 0,1:09:36.33,1:09:39.39,Default,,0,0,0,,The state can only be updated by our actions.
-Dialogue: 0,1:09:39.39,1:09:43.56,Default,,0,0,0,,And updates are made using our peer functions or our reducers.
-Dialogue: 0,1:09:43.56,1:09:47.02,Default,,0,0,0,,And we've created a reducer.
-Dialogue: 0,1:09:47.02,1:09:49.22,Default,,0,0,0,,We've created a store that maintains the state.
-Dialogue: 0,1:09:49.22,1:09:52.10,Default,,0,0,0,,We can get the state using getState.
-Dialogue: 0,1:09:52.10,1:09:53.40,Default,,0,0,0,,And we've created some actions.
+Dialogue: 0,1:09:13.26,1:09:21.46,Default,,0,0,0,,ဒါကြောင့်Userထဲမှာရှိတဲ့contactသည် မကြာသေးခင်ကထည့်ထားတဲ့contactဖြစ်တယ်ဆိုတာ သေချာသွားတယ်
+Dialogue: 0,1:09:21.46,1:09:27.84,Default,,0,0,0,,Reduxကိုတော်တော်ပြည့်စုံအောင်တော့ရေးပြီးသွားပြီ
+Dialogue: 0,1:09:27.84,1:09:32.27,Default,,0,0,0,,ဒါသည် ကျွန်တော်တို့ကိုယ်တိုင်တည်ဆောက်ထားတဲ့data management libraryပေါ့
+Dialogue: 0,1:09:32.27,1:09:34.52,Default,,0,0,0,,data ကိုတစ်နေရာထဲမှာပဲသိမ်းတယ်
+Dialogue: 0,1:09:34.52,1:09:36.33,Default,,0,0,0,,store ထဲမှာပဲသိမ်းတယ်
+Dialogue: 0,1:09:36.33,1:09:39.39,Default,,0,0,0,,actionတွေသုံးပြီးတော့ပဲ stateကို manage လုပ်လို့ရမယ်
+Dialogue: 0,1:09:39.39,1:09:43.56,Default,,0,0,0,,updateလုပ်ရင်လည်းpure functionတွေပဲသုံးထားတယ်
+Dialogue: 0,1:09:43.56,1:09:47.02,Default,,0,0,0,,reducerတစ်ခု ဆောက်ထားတယ်
+Dialogue: 0,1:09:47.02,1:09:49.22,Default,,0,0,0,,stateကိုထိမ်းပေးမယ့်storeတစ်ခုလည်းဆောက်ထားတယ်
+Dialogue: 0,1:09:49.22,1:09:52.10,Default,,0,0,0,,getStateနဲ့stateကိုပြန်တောင်းလို့ရတယ်
+Dialogue: 0,1:09:52.10,1:09:53.40,Default,,0,0,0,,action creatorတွေရှိမယ်
 Dialogue: 0,1:09:53.40,1:09:56.02,Default,,0,0,0,,
-Dialogue: 0,1:09:56.02,1:09:57.73,Default,,0,0,0,,So let's go ahead and take a short break.
-Dialogue: 0,1:09:57.73,1:10:02.00,Default,,0,0,0,,And then when we come back, we can add Redux to our actual application.
+Dialogue: 0,1:09:56.02,1:09:57.73,Default,,0,0,0,,ဒါလေးလုပ်ပြီးရင် ခဏနားပါမယ်
+Dialogue: 0,1:09:57.73,1:10:02.00,Default,,0,0,0,,ပြန်စရင် application နဲ့ဒီreduxကိုတွဲသုံးကြည့်ပါမယ်
 Dialogue: 0,1:10:02.00,1:10:03.92,Default,,0,0,0,,All right, hello and welcome back.
 Dialogue: 0,1:10:03.92,1:10:08.44,Default,,0,0,0,,Before the break, we actually implemented our own small simpleRedux.
 Dialogue: 0,1:10:08.44,1:10:12.70,Default,,0,0,0,,And now, let's actually start moving from our simpleRedux,
