@@ -6,7 +6,7 @@ CS50 Mobile development with React Native သင်တန်းထဲက redux �
 [subtitle](./lecture9-720p-en.ass)  
 [video](https://u.pcloud.link/publink/show?code=XZx6nTXZWqinu2MIQXzSo177jMJA6YFMphdk)
 
-> 1:10:02.00 အချိန်ထိသာ မြန်မာလိုပြန်ထားပါတယ်
+> 1:10:02.00 အချိန်ထိသာ မြန်မာလိုပြန်ထားပါတယ်  
 > ပိုမို ဆီလျော်အောင် ဘာသာပြန်ပေးနိုင်တယ်ဆိုရင် အကောင်းဆုံးပါ
 > 
 > အမှားတွေ့ရင်လည်း ခွင့်လွှတ်ပါ
