@@ -10,8 +10,12 @@ class Store {
     getState() {
         return this.state
     }
-    dispatch(update) {
-        this.state = this.reducer(this.state, update)
+    dispatch(action) {
+        if(typeof action==="function"){// for thunk
+            action(this.dispatch.bind(this))
+        }else{
+            this.state = this.reducer(this.state, update)
+        }
     }
 }
 const DEFAULT_STATE = { user: {}, contacts: [] }
@@ -48,9 +52,14 @@ const addContact = newContact => ({
 })
 const store = new Store(reducer, DEFAULT_STATE)
 
+const thunkDemo=()=>dispatch=>{
+    dispatch(updateUser({foo:'foo'}))
+}
+
 store.dispatch(updateUser({ foo: 'foo' }))
 store.dispatch(updateUser({ bar: 'bar' }))
 store.dispatch(updateUser({ foo: 'baz' }))
+store.dispatch(thunkDemo())
 
 store.dispatch(addContact({ name: 'Tammy', number: '1231231234' }))
 store.dispatch(addContact({ name: 'Jenny', number: '5435435432' }))
