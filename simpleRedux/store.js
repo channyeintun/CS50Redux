@@ -14,7 +14,7 @@ class Store {
         if(typeof action==="function"){// for thunk
             action(this.dispatch.bind(this))
         }else{
-            this.state = this.reducer(this.state, update)
+            this.state = this.reducer(this.state, action)
         }
     }
 }
